@@ -1,24 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Drawing.Drawing2D;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.ComponentModel;
+using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Windows.Forms;
 
 namespace HUYNHDE_DUAN1.contructions_functions
 {
-    internal class buttonRadius: Button
+    internal class buttonRadius : Button
     {
         // fields
         private int borderSize = 0;
+
         private int borderRadius = 20;
         private Color borderColor = Color.Red;
 
         //properties
         /*   */
+
         [Category("RJ Code Advacne")]
         public int BorderSize
         {
@@ -32,7 +30,9 @@ namespace HUYNHDE_DUAN1.contructions_functions
                 this.Invalidate();
             }
         }
+
         /*   */
+
         [Category("RJ Code Advacne")]
         public int BorderRadius
         {
@@ -46,7 +46,9 @@ namespace HUYNHDE_DUAN1.contructions_functions
                 this.Invalidate();
             }
         }
+
         /*   */
+
         [Category("RJ Code Advacne")]
         public Color BorderColor
         {
@@ -60,21 +62,24 @@ namespace HUYNHDE_DUAN1.contructions_functions
                 this.Invalidate();
             }
         }
+
         /*   */
+
         [Category("RJ Code Advacne")]
         public Color BackgroundColor
         {
             get { return this.BackColor; }
             set { this.BackColor = value; }
         }
+
         /*   */
+
         [Category("RJ Code Advacne")]
         public Color TextColor
         {
             get { return this.ForeColor; }
             set { this.ForeColor = value; }
         }
-
 
         // contructor
         public buttonRadius()
@@ -98,6 +103,7 @@ namespace HUYNHDE_DUAN1.contructions_functions
             path.CloseFigure();
             return path;
         }
+
         protected override void OnPaint(PaintEventArgs pevent)
         {
             base.OnPaint(pevent);
@@ -143,11 +149,13 @@ namespace HUYNHDE_DUAN1.contructions_functions
                 }
             }
         }
+
         protected override void OnHandleCreated(EventArgs e)
         {
             base.OnHandleCreated(e);
             this.Parent.BackColorChanged += new EventHandler(Container_BackColorChanged);
         }
+
         private void Container_BackColorChanged(object sender, EventArgs e)
         {
             if (this.DesignMode)
@@ -155,4 +163,3 @@ namespace HUYNHDE_DUAN1.contructions_functions
         }
     }
 }
-

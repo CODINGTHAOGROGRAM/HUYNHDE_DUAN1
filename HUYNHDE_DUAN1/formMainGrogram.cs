@@ -183,12 +183,6 @@ namespace HUYNHDE_DUAN1
             ResetForm();
         }
 
-       
-
-       
-
-       
-
         private void btnMinimized_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;

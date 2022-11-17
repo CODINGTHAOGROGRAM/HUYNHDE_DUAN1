@@ -53,14 +53,125 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="contructions_functions\buttonRadius.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="contructions_functions\CircularPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="contructions_functions\panelLinearGradient.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="formChildDataTP.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="formChildDataTP.Designer.cs">
+      <DependentUpon>formChildDataTP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formChildGDBDG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formChildGDBDG.Designer.cs">
+      <DependentUpon>formChildGDBDG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formChildManagerEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formChildManagerEmployee.Designer.cs">
+      <DependentUpon>formChildManagerEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formChildStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formChildStock.Designer.cs">
+      <DependentUpon>formChildStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formGDBDG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formGDBDG.Designer.cs">
+      <DependentUpon>formGDBDG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formDataTP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formDataTP.Designer.cs">
+      <DependentUpon>formDataTP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formForgetPass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formForgetPass.Designer.cs">
+      <DependentUpon>formForgetPass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formLoginGrogram.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formLoginGrogram.Designer.cs">
+      <DependentUpon>formLoginGrogram.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formMainGrogram.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formMainGrogram.Designer.cs">
+      <DependentUpon>formMainGrogram.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManagerEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManagerEmployee.Designer.cs">
+      <DependentUpon>FormManagerEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formPersonnalCurrent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formPersonnalCurrent.Designer.cs">
+      <DependentUpon>formPersonnalCurrent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formStock.Designer.cs">
+      <DependentUpon>formStock.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="formChildDataTP.resx">
+      <DependentUpon>formChildDataTP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formChildGDBDG.resx">
+      <DependentUpon>formChildGDBDG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formChildManagerEmployee.resx">
+      <DependentUpon>formChildManagerEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formChildStock.resx">
+      <DependentUpon>formChildStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formGDBDG.resx">
+      <DependentUpon>formGDBDG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formDataTP.resx">
+      <DependentUpon>formDataTP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formForgetPass.resx">
+      <DependentUpon>formForgetPass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formLoginGrogram.resx">
+      <DependentUpon>formLoginGrogram.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formMainGrogram.resx">
+      <DependentUpon>formMainGrogram.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManagerEmployee.resx">
+      <DependentUpon>FormManagerEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formPersonnalCurrent.resx">
+      <DependentUpon>formPersonnalCurrent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formStock.resx">
+      <DependentUpon>formStock.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -95,15 +206,14 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="img\login_welcome.png" />
-    <Resource Include="img\logo-removebg.png" />
-    <Resource Include="img\logo.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="img\login_bg.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="img\1668246155408.jpg" />
+    <Content Include="img\bannerForget.png" />
+    <Content Include="img\forgetUseLogin.png" />
+    <Content Include="img\LogoTeamDisplay.png" />
+    <Content Include="img\LogoTeamHome.jpg" />
+    <Content Include="img\user_login.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

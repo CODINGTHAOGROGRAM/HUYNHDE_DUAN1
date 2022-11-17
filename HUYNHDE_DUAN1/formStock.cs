@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace HUYNHDE_DUAN1
 {
-    public partial class Form1 : Form
+    public partial class formStock : Form
     {
-        public Form1()
+        public formStock()
         {
             InitializeComponent();
         }
+
+       
     }
 }

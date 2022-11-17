@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,6 +18,35 @@ namespace HUYNHDE_DUAN1
         private IconButton currentBtn;
         private Panel leftBorderBtn;
         private Form ChildFormCurrent;
+
+        #region MouseDown Form
+        public const int WM_NCLBUTTONDOWN = 0xA1;
+        public const int HT_CAPTION = 0x2;
+        [DllImportAttribute("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+        [DllImportAttribute("user32.dll")]
+        public static extern bool ReleaseCapture();
+        private void panelLinearGradient2_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+
+            }
+        }
+        private void pcLogoHome_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+
+            }
+        }
+        #endregion
+
+
         public FormMain()
         {
             InitializeComponent();
@@ -29,6 +59,7 @@ namespace HUYNHDE_DUAN1
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(5, 100);
             pnControlButtons.Controls.Add(leftBorderBtn);
+           
 
         }
 
@@ -206,6 +237,8 @@ namespace HUYNHDE_DUAN1
             {
                 WindowState = FormWindowState.Maximized;
                 btnMaximized.Text = "❐";
+               
+                
             }
         }
 
@@ -213,5 +246,7 @@ namespace HUYNHDE_DUAN1
         {
             Application.Exit();
         }
+
+       
     }
 }

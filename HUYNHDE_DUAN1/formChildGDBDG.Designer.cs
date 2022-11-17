@@ -115,7 +115,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Noto Serif", 12F);
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(19, 40);
+            this.label5.Location = new System.Drawing.Point(3, 40);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(34, 22);
             this.label5.TabIndex = 1;
@@ -276,9 +276,9 @@
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox1.Font = new System.Drawing.Font("Noto Serif", 12F);
             this.richTextBox1.ForeColor = System.Drawing.Color.White;
-            this.richTextBox1.Location = new System.Drawing.Point(5, 87);
+            this.richTextBox1.Location = new System.Drawing.Point(4, 115);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(60, 103);
+            this.richTextBox1.Size = new System.Drawing.Size(61, 76);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "Giá (nghìn đồng)";
             // 
@@ -436,9 +436,9 @@
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
             this.label9.Location = new System.Drawing.Point(646, 148);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(134, 22);
+            this.label9.Size = new System.Drawing.Size(130, 22);
             this.label9.TabIndex = 150;
-            this.label9.Text = "Phầm trăm (%):";
+            this.label9.Text = "Phần trăm (%):";
             // 
             // label8
             // 

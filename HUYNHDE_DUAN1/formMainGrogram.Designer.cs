@@ -29,132 +29,168 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.panelLinearGradient2 = new HUYNHDE_DUAN1.contructions_functions.panelLinearGradient();
-            this.btnMinimized = new FontAwesome.Sharp.IconButton();
-            this.btnMaximized = new FontAwesome.Sharp.IconButton();
-            this.btnEx = new FontAwesome.Sharp.IconButton();
-            this.pnControlButtons = new HUYNHDE_DUAN1.contructions_functions.panelLinearGradient();
-            this.btnFormDataTP = new FontAwesome.Sharp.IconButton();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.btnFormGDBDG = new FontAwesome.Sharp.IconButton();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.btnFormStock = new FontAwesome.Sharp.IconButton();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.btnFormManagerEmplyee = new FontAwesome.Sharp.IconButton();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.btnFormPersonalCurrent = new FontAwesome.Sharp.IconButton();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pcLogoHome = new System.Windows.Forms.PictureBox();
-            this.pnFillChildForms = new HUYNHDE_DUAN1.contructions_functions.panelLinearGradient();
-            this.panelOpacity = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.lbCongra = new System.Windows.Forms.Label();
-            this.lbTime = new System.Windows.Forms.Label();
-            this.lbDate = new System.Windows.Forms.Label();
-            this.logoDisplay = new System.Windows.Forms.PictureBox();
             this.TimerLoad = new System.Windows.Forms.Timer(this.components);
             this.panel = new HUYNHDE_DUAN1.contructions_functions.panelLinearGradient();
             this.label1 = new System.Windows.Forms.Label();
             this.fillIconButton = new FontAwesome.Sharp.IconButton();
-            this.panelLinearGradient2.SuspendLayout();
+            this.pnFillChildForms = new HUYNHDE_DUAN1.contructions_functions.panelLinearGradient();
+            this.panelOpacity = new System.Windows.Forms.Panel();
+            this.lbCongra = new System.Windows.Forms.Label();
+            this.lbTime = new System.Windows.Forms.Label();
+            this.lbDate = new System.Windows.Forms.Label();
+            this.logoDisplay = new System.Windows.Forms.PictureBox();
+            this.pnControlButtons = new HUYNHDE_DUAN1.contructions_functions.panelLinearGradient();
+            this.btnFormDataTP = new FontAwesome.Sharp.IconButton();
+            this.btnFormGDBDG = new FontAwesome.Sharp.IconButton();
+            this.btnFormStock = new FontAwesome.Sharp.IconButton();
+            this.btnFormManagerEmplyee = new FontAwesome.Sharp.IconButton();
+            this.btnFormPersonalCurrent = new FontAwesome.Sharp.IconButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pcLogoHome = new System.Windows.Forms.PictureBox();
+            this.panelLinearGradient2 = new HUYNHDE_DUAN1.contructions_functions.panelLinearGradient();
+            this.btnMinimized = new FontAwesome.Sharp.IconButton();
+            this.btnMaximized = new FontAwesome.Sharp.IconButton();
+            this.btnEx = new FontAwesome.Sharp.IconButton();
+            this.panel.SuspendLayout();
+            this.pnFillChildForms.SuspendLayout();
+            this.panelOpacity.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logoDisplay)).BeginInit();
             this.pnControlButtons.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcLogoHome)).BeginInit();
-            this.pnFillChildForms.SuspendLayout();
-            this.panelOpacity.SuspendLayout();
-            this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.logoDisplay)).BeginInit();
-            this.panel.SuspendLayout();
+            this.panelLinearGradient2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panelLinearGradient2
+            // TimerLoad
             // 
-            this.panelLinearGradient2.Colorleft = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(254)))), ((int)(((byte)(250)))));
-            this.panelLinearGradient2.ColorRight = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.panelLinearGradient2.Controls.Add(this.btnMinimized);
-            this.panelLinearGradient2.Controls.Add(this.btnMaximized);
-            this.panelLinearGradient2.Controls.Add(this.btnEx);
-            this.panelLinearGradient2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLinearGradient2.Location = new System.Drawing.Point(0, 0);
-            this.panelLinearGradient2.Name = "panelLinearGradient2";
-            this.panelLinearGradient2.Size = new System.Drawing.Size(1584, 30);
-            this.panelLinearGradient2.TabIndex = 0;
+            this.TimerLoad.Tick += new System.EventHandler(this.TimerLoad_Tick);
             // 
-            // btnMinimized
+            // panel
             // 
-            this.btnMinimized.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.btnMinimized.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnMinimized.FlatAppearance.BorderSize = 0;
-            this.btnMinimized.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimized.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMinimized.ForeColor = System.Drawing.Color.White;
-            this.btnMinimized.IconChar = FontAwesome.Sharp.IconChar.Minus;
-            this.btnMinimized.IconColor = System.Drawing.Color.White;
-            this.btnMinimized.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnMinimized.IconSize = 25;
-            this.btnMinimized.Location = new System.Drawing.Point(1485, 0);
-            this.btnMinimized.Name = "btnMinimized";
-            this.btnMinimized.Size = new System.Drawing.Size(33, 30);
-            this.btnMinimized.TabIndex = 2;
-            this.btnMinimized.UseVisualStyleBackColor = false;
-            this.btnMinimized.Click += new System.EventHandler(this.btnMinimized_Click);
+            this.panel.Colorleft = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(254)))), ((int)(((byte)(250)))));
+            this.panel.ColorRight = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.panel.Controls.Add(this.label1);
+            this.panel.Controls.Add(this.fillIconButton);
+            this.panel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel.Location = new System.Drawing.Point(300, 30);
+            this.panel.Name = "panel";
+            this.panel.Size = new System.Drawing.Size(1284, 42);
+            this.panel.TabIndex = 3;
             // 
-            // btnMaximized
+            // label1
             // 
-            this.btnMaximized.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.btnMaximized.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnMaximized.FlatAppearance.BorderSize = 0;
-            this.btnMaximized.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMaximized.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMaximized.ForeColor = System.Drawing.Color.White;
-            this.btnMaximized.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnMaximized.IconColor = System.Drawing.Color.Black;
-            this.btnMaximized.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnMaximized.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnMaximized.Location = new System.Drawing.Point(1518, 0);
-            this.btnMaximized.Name = "btnMaximized";
-            this.btnMaximized.Size = new System.Drawing.Size(33, 30);
-            this.btnMaximized.TabIndex = 1;
-            this.btnMaximized.Text = "❐";
-            this.btnMaximized.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnMaximized.UseVisualStyleBackColor = false;
-            this.btnMaximized.Click += new System.EventHandler(this.btnMaximized_Click);
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Noto Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.label1.Location = new System.Drawing.Point(45, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(69, 26);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Home";
             // 
-            // btnEx
+            // fillIconButton
             // 
-            this.btnEx.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.btnEx.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnEx.FlatAppearance.BorderSize = 0;
-            this.btnEx.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEx.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEx.ForeColor = System.Drawing.Color.White;
-            this.btnEx.IconChar = FontAwesome.Sharp.IconChar.X;
-            this.btnEx.IconColor = System.Drawing.Color.White;
-            this.btnEx.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnEx.IconSize = 20;
-            this.btnEx.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnEx.Location = new System.Drawing.Point(1551, 0);
-            this.btnEx.Name = "btnEx";
-            this.btnEx.Size = new System.Drawing.Size(33, 30);
-            this.btnEx.TabIndex = 0;
-            this.btnEx.UseVisualStyleBackColor = false;
-            this.btnEx.Click += new System.EventHandler(this.btnEx_Click);
+            this.fillIconButton.BackColor = System.Drawing.Color.Transparent;
+            this.fillIconButton.Dock = System.Windows.Forms.DockStyle.Left;
+            this.fillIconButton.FlatAppearance.BorderSize = 0;
+            this.fillIconButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.fillIconButton.ForeColor = System.Drawing.Color.Violet;
+            this.fillIconButton.IconChar = FontAwesome.Sharp.IconChar.User;
+            this.fillIconButton.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.fillIconButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.fillIconButton.IconSize = 25;
+            this.fillIconButton.Location = new System.Drawing.Point(0, 0);
+            this.fillIconButton.Name = "fillIconButton";
+            this.fillIconButton.Size = new System.Drawing.Size(39, 42);
+            this.fillIconButton.TabIndex = 0;
+            this.fillIconButton.UseVisualStyleBackColor = false;
+            // 
+            // pnFillChildForms
+            // 
+            this.pnFillChildForms.Colorleft = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(254)))), ((int)(((byte)(250)))));
+            this.pnFillChildForms.ColorRight = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.pnFillChildForms.Controls.Add(this.panelOpacity);
+            this.pnFillChildForms.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnFillChildForms.Location = new System.Drawing.Point(300, 30);
+            this.pnFillChildForms.Name = "pnFillChildForms";
+            this.pnFillChildForms.Size = new System.Drawing.Size(1284, 831);
+            this.pnFillChildForms.TabIndex = 2;
+            // 
+            // panelOpacity
+            // 
+            this.panelOpacity.BackColor = System.Drawing.Color.White;
+            this.panelOpacity.Controls.Add(this.lbCongra);
+            this.panelOpacity.Controls.Add(this.lbTime);
+            this.panelOpacity.Controls.Add(this.lbDate);
+            this.panelOpacity.Controls.Add(this.logoDisplay);
+            this.panelOpacity.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelOpacity.ForeColor = System.Drawing.Color.Transparent;
+            this.panelOpacity.Location = new System.Drawing.Point(0, 0);
+            this.panelOpacity.Name = "panelOpacity";
+            this.panelOpacity.Size = new System.Drawing.Size(1284, 831);
+            this.panelOpacity.TabIndex = 0;
+            // 
+            // lbCongra
+            // 
+            this.lbCongra.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbCongra.AutoSize = true;
+            this.lbCongra.BackColor = System.Drawing.Color.Transparent;
+            this.lbCongra.Font = new System.Drawing.Font("Noto Serif", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCongra.ForeColor = System.Drawing.Color.White;
+            this.lbCongra.Location = new System.Drawing.Point(362, 678);
+            this.lbCongra.Name = "lbCongra";
+            this.lbCongra.Size = new System.Drawing.Size(82, 33);
+            this.lbCongra.TabIndex = 7;
+            this.lbCongra.Text = "label3";
+            // 
+            // lbTime
+            // 
+            this.lbTime.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbTime.AutoSize = true;
+            this.lbTime.BackColor = System.Drawing.Color.Transparent;
+            this.lbTime.Font = new System.Drawing.Font("Script MT Bold", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTime.ForeColor = System.Drawing.Color.White;
+            this.lbTime.Location = new System.Drawing.Point(525, 589);
+            this.lbTime.Name = "lbTime";
+            this.lbTime.Size = new System.Drawing.Size(222, 58);
+            this.lbTime.TabIndex = 6;
+            this.lbTime.Text = "00:00:00\"";
+            // 
+            // lbDate
+            // 
+            this.lbDate.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbDate.AutoSize = true;
+            this.lbDate.BackColor = System.Drawing.Color.Transparent;
+            this.lbDate.Font = new System.Drawing.Font("Script MT Bold", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDate.ForeColor = System.Drawing.Color.White;
+            this.lbDate.Location = new System.Drawing.Point(508, 514);
+            this.lbDate.Name = "lbDate";
+            this.lbDate.Size = new System.Drawing.Size(309, 58);
+            this.lbDate.TabIndex = 5;
+            this.lbDate.Text = "dd/MM/yyyy";
+            // 
+            // logoDisplay
+            // 
+            this.logoDisplay.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.logoDisplay.BackColor = System.Drawing.Color.Transparent;
+            this.logoDisplay.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.logoDisplay.Location = new System.Drawing.Point(325, 121);
+            this.logoDisplay.Name = "logoDisplay";
+            this.logoDisplay.Size = new System.Drawing.Size(635, 371);
+            this.logoDisplay.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.logoDisplay.TabIndex = 4;
+            this.logoDisplay.TabStop = false;
             // 
             // pnControlButtons
             // 
             this.pnControlButtons.Colorleft = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(198)))), ((int)(((byte)(220)))));
             this.pnControlButtons.ColorRight = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(198)))), ((int)(((byte)(220)))));
             this.pnControlButtons.Controls.Add(this.btnFormDataTP);
-            this.pnControlButtons.Controls.Add(this.panel6);
             this.pnControlButtons.Controls.Add(this.btnFormGDBDG);
-            this.pnControlButtons.Controls.Add(this.panel5);
             this.pnControlButtons.Controls.Add(this.btnFormStock);
-            this.pnControlButtons.Controls.Add(this.panel4);
             this.pnControlButtons.Controls.Add(this.btnFormManagerEmplyee);
-            this.pnControlButtons.Controls.Add(this.panel3);
             this.pnControlButtons.Controls.Add(this.btnFormPersonalCurrent);
-            this.pnControlButtons.Controls.Add(this.panel2);
             this.pnControlButtons.Controls.Add(this.panel1);
             this.pnControlButtons.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnControlButtons.Location = new System.Drawing.Point(0, 30);
@@ -175,7 +211,7 @@
             this.btnFormDataTP.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnFormDataTP.IconSize = 30;
             this.btnFormDataTP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFormDataTP.Location = new System.Drawing.Point(0, 665);
+            this.btnFormDataTP.Location = new System.Drawing.Point(0, 550);
             this.btnFormDataTP.Name = "btnFormDataTP";
             this.btnFormDataTP.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnFormDataTP.Size = new System.Drawing.Size(300, 100);
@@ -185,15 +221,6 @@
             this.btnFormDataTP.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnFormDataTP.UseVisualStyleBackColor = false;
             this.btnFormDataTP.Click += new System.EventHandler(this.btnFormDataTP_Click);
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.Transparent;
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(0, 642);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(300, 23);
-            this.panel6.TabIndex = 9;
             // 
             // btnFormGDBDG
             // 
@@ -208,7 +235,7 @@
             this.btnFormGDBDG.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnFormGDBDG.IconSize = 30;
             this.btnFormGDBDG.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFormGDBDG.Location = new System.Drawing.Point(0, 542);
+            this.btnFormGDBDG.Location = new System.Drawing.Point(0, 450);
             this.btnFormGDBDG.Name = "btnFormGDBDG";
             this.btnFormGDBDG.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnFormGDBDG.Size = new System.Drawing.Size(300, 100);
@@ -218,15 +245,6 @@
             this.btnFormGDBDG.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnFormGDBDG.UseVisualStyleBackColor = false;
             this.btnFormGDBDG.Click += new System.EventHandler(this.btnFormGDBDG_Click);
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.Transparent;
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 519);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(300, 23);
-            this.panel5.TabIndex = 7;
             // 
             // btnFormStock
             // 
@@ -241,7 +259,7 @@
             this.btnFormStock.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnFormStock.IconSize = 30;
             this.btnFormStock.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFormStock.Location = new System.Drawing.Point(0, 419);
+            this.btnFormStock.Location = new System.Drawing.Point(0, 350);
             this.btnFormStock.Name = "btnFormStock";
             this.btnFormStock.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnFormStock.Size = new System.Drawing.Size(300, 100);
@@ -251,15 +269,6 @@
             this.btnFormStock.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnFormStock.UseVisualStyleBackColor = false;
             this.btnFormStock.Click += new System.EventHandler(this.btnFormStock_Click_1);
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.Transparent;
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 396);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(300, 23);
-            this.panel4.TabIndex = 5;
             // 
             // btnFormManagerEmplyee
             // 
@@ -274,7 +283,7 @@
             this.btnFormManagerEmplyee.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnFormManagerEmplyee.IconSize = 30;
             this.btnFormManagerEmplyee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFormManagerEmplyee.Location = new System.Drawing.Point(0, 296);
+            this.btnFormManagerEmplyee.Location = new System.Drawing.Point(0, 250);
             this.btnFormManagerEmplyee.Name = "btnFormManagerEmplyee";
             this.btnFormManagerEmplyee.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnFormManagerEmplyee.Size = new System.Drawing.Size(300, 100);
@@ -284,15 +293,6 @@
             this.btnFormManagerEmplyee.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnFormManagerEmplyee.UseVisualStyleBackColor = false;
             this.btnFormManagerEmplyee.Click += new System.EventHandler(this.btnFormManagerEmplyee_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Transparent;
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 273);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(300, 23);
-            this.panel3.TabIndex = 3;
             // 
             // btnFormPersonalCurrent
             // 
@@ -307,7 +307,7 @@
             this.btnFormPersonalCurrent.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnFormPersonalCurrent.IconSize = 30;
             this.btnFormPersonalCurrent.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFormPersonalCurrent.Location = new System.Drawing.Point(0, 173);
+            this.btnFormPersonalCurrent.Location = new System.Drawing.Point(0, 150);
             this.btnFormPersonalCurrent.Name = "btnFormPersonalCurrent";
             this.btnFormPersonalCurrent.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnFormPersonalCurrent.Size = new System.Drawing.Size(300, 100);
@@ -317,15 +317,6 @@
             this.btnFormPersonalCurrent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnFormPersonalCurrent.UseVisualStyleBackColor = false;
             this.btnFormPersonalCurrent.Click += new System.EventHandler(this.btnFormPersonalCurrent_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 150);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(300, 23);
-            this.panel2.TabIndex = 1;
             // 
             // panel1
             // 
@@ -339,6 +330,7 @@
             // 
             // pcLogoHome
             // 
+            this.pcLogoHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(198)))), ((int)(((byte)(220)))));
             this.pcLogoHome.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pcLogoHome.Location = new System.Drawing.Point(0, 0);
             this.pcLogoHome.Name = "pcLogoHome";
@@ -347,131 +339,81 @@
             this.pcLogoHome.TabIndex = 0;
             this.pcLogoHome.TabStop = false;
             this.pcLogoHome.Click += new System.EventHandler(this.pcLogoHome_Click);
+            this.pcLogoHome.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pcLogoHome_MouseDown);
             // 
-            // pnFillChildForms
+            // panelLinearGradient2
             // 
-            this.pnFillChildForms.Colorleft = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(254)))), ((int)(((byte)(250)))));
-            this.pnFillChildForms.ColorRight = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.pnFillChildForms.Controls.Add(this.panelOpacity);
-            this.pnFillChildForms.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnFillChildForms.Location = new System.Drawing.Point(300, 30);
-            this.pnFillChildForms.Name = "pnFillChildForms";
-            this.pnFillChildForms.Size = new System.Drawing.Size(1284, 831);
-            this.pnFillChildForms.TabIndex = 2;
+            this.panelLinearGradient2.Colorleft = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(254)))), ((int)(((byte)(250)))));
+            this.panelLinearGradient2.ColorRight = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.panelLinearGradient2.Controls.Add(this.btnMinimized);
+            this.panelLinearGradient2.Controls.Add(this.btnMaximized);
+            this.panelLinearGradient2.Controls.Add(this.btnEx);
+            this.panelLinearGradient2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLinearGradient2.Location = new System.Drawing.Point(0, 0);
+            this.panelLinearGradient2.Name = "panelLinearGradient2";
+            this.panelLinearGradient2.Size = new System.Drawing.Size(1584, 30);
+            this.panelLinearGradient2.TabIndex = 0;
+            this.panelLinearGradient2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelLinearGradient2_MouseDown);
             // 
-            // panelOpacity
+            // btnMinimized
             // 
-            this.panelOpacity.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panelOpacity.Controls.Add(this.panel7);
-            this.panelOpacity.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelOpacity.Location = new System.Drawing.Point(0, 0);
-            this.panelOpacity.Name = "panelOpacity";
-            this.panelOpacity.Size = new System.Drawing.Size(1284, 831);
-            this.panelOpacity.TabIndex = 0;
+            this.btnMinimized.BackColor = System.Drawing.Color.Transparent;
+            this.btnMinimized.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnMinimized.FlatAppearance.BorderSize = 0;
+            this.btnMinimized.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimized.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMinimized.ForeColor = System.Drawing.Color.White;
+            this.btnMinimized.IconChar = FontAwesome.Sharp.IconChar.Minus;
+            this.btnMinimized.IconColor = System.Drawing.Color.White;
+            this.btnMinimized.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMinimized.IconSize = 25;
+            this.btnMinimized.Location = new System.Drawing.Point(1485, 0);
+            this.btnMinimized.Name = "btnMinimized";
+            this.btnMinimized.Size = new System.Drawing.Size(33, 30);
+            this.btnMinimized.TabIndex = 2;
+            this.btnMinimized.UseVisualStyleBackColor = false;
+            this.btnMinimized.Click += new System.EventHandler(this.btnMinimized_Click);
             // 
-            // panel7
+            // btnMaximized
             // 
-            this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel7.BackColor = System.Drawing.Color.Transparent;
-            this.panel7.Controls.Add(this.lbCongra);
-            this.panel7.Controls.Add(this.lbTime);
-            this.panel7.Controls.Add(this.lbDate);
-            this.panel7.Controls.Add(this.logoDisplay);
-            this.panel7.Location = new System.Drawing.Point(439, 41);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(767, 700);
-            this.panel7.TabIndex = 0;
+            this.btnMaximized.BackColor = System.Drawing.Color.Transparent;
+            this.btnMaximized.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnMaximized.FlatAppearance.BorderSize = 0;
+            this.btnMaximized.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMaximized.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMaximized.ForeColor = System.Drawing.Color.White;
+            this.btnMaximized.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnMaximized.IconColor = System.Drawing.Color.Black;
+            this.btnMaximized.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMaximized.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnMaximized.Location = new System.Drawing.Point(1518, 0);
+            this.btnMaximized.Name = "btnMaximized";
+            this.btnMaximized.Size = new System.Drawing.Size(33, 30);
+            this.btnMaximized.TabIndex = 1;
+            this.btnMaximized.Text = "❐";
+            this.btnMaximized.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnMaximized.UseVisualStyleBackColor = false;
+            this.btnMaximized.Click += new System.EventHandler(this.btnMaximized_Click);
             // 
-            // lbCongra
+            // btnEx
             // 
-            this.lbCongra.AutoSize = true;
-            this.lbCongra.Font = new System.Drawing.Font("Noto Serif", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCongra.ForeColor = System.Drawing.Color.White;
-            this.lbCongra.Location = new System.Drawing.Point(114, 568);
-            this.lbCongra.Name = "lbCongra";
-            this.lbCongra.Size = new System.Drawing.Size(82, 33);
-            this.lbCongra.TabIndex = 3;
-            this.lbCongra.Text = "label3";
-            // 
-            // lbTime
-            // 
-            this.lbTime.AutoSize = true;
-            this.lbTime.Font = new System.Drawing.Font("Script MT Bold", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTime.ForeColor = System.Drawing.Color.White;
-            this.lbTime.Location = new System.Drawing.Point(301, 478);
-            this.lbTime.Name = "lbTime";
-            this.lbTime.Size = new System.Drawing.Size(161, 42);
-            this.lbTime.TabIndex = 2;
-            this.lbTime.Text = "00:00:00\"";
-            // 
-            // lbDate
-            // 
-            this.lbDate.AutoSize = true;
-            this.lbDate.Font = new System.Drawing.Font("Script MT Bold", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDate.ForeColor = System.Drawing.Color.White;
-            this.lbDate.Location = new System.Drawing.Point(284, 403);
-            this.lbDate.Name = "lbDate";
-            this.lbDate.Size = new System.Drawing.Size(224, 42);
-            this.lbDate.TabIndex = 1;
-            this.lbDate.Text = "dd/MM/yyyy";
-            // 
-            // logoDisplay
-            // 
-            this.logoDisplay.BackColor = System.Drawing.Color.Transparent;
-            this.logoDisplay.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.logoDisplay.Location = new System.Drawing.Point(66, 12);
-            this.logoDisplay.Name = "logoDisplay";
-            this.logoDisplay.Size = new System.Drawing.Size(635, 371);
-            this.logoDisplay.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.logoDisplay.TabIndex = 0;
-            this.logoDisplay.TabStop = false;
-            // 
-            // TimerLoad
-            // 
-            this.TimerLoad.Tick += new System.EventHandler(this.TimerLoad_Tick);
-            // 
-            // panel
-            // 
-            this.panel.Colorleft = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(254)))), ((int)(((byte)(250)))));
-            this.panel.ColorRight = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.panel.Controls.Add(this.label1);
-            this.panel.Controls.Add(this.fillIconButton);
-            this.panel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel.Location = new System.Drawing.Point(300, 30);
-            this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(1284, 26);
-            this.panel.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label1.Font = new System.Drawing.Font("Noto Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.label1.Location = new System.Drawing.Point(39, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 22);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Home";
-            // 
-            // fillIconButton
-            // 
-            this.fillIconButton.BackColor = System.Drawing.Color.Transparent;
-            this.fillIconButton.Dock = System.Windows.Forms.DockStyle.Left;
-            this.fillIconButton.FlatAppearance.BorderSize = 0;
-            this.fillIconButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.fillIconButton.ForeColor = System.Drawing.Color.Violet;
-            this.fillIconButton.IconChar = FontAwesome.Sharp.IconChar.User;
-            this.fillIconButton.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.fillIconButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.fillIconButton.IconSize = 25;
-            this.fillIconButton.Location = new System.Drawing.Point(0, 0);
-            this.fillIconButton.Name = "fillIconButton";
-            this.fillIconButton.Size = new System.Drawing.Size(39, 26);
-            this.fillIconButton.TabIndex = 0;
-            this.fillIconButton.UseVisualStyleBackColor = false;
+            this.btnEx.BackColor = System.Drawing.Color.Transparent;
+            this.btnEx.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnEx.FlatAppearance.BorderSize = 0;
+            this.btnEx.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEx.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEx.ForeColor = System.Drawing.Color.White;
+            this.btnEx.IconChar = FontAwesome.Sharp.IconChar.X;
+            this.btnEx.IconColor = System.Drawing.Color.White;
+            this.btnEx.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEx.IconSize = 20;
+            this.btnEx.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnEx.Location = new System.Drawing.Point(1551, 0);
+            this.btnEx.Name = "btnEx";
+            this.btnEx.Size = new System.Drawing.Size(33, 30);
+            this.btnEx.TabIndex = 0;
+            this.btnEx.UseVisualStyleBackColor = false;
+            this.btnEx.Click += new System.EventHandler(this.btnEx_Click);
             // 
             // FormMain
             // 
@@ -484,59 +426,48 @@
             this.Controls.Add(this.panelLinearGradient2);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.IsMdiContainer = true;
             this.Name = "FormMain";
             this.Text = "formMainGrogram";
             this.Load += new System.EventHandler(this.formMainGrogram_Load);
-            this.panelLinearGradient2.ResumeLayout(false);
+            this.panel.ResumeLayout(false);
+            this.panel.PerformLayout();
+            this.pnFillChildForms.ResumeLayout(false);
+            this.panelOpacity.ResumeLayout(false);
+            this.panelOpacity.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logoDisplay)).EndInit();
             this.pnControlButtons.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pcLogoHome)).EndInit();
-            this.pnFillChildForms.ResumeLayout(false);
-            this.panelOpacity.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.logoDisplay)).EndInit();
-            this.panel.ResumeLayout(false);
-            this.panel.PerformLayout();
+            this.panelLinearGradient2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private contructions_functions.panelLinearGradient panelLinearGradient1;
-        private contructions_functions.panelLinearGradient panelControlButtons;
-        private contructions_functions.panelLinearGradient panelLinearGradient3;
-        private contructions_functions.panelLinearGradient panelLinearGradient4;
-        private contructions_functions.panelLinearGradient panelLinearGradient5;
-        private contructions_functions.panelLinearGradient panelFillChildForms;
+        
         private contructions_functions.panelLinearGradient panelLinearGradient2;
         private contructions_functions.panelLinearGradient pnControlButtons;
         private FontAwesome.Sharp.IconButton btnFormDataTP;
-        private System.Windows.Forms.Panel panel6;
         private FontAwesome.Sharp.IconButton btnFormGDBDG;
-        private System.Windows.Forms.Panel panel5;
         private FontAwesome.Sharp.IconButton btnFormStock;
-        private System.Windows.Forms.Panel panel4;
         private FontAwesome.Sharp.IconButton btnFormManagerEmplyee;
-        private System.Windows.Forms.Panel panel3;
         private FontAwesome.Sharp.IconButton btnFormPersonalCurrent;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pcLogoHome;
         private contructions_functions.panelLinearGradient pnFillChildForms;
         private System.Windows.Forms.Panel panelOpacity;
-        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Timer TimerLoad;
+        private contructions_functions.panelLinearGradient panel;
+        private FontAwesome.Sharp.IconButton fillIconButton;
+        private FontAwesome.Sharp.IconButton btnMinimized;
+        private FontAwesome.Sharp.IconButton btnMaximized;
+        private FontAwesome.Sharp.IconButton btnEx;
         private System.Windows.Forms.Label lbCongra;
         private System.Windows.Forms.Label lbTime;
         private System.Windows.Forms.Label lbDate;
         private System.Windows.Forms.PictureBox logoDisplay;
-        private System.Windows.Forms.Timer TimerLoad;
-        private contructions_functions.panelLinearGradient panel;
-        private FontAwesome.Sharp.IconButton fillIconButton;
         private System.Windows.Forms.Label label1;
-        private FontAwesome.Sharp.IconButton btnMinimized;
-        private FontAwesome.Sharp.IconButton btnMaximized;
-        private FontAwesome.Sharp.IconButton btnEx;
     }
 }

@@ -32,9 +32,9 @@
             this.btnConfirm = new System.Windows.Forms.Button();
             this.btnSendkey = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtSendKeys = new System.Windows.Forms.TextBox();
             this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
-            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.logoForgetLogin = new System.Windows.Forms.PictureBox();
@@ -59,9 +59,9 @@
             this.panelLinearGradient2.Controls.Add(this.btnConfirm);
             this.panelLinearGradient2.Controls.Add(this.btnSendkey);
             this.panelLinearGradient2.Controls.Add(this.panel3);
-            this.panelLinearGradient2.Controls.Add(this.txtPassword);
+            this.panelLinearGradient2.Controls.Add(this.txtSendKeys);
             this.panelLinearGradient2.Controls.Add(this.iconPictureBox2);
-            this.panelLinearGradient2.Controls.Add(this.txtUsername);
+            this.panelLinearGradient2.Controls.Add(this.txtEmail);
             this.panelLinearGradient2.Controls.Add(this.panel2);
             this.panelLinearGradient2.Controls.Add(this.iconPictureBox1);
             this.panelLinearGradient2.Controls.Add(this.logoForgetLogin);
@@ -69,7 +69,7 @@
             this.panelLinearGradient2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelLinearGradient2.Location = new System.Drawing.Point(477, 0);
             this.panelLinearGradient2.Name = "panelLinearGradient2";
-            this.panelLinearGradient2.Size = new System.Drawing.Size(307, 561);
+            this.panelLinearGradient2.Size = new System.Drawing.Size(356, 635);
             this.panelLinearGradient2.TabIndex = 3;
             // 
             // btnConfirm
@@ -77,9 +77,9 @@
             this.btnConfirm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(208)))), ((int)(((byte)(206)))));
             this.btnConfirm.Font = new System.Drawing.Font("Noto Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirm.ForeColor = System.Drawing.Color.White;
-            this.btnConfirm.Location = new System.Drawing.Point(78, 441);
+            this.btnConfirm.Location = new System.Drawing.Point(83, 490);
             this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(162, 40);
+            this.btnConfirm.Size = new System.Drawing.Size(196, 40);
             this.btnConfirm.TabIndex = 15;
             this.btnConfirm.Text = "Xác nhận";
             this.btnConfirm.UseVisualStyleBackColor = false;
@@ -90,32 +90,32 @@
             this.btnSendkey.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnSendkey.Font = new System.Drawing.Font("Noto Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSendkey.ForeColor = System.Drawing.Color.White;
-            this.btnSendkey.Location = new System.Drawing.Point(79, 384);
+            this.btnSendkey.Location = new System.Drawing.Point(84, 433);
             this.btnSendkey.Name = "btnSendkey";
-            this.btnSendkey.Size = new System.Drawing.Size(162, 40);
+            this.btnSendkey.Size = new System.Drawing.Size(196, 40);
             this.btnSendkey.TabIndex = 14;
             this.btnSendkey.Text = "Gửi mã";
             this.btnSendkey.UseVisualStyleBackColor = false;
             // 
             // panel3
             // 
-            this.panel3.Location = new System.Drawing.Point(76, 324);
+            this.panel3.Location = new System.Drawing.Point(81, 373);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 2);
+            this.panel3.Size = new System.Drawing.Size(234, 2);
             this.panel3.TabIndex = 11;
             // 
-            // txtPassword
+            // txtSendKeys
             // 
-            this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(208)))), ((int)(((byte)(206)))));
-            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPassword.Font = new System.Drawing.Font("Noto Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.ForeColor = System.Drawing.Color.White;
-            this.txtPassword.Location = new System.Drawing.Point(75, 296);
-            this.txtPassword.Multiline = true;
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(193, 24);
-            this.txtPassword.TabIndex = 10;
-            this.txtPassword.Text = "Mã xác nhận";
+            this.txtSendKeys.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(208)))), ((int)(((byte)(206)))));
+            this.txtSendKeys.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSendKeys.Font = new System.Drawing.Font("Noto Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSendKeys.ForeColor = System.Drawing.Color.White;
+            this.txtSendKeys.Location = new System.Drawing.Point(81, 343);
+            this.txtSendKeys.Multiline = true;
+            this.txtSendKeys.Name = "txtSendKeys";
+            this.txtSendKeys.Size = new System.Drawing.Size(227, 24);
+            this.txtSendKeys.TabIndex = 10;
+            this.txtSendKeys.Text = "Mã xác nhận";
             // 
             // iconPictureBox2
             // 
@@ -123,30 +123,31 @@
             this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.Key;
             this.iconPictureBox2.IconColor = System.Drawing.Color.White;
             this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox2.Location = new System.Drawing.Point(42, 291);
+            this.iconPictureBox2.IconSize = 30;
+            this.iconPictureBox2.Location = new System.Drawing.Point(47, 340);
             this.iconPictureBox2.Name = "iconPictureBox2";
-            this.iconPictureBox2.Size = new System.Drawing.Size(32, 32);
+            this.iconPictureBox2.Size = new System.Drawing.Size(30, 32);
             this.iconPictureBox2.TabIndex = 9;
             this.iconPictureBox2.TabStop = false;
             // 
-            // txtUsername
+            // txtEmail
             // 
-            this.txtUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(208)))), ((int)(((byte)(206)))));
-            this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUsername.Font = new System.Drawing.Font("Noto Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.ForeColor = System.Drawing.Color.White;
-            this.txtUsername.Location = new System.Drawing.Point(78, 214);
-            this.txtUsername.Multiline = true;
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(193, 24);
-            this.txtUsername.TabIndex = 6;
-            this.txtUsername.Text = "Email";
+            this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(208)))), ((int)(((byte)(206)))));
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEmail.Font = new System.Drawing.Font("Noto Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.ForeColor = System.Drawing.Color.White;
+            this.txtEmail.Location = new System.Drawing.Point(84, 261);
+            this.txtEmail.Multiline = true;
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(227, 24);
+            this.txtEmail.TabIndex = 6;
+            this.txtEmail.Text = "Email";
             // 
             // panel2
             // 
-            this.panel2.Location = new System.Drawing.Point(75, 242);
+            this.panel2.Location = new System.Drawing.Point(80, 291);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 2);
+            this.panel2.Size = new System.Drawing.Size(234, 2);
             this.panel2.TabIndex = 5;
             // 
             // iconPictureBox1
@@ -155,18 +156,19 @@
             this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Envelope;
             this.iconPictureBox1.IconColor = System.Drawing.Color.White;
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.Location = new System.Drawing.Point(42, 212);
+            this.iconPictureBox1.IconSize = 30;
+            this.iconPictureBox1.Location = new System.Drawing.Point(47, 261);
             this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.iconPictureBox1.Size = new System.Drawing.Size(30, 32);
             this.iconPictureBox1.TabIndex = 4;
             this.iconPictureBox1.TabStop = false;
             // 
             // logoForgetLogin
             // 
             this.logoForgetLogin.BackColor = System.Drawing.Color.Transparent;
-            this.logoForgetLogin.Location = new System.Drawing.Point(42, 94);
+            this.logoForgetLogin.Location = new System.Drawing.Point(47, 143);
             this.logoForgetLogin.Name = "logoForgetLogin";
-            this.logoForgetLogin.Size = new System.Drawing.Size(231, 80);
+            this.logoForgetLogin.Size = new System.Drawing.Size(265, 80);
             this.logoForgetLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.logoForgetLogin.TabIndex = 3;
             this.logoForgetLogin.TabStop = false;
@@ -178,7 +180,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(307, 39);
+            this.panel1.Size = new System.Drawing.Size(356, 39);
             this.panel1.TabIndex = 0;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
@@ -190,7 +192,7 @@
             this.ExitForms.IconColor = System.Drawing.Color.WhiteSmoke;
             this.ExitForms.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.ExitForms.IconSize = 25;
-            this.ExitForms.Location = new System.Drawing.Point(279, 3);
+            this.ExitForms.Location = new System.Drawing.Point(328, 3);
             this.ExitForms.Name = "ExitForms";
             this.ExitForms.Size = new System.Drawing.Size(25, 25);
             this.ExitForms.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -206,7 +208,7 @@
             this.panelLinearGradient1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelLinearGradient1.Location = new System.Drawing.Point(0, 0);
             this.panelLinearGradient1.Name = "panelLinearGradient1";
-            this.panelLinearGradient1.Size = new System.Drawing.Size(477, 561);
+            this.panelLinearGradient1.Size = new System.Drawing.Size(477, 635);
             this.panelLinearGradient1.TabIndex = 2;
             // 
             // ImgForgetLogin
@@ -215,7 +217,7 @@
             this.ImgForgetLogin.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ImgForgetLogin.Location = new System.Drawing.Point(0, 0);
             this.ImgForgetLogin.Name = "ImgForgetLogin";
-            this.ImgForgetLogin.Size = new System.Drawing.Size(477, 561);
+            this.ImgForgetLogin.Size = new System.Drawing.Size(477, 635);
             this.ImgForgetLogin.TabIndex = 0;
             this.ImgForgetLogin.TabStop = false;
             this.ImgForgetLogin.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ImgForgetLogin_MouseDown);
@@ -224,7 +226,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 561);
+            this.ClientSize = new System.Drawing.Size(833, 635);
             this.Controls.Add(this.panelLinearGradient2);
             this.Controls.Add(this.panelLinearGradient1);
             this.Name = "formForgetPass";
@@ -250,9 +252,9 @@
         private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.Button btnSendkey;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.TextBox txtSendKeys;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
-        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Panel panel2;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private System.Windows.Forms.PictureBox logoForgetLogin;

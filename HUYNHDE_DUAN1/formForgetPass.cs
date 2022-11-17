@@ -39,6 +39,7 @@ namespace HUYNHDE_DUAN1
         {
             ImgForgetLogin.Image = Image.FromFile("../../img/bannerForget.png");
             logoForgetLogin.Image = Image.FromFile("../../img/forgetUseLogin.png");
+            
         }
 
         private void ExitForms_Click(object sender, EventArgs e)
@@ -72,8 +73,9 @@ namespace HUYNHDE_DUAN1
             }                                                                                                           
         }
 
+
         #endregion
 
-
+       
     }
 }

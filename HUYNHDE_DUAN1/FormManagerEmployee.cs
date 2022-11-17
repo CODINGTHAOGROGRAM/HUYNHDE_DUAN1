@@ -16,5 +16,16 @@ namespace HUYNHDE_DUAN1
         {
             InitializeComponent();
         }
+
+        
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            formChildManagerEmployee ctrolEmploy = new formChildManagerEmployee();
+            FormMain fm = new FormMain();
+            ctrolEmploy.ShowDialog();
+            ctrolEmploy.MdiParent = fm;
+
+        }
     }
 }

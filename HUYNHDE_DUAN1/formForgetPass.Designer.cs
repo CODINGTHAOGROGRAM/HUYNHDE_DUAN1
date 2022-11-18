@@ -228,6 +228,7 @@
             this.Controls.Add(this.panelLinearGradient2);
             this.Controls.Add(this.panelLinearGradient1);
             this.Name = "formForgetPass";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "formForgetPass";
             this.Load += new System.EventHandler(this.formForgetPass_Load);
             this.panelLinearGradient2.ResumeLayout(false);

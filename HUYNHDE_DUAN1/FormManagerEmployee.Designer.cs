@@ -134,6 +134,7 @@
             this.btnAdd.Text = "Thêm";
             this.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnDelete
             // 
@@ -592,7 +593,7 @@
             this.ClientSize = new System.Drawing.Size(1268, 858);
             this.Controls.Add(this.panel3);
             this.Name = "FormManagerEmployee";
-            this.Text = "Quản lý nhân viên";
+            this.Text = "Quản lý thông tin các nhân viên";
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

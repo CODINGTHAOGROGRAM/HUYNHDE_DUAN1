@@ -88,6 +88,7 @@
             this.linkLabel2.TabIndex = 16;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Quên mật khẩu ?";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // btnExit
             // 
@@ -113,6 +114,7 @@
             this.btnSignin.TabIndex = 14;
             this.btnSignin.Text = "Đăng nhập";
             this.btnSignin.UseVisualStyleBackColor = false;
+            this.btnSignin.Click += new System.EventHandler(this.btnSignin_Click);
             // 
             // checkBox2
             // 
@@ -257,6 +259,7 @@
             this.Controls.Add(this.panelLinearGradient2);
             this.Controls.Add(this.panelLinearGradient1);
             this.Name = "formLoginGrogram";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "formLoginGrogram";
             this.Load += new System.EventHandler(this.formLoginGrogram_Load);
             this.panelLinearGradient2.ResumeLayout(false);

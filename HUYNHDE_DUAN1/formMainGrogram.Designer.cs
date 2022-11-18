@@ -74,7 +74,7 @@
             this.panel.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel.Location = new System.Drawing.Point(300, 30);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(1143, 31);
+            this.panel.Size = new System.Drawing.Size(1143, 50);
             this.panel.TabIndex = 3;
             // 
             // label1
@@ -83,7 +83,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.label1.Location = new System.Drawing.Point(45, 3);
+            this.label1.Location = new System.Drawing.Point(45, 10);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 25);
             this.label1.TabIndex = 1;
@@ -102,7 +102,7 @@
             this.fillIconButton.IconSize = 30;
             this.fillIconButton.Location = new System.Drawing.Point(0, 0);
             this.fillIconButton.Name = "fillIconButton";
-            this.fillIconButton.Size = new System.Drawing.Size(39, 31);
+            this.fillIconButton.Size = new System.Drawing.Size(39, 50);
             this.fillIconButton.TabIndex = 0;
             this.fillIconButton.UseVisualStyleBackColor = false;
             // 
@@ -136,11 +136,11 @@
             this.lbCongra.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbCongra.AutoSize = true;
             this.lbCongra.BackColor = System.Drawing.Color.Transparent;
-            this.lbCongra.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCongra.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCongra.ForeColor = System.Drawing.Color.White;
             this.lbCongra.Location = new System.Drawing.Point(337, 635);
             this.lbCongra.Name = "lbCongra";
-            this.lbCongra.Size = new System.Drawing.Size(79, 29);
+            this.lbCongra.Size = new System.Drawing.Size(93, 33);
             this.lbCongra.TabIndex = 7;
             this.lbCongra.Text = "label3";
             // 
@@ -149,11 +149,11 @@
             this.lbTime.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbTime.AutoSize = true;
             this.lbTime.BackColor = System.Drawing.Color.Transparent;
-            this.lbTime.Font = new System.Drawing.Font("Script MT Bold", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTime.Font = new System.Drawing.Font("Script MT Bold", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTime.ForeColor = System.Drawing.Color.White;
             this.lbTime.Location = new System.Drawing.Point(524, 545);
             this.lbTime.Name = "lbTime";
-            this.lbTime.Size = new System.Drawing.Size(161, 42);
+            this.lbTime.Size = new System.Drawing.Size(169, 44);
             this.lbTime.TabIndex = 6;
             this.lbTime.Text = "00:00:00\"";
             // 
@@ -162,11 +162,11 @@
             this.lbDate.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbDate.AutoSize = true;
             this.lbDate.BackColor = System.Drawing.Color.Transparent;
-            this.lbDate.Font = new System.Drawing.Font("Script MT Bold", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDate.Font = new System.Drawing.Font("Script MT Bold", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDate.ForeColor = System.Drawing.Color.White;
             this.lbDate.Location = new System.Drawing.Point(507, 470);
             this.lbDate.Name = "lbDate";
-            this.lbDate.Size = new System.Drawing.Size(224, 42);
+            this.lbDate.Size = new System.Drawing.Size(237, 44);
             this.lbDate.TabIndex = 5;
             this.lbDate.Text = "dd/MM/yyyy";
             // 
@@ -339,7 +339,6 @@
             this.pcLogoHome.TabIndex = 0;
             this.pcLogoHome.TabStop = false;
             this.pcLogoHome.Click += new System.EventHandler(this.pcLogoHome_Click);
-            this.pcLogoHome.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pcLogoHome_MouseDown);
             // 
             // panelLinearGradient2
             // 
@@ -357,12 +356,12 @@
             // 
             // btnMinimized
             // 
-            this.btnMinimized.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.btnMinimized.BackColor = System.Drawing.Color.Transparent;
             this.btnMinimized.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnMinimized.FlatAppearance.BorderSize = 0;
             this.btnMinimized.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimized.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMinimized.ForeColor = System.Drawing.Color.White;
+            this.btnMinimized.ForeColor = System.Drawing.Color.Transparent;
             this.btnMinimized.IconChar = FontAwesome.Sharp.IconChar.Minus;
             this.btnMinimized.IconColor = System.Drawing.Color.White;
             this.btnMinimized.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -376,14 +375,14 @@
             // 
             // btnMaximized
             // 
-            this.btnMaximized.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.btnMaximized.BackColor = System.Drawing.Color.Transparent;
             this.btnMaximized.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnMaximized.FlatAppearance.BorderSize = 0;
             this.btnMaximized.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMaximized.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMaximized.ForeColor = System.Drawing.Color.White;
+            this.btnMaximized.ForeColor = System.Drawing.Color.Transparent;
             this.btnMaximized.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnMaximized.IconColor = System.Drawing.Color.Black;
+            this.btnMaximized.IconColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnMaximized.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMaximized.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnMaximized.Location = new System.Drawing.Point(1377, 0);
@@ -397,12 +396,12 @@
             // 
             // btnEx
             // 
-            this.btnEx.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.btnEx.BackColor = System.Drawing.Color.Transparent;
             this.btnEx.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnEx.FlatAppearance.BorderSize = 0;
             this.btnEx.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEx.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEx.ForeColor = System.Drawing.Color.White;
+            this.btnEx.ForeColor = System.Drawing.Color.Transparent;
             this.btnEx.IconChar = FontAwesome.Sharp.IconChar.X;
             this.btnEx.IconColor = System.Drawing.Color.White;
             this.btnEx.IconFont = FontAwesome.Sharp.IconFont.Auto;

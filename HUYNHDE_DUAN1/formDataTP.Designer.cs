@@ -41,6 +41,12 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.label18 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnUpGrade = new FontAwesome.Sharp.IconButton();
+            this.btnExports = new FontAwesome.Sharp.IconButton();
+            this.btnAdd = new FontAwesome.Sharp.IconButton();
+            this.btnDelete = new FontAwesome.Sharp.IconButton();
+            this.btnSave = new FontAwesome.Sharp.IconButton();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.textBox14 = new System.Windows.Forms.TextBox();
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.textBox12 = new System.Windows.Forms.TextBox();
@@ -73,12 +79,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnUpGrade = new FontAwesome.Sharp.IconButton();
-            this.btnExports = new FontAwesome.Sharp.IconButton();
-            this.btnAdd = new FontAwesome.Sharp.IconButton();
-            this.btnDelete = new FontAwesome.Sharp.IconButton();
-            this.btnSave = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -280,8 +280,121 @@
             this.panel4.Size = new System.Drawing.Size(1284, 660);
             this.panel4.TabIndex = 3;
             // 
+            // btnUpGrade
+            // 
+            this.btnUpGrade.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnUpGrade.FlatAppearance.BorderSize = 4;
+            this.btnUpGrade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpGrade.Font = new System.Drawing.Font("Noto Serif", 12F);
+            this.btnUpGrade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.btnUpGrade.IconChar = FontAwesome.Sharp.IconChar.Download;
+            this.btnUpGrade.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.btnUpGrade.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnUpGrade.IconSize = 20;
+            this.btnUpGrade.Location = new System.Drawing.Point(1133, 38);
+            this.btnUpGrade.Name = "btnUpGrade";
+            this.btnUpGrade.Size = new System.Drawing.Size(119, 45);
+            this.btnUpGrade.TabIndex = 128;
+            this.btnUpGrade.Text = "Cập nhật";
+            this.btnUpGrade.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnUpGrade.UseVisualStyleBackColor = true;
+            // 
+            // btnExports
+            // 
+            this.btnExports.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExports.FlatAppearance.BorderSize = 4;
+            this.btnExports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExports.Font = new System.Drawing.Font("Noto Serif", 12F);
+            this.btnExports.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.btnExports.IconChar = FontAwesome.Sharp.IconChar.Upload;
+            this.btnExports.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.btnExports.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnExports.IconSize = 20;
+            this.btnExports.Location = new System.Drawing.Point(1133, 378);
+            this.btnExports.Name = "btnExports";
+            this.btnExports.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnExports.Size = new System.Drawing.Size(119, 45);
+            this.btnExports.TabIndex = 129;
+            this.btnExports.Text = "Xuất";
+            this.btnExports.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnExports.UseVisualStyleBackColor = true;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAdd.FlatAppearance.BorderSize = 4;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Font = new System.Drawing.Font("Noto Serif", 12F);
+            this.btnAdd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.btnAdd.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            this.btnAdd.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.btnAdd.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAdd.IconSize = 20;
+            this.btnAdd.Location = new System.Drawing.Point(1133, 123);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnAdd.Size = new System.Drawing.Size(119, 45);
+            this.btnAdd.TabIndex = 127;
+            this.btnAdd.Text = "Thêm";
+            this.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDelete.FlatAppearance.BorderSize = 4;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("Noto Serif", 12F);
+            this.btnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.btnDelete.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
+            this.btnDelete.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.btnDelete.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnDelete.IconSize = 20;
+            this.btnDelete.Location = new System.Drawing.Point(1133, 293);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnDelete.Size = new System.Drawing.Size(119, 45);
+            this.btnDelete.TabIndex = 126;
+            this.btnDelete.Text = "Xóa";
+            this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDelete.UseVisualStyleBackColor = true;
+            // 
+            // btnSave
+            // 
+            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSave.FlatAppearance.BorderSize = 4;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Noto Serif", 12F);
+            this.btnSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.btnSave.IconChar = FontAwesome.Sharp.IconChar.FloppyDisk;
+            this.btnSave.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.btnSave.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSave.IconSize = 20;
+            this.btnSave.Location = new System.Drawing.Point(1133, 208);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnSave.Size = new System.Drawing.Size(119, 45);
+            this.btnSave.TabIndex = 125;
+            this.btnSave.Text = "Lưu";
+            this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSave.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 457);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(1284, 251);
+            this.dataGridView1.TabIndex = 124;
+            // 
             // textBox14
             // 
+            this.textBox14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox14.BackColor = System.Drawing.Color.White;
             this.textBox14.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox14.Font = new System.Drawing.Font("Noto Serif", 12F);
@@ -293,6 +406,8 @@
             // 
             // textBox13
             // 
+            this.textBox13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox13.BackColor = System.Drawing.Color.White;
             this.textBox13.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox13.Font = new System.Drawing.Font("Noto Serif", 12F);
@@ -304,6 +419,8 @@
             // 
             // textBox12
             // 
+            this.textBox12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox12.BackColor = System.Drawing.Color.White;
             this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox12.Font = new System.Drawing.Font("Noto Serif", 12F);
@@ -315,6 +432,8 @@
             // 
             // textBox11
             // 
+            this.textBox11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox11.BackColor = System.Drawing.Color.White;
             this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox11.Font = new System.Drawing.Font("Noto Serif", 12F);
@@ -326,6 +445,8 @@
             // 
             // textBox10
             // 
+            this.textBox10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox10.BackColor = System.Drawing.Color.White;
             this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox10.Font = new System.Drawing.Font("Noto Serif", 12F);
@@ -337,6 +458,8 @@
             // 
             // textBox9
             // 
+            this.textBox9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox9.BackColor = System.Drawing.Color.White;
             this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox9.Font = new System.Drawing.Font("Noto Serif", 12F);
@@ -403,6 +526,8 @@
             // 
             // panel18
             // 
+            this.panel18.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
             this.panel18.Location = new System.Drawing.Point(866, 294);
             this.panel18.Name = "panel18";
@@ -411,6 +536,8 @@
             // 
             // panel17
             // 
+            this.panel17.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
             this.panel17.Location = new System.Drawing.Point(866, 230);
             this.panel17.Name = "panel17";
@@ -451,6 +578,8 @@
             // 
             // panel10
             // 
+            this.panel10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
             this.panel10.Location = new System.Drawing.Point(740, 38);
             this.panel10.Name = "panel10";
@@ -459,6 +588,8 @@
             // 
             // panel9
             // 
+            this.panel9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
             this.panel9.Location = new System.Drawing.Point(870, 166);
             this.panel9.Name = "panel9";
@@ -475,6 +606,8 @@
             // 
             // panel7
             // 
+            this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
             this.panel7.Location = new System.Drawing.Point(740, 102);
             this.panel7.Name = "panel7";
@@ -483,6 +616,8 @@
             // 
             // panel6
             // 
+            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
             this.panel6.Location = new System.Drawing.Point(866, 358);
             this.panel6.Name = "panel6";
@@ -599,112 +734,6 @@
             this.label1.TabIndex = 95;
             this.label1.Text = "Tổng GTGD thỏa thuận lô chẵn:";
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 457);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1284, 251);
-            this.dataGridView1.TabIndex = 124;
-            // 
-            // btnUpGrade
-            // 
-            this.btnUpGrade.FlatAppearance.BorderSize = 4;
-            this.btnUpGrade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpGrade.Font = new System.Drawing.Font("Noto Serif", 12F);
-            this.btnUpGrade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.btnUpGrade.IconChar = FontAwesome.Sharp.IconChar.Download;
-            this.btnUpGrade.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.btnUpGrade.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnUpGrade.IconSize = 20;
-            this.btnUpGrade.Location = new System.Drawing.Point(1133, 38);
-            this.btnUpGrade.Name = "btnUpGrade";
-            this.btnUpGrade.Size = new System.Drawing.Size(119, 45);
-            this.btnUpGrade.TabIndex = 128;
-            this.btnUpGrade.Text = "Cập nhật";
-            this.btnUpGrade.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnUpGrade.UseVisualStyleBackColor = true;
-            // 
-            // btnExports
-            // 
-            this.btnExports.FlatAppearance.BorderSize = 4;
-            this.btnExports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExports.Font = new System.Drawing.Font("Noto Serif", 12F);
-            this.btnExports.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.btnExports.IconChar = FontAwesome.Sharp.IconChar.Upload;
-            this.btnExports.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.btnExports.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnExports.IconSize = 20;
-            this.btnExports.Location = new System.Drawing.Point(1133, 378);
-            this.btnExports.Name = "btnExports";
-            this.btnExports.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnExports.Size = new System.Drawing.Size(119, 45);
-            this.btnExports.TabIndex = 129;
-            this.btnExports.Text = "Xuất";
-            this.btnExports.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnExports.UseVisualStyleBackColor = true;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.FlatAppearance.BorderSize = 4;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Font = new System.Drawing.Font("Noto Serif", 12F);
-            this.btnAdd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.btnAdd.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
-            this.btnAdd.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.btnAdd.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAdd.IconSize = 20;
-            this.btnAdd.Location = new System.Drawing.Point(1133, 123);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnAdd.Size = new System.Drawing.Size(119, 45);
-            this.btnAdd.TabIndex = 127;
-            this.btnAdd.Text = "Thêm";
-            this.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.FlatAppearance.BorderSize = 4;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Font = new System.Drawing.Font("Noto Serif", 12F);
-            this.btnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.btnDelete.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
-            this.btnDelete.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.btnDelete.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnDelete.IconSize = 20;
-            this.btnDelete.Location = new System.Drawing.Point(1133, 293);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnDelete.Size = new System.Drawing.Size(119, 45);
-            this.btnDelete.TabIndex = 126;
-            this.btnDelete.Text = "Xóa";
-            this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDelete.UseVisualStyleBackColor = true;
-            // 
-            // btnSave
-            // 
-            this.btnSave.FlatAppearance.BorderSize = 4;
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Noto Serif", 12F);
-            this.btnSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.btnSave.IconChar = FontAwesome.Sharp.IconChar.FloppyDisk;
-            this.btnSave.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.btnSave.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSave.IconSize = 20;
-            this.btnSave.Location = new System.Drawing.Point(1133, 208);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnSave.Size = new System.Drawing.Size(119, 45);
-            this.btnSave.TabIndex = 125;
-            this.btnSave.Text = "Lưu";
-            this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSave.UseVisualStyleBackColor = true;
-            // 
             // formDataTP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -713,7 +742,7 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
             this.Name = "formDataTP";
-            this.Text = "Dữ liệu GDTP";
+            this.Text = "Quản lý dữ liệu giao dịch trái phiếu";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel4.ResumeLayout(false);

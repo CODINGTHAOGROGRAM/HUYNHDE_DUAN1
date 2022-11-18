@@ -84,19 +84,19 @@
             this.panelControlForm.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControlForm.Location = new System.Drawing.Point(0, 0);
             this.panelControlForm.Name = "panelControlForm";
-            this.panelControlForm.Size = new System.Drawing.Size(1100, 26);
+            this.panelControlForm.Size = new System.Drawing.Size(1100, 50);
             this.panelControlForm.TabIndex = 99;
+            this.panelControlForm.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelControlForm_MouseDown);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label2.Font = new System.Drawing.Font("Noto Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Noto Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Location = new System.Drawing.Point(3, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(317, 22);
+            this.label2.Size = new System.Drawing.Size(401, 28);
             this.label2.TabIndex = 2;
             this.label2.Text = "Thêm dữ liệu giao dịch biến động giá";
             // 
@@ -105,7 +105,7 @@
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
             this.panel9.Controls.Add(this.label5);
             this.panel9.Controls.Add(this.label4);
-            this.panel9.Location = new System.Drawing.Point(577, 99);
+            this.panel9.Location = new System.Drawing.Point(570, 151);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(57, 73);
             this.panel9.TabIndex = 169;
@@ -135,88 +135,88 @@
             // 
             // textBox14
             // 
-            this.textBox14.BackColor = System.Drawing.Color.White;
+            this.textBox14.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.textBox14.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox14.Font = new System.Drawing.Font("Noto Serif", 12F);
             this.textBox14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox14.Location = new System.Drawing.Point(279, 90);
+            this.textBox14.Location = new System.Drawing.Point(272, 142);
             this.textBox14.Name = "textBox14";
             this.textBox14.Size = new System.Drawing.Size(235, 22);
             this.textBox14.TabIndex = 168;
             // 
             // textBox13
             // 
-            this.textBox13.BackColor = System.Drawing.Color.White;
+            this.textBox13.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.textBox13.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox13.Font = new System.Drawing.Font("Noto Serif", 12F);
             this.textBox13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox13.Location = new System.Drawing.Point(279, 139);
+            this.textBox13.Location = new System.Drawing.Point(272, 191);
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(235, 22);
             this.textBox13.TabIndex = 167;
             // 
             // textBox12
             // 
-            this.textBox12.BackColor = System.Drawing.Color.White;
+            this.textBox12.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox12.Font = new System.Drawing.Font("Noto Serif", 12F);
             this.textBox12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox12.Location = new System.Drawing.Point(279, 186);
+            this.textBox12.Location = new System.Drawing.Point(272, 238);
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(235, 22);
             this.textBox12.TabIndex = 166;
             // 
             // textBox11
             // 
-            this.textBox11.BackColor = System.Drawing.Color.White;
+            this.textBox11.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox11.Font = new System.Drawing.Font("Noto Serif", 12F);
             this.textBox11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox11.Location = new System.Drawing.Point(279, 233);
+            this.textBox11.Location = new System.Drawing.Point(272, 285);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(235, 22);
             this.textBox11.TabIndex = 165;
             // 
             // textBox8
             // 
-            this.textBox8.BackColor = System.Drawing.Color.White;
+            this.textBox8.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox8.Font = new System.Drawing.Font("Noto Serif", 12F);
             this.textBox8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox8.Location = new System.Drawing.Point(279, 287);
+            this.textBox8.Location = new System.Drawing.Point(272, 339);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(235, 22);
             this.textBox8.TabIndex = 164;
             // 
             // textBox7
             // 
-            this.textBox7.BackColor = System.Drawing.Color.White;
+            this.textBox7.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox7.Font = new System.Drawing.Font("Noto Serif", 12F);
             this.textBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox7.Location = new System.Drawing.Point(279, 336);
+            this.textBox7.Location = new System.Drawing.Point(272, 388);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(235, 22);
             this.textBox7.TabIndex = 163;
             // 
             // textBox6
             // 
-            this.textBox6.BackColor = System.Drawing.Color.White;
+            this.textBox6.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox6.Font = new System.Drawing.Font("Noto Serif", 12F);
             this.textBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox6.Location = new System.Drawing.Point(279, 385);
+            this.textBox6.Location = new System.Drawing.Point(272, 437);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(235, 22);
             this.textBox6.TabIndex = 162;
             // 
             // textBox5
             // 
-            this.textBox5.BackColor = System.Drawing.Color.White;
+            this.textBox5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox5.Font = new System.Drawing.Font("Noto Serif", 12F);
             this.textBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox5.Location = new System.Drawing.Point(840, 140);
+            this.textBox5.Location = new System.Drawing.Point(833, 192);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(213, 22);
             this.textBox5.TabIndex = 161;
@@ -224,7 +224,7 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.panel6.Location = new System.Drawing.Point(840, 168);
+            this.panel6.Location = new System.Drawing.Point(833, 220);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(213, 2);
             this.panel6.TabIndex = 160;
@@ -232,7 +232,7 @@
             // panel23
             // 
             this.panel23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.panel23.Location = new System.Drawing.Point(279, 364);
+            this.panel23.Location = new System.Drawing.Point(272, 416);
             this.panel23.Name = "panel23";
             this.panel23.Size = new System.Drawing.Size(235, 2);
             this.panel23.TabIndex = 143;
@@ -240,7 +240,7 @@
             // panel22
             // 
             this.panel22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.panel22.Location = new System.Drawing.Point(279, 413);
+            this.panel22.Location = new System.Drawing.Point(272, 465);
             this.panel22.Name = "panel22";
             this.panel22.Size = new System.Drawing.Size(235, 2);
             this.panel22.TabIndex = 144;
@@ -248,7 +248,7 @@
             // panel21
             // 
             this.panel21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.panel21.Location = new System.Drawing.Point(279, 315);
+            this.panel21.Location = new System.Drawing.Point(272, 367);
             this.panel21.Name = "panel21";
             this.panel21.Size = new System.Drawing.Size(235, 2);
             this.panel21.TabIndex = 145;
@@ -256,7 +256,7 @@
             // panel20
             // 
             this.panel20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.panel20.Location = new System.Drawing.Point(279, 261);
+            this.panel20.Location = new System.Drawing.Point(272, 313);
             this.panel20.Name = "panel20";
             this.panel20.Size = new System.Drawing.Size(235, 2);
             this.panel20.TabIndex = 146;
@@ -265,7 +265,7 @@
             // 
             this.panel19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
             this.panel19.Controls.Add(this.richTextBox1);
-            this.panel19.Location = new System.Drawing.Point(48, 99);
+            this.panel19.Location = new System.Drawing.Point(41, 151);
             this.panel19.Name = "panel19";
             this.panel19.Size = new System.Drawing.Size(76, 318);
             this.panel19.TabIndex = 159;
@@ -287,7 +287,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Noto Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.label6.Location = new System.Drawing.Point(136, 99);
+            this.label6.Location = new System.Drawing.Point(129, 151);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(109, 22);
             this.label6.TabIndex = 147;
@@ -296,7 +296,7 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.panel8.Location = new System.Drawing.Point(279, 167);
+            this.panel8.Location = new System.Drawing.Point(272, 219);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(235, 2);
             this.panel8.TabIndex = 141;
@@ -304,7 +304,7 @@
             // panel13
             // 
             this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.panel13.Location = new System.Drawing.Point(279, 118);
+            this.panel13.Location = new System.Drawing.Point(272, 170);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(235, 2);
             this.panel13.TabIndex = 142;
@@ -312,40 +312,40 @@
             // panel14
             // 
             this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.panel14.Location = new System.Drawing.Point(279, 214);
+            this.panel14.Location = new System.Drawing.Point(272, 266);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(235, 2);
             this.panel14.TabIndex = 139;
             // 
             // textBox10
             // 
-            this.textBox10.BackColor = System.Drawing.Color.White;
+            this.textBox10.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox10.Font = new System.Drawing.Font("Noto Serif", 12F);
             this.textBox10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox10.Location = new System.Drawing.Point(840, 90);
+            this.textBox10.Location = new System.Drawing.Point(833, 142);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(213, 22);
             this.textBox10.TabIndex = 158;
             // 
             // textBox9
             // 
-            this.textBox9.BackColor = System.Drawing.Color.White;
+            this.textBox9.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox9.Font = new System.Drawing.Font("Noto Serif", 12F);
             this.textBox9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox9.Location = new System.Drawing.Point(699, 44);
+            this.textBox9.Location = new System.Drawing.Point(692, 96);
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(330, 22);
+            this.textBox9.Size = new System.Drawing.Size(354, 22);
             this.textBox9.TabIndex = 157;
             // 
             // textBox4
             // 
-            this.textBox4.BackColor = System.Drawing.Color.White;
+            this.textBox4.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox4.Font = new System.Drawing.Font("Noto Serif", 12F);
             this.textBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox4.Location = new System.Drawing.Point(167, 44);
+            this.textBox4.Location = new System.Drawing.Point(160, 96);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(347, 22);
             this.textBox4.TabIndex = 156;
@@ -353,7 +353,7 @@
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.panel12.Location = new System.Drawing.Point(167, 69);
+            this.panel12.Location = new System.Drawing.Point(160, 121);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(347, 2);
             this.panel12.TabIndex = 138;
@@ -361,7 +361,7 @@
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.panel10.Location = new System.Drawing.Point(699, 69);
+            this.panel10.Location = new System.Drawing.Point(692, 121);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(354, 2);
             this.panel10.TabIndex = 137;
@@ -369,7 +369,7 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.panel7.Location = new System.Drawing.Point(840, 118);
+            this.panel7.Location = new System.Drawing.Point(833, 170);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(213, 2);
             this.panel7.TabIndex = 136;
@@ -379,7 +379,7 @@
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Noto Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.label19.Location = new System.Drawing.Point(136, 246);
+            this.label19.Location = new System.Drawing.Point(129, 298);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(73, 22);
             this.label19.TabIndex = 155;
@@ -390,7 +390,7 @@
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Noto Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.label18.Location = new System.Drawing.Point(48, 50);
+            this.label18.Location = new System.Drawing.Point(41, 102);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(65, 22);
             this.label18.TabIndex = 154;
@@ -401,7 +401,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Noto Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.label14.Location = new System.Drawing.Point(136, 148);
+            this.label14.Location = new System.Drawing.Point(129, 200);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(54, 22);
             this.label14.TabIndex = 153;
@@ -412,7 +412,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Noto Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.label13.Location = new System.Drawing.Point(136, 295);
+            this.label13.Location = new System.Drawing.Point(129, 347);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(89, 22);
             this.label13.TabIndex = 152;
@@ -423,7 +423,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Noto Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.label10.Location = new System.Drawing.Point(136, 344);
+            this.label10.Location = new System.Drawing.Point(129, 396);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(86, 22);
             this.label10.TabIndex = 151;
@@ -434,7 +434,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Noto Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.label9.Location = new System.Drawing.Point(646, 148);
+            this.label9.Location = new System.Drawing.Point(639, 200);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(134, 22);
             this.label9.TabIndex = 150;
@@ -445,7 +445,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Noto Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.label8.Location = new System.Drawing.Point(136, 197);
+            this.label8.Location = new System.Drawing.Point(129, 249);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(45, 22);
             this.label8.TabIndex = 149;
@@ -456,7 +456,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Noto Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.label7.Location = new System.Drawing.Point(136, 393);
+            this.label7.Location = new System.Drawing.Point(129, 445);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(98, 22);
             this.label7.TabIndex = 148;
@@ -467,7 +467,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Noto Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.label3.Location = new System.Drawing.Point(646, 99);
+            this.label3.Location = new System.Drawing.Point(639, 151);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(148, 22);
             this.label3.TabIndex = 140;
@@ -478,7 +478,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Noto Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.label1.Location = new System.Drawing.Point(577, 50);
+            this.label1.Location = new System.Drawing.Point(570, 102);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 22);
             this.label1.TabIndex = 135;
@@ -495,7 +495,7 @@
             this.btnAdd.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
             this.btnAdd.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAdd.IconSize = 20;
-            this.btnAdd.Location = new System.Drawing.Point(595, 370);
+            this.btnAdd.Location = new System.Drawing.Point(588, 422);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnAdd.Size = new System.Drawing.Size(119, 45);
@@ -515,7 +515,7 @@
             this.btnClose.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClose.IconSize = 20;
-            this.btnClose.Location = new System.Drawing.Point(933, 370);
+            this.btnClose.Location = new System.Drawing.Point(927, 422);
             this.btnClose.Name = "btnClose";
             this.btnClose.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnClose.Size = new System.Drawing.Size(119, 45);
@@ -536,7 +536,7 @@
             this.btnRefesh.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
             this.btnRefesh.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnRefesh.IconSize = 20;
-            this.btnRefesh.Location = new System.Drawing.Point(764, 370);
+            this.btnRefesh.Location = new System.Drawing.Point(757, 422);
             this.btnRefesh.Name = "btnRefesh";
             this.btnRefesh.Size = new System.Drawing.Size(119, 45);
             this.btnRefesh.TabIndex = 170;
@@ -548,8 +548,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1100, 461);
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.ClientSize = new System.Drawing.Size(1100, 548);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnRefesh);
@@ -590,6 +590,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panelControlForm);
             this.Name = "formChildGDBDG";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "formChildGDBDG";
             this.panelControlForm.ResumeLayout(false);
             this.panelControlForm.PerformLayout();

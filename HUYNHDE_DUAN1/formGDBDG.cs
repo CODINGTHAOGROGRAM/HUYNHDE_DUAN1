@@ -9,6 +9,12 @@ namespace HUYNHDE_DUAN1
             InitializeComponent();
         }
 
+        private void btnAdd_Click(object sender, System.EventArgs e)
+        {
+            formChildGDBDG dg = new formChildGDBDG();
+            dg.ShowDialog();
+        }
+
         
     }
 }

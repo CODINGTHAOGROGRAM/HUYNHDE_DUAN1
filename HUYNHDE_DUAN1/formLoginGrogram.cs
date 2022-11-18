@@ -73,8 +73,31 @@ namespace HUYNHDE_DUAN1
 
             }
         }
+
         #endregion
 
-        
+        private void btnSignin_Click(object sender, EventArgs e)
+        {
+            if(txtUsername.Text == "xinchao" && txtPassword.Text == "hello")
+            {
+                FormMain fm = new FormMain();
+                fm.Show();
+                this.Hide();
+            }
+            else
+            {
+                formMessage ms  = new formMessage();
+                ms.ShowDialog();
+
+            }
+
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            formForgetPass fg = new formForgetPass();
+            fg.Show();
+            this.Hide();
+        }
     }
 }

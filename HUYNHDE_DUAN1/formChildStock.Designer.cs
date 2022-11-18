@@ -88,25 +88,25 @@
             this.panelLinearGradient1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLinearGradient1.Location = new System.Drawing.Point(0, 0);
             this.panelLinearGradient1.Name = "panelLinearGradient1";
-            this.panelLinearGradient1.Size = new System.Drawing.Size(1000, 30);
+            this.panelLinearGradient1.Size = new System.Drawing.Size(1040, 50);
             this.panelLinearGradient1.TabIndex = 0;
+            this.panelLinearGradient1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelLinearGradient1_MouseDown);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label2.Font = new System.Drawing.Font("Noto Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Noto Serif", 16F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Location = new System.Drawing.Point(3, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(217, 22);
+            this.label2.Size = new System.Drawing.Size(298, 30);
             this.label2.TabIndex = 3;
             this.label2.Text = "Thêm hồ sơ chứng khoán";
             // 
             // textBox15
             // 
-            this.textBox15.BackColor = System.Drawing.Color.White;
+            this.textBox15.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.textBox15.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox15.Font = new System.Drawing.Font("Noto Serif", 12F);
             this.textBox15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
@@ -117,7 +117,7 @@
             // 
             // textBox14
             // 
-            this.textBox14.BackColor = System.Drawing.Color.White;
+            this.textBox14.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.textBox14.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox14.Font = new System.Drawing.Font("Noto Serif", 12F);
             this.textBox14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
@@ -128,7 +128,7 @@
             // 
             // textBox13
             // 
-            this.textBox13.BackColor = System.Drawing.Color.White;
+            this.textBox13.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.textBox13.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox13.Font = new System.Drawing.Font("Noto Serif", 12F);
             this.textBox13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
@@ -139,7 +139,7 @@
             // 
             // textBox12
             // 
-            this.textBox12.BackColor = System.Drawing.Color.White;
+            this.textBox12.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox12.Font = new System.Drawing.Font("Noto Serif", 12F);
             this.textBox12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
@@ -150,7 +150,7 @@
             // 
             // textBox11
             // 
-            this.textBox11.BackColor = System.Drawing.Color.White;
+            this.textBox11.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox11.Font = new System.Drawing.Font("Noto Serif", 12F);
             this.textBox11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
@@ -161,7 +161,7 @@
             // 
             // textBox10
             // 
-            this.textBox10.BackColor = System.Drawing.Color.White;
+            this.textBox10.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox10.Font = new System.Drawing.Font("Noto Serif", 12F);
             this.textBox10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
@@ -172,7 +172,7 @@
             // 
             // textBox9
             // 
-            this.textBox9.BackColor = System.Drawing.Color.White;
+            this.textBox9.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox9.Font = new System.Drawing.Font("Noto Serif", 12F);
             this.textBox9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
@@ -183,7 +183,7 @@
             // 
             // textBox8
             // 
-            this.textBox8.BackColor = System.Drawing.Color.White;
+            this.textBox8.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox8.Font = new System.Drawing.Font("Noto Serif", 12F);
             this.textBox8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
@@ -194,7 +194,7 @@
             // 
             // textBox7
             // 
-            this.textBox7.BackColor = System.Drawing.Color.White;
+            this.textBox7.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox7.Font = new System.Drawing.Font("Noto Serif", 12F);
             this.textBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
@@ -205,7 +205,7 @@
             // 
             // textBox6
             // 
-            this.textBox6.BackColor = System.Drawing.Color.White;
+            this.textBox6.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox6.Font = new System.Drawing.Font("Noto Serif", 12F);
             this.textBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
@@ -216,7 +216,7 @@
             // 
             // textBox5
             // 
-            this.textBox5.BackColor = System.Drawing.Color.White;
+            this.textBox5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox5.Font = new System.Drawing.Font("Noto Serif", 12F);
             this.textBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
@@ -227,7 +227,7 @@
             // 
             // textBox4
             // 
-            this.textBox4.BackColor = System.Drawing.Color.White;
+            this.textBox4.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox4.Font = new System.Drawing.Font("Noto Serif", 12F);
             this.textBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
@@ -238,7 +238,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.BackColor = System.Drawing.Color.White;
+            this.textBox3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox3.Font = new System.Drawing.Font("Noto Serif", 12F);
             this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
@@ -249,7 +249,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.BackColor = System.Drawing.Color.White;
+            this.textBox2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Font = new System.Drawing.Font("Noto Serif", 12F);
             this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
@@ -268,7 +268,7 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.BackColor = System.Drawing.Color.White;
+            this.richTextBox1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.richTextBox1.Font = new System.Drawing.Font("Noto Serif", 12F);
             this.richTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
@@ -558,7 +558,7 @@
             this.btnAdd.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
             this.btnAdd.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAdd.IconSize = 20;
-            this.btnAdd.Location = new System.Drawing.Point(271, 687);
+            this.btnAdd.Location = new System.Drawing.Point(311, 687);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnAdd.Size = new System.Drawing.Size(119, 45);
@@ -578,7 +578,7 @@
             this.btnClose.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClose.IconSize = 20;
-            this.btnClose.Location = new System.Drawing.Point(609, 687);
+            this.btnClose.Location = new System.Drawing.Point(629, 687);
             this.btnClose.Name = "btnClose";
             this.btnClose.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnClose.Size = new System.Drawing.Size(119, 45);
@@ -599,7 +599,7 @@
             this.btnRefesh.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
             this.btnRefesh.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnRefesh.IconSize = 20;
-            this.btnRefesh.Location = new System.Drawing.Point(440, 687);
+            this.btnRefesh.Location = new System.Drawing.Point(480, 687);
             this.btnRefesh.Name = "btnRefesh";
             this.btnRefesh.Size = new System.Drawing.Size(119, 45);
             this.btnRefesh.TabIndex = 165;
@@ -611,8 +611,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1000, 761);
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.ClientSize = new System.Drawing.Size(1040, 761);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnRefesh);
@@ -662,6 +662,7 @@
             this.Controls.Add(this.label11);
             this.Controls.Add(this.panelLinearGradient1);
             this.Name = "formChildStock";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "formChildStock";
             this.panelLinearGradient1.ResumeLayout(false);
             this.panelLinearGradient1.PerformLayout();

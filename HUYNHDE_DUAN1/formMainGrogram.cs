@@ -21,7 +21,7 @@ namespace HUYNHDE_DUAN1
         public FormMain()
         {
             InitializeComponent();
-            this.TopMost = true;
+            //  this.TopMost = true;
             this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
             //opacity
@@ -60,19 +60,7 @@ namespace HUYNHDE_DUAN1
                 }
             }
         }
-        private void pcLogoHome_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                ReleaseCapture();
-                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
 
-                if (this.WindowState == FormWindowState.Normal)
-                {
-                    btnMaximized.Text = "☐";
-                }
-            }
-        }
         #endregion
 
 
@@ -94,13 +82,13 @@ namespace HUYNHDE_DUAN1
                 DisableBtn();
                 #region
                 currentBtn = (IconButton)btnsender;
-                currentBtn.BackColor = Color.FromArgb(47,167,204);
+                currentBtn.BackColor = Color.FromArgb(47, 167, 204);
                 currentBtn.ForeColor = color;
                 currentBtn.TextAlign = ContentAlignment.MiddleCenter;
                 currentBtn.IconColor = color;
                 currentBtn.TextImageRelation = TextImageRelation.TextBeforeImage;
                 currentBtn.ImageAlign = ContentAlignment.MiddleRight;
-               
+
                 // left border btn
                 leftBorderBtn.BackColor = color;
                 leftBorderBtn.Location = new Point(0, currentBtn.Location.Y);
@@ -243,6 +231,5 @@ namespace HUYNHDE_DUAN1
             Application.Exit();
         }
 
-        
     }
 }

@@ -8,5 +8,7 @@ namespace HUYNHDE_DUAN1
         {
             InitializeComponent();
         }
+
+        
     }
 }

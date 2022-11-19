@@ -18,10 +18,11 @@ namespace HUYNHDE_DUAN1
         private IconButton currentBtn;
         private Panel leftBorderBtn;
         private Form ChildFormCurrent;
+
         public FormMain()
         {
             InitializeComponent();
-            //  this.TopMost = true;
+           
             this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
             //opacity
@@ -30,6 +31,10 @@ namespace HUYNHDE_DUAN1
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(5, 100);
             pnControlButtons.Controls.Add(leftBorderBtn);
+
+
+            ///
+
 
         }
 

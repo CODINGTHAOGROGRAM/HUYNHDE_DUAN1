@@ -9,12 +9,10 @@ namespace HUYNHDE_DUAN1
             InitializeComponent();
         }
 
-        private void btnAdd_Click(object sender, System.EventArgs e)
+        private void btnAdd_Click_1(object sender, System.EventArgs e)
         {
             formChildDataTP tp = new formChildDataTP();
             tp.ShowDialog();
         }
-
-        
     }
 }

@@ -20,7 +20,7 @@ namespace HUYNHDE_DUAN1
         private void btnAdd_Click(object sender, EventArgs e)
         {
             FormMain main = new FormMain();
-            formChildManagerEmployee mf= new formChildManagerEmployee();
+            formChildManagerEmployee mf = new formChildManagerEmployee();
             main.Opacity = 70;
             mf.ShowDialog();
         }

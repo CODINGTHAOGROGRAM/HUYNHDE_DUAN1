@@ -14,7 +14,5 @@ namespace HUYNHDE_DUAN1
             formChildGDBDG dg = new formChildGDBDG();
             dg.ShowDialog();
         }
-
-        
     }
 }

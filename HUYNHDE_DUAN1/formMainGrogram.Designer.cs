@@ -137,7 +137,7 @@
             this.lbCongra.AutoSize = true;
             this.lbCongra.BackColor = System.Drawing.Color.Transparent;
             this.lbCongra.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCongra.ForeColor = System.Drawing.Color.White;
+            this.lbCongra.ForeColor = System.Drawing.Color.Transparent;
             this.lbCongra.Location = new System.Drawing.Point(337, 635);
             this.lbCongra.Name = "lbCongra";
             this.lbCongra.Size = new System.Drawing.Size(93, 33);
@@ -150,7 +150,7 @@
             this.lbTime.AutoSize = true;
             this.lbTime.BackColor = System.Drawing.Color.Transparent;
             this.lbTime.Font = new System.Drawing.Font("Script MT Bold", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTime.ForeColor = System.Drawing.Color.White;
+            this.lbTime.ForeColor = System.Drawing.Color.Transparent;
             this.lbTime.Location = new System.Drawing.Point(524, 545);
             this.lbTime.Name = "lbTime";
             this.lbTime.Size = new System.Drawing.Size(169, 44);
@@ -163,7 +163,7 @@
             this.lbDate.AutoSize = true;
             this.lbDate.BackColor = System.Drawing.Color.Transparent;
             this.lbDate.Font = new System.Drawing.Font("Script MT Bold", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDate.ForeColor = System.Drawing.Color.White;
+            this.lbDate.ForeColor = System.Drawing.Color.Transparent;
             this.lbDate.Location = new System.Drawing.Point(507, 470);
             this.lbDate.Name = "lbDate";
             this.lbDate.Size = new System.Drawing.Size(237, 44);

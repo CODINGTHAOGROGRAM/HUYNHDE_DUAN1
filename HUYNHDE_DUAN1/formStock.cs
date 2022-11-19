@@ -22,5 +22,7 @@ namespace HUYNHDE_DUAN1
             formChildStock ct = new formChildStock();   
             ct.ShowDialog();
         }
+
+        
     }
 }

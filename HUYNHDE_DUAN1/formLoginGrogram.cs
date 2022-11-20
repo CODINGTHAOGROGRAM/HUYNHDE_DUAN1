@@ -99,5 +99,21 @@ namespace HUYNHDE_DUAN1
             fg.Show();
             this.Hide();
         }
+
+        private void txtUsername_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar.Equals(Convert.ToChar(13)))
+            {
+                btnSignin_Click(sender, e);
+            }
+        }
+
+        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar.Equals(Convert.ToChar(13)))
+            {
+                btnSignin_Click(sender, e);
+            }
+        }
     }
 }

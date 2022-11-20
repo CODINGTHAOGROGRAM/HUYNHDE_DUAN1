@@ -219,6 +219,7 @@
     <Resource Include="img\login_bg.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="img\Group 2.png" />
     <Content Include="img\bannerForget.png" />
     <Content Include="img\forgetUseLogin.png" />
     <Content Include="img\LogoTeamDisplay.png" />

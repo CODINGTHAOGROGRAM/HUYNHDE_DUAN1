@@ -56,10 +56,11 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.circularPictureBox2 = new HUYNHDE_DUAN1.contructions_functions.CircularPictureBox();
             this.circularPictureBox1 = new HUYNHDE_DUAN1.contructions_functions.CircularPictureBox();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,6 +83,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(300, 852);
             this.panel2.TabIndex = 1;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // btnThoat
             // 
@@ -122,7 +124,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.iconButton1);
+            this.panel3.Controls.Add(this.circularPictureBox2);
             this.panel3.Controls.Add(this.circularPictureBox1);
             this.panel3.Controls.Add(this.btnSave);
             this.panel3.Controls.Add(this.textBox7);
@@ -417,21 +419,17 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "do272443@gmail.com";
             // 
-            // iconButton1
+            // circularPictureBox2
             // 
-            this.iconButton1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.iconButton1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.iconButton1.FlatAppearance.BorderSize = 2;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Pen;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 20;
-            this.iconButton1.Location = new System.Drawing.Point(434, 235);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(28, 23);
-            this.iconButton1.TabIndex = 34;
-            this.iconButton1.UseVisualStyleBackColor = false;
+            this.circularPictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.circularPictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.circularPictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.circularPictureBox2.Location = new System.Drawing.Point(426, 240);
+            this.circularPictureBox2.Name = "circularPictureBox2";
+            this.circularPictureBox2.Size = new System.Drawing.Size(35, 35);
+            this.circularPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.circularPictureBox2.TabIndex = 136;
+            this.circularPictureBox2.TabStop = false;
             // 
             // circularPictureBox1
             // 
@@ -458,6 +456,7 @@
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -494,6 +493,6 @@
         private FontAwesome.Sharp.IconButton btnDangXuat;
         private FontAwesome.Sharp.IconButton btnSave;
         private contructions_functions.CircularPictureBox circularPictureBox1;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private contructions_functions.CircularPictureBox circularPictureBox2;
     }
 }

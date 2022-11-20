@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HUYNHDE_DUAN1.FormChildCotrols;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -21,7 +22,8 @@ namespace HUYNHDE_DUAN1
             //Application.Run(new FormMain());
             // Application.Run(new formForgetPass());
             // Application.Run(new formChildManagerEmployee());
-           // Application.Run(new formMessage());
+            // Application.Run(new formMessage());
+            //Application.Run(new formChildTKCC());
         }
     }
 }

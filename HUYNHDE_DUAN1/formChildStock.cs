@@ -57,8 +57,9 @@ namespace HUYNHDE_DUAN1
             this.Close();
         }
 
-       
-
-       
+        private void formChildStock_Click(object sender, EventArgs e)
+        {
+            this.ActiveControl = null;
+        }
     }
 }

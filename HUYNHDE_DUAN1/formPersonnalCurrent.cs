@@ -27,5 +27,19 @@ namespace HUYNHDE_DUAN1
         {
 
         }
+        #region clear focus textbox
+        private void panel1_Click(object sender, EventArgs e)
+        {
+            this.ActiveControl = null;
+        }
+        private void panel2_Click(object sender, EventArgs e)
+        {
+            this.ActiveControl = null;
+        }
+        private void panel3_Click(object sender, EventArgs e)
+        {
+            this.ActiveControl = null;
+        }
+        #endregion
     }
 }

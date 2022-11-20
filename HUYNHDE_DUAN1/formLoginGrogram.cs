@@ -115,5 +115,15 @@ namespace HUYNHDE_DUAN1
                 btnSignin_Click(sender, e);
             }
         }
+
+        private void imgLogin_Click(object sender, EventArgs e)
+        {
+            this.ActiveControl = null;
+        }
+
+        private void panelLinearGradient2_Click(object sender, EventArgs e)
+        {
+            this.ActiveControl = null;
+        }
     }
 }

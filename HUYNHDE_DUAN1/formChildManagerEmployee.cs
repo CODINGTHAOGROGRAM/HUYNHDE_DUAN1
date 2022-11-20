@@ -60,6 +60,9 @@ namespace HUYNHDE_DUAN1
             this.Close();
         }
 
-        
+        private void formChildManagerEmployee_Click(object sender, EventArgs e)
+        {
+            this.ActiveControl = null;
+        }
     }
 }

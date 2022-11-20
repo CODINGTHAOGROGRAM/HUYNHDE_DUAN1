@@ -138,7 +138,7 @@
             this.lbCongra.BackColor = System.Drawing.Color.Transparent;
             this.lbCongra.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCongra.ForeColor = System.Drawing.Color.Transparent;
-            this.lbCongra.Location = new System.Drawing.Point(337, 635);
+            this.lbCongra.Location = new System.Drawing.Point(314, 617);
             this.lbCongra.Name = "lbCongra";
             this.lbCongra.Size = new System.Drawing.Size(93, 33);
             this.lbCongra.TabIndex = 7;

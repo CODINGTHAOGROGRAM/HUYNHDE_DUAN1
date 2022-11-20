@@ -285,6 +285,7 @@
             // 
             // iconButton6
             // 
+            this.iconButton6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconButton6.FlatAppearance.BorderSize = 4;
             this.iconButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);

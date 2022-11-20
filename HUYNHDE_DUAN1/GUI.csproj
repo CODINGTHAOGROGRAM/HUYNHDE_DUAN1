@@ -63,123 +63,141 @@
     <Compile Include="contructions_functions\panelLinearGradient.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="formChildDataTP.cs">
+    <Compile Include="FormChildCotrols\formChildDataTP.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formChildDataTP.Designer.cs">
+    <Compile Include="FormChildCotrols\formChildDataTP.Designer.cs">
       <DependentUpon>formChildDataTP.cs</DependentUpon>
     </Compile>
-    <Compile Include="formChildGDBDG.cs">
+    <Compile Include="FormChildCotrols\formChildGDBDG.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formChildGDBDG.Designer.cs">
+    <Compile Include="FormChildCotrols\formChildGDBDG.Designer.cs">
       <DependentUpon>formChildGDBDG.cs</DependentUpon>
     </Compile>
-    <Compile Include="formChildManagerEmployee.cs">
+    <Compile Include="FormChildCotrols\formChildManagerEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formChildManagerEmployee.Designer.cs">
+    <Compile Include="FormChildCotrols\formChildManagerEmployee.Designer.cs">
       <DependentUpon>formChildManagerEmployee.cs</DependentUpon>
     </Compile>
-    <Compile Include="formChildStock.cs">
+    <Compile Include="FormChildCotrols\formChildStock.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formChildStock.Designer.cs">
+    <Compile Include="FormChildCotrols\formChildStock.Designer.cs">
       <DependentUpon>formChildStock.cs</DependentUpon>
     </Compile>
-    <Compile Include="formGDBDG.cs">
+    <Compile Include="FormChildCotrols\formChildTKCC.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formGDBDG.Designer.cs">
+    <Compile Include="FormChildCotrols\formChildTKCC.Designer.cs">
+      <DependentUpon>formChildTKCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormChildCotrols\formChildVH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChildCotrols\formChildVH.Designer.cs">
+      <DependentUpon>formChildVH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormControls\formGDBDG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormControls\formGDBDG.Designer.cs">
       <DependentUpon>formGDBDG.cs</DependentUpon>
     </Compile>
-    <Compile Include="formDataTP.cs">
+    <Compile Include="FormControls\formDataTP.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formDataTP.Designer.cs">
+    <Compile Include="FormControls\formDataTP.Designer.cs">
       <DependentUpon>formDataTP.cs</DependentUpon>
     </Compile>
-    <Compile Include="formForgetPass.cs">
+    <Compile Include="FormUI\formForgetPass.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formForgetPass.Designer.cs">
+    <Compile Include="FormUI\formForgetPass.Designer.cs">
       <DependentUpon>formForgetPass.cs</DependentUpon>
     </Compile>
-    <Compile Include="formLoginGrogram.cs">
+    <Compile Include="FormUI\formLoginGrogram.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formLoginGrogram.Designer.cs">
+    <Compile Include="FormUI\formLoginGrogram.Designer.cs">
       <DependentUpon>formLoginGrogram.cs</DependentUpon>
     </Compile>
-    <Compile Include="formMainGrogram.cs">
+    <Compile Include="FormUI\formMainGrogram.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formMainGrogram.Designer.cs">
+    <Compile Include="FormUI\formMainGrogram.Designer.cs">
       <DependentUpon>formMainGrogram.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormManagerEmployee.cs">
+    <Compile Include="FormControls\FormManagerEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormManagerEmployee.Designer.cs">
+    <Compile Include="FormControls\FormManagerEmployee.Designer.cs">
       <DependentUpon>FormManagerEmployee.cs</DependentUpon>
     </Compile>
-    <Compile Include="formMessage.cs">
+    <Compile Include="FormUI\formMessage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formMessage.Designer.cs">
+    <Compile Include="FormUI\formMessage.Designer.cs">
       <DependentUpon>formMessage.cs</DependentUpon>
     </Compile>
-    <Compile Include="formPersonnalCurrent.cs">
+    <Compile Include="FormControls\formPersonnalCurrent.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formPersonnalCurrent.Designer.cs">
+    <Compile Include="FormControls\formPersonnalCurrent.Designer.cs">
       <DependentUpon>formPersonnalCurrent.cs</DependentUpon>
     </Compile>
-    <Compile Include="formStock.cs">
+    <Compile Include="FormControls\formStock.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formStock.Designer.cs">
+    <Compile Include="FormControls\formStock.Designer.cs">
       <DependentUpon>formStock.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="formChildDataTP.resx">
+    <EmbeddedResource Include="FormChildCotrols\formChildDataTP.resx">
       <DependentUpon>formChildDataTP.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formChildGDBDG.resx">
+    <EmbeddedResource Include="FormChildCotrols\formChildGDBDG.resx">
       <DependentUpon>formChildGDBDG.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formChildManagerEmployee.resx">
+    <EmbeddedResource Include="FormChildCotrols\formChildManagerEmployee.resx">
       <DependentUpon>formChildManagerEmployee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formChildStock.resx">
+    <EmbeddedResource Include="FormChildCotrols\formChildStock.resx">
       <DependentUpon>formChildStock.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formGDBDG.resx">
+    <EmbeddedResource Include="FormChildCotrols\formChildTKCC.resx">
+      <DependentUpon>formChildTKCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChildCotrols\formChildVH.resx">
+      <DependentUpon>formChildVH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormControls\formGDBDG.resx">
       <DependentUpon>formGDBDG.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formDataTP.resx">
+    <EmbeddedResource Include="FormControls\formDataTP.resx">
       <DependentUpon>formDataTP.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formForgetPass.resx">
+    <EmbeddedResource Include="FormUI\formForgetPass.resx">
       <DependentUpon>formForgetPass.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formLoginGrogram.resx">
+    <EmbeddedResource Include="FormUI\formLoginGrogram.resx">
       <DependentUpon>formLoginGrogram.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formMainGrogram.resx">
+    <EmbeddedResource Include="FormUI\formMainGrogram.resx">
       <DependentUpon>formMainGrogram.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormManagerEmployee.resx">
+    <EmbeddedResource Include="FormControls\FormManagerEmployee.resx">
       <DependentUpon>FormManagerEmployee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formMessage.resx">
+    <EmbeddedResource Include="FormUI\formMessage.resx">
       <DependentUpon>formMessage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formPersonnalCurrent.resx">
+    <EmbeddedResource Include="FormControls\formPersonnalCurrent.resx">
       <DependentUpon>formPersonnalCurrent.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formStock.resx">
+    <EmbeddedResource Include="FormControls\formStock.resx">
       <DependentUpon>formStock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

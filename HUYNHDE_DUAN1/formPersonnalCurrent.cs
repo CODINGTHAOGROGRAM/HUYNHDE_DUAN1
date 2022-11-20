@@ -20,8 +20,12 @@ namespace HUYNHDE_DUAN1
         private void formPersonnalCurrent_Load(object sender, EventArgs e)
         {
             circularPictureBox1.Image = Image.FromFile("../../img/LogoTeamHome.jpg");
+            circularPictureBox2.Image = Image.FromFile("../../img/Group 2.png");
         }
 
-        
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -71,11 +71,12 @@
             this.panelLinearGradient2.Name = "panelLinearGradient2";
             this.panelLinearGradient2.Size = new System.Drawing.Size(307, 561);
             this.panelLinearGradient2.TabIndex = 3;
+            this.panelLinearGradient2.Click += new System.EventHandler(this.panelLinearGradient2_Click);
             // 
             // btnConfirm
             // 
             this.btnConfirm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(208)))), ((int)(((byte)(206)))));
-            this.btnConfirm.Font = new System.Drawing.Font("Noto Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirm.ForeColor = System.Drawing.Color.White;
             this.btnConfirm.Location = new System.Drawing.Point(78, 441);
             this.btnConfirm.Name = "btnConfirm";
@@ -83,12 +84,13 @@
             this.btnConfirm.TabIndex = 15;
             this.btnConfirm.Text = "Xác nhận";
             this.btnConfirm.UseVisualStyleBackColor = false;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
             // btnSendkey
             // 
             this.btnSendkey.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(208)))), ((int)(((byte)(206)))));
             this.btnSendkey.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnSendkey.Font = new System.Drawing.Font("Noto Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSendkey.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSendkey.ForeColor = System.Drawing.Color.White;
             this.btnSendkey.Location = new System.Drawing.Point(79, 384);
             this.btnSendkey.Name = "btnSendkey";
@@ -96,6 +98,7 @@
             this.btnSendkey.TabIndex = 14;
             this.btnSendkey.Text = "Gửi mã";
             this.btnSendkey.UseVisualStyleBackColor = false;
+            this.btnSendkey.Click += new System.EventHandler(this.btnSendkey_Click);
             // 
             // panel3
             // 
@@ -108,7 +111,7 @@
             // 
             this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(208)))), ((int)(((byte)(206)))));
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPassword.Font = new System.Drawing.Font("Noto Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.ForeColor = System.Drawing.Color.White;
             this.txtPassword.Location = new System.Drawing.Point(75, 296);
             this.txtPassword.Multiline = true;
@@ -116,6 +119,7 @@
             this.txtPassword.Size = new System.Drawing.Size(193, 24);
             this.txtPassword.TabIndex = 10;
             this.txtPassword.Text = "Mã xác nhận";
+            this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
             // 
             // iconPictureBox2
             // 
@@ -133,7 +137,7 @@
             // 
             this.txtUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(208)))), ((int)(((byte)(206)))));
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUsername.Font = new System.Drawing.Font("Noto Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.ForeColor = System.Drawing.Color.White;
             this.txtUsername.Location = new System.Drawing.Point(78, 214);
             this.txtUsername.Multiline = true;
@@ -141,6 +145,7 @@
             this.txtUsername.Size = new System.Drawing.Size(193, 24);
             this.txtUsername.TabIndex = 6;
             this.txtUsername.Text = "Email";
+            this.txtUsername.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsername_KeyPress);
             // 
             // panel2
             // 
@@ -218,6 +223,7 @@
             this.ImgForgetLogin.Size = new System.Drawing.Size(477, 561);
             this.ImgForgetLogin.TabIndex = 0;
             this.ImgForgetLogin.TabStop = false;
+            this.ImgForgetLogin.Click += new System.EventHandler(this.ImgForgetLogin_Click);
             this.ImgForgetLogin.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ImgForgetLogin_MouseDown);
             // 
             // formForgetPass

@@ -149,11 +149,11 @@
             this.lbTime.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbTime.AutoSize = true;
             this.lbTime.BackColor = System.Drawing.Color.Transparent;
-            this.lbTime.Font = new System.Drawing.Font("Script MT Bold", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTime.ForeColor = System.Drawing.Color.Transparent;
             this.lbTime.Location = new System.Drawing.Point(524, 545);
             this.lbTime.Name = "lbTime";
-            this.lbTime.Size = new System.Drawing.Size(169, 44);
+            this.lbTime.Size = new System.Drawing.Size(186, 42);
             this.lbTime.TabIndex = 6;
             this.lbTime.Text = "00:00:00\"";
             // 
@@ -162,11 +162,11 @@
             this.lbDate.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbDate.AutoSize = true;
             this.lbDate.BackColor = System.Drawing.Color.Transparent;
-            this.lbDate.Font = new System.Drawing.Font("Script MT Bold", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDate.ForeColor = System.Drawing.Color.Transparent;
             this.lbDate.Location = new System.Drawing.Point(507, 470);
             this.lbDate.Name = "lbDate";
-            this.lbDate.Size = new System.Drawing.Size(237, 44);
+            this.lbDate.Size = new System.Drawing.Size(228, 42);
             this.lbDate.TabIndex = 5;
             this.lbDate.Text = "dd/MM/yyyy";
             // 
@@ -201,6 +201,7 @@
             // btnFormDataTP
             // 
             this.btnFormDataTP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(198)))), ((int)(((byte)(220)))));
+            this.btnFormDataTP.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFormDataTP.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnFormDataTP.FlatAppearance.BorderSize = 0;
             this.btnFormDataTP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -225,6 +226,7 @@
             // btnFormGDBDG
             // 
             this.btnFormGDBDG.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(198)))), ((int)(((byte)(220)))));
+            this.btnFormGDBDG.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFormGDBDG.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnFormGDBDG.FlatAppearance.BorderSize = 0;
             this.btnFormGDBDG.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -249,6 +251,7 @@
             // btnFormStock
             // 
             this.btnFormStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(198)))), ((int)(((byte)(220)))));
+            this.btnFormStock.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFormStock.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnFormStock.FlatAppearance.BorderSize = 0;
             this.btnFormStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -273,6 +276,7 @@
             // btnFormManagerEmplyee
             // 
             this.btnFormManagerEmplyee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(198)))), ((int)(((byte)(220)))));
+            this.btnFormManagerEmplyee.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFormManagerEmplyee.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnFormManagerEmplyee.FlatAppearance.BorderSize = 0;
             this.btnFormManagerEmplyee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -297,6 +301,7 @@
             // btnFormPersonalCurrent
             // 
             this.btnFormPersonalCurrent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(198)))), ((int)(((byte)(220)))));
+            this.btnFormPersonalCurrent.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFormPersonalCurrent.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnFormPersonalCurrent.FlatAppearance.BorderSize = 0;
             this.btnFormPersonalCurrent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -357,6 +362,7 @@
             // btnMinimized
             // 
             this.btnMinimized.BackColor = System.Drawing.Color.Transparent;
+            this.btnMinimized.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMinimized.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnMinimized.FlatAppearance.BorderSize = 0;
             this.btnMinimized.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -376,6 +382,7 @@
             // btnMaximized
             // 
             this.btnMaximized.BackColor = System.Drawing.Color.Transparent;
+            this.btnMaximized.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMaximized.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnMaximized.FlatAppearance.BorderSize = 0;
             this.btnMaximized.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -397,6 +404,7 @@
             // btnEx
             // 
             this.btnEx.BackColor = System.Drawing.Color.Transparent;
+            this.btnEx.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEx.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnEx.FlatAppearance.BorderSize = 0;
             this.btnEx.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

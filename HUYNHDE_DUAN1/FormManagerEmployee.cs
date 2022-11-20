@@ -24,5 +24,15 @@ namespace HUYNHDE_DUAN1
             main.Opacity = 70;
             mf.ShowDialog();
         }
+
+        private void panel3_Click(object sender, EventArgs e)
+        {
+            this.ActiveControl = null;
+        }
+
+        private void panel2_Click(object sender, EventArgs e)
+        {
+            this.ActiveControl = null;
+        }
     }
 }

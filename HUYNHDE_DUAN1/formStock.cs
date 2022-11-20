@@ -23,6 +23,9 @@ namespace HUYNHDE_DUAN1
             ct.ShowDialog();
         }
 
-        
+        private void panel4_Click(object sender, EventArgs e)
+        {
+            this.ActiveControl = null;
+        }
     }
 }

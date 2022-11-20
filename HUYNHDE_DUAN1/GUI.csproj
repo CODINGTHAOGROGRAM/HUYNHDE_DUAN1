@@ -226,5 +226,8 @@
     <Content Include="img\LogoTeamHome.jpg" />
     <Content Include="img\user_login.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="img\Avatar_user\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

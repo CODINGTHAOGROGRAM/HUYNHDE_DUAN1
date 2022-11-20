@@ -75,11 +75,13 @@
             this.panelLinearGradient2.Name = "panelLinearGradient2";
             this.panelLinearGradient2.Size = new System.Drawing.Size(350, 642);
             this.panelLinearGradient2.TabIndex = 1;
+            this.panelLinearGradient2.Click += new System.EventHandler(this.panelLinearGradient2_Click);
             // 
             // linkLabel2
             // 
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabel2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.linkLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel2.LinkColor = System.Drawing.Color.White;
             this.linkLabel2.Location = new System.Drawing.Point(197, 354);
@@ -93,6 +95,7 @@
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(208)))), ((int)(((byte)(206)))));
+            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
             this.btnExit.Location = new System.Drawing.Point(80, 470);
@@ -105,6 +108,7 @@
             // btnSignin
             // 
             this.btnSignin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(208)))), ((int)(((byte)(206)))));
+            this.btnSignin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSignin.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnSignin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSignin.ForeColor = System.Drawing.Color.White;
@@ -120,6 +124,7 @@
             // 
             this.checkBox2.AutoSize = true;
             this.checkBox2.BackColor = System.Drawing.Color.Transparent;
+            this.checkBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox2.ForeColor = System.Drawing.Color.White;
             this.checkBox2.Location = new System.Drawing.Point(47, 354);
@@ -251,6 +256,7 @@
             this.imgLogin.Size = new System.Drawing.Size(516, 642);
             this.imgLogin.TabIndex = 0;
             this.imgLogin.TabStop = false;
+            this.imgLogin.Click += new System.EventHandler(this.imgLogin_Click);
             this.imgLogin.MouseDown += new System.Windows.Forms.MouseEventHandler(this.imgLogin_MouseDown);
             // 
             // formLoginGrogram

@@ -56,6 +56,7 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.circularPictureBox1 = new HUYNHDE_DUAN1.contructions_functions.CircularPictureBox();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -121,6 +122,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.iconButton1);
             this.panel3.Controls.Add(this.circularPictureBox1);
             this.panel3.Controls.Add(this.btnSave);
             this.panel3.Controls.Add(this.textBox7);
@@ -146,6 +148,7 @@
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
             this.panel3.Location = new System.Drawing.Point(300, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(668, 852);
@@ -414,6 +417,22 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "do272443@gmail.com";
             // 
+            // iconButton1
+            // 
+            this.iconButton1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.iconButton1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.iconButton1.FlatAppearance.BorderSize = 2;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Pen;
+            this.iconButton1.IconColor = System.Drawing.Color.Black;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 20;
+            this.iconButton1.Location = new System.Drawing.Point(434, 235);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(28, 23);
+            this.iconButton1.TabIndex = 34;
+            this.iconButton1.UseVisualStyleBackColor = false;
+            // 
             // circularPictureBox1
             // 
             this.circularPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -475,5 +494,6 @@
         private FontAwesome.Sharp.IconButton btnDangXuat;
         private FontAwesome.Sharp.IconButton btnSave;
         private contructions_functions.CircularPictureBox circularPictureBox1;
+        private FontAwesome.Sharp.IconButton iconButton1;
     }
 }

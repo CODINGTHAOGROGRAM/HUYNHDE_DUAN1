@@ -1,6 +1,7 @@
 ﻿using BUS;
 using HUYNHDE_DUAN1.FormChildCotrols;
 using System.Windows.Forms;
+using static HUYNHDE_DUAN1.formMessage;
 
 namespace HUYNHDE_DUAN1
 {
@@ -40,7 +41,8 @@ namespace HUYNHDE_DUAN1
 
         private void btnUpGrade_Click(object sender, System.EventArgs e)
         {
-
+            formMessage form = new formMessage();
+            form.show("Thông báo", "Thiếu thông tin", "icon_info_main.png");
             BUS_BienDongGia.Instance.DongBoBDG();
         }
     }

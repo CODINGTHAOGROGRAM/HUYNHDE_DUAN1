@@ -54,6 +54,18 @@ namespace HUYNHDE_DUAN1
             this.FormBorderStyle = FormBorderStyle.None;
             // CallBack BorderForms
             this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 50, 50));
+           
+        }
+        public void show(string title, string text, string icon)
+        {
+            tt.Text = title;
+            info.Text = text;
+            pic.Image = Image.FromFile($"../../img/icon_info/{icon}");
+            this.ShowDialog();
+
+            //using static HUYNHDE_DUAN1.formMessage;
+            /*formMessage form = new formMessage();
+            form.show("Thông báo", "Thiếu thông tin", "icon_info_main.png");*/
         }
         private void btnEx_Click(object sender, EventArgs e)
         {

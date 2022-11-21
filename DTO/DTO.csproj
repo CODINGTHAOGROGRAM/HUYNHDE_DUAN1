@@ -41,6 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DTO_BienDongGia.cs" />
+    <Compile Include="DTO_CungCau.cs" />
+    <Compile Include="DTO_GiaoDichTraiPhieu.cs" />
+    <Compile Include="DTO_HoSoCoPhieu.cs" />
+    <Compile Include="DTO_NhanVien.cs" />
+    <Compile Include="DTO_TaiKhoan.cs" />
+    <Compile Include="DTO_VonHoa.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

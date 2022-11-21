@@ -250,7 +250,6 @@
             // imgLogin
             // 
             this.imgLogin.BackColor = System.Drawing.Color.Transparent;
-            this.imgLogin.Dock = System.Windows.Forms.DockStyle.Fill;
             this.imgLogin.Location = new System.Drawing.Point(0, 0);
             this.imgLogin.Name = "imgLogin";
             this.imgLogin.Size = new System.Drawing.Size(516, 642);

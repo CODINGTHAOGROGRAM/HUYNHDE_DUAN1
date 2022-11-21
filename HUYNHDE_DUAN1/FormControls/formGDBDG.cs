@@ -42,7 +42,7 @@ namespace HUYNHDE_DUAN1
         private void btnUpGrade_Click(object sender, System.EventArgs e)
         {
             formMessage form = new formMessage();
-            form.show("Thông báo", "Thiếu thông tin", "icon_info_main.png");
+            form.showMessage("Thông báo", "Thiếu thông tin", "icon_info_main.png");
             BUS_BienDongGia.Instance.DongBoBDG();
         }
     }

@@ -71,6 +71,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS_BienDongGia.cs" />
+    <Compile Include="BUS_CungCau.cs" />
+    <Compile Include="BUS_GiaoDichTraiPhieu.cs" />
+    <Compile Include="BUS_HoSoCuPhieu.cs" />
+    <Compile Include="BUS_NhanVien.cs" />
+    <Compile Include="BUS_TaiKhoan.cs" />
+    <Compile Include="BUS_VonHoa.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

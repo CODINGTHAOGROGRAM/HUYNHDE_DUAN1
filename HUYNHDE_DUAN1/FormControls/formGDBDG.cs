@@ -1,4 +1,5 @@
-﻿using HUYNHDE_DUAN1.FormChildCotrols;
+﻿using BUS;
+using HUYNHDE_DUAN1.FormChildCotrols;
 using System.Windows.Forms;
 
 namespace HUYNHDE_DUAN1
@@ -35,6 +36,12 @@ namespace HUYNHDE_DUAN1
         {
             formChildVH vh = new formChildVH(); 
             vh.ShowDialog();
+        }
+
+        private void btnUpGrade_Click(object sender, System.EventArgs e)
+        {
+
+            BUS_BienDongGia.Instance.DongBoBDG();
         }
     }
 }

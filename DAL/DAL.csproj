@@ -41,6 +41,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL_BienDongGia.cs" />
+    <Compile Include="DAL_CungCau.cs" />
+    <Compile Include="DAL_DataProvider.cs" />
+    <Compile Include="DAL_GiaoDichTraiPhieu.cs" />
+    <Compile Include="DAL_HoSoCoPhieu.cs" />
+    <Compile Include="DAL_NhanVien.cs" />
+    <Compile Include="DAL_TaiKhoan.cs" />
+    <Compile Include="DAL_VonHoa.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

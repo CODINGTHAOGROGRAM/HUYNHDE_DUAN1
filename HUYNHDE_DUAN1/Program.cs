@@ -18,7 +18,7 @@ namespace HUYNHDE_DUAN1
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Form1());
-            Application.Run(new formLoginGrogram());
+            Application.Run(new FormMain());
             //Application.Run(new FormMain());
             // Application.Run(new formForgetPass());
             // Application.Run(new formChildManagerEmployee());

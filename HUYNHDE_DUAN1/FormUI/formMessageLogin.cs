@@ -11,8 +11,9 @@ using System.Windows.Forms;
 
 namespace HUYNHDE_DUAN1
 {
-    public partial class formMessage : Form
+    public partial class formMessageLogin : Form
     {
+
         #region Border Forms
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
@@ -36,7 +37,7 @@ namespace HUYNHDE_DUAN1
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
         [DllImportAttribute("user32.dll")]
         public static extern bool ReleaseCapture();
-        private void panelLinearGradient1_MouseDown(object sender, MouseEventArgs e)
+        private void panelLinearGradient1_MouseDown_1(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -47,14 +48,12 @@ namespace HUYNHDE_DUAN1
             }
         }
         #endregion
-
-        public formMessage()
+        public formMessageLogin()
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             // CallBack BorderForms
             this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 50, 50));
-           
         }
         public void showMessage(string title, string text, string icon)
         {
@@ -63,19 +62,18 @@ namespace HUYNHDE_DUAN1
             pic.Image = Image.FromFile($"../../img/icon_info/{icon}");
             this.ShowDialog();
 
-            //using static HUYNHDE_DUAN1.formMessage;
-            /*formMessage form = new formMessage();
-            form.show("Thông báo", "Thiếu thông tin", "icon_info_main.png");*/
         }
+
         private void btnEx_Click(object sender, EventArgs e)
         {
             this.Close();
-
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
+       
     }
 }

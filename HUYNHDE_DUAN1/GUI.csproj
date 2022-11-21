@@ -111,6 +111,12 @@
     <Compile Include="FormControls\formDataTP.Designer.cs">
       <DependentUpon>formDataTP.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormUI\formMessageLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUI\formMessageLogin.Designer.cs">
+      <DependentUpon>formMessageLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUI\formForgetPass.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,6 +184,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormControls\formDataTP.resx">
       <DependentUpon>formDataTP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUI\formMessageLogin.resx">
+      <DependentUpon>formMessageLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUI\formForgetPass.resx">
       <DependentUpon>formForgetPass.cs</DependentUpon>

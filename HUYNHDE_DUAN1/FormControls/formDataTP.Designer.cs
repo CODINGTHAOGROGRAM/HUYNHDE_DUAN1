@@ -30,12 +30,12 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.fromdate = new System.Windows.Forms.TextBox();
             this.panel16 = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.todate = new System.Windows.Forms.TextBox();
             this.panel11 = new System.Windows.Forms.Panel();
             this.btnFind = new FontAwesome.Sharp.IconButton();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -88,12 +88,12 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.fromdate);
             this.panel1.Controls.Add(this.panel16);
             this.panel1.Controls.Add(this.label17);
             this.panel1.Controls.Add(this.label16);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.todate);
             this.panel1.Controls.Add(this.panel11);
             this.panel1.Controls.Add(this.btnFind);
             this.panel1.Controls.Add(this.panel5);
@@ -116,17 +116,17 @@
             this.textBox3.Size = new System.Drawing.Size(152, 19);
             this.textBox3.TabIndex = 112;
             // 
-            // textBox2
+            // fromdate
             // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox2.Location = new System.Drawing.Point(551, 93);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(152, 19);
-            this.textBox2.TabIndex = 111;
+            this.fromdate.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.fromdate.BackColor = System.Drawing.Color.White;
+            this.fromdate.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.fromdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.fromdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.fromdate.Location = new System.Drawing.Point(551, 93);
+            this.fromdate.Name = "fromdate";
+            this.fromdate.Size = new System.Drawing.Size(152, 19);
+            this.fromdate.TabIndex = 111;
             // 
             // panel16
             // 
@@ -173,17 +173,17 @@
             this.label2.TabIndex = 92;
             this.label2.Text = "Đến ngày:";
             // 
-            // textBox1
+            // todate
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox1.Location = new System.Drawing.Point(870, 93);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(152, 19);
-            this.textBox1.TabIndex = 91;
+            this.todate.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.todate.BackColor = System.Drawing.Color.White;
+            this.todate.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.todate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.todate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.todate.Location = new System.Drawing.Point(870, 93);
+            this.todate.Name = "todate";
+            this.todate.Size = new System.Drawing.Size(152, 19);
+            this.todate.TabIndex = 91;
             // 
             // panel11
             // 
@@ -301,6 +301,7 @@
             this.btnUpGrade.Text = "Cập nhật";
             this.btnUpGrade.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnUpGrade.UseVisualStyleBackColor = true;
+            this.btnUpGrade.Click += new System.EventHandler(this.btnUpGrade_Click);
             // 
             // btnExports
             // 
@@ -737,13 +738,13 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox todate;
         private FontAwesome.Sharp.IconButton btnFind;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel16;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox fromdate;
         private System.Windows.Forms.Panel panel2;
         private FontAwesome.Sharp.IconButton btnUpGrade;
         private FontAwesome.Sharp.IconButton btnExports;

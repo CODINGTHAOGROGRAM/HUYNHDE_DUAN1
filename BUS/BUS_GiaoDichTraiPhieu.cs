@@ -30,7 +30,7 @@ namespace BUS
             private set { BUS_GiaoDichTraiPhieu.instance = value; }
         }
 
-        public void Update(DateTime fromd,DateTime tod)
+        public void Update(string fromd,string tod)
         {
             DTO_GiaoDichTraiPhieu GDTP = new DTO_GiaoDichTraiPhieu();
             char[] charsToTrim = { '1', '.', ' ' };
@@ -52,10 +52,7 @@ namespace BUS
                 System.IO.File.Create(pathfile);
             }
 
-            //read file .txt
-            var logFile = System.IO.File.ReadAllLines(pathfile);
-            var xlsFileExist = new List<string>(logFile);
-
+            
             chromeOptions.AddUserProfilePreference("download.default_directory", downloadDirectory);
             chromeOptions.AddUserProfilePreference("download.prompt_for_download", false);
             chromeOptions.AddUserProfilePreference("disable-popup-blocking", "true");
@@ -67,12 +64,19 @@ namespace BUS
             WebClient download = new WebClient();
 
             Thread.Sleep(2000);
+            //read file .txt
+            //ERROR
+            var logFile = System.IO.File.ReadAllLines(pathfile);
+            var xlsFileExist = new List<string>(logFile);
+
 
             var from = chromeDriver.FindElement(By.XPath("//*[@id=\"txtTuNgay\"]"));
-            from.SendKeys(fromd.ToString("dd/MM/yyyy"));
+            //from.SendKeys(Convert.ToDateTime(fromd).ToString("dd/MM/yyyy"));
+            from.SendKeys(fromd.ToString());
 
             var to = chromeDriver.FindElement(By.XPath("//*[@id=\"txtDenNgay\"]"));
-            to.SendKeys(tod.ToString("dd/MM/yyyy"));
+            //to.SendKeys(Convert.ToDateTime(tod).ToString("dd/MM/yyyy"));
+            to.SendKeys(tod.ToString());
 
             var title = chromeDriver.FindElement(By.XPath("//*[@id=\"txtTieuDeTin\"]"));
             title.SendKeys("Kết quả giao dịch Trái phiếu doanh nghiệp ngày");

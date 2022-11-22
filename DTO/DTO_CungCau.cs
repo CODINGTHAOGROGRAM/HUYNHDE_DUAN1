@@ -8,6 +8,15 @@ namespace DTO
 {
     public class DTO_CungCau
     {
+        private static DTO_CungCau instance;
+
+        public static DTO_CungCau Instance
+        {
+            get { if (instance == null) instance = new DTO_CungCau(); return DTO_CungCau.instance; }
+
+            private set { DTO_CungCau.instance = value; }
+        }
+
         private DateTime ngayGiaoDich;
         private string mack;
         private double giaDong;

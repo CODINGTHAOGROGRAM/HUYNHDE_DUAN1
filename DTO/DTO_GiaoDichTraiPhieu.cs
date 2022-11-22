@@ -8,6 +8,15 @@ namespace DTO
 {
     public class DTO_GiaoDichTraiPhieu
     {
+        private static DTO_GiaoDichTraiPhieu instance;
+
+        public static DTO_GiaoDichTraiPhieu Instance
+        {
+            get { if (instance == null) instance = new DTO_GiaoDichTraiPhieu(); return DTO_GiaoDichTraiPhieu.instance; }
+
+            private set { DTO_GiaoDichTraiPhieu.instance = value; }
+        }
+
         private int iD_tpdn;
         private int sTT;
         private DateTime ngay_GD;

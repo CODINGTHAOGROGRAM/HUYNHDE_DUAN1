@@ -8,6 +8,14 @@ namespace DTO
 {
     public class DTO_VonHoa
     {
+        private static DTO_VonHoa instance;
+
+        public static DTO_VonHoa Instance
+        {
+            get { if (instance == null) instance = new DTO_VonHoa(); return DTO_VonHoa.instance; }
+
+            private set { DTO_VonHoa.instance = value; }
+        }
         private DateTime ngayGiaoDich;
         private string maCk;
         private double giaDOng;

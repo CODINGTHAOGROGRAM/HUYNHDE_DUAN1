@@ -8,6 +8,15 @@ namespace DTO
 {
     public class DTO_HoSoCoPhieu
     {
+        private static DTO_HoSoCoPhieu instance;
+
+        public static DTO_HoSoCoPhieu Instance
+        {
+            get { if (instance == null) instance = new DTO_HoSoCoPhieu(); return DTO_HoSoCoPhieu.instance; }
+
+            private set { DTO_HoSoCoPhieu.instance = value; }
+        }
+
         private string maCk;
 
         public string MaCk { get => maCk; set => maCk = value; }

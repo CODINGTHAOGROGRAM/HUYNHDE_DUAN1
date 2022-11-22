@@ -17,4 +17,5 @@ namespace BUS
             private set { BUS_GiaoDichTraiPhieu.instance = value; }
         }
     }
+    
 }

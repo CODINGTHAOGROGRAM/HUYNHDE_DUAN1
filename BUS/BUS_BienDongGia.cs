@@ -26,9 +26,13 @@ namespace BUS
         }
         public void DongBoBDG()
         {
-            IWebDriver driver = new ChromeDriver();
-            driver.Manage().Window.Maximize();
+            ChromeDriverService service = ChromeDriverService.CreateDefaultService();
+            service.HideCommandPromptWindow = true;
 
+            var options = new ChromeOptions();
+            options.AddArgument("window-position=-32000,-32000");
+            IWebDriver driver = new ChromeDriver(service,options);
+            
             driver.Navigate().GoToUrl("https://www.hnx.vn/cophieu-etfs/chi-tiet-chung-khoan-ny-AAV.html?_des_tab=2");
 
             DataTable dt = new DataTable("BienDongGia");
@@ -57,7 +61,7 @@ namespace BUS
                 driver.Navigate().GoToUrl(url);
                 Thread.Sleep(1000);
 
-                Console.WriteLine(MaCk + " " + i);
+      
                 int x = 2;
                 
 
@@ -117,14 +121,14 @@ namespace BUS
             DataProvider.Instance.insertDB(dt);
             driver.Close();
         }
-        static bool CountGD(string query, string mack, string ngayGd)
+         public bool CountGD(string query, string mack, string ngayGd)
         {
             var i = DataProvider.Instance.Executequery(query, new object[] { mack, ngayGd });
             if (i.Rows.Count > 0) { return true; }
             return false;
         }
 
-        static List<double> tryparst (IList<IWebElement> list)
+         public List<double> tryparst (IList<IWebElement> list)
         {
             List<double> result = new List<double>();
 

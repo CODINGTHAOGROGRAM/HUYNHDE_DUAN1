@@ -111,6 +111,36 @@
     <Compile Include="FormControls\formDataTP.Designer.cs">
       <DependentUpon>formDataTP.cs</DependentUpon>
     </Compile>
+    <Compile Include="formShowClickGrid\formShowBDG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formShowClickGrid\formShowBDG.Designer.cs">
+      <DependentUpon>formShowBDG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formShowClickGrid\formShowGDTP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formShowClickGrid\formShowGDTP.Designer.cs">
+      <DependentUpon>formShowGDTP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formShowClickGrid\formShowStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formShowClickGrid\formShowStock.Designer.cs">
+      <DependentUpon>formShowStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formShowClickGrid\formShowTKCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formShowClickGrid\formShowTKCC.Designer.cs">
+      <DependentUpon>formShowTKCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formShowClickGrid\formShowVH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formShowClickGrid\formShowVH.Designer.cs">
+      <DependentUpon>formShowVH.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUI\formMessageLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,6 +214,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormControls\formDataTP.resx">
       <DependentUpon>formDataTP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formShowClickGrid\formShowBDG.resx">
+      <DependentUpon>formShowBDG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formShowClickGrid\formShowGDTP.resx">
+      <DependentUpon>formShowGDTP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formShowClickGrid\formShowStock.resx">
+      <DependentUpon>formShowStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formShowClickGrid\formShowTKCC.resx">
+      <DependentUpon>formShowTKCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formShowClickGrid\formShowVH.resx">
+      <DependentUpon>formShowVH.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUI\formMessageLogin.resx">
       <DependentUpon>formMessageLogin.cs</DependentUpon>

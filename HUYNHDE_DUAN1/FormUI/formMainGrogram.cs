@@ -151,6 +151,8 @@ namespace HUYNHDE_DUAN1
             label1.Text = "Home";
         }
 
+
+
         private void TimerLoad_Tick(object sender, EventArgs e)
         {
             lbDate.Text = DateTime.Now.ToString("dd/MM/yyyy");
@@ -174,17 +176,9 @@ namespace HUYNHDE_DUAN1
                                           "Have a good night!";
             }
         }
-        private void btnFormPersonalCurrent_Click(object sender, EventArgs e)
-        {
-            ActionButton(sender, RGBColors.color1);
-            OppenChildForm(new formPersonnalCurrent());
-        }
+       
 
-        private void btnFormManagerEmplyee_Click(object sender, EventArgs e)
-        {
-            ActionButton(sender, RGBColors.color1);
-            OppenChildForm(new FormManagerEmployee());
-        }
+
 
         private void btnFormStock_Click_1(object sender, EventArgs e)
         {
@@ -203,6 +197,19 @@ namespace HUYNHDE_DUAN1
             ActionButton(sender, RGBColors.color1);
             OppenChildForm(new formDataTP());
         }
+        private void btnFormManagerEmplyee_Click_1(object sender, EventArgs e)
+        {
+            ActionButton(sender, RGBColors.color1);
+            OppenChildForm(new FormManagerEmployee());
+        }
+
+        private void btnFormPersonalCurrent_Click_1(object sender, EventArgs e)
+        {
+            ActionButton(sender, RGBColors.color1);
+            OppenChildForm(new formPersonnalCurrent());
+        }
+
+
 
         private void pcLogoHome_Click(object sender, EventArgs e)
         {
@@ -236,5 +243,6 @@ namespace HUYNHDE_DUAN1
             Application.Exit();
         }
 
+       
     }
 }

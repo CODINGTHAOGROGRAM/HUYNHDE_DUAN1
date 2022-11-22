@@ -45,5 +45,10 @@ namespace HUYNHDE_DUAN1
             form.showMessage("Thông báo", "Thiếu thông tin", "icon_info_main.png");
             BUS_BienDongGia.Instance.DongBoBDG();
         }
+
+        private void btnUpGrate1_Click(object sender, System.EventArgs e)
+        {
+            BUS_CungCau.Instance.DongBoCungCau();
+        }
     }
 }

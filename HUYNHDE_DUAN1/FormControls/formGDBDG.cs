@@ -21,34 +21,60 @@ namespace HUYNHDE_DUAN1
             this.ActiveControl = null;
         }
 
-        private void btnAdd_Click_1(object sender, System.EventArgs e)
+
+
+        #region Controls btn BDG
+        private void btnAddBDG_Click(object sender, System.EventArgs e)
         {
             formChildGDBDG dg = new formChildGDBDG();
             dg.ShowDialog();
         }
+        private void btnExportsBDG_Click(object sender, System.EventArgs e)
+        {
 
-        private void btnAdd1_Click(object sender, System.EventArgs e)
+        }
+
+        private void btnUpGradeBDG_Click(object sender, System.EventArgs e)
+        {
+            BUS_BienDongGia.Instance.DongBoBDG();
+        }
+        #endregion   
+
+        #region Controls btn TKCC
+        private void btnUpGradeTKCC_Click(object sender, System.EventArgs e)
+        {
+            BUS_CungCau.Instance.DongBoCungCau();
+        }
+
+        private void btnAddTKCC_Click(object sender, System.EventArgs e)
         {
             formChildTKCC tk = new formChildTKCC();
             tk.ShowDialog();
         }
 
-        private void btnAdd2_Click(object sender, System.EventArgs e)
+        private void btnExportTKCC_Click(object sender, System.EventArgs e)
         {
-            formChildVH vh = new formChildVH(); 
+
+        }
+        #endregion
+
+        #region Controls btn VH
+        private void btnUpgradeVH_Click(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void btnAddVH_Click(object sender, System.EventArgs e)
+        {
+            formChildVH vh = new formChildVH();
             vh.ShowDialog();
         }
 
-        private void btnUpGrade_Click(object sender, System.EventArgs e)
+        private void btnExportVH_Click(object sender, System.EventArgs e)
         {
-            formMessage form = new formMessage();
-            form.showMessage("Thông báo", "Thiếu thông tin", "icon_info_main.png");
-            BUS_BienDongGia.Instance.DongBoBDG();
-        }
 
-        private void btnUpGrate1_Click(object sender, System.EventArgs e)
-        {
-            BUS_CungCau.Instance.DongBoCungCau();
         }
+        #endregion
+
     }
 }

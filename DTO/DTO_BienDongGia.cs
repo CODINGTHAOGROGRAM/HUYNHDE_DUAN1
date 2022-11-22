@@ -8,6 +8,14 @@ namespace DTO
 {
     public class DTO_BienDongGia
     {
+        private static DTO_BienDongGia instance;
+
+        public static DTO_BienDongGia Instance
+        {
+            get { if (instance == null) instance = new DTO_BienDongGia(); return DTO_BienDongGia.instance; }
+
+            private set { DTO_BienDongGia.instance = value; }
+        }
         private DateTime ngayGiaoDich;
         private string maCk;
         private double giaThamChieu;

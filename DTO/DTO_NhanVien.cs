@@ -8,6 +8,15 @@ namespace DTO
 {
     public class DTO_NhanVien
     {
+        private static DTO_NhanVien instance;
+
+        public static DTO_NhanVien Instance
+        {
+            get { if (instance == null) instance = new DTO_NhanVien(); return DTO_NhanVien.instance; }
+
+            private set { DTO_NhanVien.instance = value; }
+        }
+
         private string maNV;
 
         public string MaNV { get => maNV; set => maNV = value; }

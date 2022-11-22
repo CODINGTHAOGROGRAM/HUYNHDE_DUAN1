@@ -8,6 +8,14 @@ namespace DTO
 {
     public class DTO_TaiKhoan
     {
+        private static DTO_TaiKhoan instance;
+
+        public static DTO_TaiKhoan Instance
+        {
+            get { if (instance == null) instance = new DTO_TaiKhoan(); return DTO_TaiKhoan.instance; }
+
+            private set { DTO_TaiKhoan.instance = value; }
+        }
         private string maNV;
         private string taiKhoan;
         private string matKhau;

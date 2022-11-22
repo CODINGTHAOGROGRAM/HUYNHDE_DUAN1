@@ -1,5 +1,8 @@
-﻿using System.Windows.Forms;
-
+﻿using BUS;
+using DTO;
+using System;
+using System.Windows.Forms;
+using static HUYNHDE_DUAN1.formMessage;
 namespace HUYNHDE_DUAN1
 {
     public partial class formDataTP : Form
@@ -23,6 +26,15 @@ namespace HUYNHDE_DUAN1
         private void panel2_Click(object sender, System.EventArgs e)
         {
             this.ActiveControl = null;
+        }
+
+        private void btnUpGrade_Click(object sender, System.EventArgs e)
+        {
+            BUS_GiaoDichTraiPhieu.Instance.Update(fromdate.ToString(), todate.ToString());
+
+            formMessage form = new formMessage();
+            form.showMessage("Thông báo", "Cập nhật thành công", "icon_success.png");
+
         }
     }
 }

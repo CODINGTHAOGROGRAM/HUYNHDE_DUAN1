@@ -42,6 +42,7 @@ namespace DAL
             oda.Fill(ds);
 
             DataTable GiaoDichTraiPhieu = ds.Tables[0];
+            GiaoDichTraiPhieu.TableName = "GiaoDichTraiPhieu";
             GiaoDichTraiPhieu.Rows.Remove(GiaoDichTraiPhieu.Rows[GiaoDichTraiPhieu.Rows.Count - 1]);
 
             DataProvider.Instance.insertDB(GiaoDichTraiPhieu);

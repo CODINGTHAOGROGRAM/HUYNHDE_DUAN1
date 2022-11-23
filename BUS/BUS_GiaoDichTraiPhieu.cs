@@ -89,10 +89,10 @@ namespace BUS
             select_show_more.Click();
 
             Thread.Sleep(1000);
-            var select = chromeDriver.FindElement(By.XPath("//*[@id=\"divNumberRecordOnPage\"]/option[5]"));
+            var select = chromeDriver.FindElement(By.XPath("//*[@id=\"divNumberRecordOnPage\"]/option[1]"));
             select.Click();
 
-            int startPage = 1;
+            int pageNumber = 1;
             while (true)
             {
                 try
@@ -137,7 +137,14 @@ namespace BUS
                         var esc = chromeDriver.FindElement(By.XPath("//*[@id=\"divViewDetailArticles\"]/div[5]/input"));
                         esc.Click();
                         stt++;
+
+                        if (stt == 11)
+                        {
+                            break;
+                        }
                     }
+                    pageNumber++;
+                    chromeDriver.FindElement(By.XPath($"//*[@id=\"{pageNumber}\"]")).Click();
                 }
                 catch (Exception)
                 {

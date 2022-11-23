@@ -28,69 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tt = new System.Windows.Forms.Label();
-            this.info = new System.Windows.Forms.Label();
-            this.btnEx = new FontAwesome.Sharp.IconButton();
-            this.pic = new System.Windows.Forms.PictureBox();
-            this.button = new FontAwesome.Sharp.IconButton();
             this.panelLinearGradient1 = new HUYNHDE_DUAN1.contructions_functions.panelLinearGradient();
-            ((System.ComponentModel.ISupportInitialize)(this.pic)).BeginInit();
+            this.button = new FontAwesome.Sharp.IconButton();
+            this.pic = new System.Windows.Forms.PictureBox();
+            this.btnEx = new FontAwesome.Sharp.IconButton();
+            this.info = new System.Windows.Forms.Label();
+            this.tt = new System.Windows.Forms.Label();
             this.panelLinearGradient1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic)).BeginInit();
             this.SuspendLayout();
             // 
-            // tt
+            // panelLinearGradient1
             // 
-            this.tt.AutoSize = true;
-            this.tt.BackColor = System.Drawing.Color.Transparent;
-            this.tt.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(41)))), ((int)(((byte)(128)))));
-            this.tt.Location = new System.Drawing.Point(12, 9);
-            this.tt.Name = "tt";
-            this.tt.Size = new System.Drawing.Size(124, 29);
-            this.tt.TabIndex = 37;
-            this.tt.Text = "Cảnh báo";
-            // 
-            // info
-            // 
-            this.info.AutoSize = true;
-            this.info.BackColor = System.Drawing.Color.Transparent;
-            this.info.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.info.ForeColor = System.Drawing.Color.White;
-            this.info.Location = new System.Drawing.Point(172, 132);
-            this.info.Name = "info";
-            this.info.Size = new System.Drawing.Size(43, 25);
-            this.info.TabIndex = 38;
-            this.info.Text = "text";
-            // 
-            // btnEx
-            // 
-            this.btnEx.BackColor = System.Drawing.Color.Transparent;
-            this.btnEx.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEx.FlatAppearance.BorderSize = 0;
-            this.btnEx.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEx.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEx.ForeColor = System.Drawing.Color.Transparent;
-            this.btnEx.IconChar = FontAwesome.Sharp.IconChar.X;
-            this.btnEx.IconColor = System.Drawing.Color.White;
-            this.btnEx.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnEx.IconSize = 20;
-            this.btnEx.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnEx.Location = new System.Drawing.Point(508, 3);
-            this.btnEx.Name = "btnEx";
-            this.btnEx.Size = new System.Drawing.Size(33, 30);
-            this.btnEx.TabIndex = 39;
-            this.btnEx.UseVisualStyleBackColor = false;
-            this.btnEx.Click += new System.EventHandler(this.btnEx_Click);
-            // 
-            // pic
-            // 
-            this.pic.BackColor = System.Drawing.Color.Transparent;
-            this.pic.Location = new System.Drawing.Point(17, 79);
-            this.pic.Name = "pic";
-            this.pic.Size = new System.Drawing.Size(140, 132);
-            this.pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic.TabIndex = 40;
-            this.pic.TabStop = false;
+            this.panelLinearGradient1.Colorleft = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(208)))), ((int)(((byte)(206)))));
+            this.panelLinearGradient1.ColorRight = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(41)))), ((int)(((byte)(128)))));
+            this.panelLinearGradient1.Controls.Add(this.button);
+            this.panelLinearGradient1.Controls.Add(this.pic);
+            this.panelLinearGradient1.Controls.Add(this.btnEx);
+            this.panelLinearGradient1.Controls.Add(this.info);
+            this.panelLinearGradient1.Controls.Add(this.tt);
+            this.panelLinearGradient1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelLinearGradient1.Location = new System.Drawing.Point(0, 0);
+            this.panelLinearGradient1.Name = "panelLinearGradient1";
+            this.panelLinearGradient1.Size = new System.Drawing.Size(549, 252);
+            this.panelLinearGradient1.TabIndex = 0;
+            this.panelLinearGradient1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelLinearGradient1_MouseDown_1);
             // 
             // button
             // 
@@ -112,35 +74,73 @@
             this.button.UseVisualStyleBackColor = false;
             this.button.Click += new System.EventHandler(this.btnThoat_Click);
             // 
-            // panelLinearGradient1
+            // pic
             // 
-            this.panelLinearGradient1.Colorleft = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(208)))), ((int)(((byte)(206)))));
-            this.panelLinearGradient1.ColorRight = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(41)))), ((int)(((byte)(128)))));
-            this.panelLinearGradient1.Controls.Add(this.button);
-            this.panelLinearGradient1.Controls.Add(this.pic);
-            this.panelLinearGradient1.Controls.Add(this.btnEx);
-            this.panelLinearGradient1.Controls.Add(this.info);
-            this.panelLinearGradient1.Controls.Add(this.tt);
-            this.panelLinearGradient1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelLinearGradient1.Location = new System.Drawing.Point(0, 0);
-            this.panelLinearGradient1.Name = "panelLinearGradient1";
-            this.panelLinearGradient1.Size = new System.Drawing.Size(549, 252);
-            this.panelLinearGradient1.TabIndex = 0;
-            this.panelLinearGradient1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelLinearGradient1_MouseDown_1);
+            this.pic.BackColor = System.Drawing.Color.Transparent;
+            this.pic.Location = new System.Drawing.Point(17, 79);
+            this.pic.Name = "pic";
+            this.pic.Size = new System.Drawing.Size(140, 132);
+            this.pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic.TabIndex = 40;
+            this.pic.TabStop = false;
+            // 
+            // btnEx
+            // 
+            this.btnEx.BackColor = System.Drawing.Color.Transparent;
+            this.btnEx.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEx.FlatAppearance.BorderSize = 0;
+            this.btnEx.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEx.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEx.ForeColor = System.Drawing.Color.Transparent;
+            this.btnEx.IconChar = FontAwesome.Sharp.IconChar.X;
+            this.btnEx.IconColor = System.Drawing.Color.White;
+            this.btnEx.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEx.IconSize = 20;
+            this.btnEx.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnEx.Location = new System.Drawing.Point(508, 3);
+            this.btnEx.Name = "btnEx";
+            this.btnEx.Size = new System.Drawing.Size(33, 30);
+            this.btnEx.TabIndex = 39;
+            this.btnEx.UseVisualStyleBackColor = false;
+            this.btnEx.Click += new System.EventHandler(this.btnEx_Click);
+            // 
+            // info
+            // 
+            this.info.AutoSize = true;
+            this.info.BackColor = System.Drawing.Color.Transparent;
+            this.info.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.info.ForeColor = System.Drawing.Color.White;
+            this.info.Location = new System.Drawing.Point(172, 132);
+            this.info.Name = "info";
+            this.info.Size = new System.Drawing.Size(43, 25);
+            this.info.TabIndex = 38;
+            this.info.Text = "text";
+            // 
+            // tt
+            // 
+            this.tt.AutoSize = true;
+            this.tt.BackColor = System.Drawing.Color.Transparent;
+            this.tt.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(41)))), ((int)(((byte)(128)))));
+            this.tt.Location = new System.Drawing.Point(12, 9);
+            this.tt.Name = "tt";
+            this.tt.Size = new System.Drawing.Size(124, 29);
+            this.tt.TabIndex = 37;
+            this.tt.Text = "Cảnh báo";
             // 
             // formMessageLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(549, 252);
             this.Controls.Add(this.panelLinearGradient1);
             this.Name = "formMessageLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "formMessageLogin";
-            ((System.ComponentModel.ISupportInitialize)(this.pic)).EndInit();
             this.panelLinearGradient1.ResumeLayout(false);
             this.panelLinearGradient1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -29,24 +29,24 @@
         private void InitializeComponent()
         {
             this.panel4 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.GridViewHoSo = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnExports = new FontAwesome.Sharp.IconButton();
             this.btnUpGrade = new FontAwesome.Sharp.IconButton();
             this.btnAdd = new FontAwesome.Sharp.IconButton();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.iconButton6 = new FontAwesome.Sharp.IconButton();
-            this.btnExports = new FontAwesome.Sharp.IconButton();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridViewHoSo)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Controls.Add(this.dataGridView1);
+            this.panel4.Controls.Add(this.GridViewHoSo);
             this.panel4.Controls.Add(this.panel1);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.textBox1);
@@ -59,18 +59,19 @@
             this.panel4.TabIndex = 4;
             this.panel4.Click += new System.EventHandler(this.panel4_Click);
             // 
-            // dataGridView1
+            // GridViewHoSo
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.GridViewHoSo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 158);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1300, 533);
-            this.dataGridView1.TabIndex = 131;
+            this.GridViewHoSo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.GridViewHoSo.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
+            this.GridViewHoSo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridViewHoSo.GridColor = System.Drawing.SystemColors.ActiveCaption;
+            this.GridViewHoSo.Location = new System.Drawing.Point(0, 158);
+            this.GridViewHoSo.Name = "GridViewHoSo";
+            this.GridViewHoSo.Size = new System.Drawing.Size(1300, 533);
+            this.GridViewHoSo.TabIndex = 131;
             // 
             // panel1
             // 
@@ -82,6 +83,27 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1300, 160);
             this.panel1.TabIndex = 130;
+            // 
+            // btnExports
+            // 
+            this.btnExports.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnExports.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExports.FlatAppearance.BorderSize = 4;
+            this.btnExports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExports.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnExports.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.btnExports.IconChar = FontAwesome.Sharp.IconChar.Upload;
+            this.btnExports.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.btnExports.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnExports.IconSize = 20;
+            this.btnExports.Location = new System.Drawing.Point(804, 37);
+            this.btnExports.Name = "btnExports";
+            this.btnExports.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnExports.Size = new System.Drawing.Size(119, 45);
+            this.btnExports.TabIndex = 170;
+            this.btnExports.Text = "Xuất";
+            this.btnExports.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnExports.UseVisualStyleBackColor = true;
             // 
             // btnUpGrade
             // 
@@ -178,27 +200,6 @@
             this.iconButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton6.UseVisualStyleBackColor = true;
             // 
-            // btnExports
-            // 
-            this.btnExports.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnExports.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExports.FlatAppearance.BorderSize = 4;
-            this.btnExports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExports.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnExports.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.btnExports.IconChar = FontAwesome.Sharp.IconChar.Upload;
-            this.btnExports.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.btnExports.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnExports.IconSize = 20;
-            this.btnExports.Location = new System.Drawing.Point(804, 37);
-            this.btnExports.Name = "btnExports";
-            this.btnExports.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnExports.Size = new System.Drawing.Size(119, 45);
-            this.btnExports.TabIndex = 170;
-            this.btnExports.Text = "Xuất";
-            this.btnExports.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnExports.UseVisualStyleBackColor = true;
-            // 
             // formStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -210,7 +211,7 @@
             this.Load += new System.EventHandler(this.formStock_Load);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridViewHoSo)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -225,7 +226,7 @@
         private System.Windows.Forms.Panel panel5;
         private FontAwesome.Sharp.IconButton iconButton6;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView GridViewHoSo;
         private FontAwesome.Sharp.IconButton btnExports;
     }
 }

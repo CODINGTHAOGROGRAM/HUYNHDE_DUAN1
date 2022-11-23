@@ -56,16 +56,17 @@ namespace HUYNHDE_DUAN1
             this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 50, 50));
            
         }
-        public void showMessage(string title, string text, string icon)
+        public void showMessage(string title, string text, string icon, string textbutton)
         {
             tt.Text = title;
             info.Text = text;
             pic.Image = Image.FromFile($"../../img/icon_info/{icon}");
+            button.Text = textbutton.Trim();
             this.ShowDialog();
 
             //using static HUYNHDE_DUAN1.formMessage;
             /*formMessage form = new formMessage();
-            form.show("Thông báo", "Thiếu thông tin", "icon_info_main.png");*/
+            form.showMessage("Thông báo", "Thiếu thông tin", "icon_info_main.png");*/
         }
         private void btnEx_Click(object sender, EventArgs e)
         {
@@ -75,7 +76,15 @@ namespace HUYNHDE_DUAN1
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (button.Text == "Thoát")
+            {
+                Application.Exit();
+            }
+            else
+            {
+                this.Close();
+            }
+            
         }
     }
 }

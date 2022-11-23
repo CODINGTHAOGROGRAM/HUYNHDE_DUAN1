@@ -295,8 +295,11 @@
     <Content Include="img\bannerForget.png" />
     <Content Include="img\forgetUseLogin.png" />
     <Content Include="img\icon_info\icon_error.png" />
+    <Content Include="img\icon_info\icon_error_login.png" />
     <Content Include="img\icon_info\icon_info.png" />
+    <Content Include="img\icon_info\icon_info_login.png" />
     <Content Include="img\icon_info\icon_success.png" />
+    <Content Include="img\icon_info\icon_success_login.png" />
     <Content Include="img\LogoTeamDisplay.png" />
     <Content Include="img\LogoTeamHome.jpg" />
     <Content Include="img\user_login.png" />

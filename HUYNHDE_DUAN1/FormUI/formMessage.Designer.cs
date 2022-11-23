@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.panelLinearGradient1 = new HUYNHDE_DUAN1.contructions_functions.panelLinearGradient();
+            this.button = new FontAwesome.Sharp.IconButton();
             this.pic = new System.Windows.Forms.PictureBox();
             this.btnEx = new FontAwesome.Sharp.IconButton();
             this.info = new System.Windows.Forms.Label();
             this.tt = new System.Windows.Forms.Label();
-            this.btnThoat = new FontAwesome.Sharp.IconButton();
             this.panelLinearGradient1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic)).BeginInit();
             this.SuspendLayout();
@@ -43,7 +43,7 @@
             this.panelLinearGradient1.BackColor = System.Drawing.Color.Transparent;
             this.panelLinearGradient1.Colorleft = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(254)))), ((int)(((byte)(250)))));
             this.panelLinearGradient1.ColorRight = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(84)))), ((int)(((byte)(200)))));
-            this.panelLinearGradient1.Controls.Add(this.btnThoat);
+            this.panelLinearGradient1.Controls.Add(this.button);
             this.panelLinearGradient1.Controls.Add(this.pic);
             this.panelLinearGradient1.Controls.Add(this.btnEx);
             this.panelLinearGradient1.Controls.Add(this.info);
@@ -54,6 +54,25 @@
             this.panelLinearGradient1.Size = new System.Drawing.Size(549, 252);
             this.panelLinearGradient1.TabIndex = 0;
             this.panelLinearGradient1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelLinearGradient1_MouseDown);
+            // 
+            // button
+            // 
+            this.button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button.FlatAppearance.BorderSize = 4;
+            this.button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(254)))), ((int)(((byte)(250)))));
+            this.button.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.button.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(254)))), ((int)(((byte)(250)))));
+            this.button.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.button.IconSize = 25;
+            this.button.Location = new System.Drawing.Point(442, 200);
+            this.button.Name = "button";
+            this.button.Size = new System.Drawing.Size(95, 40);
+            this.button.TabIndex = 36;
+            this.button.Text = "Đóng";
+            this.button.UseVisualStyleBackColor = true;
+            this.button.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // pic
             // 
@@ -87,11 +106,11 @@
             // info
             // 
             this.info.AutoSize = true;
-            this.info.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.info.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.info.ForeColor = System.Drawing.Color.White;
-            this.info.Location = new System.Drawing.Point(185, 130);
+            this.info.Location = new System.Drawing.Point(173, 130);
             this.info.Name = "info";
-            this.info.Size = new System.Drawing.Size(50, 29);
+            this.info.Size = new System.Drawing.Size(43, 25);
             this.info.TabIndex = 11;
             this.info.Text = "text";
             // 
@@ -106,29 +125,11 @@
             this.tt.TabIndex = 1;
             this.tt.Text = "Cảnh báo";
             // 
-            // btnThoat
-            // 
-            this.btnThoat.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnThoat.FlatAppearance.BorderSize = 4;
-            this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnThoat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(254)))), ((int)(((byte)(250)))));
-            this.btnThoat.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnThoat.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(254)))), ((int)(((byte)(250)))));
-            this.btnThoat.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnThoat.IconSize = 25;
-            this.btnThoat.Location = new System.Drawing.Point(442, 200);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(95, 40);
-            this.btnThoat.TabIndex = 36;
-            this.btnThoat.Text = "Đóng";
-            this.btnThoat.UseVisualStyleBackColor = true;
-            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
-            // 
             // formMessage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(549, 252);
             this.Controls.Add(this.panelLinearGradient1);
             this.Name = "formMessage";
@@ -148,6 +149,6 @@
         private System.Windows.Forms.Label info;
         private FontAwesome.Sharp.IconButton btnEx;
         private System.Windows.Forms.PictureBox pic;
-        private FontAwesome.Sharp.IconButton btnThoat;
+        private FontAwesome.Sharp.IconButton button;
     }
 }

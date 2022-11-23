@@ -38,7 +38,8 @@ namespace HUYNHDE_DUAN1
 
         private void ExitForms_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            formMessageLogin form = new formMessageLogin();
+            form.showMessage("Thông báo", "Bạn có thực sự muốn thoát chương trình?", "icon_info_login.png", "Thoát");
         }
 
         private void formLoginGrogram_Load(object sender, EventArgs e)
@@ -83,11 +84,11 @@ namespace HUYNHDE_DUAN1
             formMessageLogin msLogin = new formMessageLogin();
             if(txtUsername.Text == "" || txtPassword.Text == "")
             {
-                msLogin.showMessage("Thông báo","Không được để trống thông tin trên!", "icon_info.png");
+                msLogin.showMessage("Thông báo","Không được để trống thông tin!", "icon_info_login.png","Đóng");
             }
             else if(txtUsername.Text != "xinchao" || txtPassword.Text != "hello")
             {
-                msLogin.showMessage("Lỗi", "Sai tài khoản hoặc mật khẩu", "icon_error.png");
+                msLogin.showMessage("Lỗi", "Sai tài khoản hoặc mật khẩu", "icon_error_login.png","Đóng");
             }
 
         }

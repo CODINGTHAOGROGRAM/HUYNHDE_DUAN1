@@ -38,7 +38,8 @@ namespace HUYNHDE_DUAN1
 
         private void ExitForms_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            formMessageLogin form = new formMessageLogin();
+            form.showMessage("Thông báo", "Bạn có thực sự muốn thoát chương trình?", "icon_info_login.png", "Thoát");
         }
 
         #region MouseDown Form

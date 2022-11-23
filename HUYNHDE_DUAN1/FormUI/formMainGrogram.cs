@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
+using static HUYNHDE_DUAN1.formMessage;
 
 namespace HUYNHDE_DUAN1
 {
@@ -240,7 +241,9 @@ namespace HUYNHDE_DUAN1
 
         private void btnEx_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            //Application.Exit();
+            formMessage form = new formMessage();
+            form.showMessage("Thông báo", "Bạn có thực sự muốn thoát chương trình?", "icon_info.png", "Thoát");
         }
 
        

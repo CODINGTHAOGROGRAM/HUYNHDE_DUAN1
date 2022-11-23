@@ -1,4 +1,5 @@
-﻿using HUYNHDE_DUAN1.formShowClickGrid;
+﻿using BUS;
+using HUYNHDE_DUAN1.formShowClickGrid;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -35,6 +36,8 @@ namespace HUYNHDE_DUAN1
         // demo fill and click show form child
         private void formStock_Load(object sender, EventArgs e)
         {
+
+            GridViewHoSo.DataSource = BUS_HoSoCuPhieu.Instance.getListHoSo();
             /*
             string connectionString = "Data Source=PARAONG-YODANH\\SQLEXPRESS;Initial Catalog=DuLieuChungKhoan;Integrated Security=True";
             string sql = "select * from HoSoCoPhieu";
@@ -48,11 +51,6 @@ namespace HUYNHDE_DUAN1
             dataGridView1.DataMember = "HoSoCoPhieu";
             */
             
-        }
-
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

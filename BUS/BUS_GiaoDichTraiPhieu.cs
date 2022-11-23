@@ -49,7 +49,7 @@ namespace BUS
 
             if (!System.IO.File.Exists(pathfile))
             {
-                System.IO.File.Create(pathfile);
+                System.IO.File.Create(pathfile).Close();
             }
 
             
@@ -65,7 +65,6 @@ namespace BUS
 
             Thread.Sleep(2000);
             //read file .txt
-            //ERROR
             var logFile = System.IO.File.ReadAllLines(pathfile);
             var xlsFileExist = new List<string>(logFile);
 
@@ -137,12 +136,13 @@ namespace BUS
                         }
                         var esc = chromeDriver.FindElement(By.XPath("//*[@id=\"divViewDetailArticles\"]/div[5]/input"));
                         esc.Click();
-
+                        stt++;
                     }
                 }
                 catch (Exception)
                 {
-                    chromeDriver.Quit();
+                   // chromeDriver.Quit();
+                    throw;
                 }
             }
         }

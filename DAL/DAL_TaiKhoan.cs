@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,14 @@ namespace DAL
             get { if (instance == null) instance = new DAL_TaiKhoan(); return DAL_TaiKhoan.instance; }
 
             private set { DAL_TaiKhoan.instance = value; }
+        }
+
+        public bool Login (string userName, string passWord)
+        {
+            string query = "GetAccountToLogin @usernam , @password";
+            DataTable result = DataProvider.Instance.Executequery(query, new object[] { userName, passWord });
+
+            return result.Rows.Count > 0;
         }
     }
 }

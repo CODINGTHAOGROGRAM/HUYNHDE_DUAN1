@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,11 @@ namespace BUS
             get { if (instance == null) instance = new BUS_TaiKhoan(); return BUS_TaiKhoan.instance; }
 
             private set { BUS_TaiKhoan.instance = value; }
+        }
+
+        public bool Login(string username, string password)
+        {
+            return DAL_TaiKhoan.Instance.Login(username, password);
         }
     }
 }

@@ -8,6 +8,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BUS;
 using static HUYNHDE_DUAN1.formMessageLogin;
 
 namespace HUYNHDE_DUAN1
@@ -80,15 +81,23 @@ namespace HUYNHDE_DUAN1
 
         private void btnSignin_Click(object sender, EventArgs e)
         {
+            var userName = txtUsername.Text;
+            var passWord = txtPassword.Text;
            
             formMessageLogin msLogin = new formMessageLogin();
             if(txtUsername.Text == "" || txtPassword.Text == "")
             {
                 msLogin.showMessage("Thông báo","Không được để trống thông tin!", "icon_info_login.png","Đóng");
             }
-            else if(txtUsername.Text != "xinchao" || txtPassword.Text != "hello")
+            else if(BUS_TaiKhoan.Instance.Login(userName, passWord))
             {
-                msLogin.showMessage("Lỗi", "Sai tài khoản hoặc mật khẩu", "icon_error_login.png","Đóng");
+                FormMain f = new FormMain();
+                this.Hide();
+                f.ShowDialog();
+            }
+            else
+            {
+                msLogin.showMessage("Thông báo", "Sai tài khoản hoặc mật khẩu!", "icon_error_login.png", "Đóng");
             }
 
         }

@@ -31,26 +31,15 @@ namespace HUYNHDE_DUAN1
             this.ActiveControl = null;
         }
 
+        void LoadGrid()
+        {
+            GridViewHoSo.DataSource = BUS_HoSoCuPhieu.Instance.getListHoSo();
+        }
 
-
-        // demo fill and click show form child
+        
         private void formStock_Load(object sender, EventArgs e)
         {
-
-            GridViewHoSo.DataSource = BUS_HoSoCuPhieu.Instance.getListHoSo();
-            /*
-            string connectionString = "Data Source=PARAONG-YODANH\\SQLEXPRESS;Initial Catalog=DuLieuChungKhoan;Integrated Security=True";
-            string sql = "select * from HoSoCoPhieu";
-            SqlConnection connection = new SqlConnection(connectionString);
-            SqlDataAdapter dataadapter = new SqlDataAdapter(sql, connection);
-            DataSet ds = new DataSet();
-            connection.Open();
-            dataadapter.Fill(ds, "HoSoCoPhieu");
-            connection.Close();
-            dataGridView1.DataSource = ds;
-            dataGridView1.DataMember = "HoSoCoPhieu";
-            */
-            
+            LoadGrid();
         }
     }
 }

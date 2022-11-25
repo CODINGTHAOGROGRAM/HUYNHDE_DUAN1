@@ -67,11 +67,12 @@
             this.GridViewHoSo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.GridViewHoSo.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
             this.GridViewHoSo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridViewHoSo.GridColor = System.Drawing.SystemColors.ActiveCaption;
+            this.GridViewHoSo.GridColor = System.Drawing.SystemColors.AppWorkspace;
             this.GridViewHoSo.Location = new System.Drawing.Point(0, 158);
             this.GridViewHoSo.Name = "GridViewHoSo";
             this.GridViewHoSo.Size = new System.Drawing.Size(1300, 533);
             this.GridViewHoSo.TabIndex = 131;
+            this.GridViewHoSo.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridViewHoSo_CellClick);
             // 
             // panel1
             // 

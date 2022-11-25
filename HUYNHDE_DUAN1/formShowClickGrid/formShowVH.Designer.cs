@@ -62,6 +62,7 @@
             this.textBox36.Name = "textBox36";
             this.textBox36.Size = new System.Drawing.Size(255, 19);
             this.textBox36.TabIndex = 334;
+            this.textBox36.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox37
             // 
@@ -74,6 +75,7 @@
             this.textBox37.Name = "textBox37";
             this.textBox37.Size = new System.Drawing.Size(347, 19);
             this.textBox37.TabIndex = 333;
+            this.textBox37.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox40
             // 
@@ -86,6 +88,7 @@
             this.textBox40.Name = "textBox40";
             this.textBox40.Size = new System.Drawing.Size(327, 19);
             this.textBox40.TabIndex = 332;
+            this.textBox40.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox41
             // 
@@ -98,6 +101,7 @@
             this.textBox41.Name = "textBox41";
             this.textBox41.Size = new System.Drawing.Size(327, 19);
             this.textBox41.TabIndex = 331;
+            this.textBox41.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox42
             // 
@@ -110,6 +114,7 @@
             this.textBox42.Name = "textBox42";
             this.textBox42.Size = new System.Drawing.Size(327, 19);
             this.textBox42.TabIndex = 330;
+            this.textBox42.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel45
             // 
@@ -328,6 +333,7 @@
             this.Controls.Add(this.panel49);
             this.Controls.Add(this.panelControlForm);
             this.Name = "formShowVH";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "formShowVH";
             this.panelControlForm.ResumeLayout(false);
             this.panelControlForm.PerformLayout();

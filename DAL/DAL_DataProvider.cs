@@ -13,8 +13,8 @@ namespace DAL
         private static DataProvider instance;
 
         //private string connectionSTR = @"Data Source=DESKTOP-VQE9HMG\SQLEXPRESS;Initial Catalog=DuLieuChungKhoan;Integrated Security=True";
-         private string connectionSTR = @"Data Source=LAMSAMCHANPC;Initial Catalog=DuLieuChungKhoan;Integrated Security=True";
-        // private string connectionSTR = @"Data Source=PARAONG-YODANH\SQLEXPRESS;Initial Catalog=DuLieuChungKhoan;Integrated Security=True";
+         //private string connectionSTR = @"Data Source=LAMSAMCHANPC;Initial Catalog=DuLieuChungKhoan;Integrated Security=True";
+         private string connectionSTR = @"Data Source=PARAONG-YODANH\SQLEXPRESS;Initial Catalog=DuLieuChungKhoan;Integrated Security=True";
 
 
         public static DataProvider Instance

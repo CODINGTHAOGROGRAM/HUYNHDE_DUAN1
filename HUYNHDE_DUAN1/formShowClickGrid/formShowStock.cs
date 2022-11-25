@@ -49,6 +49,8 @@ namespace HUYNHDE_DUAN1.formShowClickGrid
         }
 
         #endregion MouseDown Form
+
+
         public formShowStock()
         {
             InitializeComponent();
@@ -60,8 +62,30 @@ namespace HUYNHDE_DUAN1.formShowClickGrid
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+            
         }
 
-       
+        public void bindindDataGrid(object dataSource)
+        {
+            title.DataBindings.Add(new Binding("Text", dataSource, "MaCK"));
+            txtMaCK.DataBindings.Add(new Binding("Text", dataSource, "MaCK"));
+            txtTen.DataBindings.Add(new Binding("Text", dataSource, "TenTCPH"));
+            txtTruSo.DataBindings.Add(new Binding("Text", dataSource, "TruSoChinh"));
+            txtSdt.DataBindings.Add(new Binding("Text", dataSource, "DiaChiLienlac"));
+            txtGPTL.DataBindings.Add(new Binding("Text", dataSource, "GPTL"));
+            txtNganh.DataBindings.Add(new Binding("Text", dataSource, "TenNganh"));
+            txtNguoiDD.DataBindings.Add(new Binding("Text", dataSource, "NguoiDaiDien"));
+            txtNguoiCB.DataBindings.Add(new Binding("Text", dataSource, "NguoiCongBo"));
+            txtBangCao.DataBindings.Add(new Binding("Text", dataSource, "BanCaoBach"));
+            txtKiemSoat.DataBindings.Add(new Binding("Text", dataSource, "TrangThaiKiemSoat"));
+            txtGiaoDich.DataBindings.Add(new Binding("Text", dataSource, "TrangThaiGiaoDich"));
+            txtNgay.DataBindings.Add(new Binding("Text", dataSource, "NgayGDDauTien"));
+            txtVon.DataBindings.Add(new Binding("Text", dataSource, "VonDieuLe"));
+            txtKLLH.DataBindings.Add(new Binding("Text", dataSource, "KLLH"));
+            txtKLNY.DataBindings.Add(new Binding("Text", dataSource, "KLNY"));
+            
+        }
+
+
     }
 }

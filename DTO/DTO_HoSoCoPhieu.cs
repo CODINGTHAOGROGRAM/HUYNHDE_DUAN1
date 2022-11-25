@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -52,7 +53,7 @@ namespace DTO
 
         private string trangThaiGiaoDich;
 
-        public string TrangThaiGiaoDicj { get => trangThaiGiaoDich; set => trangThaiGiaoDich = value; }
+        public string TrangThaiGiaoDich { get => trangThaiGiaoDich; set => trangThaiGiaoDich = value; }
         public DateTime NgayGDDauTien { get => ngayGDDauTien; set => ngayGDDauTien = value; }
 
         private DateTime ngayGDDauTien;
@@ -70,6 +71,24 @@ namespace DTO
 
 
         public DTO_HoSoCoPhieu() { }
+        public DTO_HoSoCoPhieu(DataRow row)
+        {
+            this.MaCk = (string)row["mack"];
+            this.TenTCPH = (string)row["tenTCPH"];
+            this.TruSoChinh = (string)row["truSoChinh"];
+            this.DiaChiLienlac = (string)row["diaChiLienlac"];
+            this.GPTL = (string)row["gPTL"];
+            this.TenNganh = (string)row["tenNganh"];
+            this.NguoiDaiDien = (string)row["nguoiDaiDien"];
+            this.NguoiCongBo = (string)row["nguoiCongBo"];
+            this.BanCaoBach = (string)row["banCaoBach"];
+            this.TrangThaiKiemSoat = (string)row["trangThaiKiemSoat"];
+            this.TrangThaiGiaoDich = (string)row["trangThaiGiaoDich"];
+            this.NgayGDDauTien = (DateTime)row["ngayGDDauTien"];
+            this.VonDieuLe = (double)row["vonDieuLe"];
+            this.KLLH = (double)row["kLLH"];
+            this.KLNY = (double)row["kLNY"];
+        }
         public DTO_HoSoCoPhieu(string mack, string tenTCPH, string truSoChinh, string diaChiLienLac, string gPTL, string tenNganh, string nguoiDaiDien,
             string nguoiCongBo, string banCaoBach, string trangThaiKiemSoat, string trangThaiGiaoDich, DateTime ngayGDDauTien, double vonDieuLe, double kLLH, double kLNY)
         {
@@ -87,7 +106,7 @@ namespace DTO
             this.ngayGDDauTien = ngayGDDauTien;
             this.vonDieuLe = vonDieuLe;
             this.kLLH = kLLH;
-            this.KLNY = kLNY;
+            this.kLNY = kLNY;
         }
 
     }

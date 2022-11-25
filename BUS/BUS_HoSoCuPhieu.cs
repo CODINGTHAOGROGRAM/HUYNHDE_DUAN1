@@ -11,6 +11,7 @@ namespace BUS
 {
     public class BUS_HoSoCuPhieu
     {
+        DAL_HoSoCoPhieu hoso = new DAL_HoSoCoPhieu();
 
         private static BUS_HoSoCuPhieu instance;
 
@@ -23,15 +24,7 @@ namespace BUS
         private BUS_HoSoCuPhieu() { }
         public List<DTO_HoSoCoPhieu> getListHoSo()
         {
-            List<DTO_HoSoCoPhieu> newList = new List<DTO_HoSoCoPhieu>();
-            string queryPerform = "select * from HoSoCoPhieu";
-            DataTable data = DataProvider.Instance.Executequery(queryPerform);
-            foreach (DataRow rowItem in data.Rows)
-            {
-                DTO_HoSoCoPhieu dtHoSo = new DTO_HoSoCoPhieu();
-                newList.Add(dtHoSo);
-            }
-            return newList;
+            return hoso.getListHoSo();
         }
     }
 }

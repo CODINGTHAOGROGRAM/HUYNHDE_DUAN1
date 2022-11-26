@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,16 @@ namespace DAL
             get { if (instance == null) instance = new DAL_CungCau(); return DAL_CungCau.instance; }
 
             private set { DAL_CungCau.instance = value; }
+        }
+        public DataTable getListCungCau()
+        {
+            DataTable dt = new DataTable();
+
+            string query = "select * from ThongKeCungCau";
+
+            dt = DataProvider.Instance.Executequery(query);
+
+            return dt;
         }
     }
 }

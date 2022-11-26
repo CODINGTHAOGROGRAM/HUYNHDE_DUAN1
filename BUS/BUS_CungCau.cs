@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace BUS
 {
@@ -120,6 +121,11 @@ namespace BUS
             var i = DataProvider.Instance.Executequery(query, new object[] { mack, ngayGd });
             if (i.Rows.Count > 0) { return true; }
             return false;
+        }
+
+        public void loadCungCau(DataGridView data) 
+        {
+            data.DataSource = DAL_CungCau.Instance.getListCungCau();
         }
     }
 }

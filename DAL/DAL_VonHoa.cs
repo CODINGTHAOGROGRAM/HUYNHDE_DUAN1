@@ -18,5 +18,15 @@ namespace DAL
 
             private set { DAL_VonHoa.instance = value; }
         }
+        public DataTable getListVonHoa()
+        {
+            DataTable dt = new DataTable();
+
+            string query = "select * from VonHoa";
+
+            dt = DataProvider.Instance.Executequery(query);
+
+            return dt;
+        }
     }
 }

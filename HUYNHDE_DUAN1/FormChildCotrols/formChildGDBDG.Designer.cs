@@ -33,14 +33,14 @@
             this.panel9 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtThamChieu = new System.Windows.Forms.TextBox();
+            this.txtGiaTran = new System.Windows.Forms.TextBox();
+            this.txtGiaSan = new System.Windows.Forms.TextBox();
+            this.txtGiaMo = new System.Windows.Forms.TextBox();
+            this.txtGiaDong = new System.Windows.Forms.TextBox();
+            this.txtGiaCao = new System.Windows.Forms.TextBox();
+            this.txtGiaThap = new System.Windows.Forms.TextBox();
+            this.PhanTram = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel23 = new System.Windows.Forms.Panel();
             this.panel22 = new System.Windows.Forms.Panel();
@@ -52,9 +52,9 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtGia = new System.Windows.Forms.TextBox();
+            this.txtNgayGiaoDich = new System.Windows.Forms.TextBox();
+            this.txtMaCk = new System.Windows.Forms.TextBox();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -133,93 +133,93 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Thay";
             // 
-            // textBox14
+            // txtThamChieu
             // 
-            this.textBox14.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.textBox14.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox14.Location = new System.Drawing.Point(272, 142);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(235, 19);
-            this.textBox14.TabIndex = 168;
+            this.txtThamChieu.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.txtThamChieu.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtThamChieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtThamChieu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.txtThamChieu.Location = new System.Drawing.Point(272, 142);
+            this.txtThamChieu.Name = "txtThamChieu";
+            this.txtThamChieu.Size = new System.Drawing.Size(235, 19);
+            this.txtThamChieu.TabIndex = 168;
             // 
-            // textBox13
+            // txtGiaTran
             // 
-            this.textBox13.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.textBox13.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox13.Location = new System.Drawing.Point(272, 191);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(235, 19);
-            this.textBox13.TabIndex = 167;
+            this.txtGiaTran.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.txtGiaTran.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtGiaTran.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtGiaTran.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.txtGiaTran.Location = new System.Drawing.Point(272, 191);
+            this.txtGiaTran.Name = "txtGiaTran";
+            this.txtGiaTran.Size = new System.Drawing.Size(235, 19);
+            this.txtGiaTran.TabIndex = 167;
             // 
-            // textBox12
+            // txtGiaSan
             // 
-            this.textBox12.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox12.Location = new System.Drawing.Point(272, 238);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(235, 19);
-            this.textBox12.TabIndex = 166;
+            this.txtGiaSan.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.txtGiaSan.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtGiaSan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtGiaSan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.txtGiaSan.Location = new System.Drawing.Point(272, 238);
+            this.txtGiaSan.Name = "txtGiaSan";
+            this.txtGiaSan.Size = new System.Drawing.Size(235, 19);
+            this.txtGiaSan.TabIndex = 166;
             // 
-            // textBox11
+            // txtGiaMo
             // 
-            this.textBox11.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox11.Location = new System.Drawing.Point(272, 285);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(235, 19);
-            this.textBox11.TabIndex = 165;
+            this.txtGiaMo.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.txtGiaMo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtGiaMo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtGiaMo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.txtGiaMo.Location = new System.Drawing.Point(272, 285);
+            this.txtGiaMo.Name = "txtGiaMo";
+            this.txtGiaMo.Size = new System.Drawing.Size(235, 19);
+            this.txtGiaMo.TabIndex = 165;
             // 
-            // textBox8
+            // txtGiaDong
             // 
-            this.textBox8.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox8.Location = new System.Drawing.Point(272, 339);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(235, 19);
-            this.textBox8.TabIndex = 164;
+            this.txtGiaDong.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.txtGiaDong.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtGiaDong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtGiaDong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.txtGiaDong.Location = new System.Drawing.Point(272, 339);
+            this.txtGiaDong.Name = "txtGiaDong";
+            this.txtGiaDong.Size = new System.Drawing.Size(235, 19);
+            this.txtGiaDong.TabIndex = 164;
             // 
-            // textBox7
+            // txtGiaCao
             // 
-            this.textBox7.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox7.Location = new System.Drawing.Point(272, 388);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(235, 19);
-            this.textBox7.TabIndex = 163;
+            this.txtGiaCao.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.txtGiaCao.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtGiaCao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtGiaCao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.txtGiaCao.Location = new System.Drawing.Point(272, 388);
+            this.txtGiaCao.Name = "txtGiaCao";
+            this.txtGiaCao.Size = new System.Drawing.Size(235, 19);
+            this.txtGiaCao.TabIndex = 163;
             // 
-            // textBox6
+            // txtGiaThap
             // 
-            this.textBox6.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox6.Location = new System.Drawing.Point(272, 437);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(235, 19);
-            this.textBox6.TabIndex = 162;
+            this.txtGiaThap.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.txtGiaThap.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtGiaThap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtGiaThap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.txtGiaThap.Location = new System.Drawing.Point(272, 437);
+            this.txtGiaThap.Name = "txtGiaThap";
+            this.txtGiaThap.Size = new System.Drawing.Size(235, 19);
+            this.txtGiaThap.TabIndex = 162;
             // 
-            // textBox5
+            // PhanTram
             // 
-            this.textBox5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox5.Location = new System.Drawing.Point(833, 192);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(213, 19);
-            this.textBox5.TabIndex = 161;
+            this.PhanTram.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.PhanTram.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.PhanTram.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.PhanTram.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.PhanTram.Location = new System.Drawing.Point(833, 192);
+            this.PhanTram.Name = "PhanTram";
+            this.PhanTram.Size = new System.Drawing.Size(213, 19);
+            this.PhanTram.TabIndex = 161;
             // 
             // panel6
             // 
@@ -317,38 +317,38 @@
             this.panel14.Size = new System.Drawing.Size(235, 2);
             this.panel14.TabIndex = 139;
             // 
-            // textBox10
+            // txtGia
             // 
-            this.textBox10.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox10.Location = new System.Drawing.Point(833, 142);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(213, 19);
-            this.textBox10.TabIndex = 158;
+            this.txtGia.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.txtGia.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtGia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.txtGia.Location = new System.Drawing.Point(833, 142);
+            this.txtGia.Name = "txtGia";
+            this.txtGia.Size = new System.Drawing.Size(213, 19);
+            this.txtGia.TabIndex = 158;
             // 
-            // textBox9
+            // txtNgayGiaoDich
             // 
-            this.textBox9.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox9.Location = new System.Drawing.Point(692, 96);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(354, 19);
-            this.textBox9.TabIndex = 157;
+            this.txtNgayGiaoDich.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.txtNgayGiaoDich.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNgayGiaoDich.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtNgayGiaoDich.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.txtNgayGiaoDich.Location = new System.Drawing.Point(692, 96);
+            this.txtNgayGiaoDich.Name = "txtNgayGiaoDich";
+            this.txtNgayGiaoDich.Size = new System.Drawing.Size(354, 19);
+            this.txtNgayGiaoDich.TabIndex = 157;
             // 
-            // textBox4
+            // txtMaCk
             // 
-            this.textBox4.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox4.Location = new System.Drawing.Point(160, 96);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(347, 19);
-            this.textBox4.TabIndex = 156;
+            this.txtMaCk.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.txtMaCk.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMaCk.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtMaCk.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.txtMaCk.Location = new System.Drawing.Point(160, 96);
+            this.txtMaCk.Name = "txtMaCk";
+            this.txtMaCk.Size = new System.Drawing.Size(347, 19);
+            this.txtMaCk.TabIndex = 156;
             // 
             // panel12
             // 
@@ -557,14 +557,14 @@
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnRefesh);
             this.Controls.Add(this.panel9);
-            this.Controls.Add(this.textBox14);
-            this.Controls.Add(this.textBox13);
-            this.Controls.Add(this.textBox12);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txtThamChieu);
+            this.Controls.Add(this.txtGiaTran);
+            this.Controls.Add(this.txtGiaSan);
+            this.Controls.Add(this.txtGiaMo);
+            this.Controls.Add(this.txtGiaDong);
+            this.Controls.Add(this.txtGiaCao);
+            this.Controls.Add(this.txtGiaThap);
+            this.Controls.Add(this.PhanTram);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel23);
             this.Controls.Add(this.panel22);
@@ -575,9 +575,9 @@
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel13);
             this.Controls.Add(this.panel14);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtGia);
+            this.Controls.Add(this.txtNgayGiaoDich);
+            this.Controls.Add(this.txtMaCk);
             this.Controls.Add(this.panel12);
             this.Controls.Add(this.panel10);
             this.Controls.Add(this.panel7);
@@ -612,14 +612,14 @@
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
+        public System.Windows.Forms.TextBox txtThamChieu;
+        public System.Windows.Forms.TextBox txtGiaTran;
+        public System.Windows.Forms.TextBox txtGiaSan;
+        public System.Windows.Forms.TextBox txtGiaMo;
+        public System.Windows.Forms.TextBox txtGiaDong;
+        public System.Windows.Forms.TextBox txtGiaCao;
+        public System.Windows.Forms.TextBox txtGiaThap;
+        public System.Windows.Forms.TextBox PhanTram;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel23;
         private System.Windows.Forms.Panel panel22;
@@ -631,9 +631,9 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Panel panel14;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox4;
+        public System.Windows.Forms.TextBox txtGia;
+        public System.Windows.Forms.TextBox txtNgayGiaoDich;
+        public System.Windows.Forms.TextBox txtMaCk;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel7;

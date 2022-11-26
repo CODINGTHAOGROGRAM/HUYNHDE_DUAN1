@@ -30,38 +30,38 @@ namespace BUS
 
             var options = new ChromeOptions();
             options.AddArgument("window-position=-32000,-32000");
-            IWebDriver driver = new ChromeDriver();
 
+            IWebDriver driver = new ChromeDriver();
             driver.Navigate().GoToUrl("https://www.hnx.vn/cophieu-etfs/chi-tiet-chung-khoan-ny-AAV.html?_des_tab=2");
 
-            DataTable dt = new DataTable("BienDongGia");
+            DataTable dt = new DataTable("ThongKeCungCau");
 
-            dt.Columns.Add("NgayGiaoDich", typeof(DateTime));
+            dt.Columns.Add("NgayGiaoDich");
             dt.Columns.Add("MaCk");
             dt.Columns.Add("GiaDong");
             dt.Columns.Add("SoLenhMua");
             dt.Columns.Add("KhoiLuongMua");
             dt.Columns.Add("SoLenhBan");
-            dt.Columns.Add("KhoiLuongBan");
-            dt.Columns.Add("DuMu");
+            dt.Columns.Add("KhoiLuongban");
+            dt.Columns.Add("DuMua");
             dt.Columns.Add("DuBan");
             dt.Columns.Add("KhoiLuongGD");
             dt.Columns.Add("GiaTriGD");
 
-            
-        Thread.Sleep(2000);
+
+            Thread.Sleep(2000);
 
             IList<IWebElement> links = driver.FindElements(By.XPath("//*[@id=\"divSearchContentArticle\"]/ul/li[2]/div/div/div[2]/ul/li/label/input"));
             string query = "exec dbo.CungCauProc_getByMaCk @mack , @ngayGiaoDich";
 
-            for (int i = 0; i < 2; i++)
+            for (int i = 0; i < 10; i++)
             {
                 string MaCk = links[i].GetAttribute("value");
                 var url = "https://www.hnx.vn/cophieu-etfs/chi-tiet-chung-khoan-ny-" + links[i].GetAttribute("value").ToLower() + ".html?_ces_tab=3";
                 driver.Navigate().GoToUrl(url);
                 Thread.Sleep(1000);
 
-
+                Console.WriteLine(MaCk);
                 int x = 2;
 
 
@@ -69,25 +69,32 @@ namespace BUS
                 {
                     try
                     {
-                        driver.FindElement(By.XPath("//*[@id=\"BienDongGiadivNumberRecordOnPage\"]/option[5]")).Click();
-                        Thread.Sleep(500);
+                        driver.FindElement(By.XPath("//*[@id=\"TK_CungCaudivNumberRecordOnPage\"]/option[5]")).Click();
+                        Thread.Sleep(2000);
 
                         IList<IWebElement> listtr = driver.FindElements(By.XPath("//*[@id=\"TK_CungCau_tableDatas\"]/tbody/tr"));
-                        Thread.Sleep(500);
+                        Thread.Sleep(2000);
                         for (int j = 1; j <= listtr.Count; j++)
                         {
-                            IList<IWebElement> listCol = driver.FindElements(By.XPath($"//*[@id=\"TK_CungCau_tableDatas\"]/tbody/tr[{i}]/td"));
 
+                            IList<IWebElement> listCol = driver.FindElements(By.XPath($"//*[@id=\"TK_CungCau_tableDatas\"]/tbody/tr[{j}]/td"));
+                            Console.WriteLine(listCol[0].Text);
+                            Console.WriteLine(listCol[9].Text);
                             DateTime NgayGiaoDich = DateTime.ParseExact(listCol[0].Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
 
-                            if (BUS_BienDongGia.Instance.CountGD(query, MaCk, NgayGiaoDich.ToString()) == false)
+                            if (CountGD(query, MaCk, NgayGiaoDich.ToString()) == false)
                             {
-                                
-                                List<double> doubles = BUS_BienDongGia.Instance.tryparst(listCol);
 
-                                dt.Rows.Add(NgayGiaoDich, MaCk, doubles[0], doubles[1], doubles[2], doubles[3],
-                                                                doubles[4], doubles[5], doubles[6], doubles[7],
-                                                                doubles[8], doubles[9]);
+                                double.TryParse(listCol[1].Text.Replace(",", "."), out double GiaDong);
+                                double.TryParse(listCol[2].Text.Replace(",", "."), out double SoLenhMua);
+                                double.TryParse(listCol[3].Text.Replace(",", "."), out double KhoiLuongMua);
+                                double.TryParse(listCol[4].Text.Replace(",", "."), out double SoLenhBan);
+                                double.TryParse(listCol[5].Text.Replace(",", "."), out double KhoiLuongBan);
+                                double.TryParse(listCol[6].Text.Replace(",", "."), out double DuMu);
+                                double.TryParse(listCol[7].Text.Replace(",", "."), out double DuBan);
+                                double.TryParse(listCol[8].Text.Replace(",", "."), out double KhoiLuongGD);
+
+                                dt.Rows.Add(NgayGiaoDich, MaCk, GiaDong, SoLenhMua, KhoiLuongMua, SoLenhBan, KhoiLuongBan, DuMu, DuBan, KhoiLuongGD, Convert.ToDouble(listCol[9].Text.Replace(".", "")));
                             }
 
                         }
@@ -101,10 +108,18 @@ namespace BUS
                         break;
                     }
                 }
+
                 driver.Navigate().Back();
             }
+
             DataProvider.Instance.insertDB(dt);
-            driver.Close();
+            driver.Quit();
+        }
+        public bool CountGD(string query, string mack, string ngayGd)
+        {
+            var i = DataProvider.Instance.Executequery(query, new object[] { mack, ngayGd });
+            if (i.Rows.Count > 0) { return true; }
+            return false;
         }
     }
 }

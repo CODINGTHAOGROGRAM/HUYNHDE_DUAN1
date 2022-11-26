@@ -58,6 +58,7 @@
             this.panel4.Size = new System.Drawing.Size(1300, 850);
             this.panel4.TabIndex = 4;
             this.panel4.Click += new System.EventHandler(this.panel4_Click);
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // GridViewHoSo
             // 

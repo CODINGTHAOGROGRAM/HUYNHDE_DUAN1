@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -55,6 +56,10 @@ namespace DTO
             this.Diem = diem;
             this.PhanTram = phanTram;
 
+        }
+
+        public DTO_BienDongGia(DataRow rowItem)
+        {
         }
     }
 }

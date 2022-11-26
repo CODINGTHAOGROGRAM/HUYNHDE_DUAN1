@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
 
 namespace HUYNHDE_DUAN1
 {
@@ -355,6 +356,7 @@ namespace HUYNHDE_DUAN1
             this.btnFindBDG.Text = "Tìm";
             this.btnFindBDG.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnFindBDG.UseVisualStyleBackColor = true;
+            this.btnFindBDG.Click += new System.EventHandler(this.btnFindBDG_Click);
             // 
             // panel5
             // 
@@ -703,7 +705,6 @@ namespace HUYNHDE_DUAN1
             this.GridVonHoa.Size = new System.Drawing.Size(1411, 757);
             this.GridVonHoa.TabIndex = 5;
             this.GridVonHoa.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridVonHoa_CellClick);
-            this.GridVonHoa.ForeColor = Color.Black;
             // 
             // panel34
             // 
@@ -852,6 +853,7 @@ namespace HUYNHDE_DUAN1
             this.Controls.Add(this.tabControl1);
             this.Name = "formGDBDG";
             this.Text = "Quản lý dữ liệu giao dịch ";
+            
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
@@ -871,6 +873,11 @@ namespace HUYNHDE_DUAN1
             this.panel34.PerformLayout();
             this.ResumeLayout(false);
 
+        }
+
+        private void formGDBDG_Load_1(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion
@@ -913,7 +920,7 @@ namespace HUYNHDE_DUAN1
         private FontAwesome.Sharp.IconButton btnFindVH;
         private System.Windows.Forms.Panel panel38;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.DataGridView GridBDG;
+        public System.Windows.Forms.DataGridView GridBDG;
         private System.Windows.Forms.Panel panel2;
         private FontAwesome.Sharp.IconButton btnUpGradeBDG;
         private FontAwesome.Sharp.IconButton btnAddBDG;

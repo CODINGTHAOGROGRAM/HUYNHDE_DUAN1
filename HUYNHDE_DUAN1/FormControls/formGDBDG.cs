@@ -1,5 +1,6 @@
 ﻿using BUS;
 using HUYNHDE_DUAN1.FormChildCotrols;
+using HUYNHDE_DUAN1.formShowClickGrid;
 using System.Windows.Forms;
 using static HUYNHDE_DUAN1.formMessage;
 
@@ -10,7 +11,7 @@ namespace HUYNHDE_DUAN1
         public formGDBDG()
         {
             InitializeComponent();
-            Load();
+            
         }
         private void panel1_Click(object sender, System.EventArgs e)
         {
@@ -76,7 +77,7 @@ namespace HUYNHDE_DUAN1
 
         }
         #endregion
-        void Load()
+         private void Load()
         {
             BUS_BienDongGia.Instance.LoadBGD(GridBDG);
             BUS_CungCau.Instance.loadCungCau(GridCungCau);
@@ -85,7 +86,7 @@ namespace HUYNHDE_DUAN1
 
         private void GridBDG_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            formChildGDBDG f = new formChildGDBDG();
+            formShowBDG f = new formShowBDG();
 
             f.txtNgayGiaoDich.Text = GridBDG.CurrentRow.Cells[1].Value.ToString();
             f.txtMaCk.Text = GridBDG.CurrentRow.Cells[2].Value.ToString();
@@ -97,7 +98,7 @@ namespace HUYNHDE_DUAN1
             f.txtGiaCao.Text = GridBDG.CurrentRow.Cells[8].Value.ToString();
             f.txtGiaThap.Text = GridBDG.CurrentRow.Cells[9].Value.ToString();
             f.txtGia.Text = GridBDG.CurrentRow.Cells[10].Value.ToString();
-            f.PhanTram.Text = GridBDG.CurrentRow.Cells[11].Value.ToString();
+            f.txtPhanTram.Text = GridBDG.CurrentRow.Cells[11].Value.ToString();
 
             f.ShowDialog();
             
@@ -105,7 +106,7 @@ namespace HUYNHDE_DUAN1
 
         private void GridCungCau_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            formChildTKCC f = new formChildTKCC();
+            formShowTKCC f = new formShowTKCC();
 
             f.txtNgayGiaoDich.Text = GridCungCau.CurrentRow.Cells[1].Value.ToString();
             f.txtMaCK.Text = GridCungCau.CurrentRow.Cells[2].Value.ToString();
@@ -113,7 +114,7 @@ namespace HUYNHDE_DUAN1
             f.txtLenhMua.Text = GridCungCau.CurrentRow.Cells[4].Value.ToString();
             f.txtLuongMua.Text = GridCungCau.CurrentRow.Cells[5].Value.ToString();
             f.txtLenhBan.Text = GridCungCau.CurrentRow.Cells[6].Value.ToString();
-            f.txtLuongban.Text = GridCungCau.CurrentRow.Cells[7].Value.ToString();
+            f.txtLuongBan.Text = GridCungCau.CurrentRow.Cells[7].Value.ToString();
             f.txtDuMua.Text = GridCungCau.CurrentRow.Cells[8].Value.ToString();
             f.txtDuBan.Text = GridCungCau.CurrentRow.Cells[9].Value.ToString();
             f.txtKLGD.Text = GridCungCau.CurrentRow.Cells[10].Value.ToString();
@@ -124,7 +125,7 @@ namespace HUYNHDE_DUAN1
 
         private void GridVonHoa_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            formChildVH f = new formChildVH();
+            formShowVH f = new formShowVH();
 
             f.txtNgayGiaoDich.Text = GridVonHoa.CurrentRow.Cells[1].Value.ToString();
             f.txtMaCK.Text = GridVonHoa.CurrentRow.Cells[2].Value.ToString();
@@ -133,6 +134,15 @@ namespace HUYNHDE_DUAN1
             f.txtThiTruong.Text = GridVonHoa.CurrentRow.Cells[5].Value.ToString();
 
             f.ShowDialog();
+        }
+
+        private void btnFindBDG_Click(object sender, System.EventArgs e)
+        {
+            
+        }
+        private void formGDBDG_Load(object sender, System.EventArgs e)
+        {
+            Load();
         }
     }
 }

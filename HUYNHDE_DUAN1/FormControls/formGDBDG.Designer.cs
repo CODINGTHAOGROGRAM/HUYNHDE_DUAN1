@@ -1,4 +1,6 @@
-﻿namespace HUYNHDE_DUAN1
+﻿using System.Drawing;
+
+namespace HUYNHDE_DUAN1
 {
     partial class formGDBDG
     {
@@ -31,7 +33,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.GridBDG = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnExportsBDG = new FontAwesome.Sharp.IconButton();
             this.btnAddBDG = new FontAwesome.Sharp.IconButton();
@@ -52,7 +54,7 @@
             this.btnExportTKCC = new FontAwesome.Sharp.IconButton();
             this.btnAddTKCC = new FontAwesome.Sharp.IconButton();
             this.btnUpGradeTKCC = new FontAwesome.Sharp.IconButton();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.GridCungCau = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.textBox16 = new System.Windows.Forms.TextBox();
@@ -69,7 +71,7 @@
             this.btnExportVH = new FontAwesome.Sharp.IconButton();
             this.btnAddVH = new FontAwesome.Sharp.IconButton();
             this.btnUpgradeVH = new FontAwesome.Sharp.IconButton();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.GridVonHoa = new System.Windows.Forms.DataGridView();
             this.panel34 = new System.Windows.Forms.Panel();
             this.textBox18 = new System.Windows.Forms.TextBox();
             this.textBox30 = new System.Windows.Forms.TextBox();
@@ -84,16 +86,16 @@
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridBDG)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridCungCau)).BeginInit();
             this.panel3.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridVonHoa)).BeginInit();
             this.panel34.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -131,21 +133,22 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.Controls.Add(this.dataGridView1);
+            this.panel6.Controls.Add(this.GridBDG);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(3, 135);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(1411, 541);
             this.panel6.TabIndex = 5;
             // 
-            // dataGridView1
+            // GridBDG
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1411, 541);
-            this.dataGridView1.TabIndex = 0;
+            this.GridBDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridBDG.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.GridBDG.Location = new System.Drawing.Point(0, 0);
+            this.GridBDG.Name = "GridBDG";
+            this.GridBDG.Size = new System.Drawing.Size(1411, 541);
+            this.GridBDG.TabIndex = 0;
+            this.GridBDG.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridBDG_CellClick);
             // 
             // panel2
             // 
@@ -366,7 +369,7 @@
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(198)))), ((int)(((byte)(220)))));
             this.tabPage2.Controls.Add(this.panel7);
-            this.tabPage2.Controls.Add(this.dataGridView2);
+            this.tabPage2.Controls.Add(this.GridCungCau);
             this.tabPage2.Controls.Add(this.panel3);
             this.tabPage2.ForeColor = System.Drawing.Color.DarkOrange;
             this.tabPage2.Location = new System.Drawing.Point(4, 34);
@@ -453,14 +456,15 @@
             this.btnUpGradeTKCC.UseVisualStyleBackColor = true;
             this.btnUpGradeTKCC.Click += new System.EventHandler(this.btnUpGradeTKCC_Click);
             // 
-            // dataGridView2
+            // GridCungCau
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 135);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(1411, 757);
-            this.dataGridView2.TabIndex = 5;
+            this.GridCungCau.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridCungCau.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.GridCungCau.Location = new System.Drawing.Point(3, 135);
+            this.GridCungCau.Name = "GridCungCau";
+            this.GridCungCau.Size = new System.Drawing.Size(1411, 757);
+            this.GridCungCau.TabIndex = 5;
+            this.GridCungCau.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridCungCau_CellClick);
             // 
             // panel3
             // 
@@ -604,7 +608,7 @@
             // 
             this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(198)))), ((int)(((byte)(220)))));
             this.tabPage3.Controls.Add(this.panel8);
-            this.tabPage3.Controls.Add(this.dataGridView3);
+            this.tabPage3.Controls.Add(this.GridVonHoa);
             this.tabPage3.Controls.Add(this.panel34);
             this.tabPage3.Location = new System.Drawing.Point(4, 34);
             this.tabPage3.Name = "tabPage3";
@@ -690,14 +694,16 @@
             this.btnUpgradeVH.UseVisualStyleBackColor = true;
             this.btnUpgradeVH.Click += new System.EventHandler(this.btnUpgradeVH_Click);
             // 
-            // dataGridView3
+            // GridVonHoa
             // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView3.Location = new System.Drawing.Point(3, 135);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(1411, 757);
-            this.dataGridView3.TabIndex = 5;
+            this.GridVonHoa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridVonHoa.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.GridVonHoa.Location = new System.Drawing.Point(3, 135);
+            this.GridVonHoa.Name = "GridVonHoa";
+            this.GridVonHoa.Size = new System.Drawing.Size(1411, 757);
+            this.GridVonHoa.TabIndex = 5;
+            this.GridVonHoa.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridVonHoa_CellClick);
+            this.GridVonHoa.ForeColor = Color.Black;
             // 
             // panel34
             // 
@@ -849,18 +855,18 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridBDG)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridCungCau)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridVonHoa)).EndInit();
             this.panel34.ResumeLayout(false);
             this.panel34.PerformLayout();
             this.ResumeLayout(false);
@@ -907,7 +913,7 @@
         private FontAwesome.Sharp.IconButton btnFindVH;
         private System.Windows.Forms.Panel panel38;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView GridBDG;
         private System.Windows.Forms.Panel panel2;
         private FontAwesome.Sharp.IconButton btnUpGradeBDG;
         private FontAwesome.Sharp.IconButton btnAddBDG;
@@ -916,11 +922,11 @@
         private FontAwesome.Sharp.IconButton btnExportTKCC;
         private FontAwesome.Sharp.IconButton btnAddTKCC;
         private FontAwesome.Sharp.IconButton btnUpGradeTKCC;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView GridCungCau;
         private System.Windows.Forms.Panel panel8;
         private FontAwesome.Sharp.IconButton btnExportVH;
         private FontAwesome.Sharp.IconButton btnAddVH;
         private FontAwesome.Sharp.IconButton btnUpgradeVH;
-        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridView GridVonHoa;
     }
 }

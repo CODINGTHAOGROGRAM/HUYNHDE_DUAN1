@@ -30,11 +30,11 @@
         {
             this.panelControlForm = new HUYNHDE_DUAN1.contructions_functions.panelLinearGradient();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox36 = new System.Windows.Forms.TextBox();
-            this.textBox37 = new System.Windows.Forms.TextBox();
-            this.textBox40 = new System.Windows.Forms.TextBox();
-            this.textBox41 = new System.Windows.Forms.TextBox();
-            this.textBox42 = new System.Windows.Forms.TextBox();
+            this.txtThiTruong = new System.Windows.Forms.TextBox();
+            this.txtNgayGiaoDich = new System.Windows.Forms.TextBox();
+            this.txtVonHoa = new System.Windows.Forms.TextBox();
+            this.txtGiaDong = new System.Windows.Forms.TextBox();
+            this.txtMaCK = new System.Windows.Forms.TextBox();
             this.panel45 = new System.Windows.Forms.Panel();
             this.panel46 = new System.Windows.Forms.Panel();
             this.panel47 = new System.Windows.Forms.Panel();
@@ -75,65 +75,65 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Thêm dữ liệu giao dịch vốn hóa\r\n";
             // 
-            // textBox36
+            // txtThiTruong
             // 
-            this.textBox36.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox36.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.textBox36.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox36.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox36.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox36.Location = new System.Drawing.Point(760, 144);
-            this.textBox36.Name = "textBox36";
-            this.textBox36.Size = new System.Drawing.Size(255, 19);
-            this.textBox36.TabIndex = 315;
+            this.txtThiTruong.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtThiTruong.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.txtThiTruong.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtThiTruong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtThiTruong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.txtThiTruong.Location = new System.Drawing.Point(760, 144);
+            this.txtThiTruong.Name = "txtThiTruong";
+            this.txtThiTruong.Size = new System.Drawing.Size(255, 19);
+            this.txtThiTruong.TabIndex = 315;
             // 
-            // textBox37
+            // txtNgayGiaoDich
             // 
-            this.textBox37.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox37.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.textBox37.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox37.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox37.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox37.Location = new System.Drawing.Point(668, 95);
-            this.textBox37.Name = "textBox37";
-            this.textBox37.Size = new System.Drawing.Size(347, 19);
-            this.textBox37.TabIndex = 314;
+            this.txtNgayGiaoDich.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtNgayGiaoDich.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.txtNgayGiaoDich.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNgayGiaoDich.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtNgayGiaoDich.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.txtNgayGiaoDich.Location = new System.Drawing.Point(668, 95);
+            this.txtNgayGiaoDich.Name = "txtNgayGiaoDich";
+            this.txtNgayGiaoDich.Size = new System.Drawing.Size(347, 19);
+            this.txtNgayGiaoDich.TabIndex = 314;
             // 
-            // textBox40
+            // txtVonHoa
             // 
-            this.textBox40.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox40.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.textBox40.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox40.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox40.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox40.Location = new System.Drawing.Point(230, 208);
-            this.textBox40.Name = "textBox40";
-            this.textBox40.Size = new System.Drawing.Size(327, 19);
-            this.textBox40.TabIndex = 313;
+            this.txtVonHoa.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtVonHoa.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.txtVonHoa.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtVonHoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtVonHoa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.txtVonHoa.Location = new System.Drawing.Point(230, 208);
+            this.txtVonHoa.Name = "txtVonHoa";
+            this.txtVonHoa.Size = new System.Drawing.Size(327, 19);
+            this.txtVonHoa.TabIndex = 313;
             // 
-            // textBox41
+            // txtGiaDong
             // 
-            this.textBox41.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox41.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.textBox41.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox41.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox41.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox41.Location = new System.Drawing.Point(230, 144);
-            this.textBox41.Name = "textBox41";
-            this.textBox41.Size = new System.Drawing.Size(327, 19);
-            this.textBox41.TabIndex = 312;
+            this.txtGiaDong.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtGiaDong.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.txtGiaDong.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtGiaDong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtGiaDong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.txtGiaDong.Location = new System.Drawing.Point(230, 144);
+            this.txtGiaDong.Name = "txtGiaDong";
+            this.txtGiaDong.Size = new System.Drawing.Size(327, 19);
+            this.txtGiaDong.TabIndex = 312;
             // 
-            // textBox42
+            // txtMaCK
             // 
-            this.textBox42.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox42.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.textBox42.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox42.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox42.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox42.Location = new System.Drawing.Point(230, 96);
-            this.textBox42.Name = "textBox42";
-            this.textBox42.Size = new System.Drawing.Size(327, 19);
-            this.textBox42.TabIndex = 311;
+            this.txtMaCK.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtMaCK.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.txtMaCK.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMaCK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtMaCK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.txtMaCK.Location = new System.Drawing.Point(230, 96);
+            this.txtMaCK.Name = "txtMaCK";
+            this.txtMaCK.Size = new System.Drawing.Size(327, 19);
+            this.txtMaCK.TabIndex = 311;
             // 
             // panel45
             // 
@@ -312,11 +312,11 @@
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnRefesh);
-            this.Controls.Add(this.textBox36);
-            this.Controls.Add(this.textBox37);
-            this.Controls.Add(this.textBox40);
-            this.Controls.Add(this.textBox41);
-            this.Controls.Add(this.textBox42);
+            this.Controls.Add(this.txtThiTruong);
+            this.Controls.Add(this.txtNgayGiaoDich);
+            this.Controls.Add(this.txtVonHoa);
+            this.Controls.Add(this.txtGiaDong);
+            this.Controls.Add(this.txtMaCK);
             this.Controls.Add(this.panel45);
             this.Controls.Add(this.panel46);
             this.Controls.Add(this.panel47);
@@ -343,11 +343,11 @@
 
         private contructions_functions.panelLinearGradient panelControlForm;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox36;
-        private System.Windows.Forms.TextBox textBox37;
-        private System.Windows.Forms.TextBox textBox40;
-        private System.Windows.Forms.TextBox textBox41;
-        private System.Windows.Forms.TextBox textBox42;
+        public System.Windows.Forms.TextBox txtThiTruong;
+        public System.Windows.Forms.TextBox txtNgayGiaoDich;
+        public System.Windows.Forms.TextBox txtVonHoa;
+        public System.Windows.Forms.TextBox txtGiaDong;
+        public System.Windows.Forms.TextBox txtMaCK;
         private System.Windows.Forms.Panel panel45;
         private System.Windows.Forms.Panel panel46;
         private System.Windows.Forms.Panel panel47;

@@ -24,17 +24,14 @@ namespace DAL
         public List<DTO_GiaoDichTraiPhieu> loadData()
         {
             List<DTO_GiaoDichTraiPhieu> list = new List<DTO_GiaoDichTraiPhieu>();
-            string query = "ShowData_GDTP";
+            string query = "exec ShowData_GDTP";
 
             DataTable data = DataProvider.Instance.Executequery(query);
 
             foreach (DataRow item in data.Rows)
             {
-                DTO_GiaoDichTraiPhieu gdtp = new DTO_GiaoDichTraiPhieu(Convert.ToInt32(item[0]), Convert.ToInt32(item[1]), Convert.ToDateTime(item[2]),
-                                                                       item[3].ToString(), Convert.ToDouble(item[4]), Convert.ToInt32(item[5]),
-                                                                       Convert.ToDouble(item[6]), Convert.ToInt32(item[7]), Convert.ToDouble(item[8]), Convert.ToInt32(item[9]),
-                                                                       Convert.ToDouble(item[10]), Convert.ToInt32(item[11]), Convert.ToDouble(item[12]));
-             list.Add(gdtp);
+                DTO_GiaoDichTraiPhieu gdtp = new DTO_GiaoDichTraiPhieu(item);
+                list.Add(gdtp);
             }
             return list;
         }

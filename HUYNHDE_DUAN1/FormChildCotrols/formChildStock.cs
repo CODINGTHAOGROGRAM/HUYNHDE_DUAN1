@@ -32,6 +32,7 @@ namespace HUYNHDE_DUAN1
 
         [DllImportAttribute("user32.dll")]
         public static extern bool ReleaseCapture();
+
         private void panelLinearGradient1_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -40,7 +41,6 @@ namespace HUYNHDE_DUAN1
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
         }
-
 
         #endregion MouseDown Form
 

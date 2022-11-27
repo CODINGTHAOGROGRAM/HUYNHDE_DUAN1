@@ -35,12 +35,13 @@ namespace HUYNHDE_DUAN1
 
         private void panelControlForm_MouseDown(object sender, MouseEventArgs e)
         {
-            if(e.Button == MouseButtons.Left)
+            if (e.Button == MouseButtons.Left)
             {
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
         }
+
         #endregion MouseDown Form
 
         public formChildManagerEmployee()

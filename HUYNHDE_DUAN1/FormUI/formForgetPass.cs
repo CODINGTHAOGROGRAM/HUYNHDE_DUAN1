@@ -75,12 +75,10 @@ namespace HUYNHDE_DUAN1
 
         private void btnSendkey_Click(object sender, EventArgs e)
         {
-
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-
         }
 
         private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
@@ -90,6 +88,7 @@ namespace HUYNHDE_DUAN1
                 btnConfirm_Click(sender, e);
             }
         }
+
         private void txtUsername_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar.Equals(Convert.ToChar(13)))

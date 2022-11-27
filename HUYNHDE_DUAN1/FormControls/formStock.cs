@@ -1,14 +1,7 @@
 ﻿using BUS;
 using HUYNHDE_DUAN1.formShowClickGrid;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace HUYNHDE_DUAN1
@@ -19,17 +12,15 @@ namespace HUYNHDE_DUAN1
         {
             InitializeComponent();
         }
+
         //Methods
-        void LoadGrid()
+        private void LoadGrid()
         {
             GridViewHoSo.DataSource = BUS_HoSoCuPhieu.Instance.getListHoSo();
             //show.tt.DataBindings.Add(new Binding("Text", GridViewHoSo.DataSource, "MaCK"));
-
-
         }
-       
-        //
 
+        //
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -42,16 +33,11 @@ namespace HUYNHDE_DUAN1
             this.ActiveControl = null;
         }
 
-
-
-
         private void formStock_Load(object sender, EventArgs e)
         {
             LoadGrid();
             // textBox1.DataBindings.Add(new Binding("Text", GridViewHoSo.DataSource, "MaCK"));
             GridViewHoSo.ForeColor = Color.Black;
-
-
         }
 
         private void GridViewHoSo_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -63,12 +49,8 @@ namespace HUYNHDE_DUAN1
                     formShowStock show = new formShowStock();
                     show.bindindDataGrid(GridViewHoSo.DataSource);
                     show.ShowDialog();
-                   
-                  
-
                 }
             }
-
         }
     }
 }

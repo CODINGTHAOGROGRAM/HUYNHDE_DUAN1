@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BUS
+﻿namespace BUS
 {
     public class BUS_NhanVien
     {
-
         private static BUS_NhanVien instance;
 
         public static BUS_NhanVien Instance
@@ -17,6 +10,5 @@ namespace BUS
 
             private set { BUS_NhanVien.instance = value; }
         }
-
     }
 }

@@ -23,25 +23,27 @@ namespace HUYNHDE_DUAN1
         #endregion Border Forms
 
         #region MoveDownForm
+
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
 
         [DllImportAttribute("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+
         [DllImportAttribute("user32.dll")]
         public static extern bool ReleaseCapture();
+
         private void panelControlForm_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
-
-
             }
         }
 
-        #endregion
+        #endregion MoveDownForm
+
         public formChildGDBDG()
         {
             InitializeComponent();
@@ -52,7 +54,7 @@ namespace HUYNHDE_DUAN1
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();   
+            this.Close();
         }
 
         private void formChildGDBDG_Click(object sender, EventArgs e)

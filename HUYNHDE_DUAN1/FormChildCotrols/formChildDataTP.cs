@@ -23,11 +23,13 @@ namespace HUYNHDE_DUAN1
         #endregion Border Forms
 
         #region MoveDownForm
+
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
 
         [DllImportAttribute("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+
         [DllImportAttribute("user32.dll")]
         public static extern bool ReleaseCapture();
 
@@ -37,12 +39,10 @@ namespace HUYNHDE_DUAN1
             {
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
-
-
             }
         }
-       
-        #endregion
+
+        #endregion MoveDownForm
 
         public formChildDataTP()
         {

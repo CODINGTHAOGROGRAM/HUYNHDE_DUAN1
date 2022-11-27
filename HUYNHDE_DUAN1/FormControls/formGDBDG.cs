@@ -1,7 +1,6 @@
 ﻿using BUS;
 using HUYNHDE_DUAN1.FormChildCotrols;
 using System.Windows.Forms;
-using static HUYNHDE_DUAN1.formMessage;
 
 namespace HUYNHDE_DUAN1
 {
@@ -11,6 +10,7 @@ namespace HUYNHDE_DUAN1
         {
             InitializeComponent();
         }
+
         private void panel1_Click(object sender, System.EventArgs e)
         {
             this.ActiveControl = null;
@@ -21,26 +21,29 @@ namespace HUYNHDE_DUAN1
             this.ActiveControl = null;
         }
 
-
-
         #region Controls btn BDG
+
         private void btnAddBDG_Click(object sender, System.EventArgs e)
         {
             formChildGDBDG dg = new formChildGDBDG();
             dg.ShowDialog();
         }
+
         private void btnExportsBDG_Click(object sender, System.EventArgs e)
         {
-
         }
 
         private void btnUpGradeBDG_Click(object sender, System.EventArgs e)
         {
             BUS_BienDongGia.Instance.DongBoBDG();
         }
-        #endregion   
+
+        #endregion Controls btn BDG
+
+
 
         #region Controls btn TKCC
+
         private void btnUpGradeTKCC_Click(object sender, System.EventArgs e)
         {
             BUS_CungCau.Instance.DongBoCungCau();
@@ -54,14 +57,14 @@ namespace HUYNHDE_DUAN1
 
         private void btnExportTKCC_Click(object sender, System.EventArgs e)
         {
-
         }
-        #endregion
+
+        #endregion Controls btn TKCC
 
         #region Controls btn VH
+
         private void btnUpgradeVH_Click(object sender, System.EventArgs e)
         {
-
         }
 
         private void btnAddVH_Click(object sender, System.EventArgs e)
@@ -72,9 +75,8 @@ namespace HUYNHDE_DUAN1
 
         private void btnExportVH_Click(object sender, System.EventArgs e)
         {
-
         }
-        #endregion
 
+        #endregion Controls btn VH
     }
 }

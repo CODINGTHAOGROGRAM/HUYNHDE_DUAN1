@@ -1,19 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace HUYNHDE_DUAN1.formShowClickGrid
 {
     public partial class formShowVH : Form
     {
-
         #region Border Forms
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
@@ -39,16 +32,18 @@ namespace HUYNHDE_DUAN1.formShowClickGrid
 
         [DllImportAttribute("user32.dll")]
         public static extern bool ReleaseCapture();
+
         private void panelControlForm_MouseDown(object sender, MouseEventArgs e)
         {
-
             if (e.Button == MouseButtons.Left)
             {
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
         }
+
         #endregion MouseDown Form
+
         public formShowVH()
         {
             InitializeComponent();
@@ -61,7 +56,5 @@ namespace HUYNHDE_DUAN1.formShowClickGrid
         {
             this.Close();
         }
-
-       
     }
 }

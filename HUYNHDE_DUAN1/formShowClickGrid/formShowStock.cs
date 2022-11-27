@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace HUYNHDE_DUAN1.formShowClickGrid
@@ -38,9 +32,9 @@ namespace HUYNHDE_DUAN1.formShowClickGrid
 
         [DllImportAttribute("user32.dll")]
         public static extern bool ReleaseCapture();
+
         private void panelLinearGradient1_MouseDown_1(object sender, MouseEventArgs e)
         {
-
             if (e.Button == MouseButtons.Left)
             {
                 ReleaseCapture();
@@ -49,7 +43,6 @@ namespace HUYNHDE_DUAN1.formShowClickGrid
         }
 
         #endregion MouseDown Form
-
 
         public formShowStock()
         {
@@ -62,7 +55,6 @@ namespace HUYNHDE_DUAN1.formShowClickGrid
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
-            
         }
 
         public void bindindDataGrid(object dataSource)
@@ -83,9 +75,6 @@ namespace HUYNHDE_DUAN1.formShowClickGrid
             txtVon.DataBindings.Add(new Binding("Text", dataSource, "VonDieuLe"));
             txtKLLH.DataBindings.Add(new Binding("Text", dataSource, "KLLH"));
             txtKLNY.DataBindings.Add(new Binding("Text", dataSource, "KLNY"));
-            
         }
-
-
     }
 }

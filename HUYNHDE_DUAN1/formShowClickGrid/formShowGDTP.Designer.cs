@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.title = new System.Windows.Forms.Label();
             this.tongGTGDLL = new System.Windows.Forms.TextBox();
             this.tongKLGDLL = new System.Windows.Forms.TextBox();
             this.tongGTGDLC = new System.Windows.Forms.TextBox();
@@ -62,24 +61,13 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.panelControlForm = new HUYNHDE_DUAN1.contructions_functions.panelLinearGradient();
             this.btnExports = new FontAwesome.Sharp.IconButton();
             this.btnSave = new FontAwesome.Sharp.IconButton();
             this.btnClose = new FontAwesome.Sharp.IconButton();
+            this.panelControlForm = new HUYNHDE_DUAN1.contructions_functions.panelLinearGradient();
+            this.title = new System.Windows.Forms.Label();
             this.panelControlForm.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // title
-            // 
-            this.title.AutoSize = true;
-            this.title.BackColor = System.Drawing.Color.Transparent;
-            this.title.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.title.Location = new System.Drawing.Point(3, 9);
-            this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(51, 25);
-            this.title.TabIndex = 2;
-            this.title.Text = "title";
             // 
             // tongGTGDLL
             // 
@@ -197,6 +185,7 @@
             this.ngay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
             this.ngay.Location = new System.Drawing.Point(152, 178);
             this.ngay.Name = "ngay";
+            this.ngay.ReadOnly = true;
             this.ngay.Size = new System.Drawing.Size(347, 19);
             this.ngay.TabIndex = 200;
             this.ngay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -209,6 +198,7 @@
             this.maCK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
             this.maCK.Location = new System.Drawing.Point(152, 117);
             this.maCK.Name = "maCK";
+            this.maCK.ReadOnly = true;
             this.maCK.Size = new System.Drawing.Size(347, 19);
             this.maCK.TabIndex = 199;
             this.maCK.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -422,18 +412,6 @@
             this.label1.TabIndex = 177;
             this.label1.Text = "Tổng GTGD thỏa thuận lô chẵn:";
             // 
-            // panelControlForm
-            // 
-            this.panelControlForm.Colorleft = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(254)))), ((int)(((byte)(250)))));
-            this.panelControlForm.ColorRight = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.panelControlForm.Controls.Add(this.title);
-            this.panelControlForm.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControlForm.Location = new System.Drawing.Point(0, 0);
-            this.panelControlForm.Name = "panelControlForm";
-            this.panelControlForm.Size = new System.Drawing.Size(1100, 50);
-            this.panelControlForm.TabIndex = 176;
-            this.panelControlForm.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelControlForm_MouseDown);
-            // 
             // btnExports
             // 
             this.btnExports.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -473,6 +451,7 @@
             this.btnSave.Text = "Lưu";
             this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnClose
             // 
@@ -495,6 +474,30 @@
             this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // panelControlForm
+            // 
+            this.panelControlForm.Colorleft = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(254)))), ((int)(((byte)(250)))));
+            this.panelControlForm.ColorRight = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.panelControlForm.Controls.Add(this.title);
+            this.panelControlForm.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelControlForm.Location = new System.Drawing.Point(0, 0);
+            this.panelControlForm.Name = "panelControlForm";
+            this.panelControlForm.Size = new System.Drawing.Size(1100, 50);
+            this.panelControlForm.TabIndex = 176;
+            this.panelControlForm.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelControlForm_MouseDown);
+            // 
+            // title
+            // 
+            this.title.AutoSize = true;
+            this.title.BackColor = System.Drawing.Color.Transparent;
+            this.title.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.title.Location = new System.Drawing.Point(3, 9);
+            this.title.Name = "title";
+            this.title.Size = new System.Drawing.Size(51, 25);
+            this.title.TabIndex = 2;
+            this.title.Text = "title";
             // 
             // formShowGDTP
             // 

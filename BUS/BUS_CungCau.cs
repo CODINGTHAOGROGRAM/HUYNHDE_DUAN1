@@ -1,14 +1,11 @@
 ﻿using DAL;
-using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Globalization;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace BUS
 {
@@ -48,7 +45,6 @@ namespace BUS
             dt.Columns.Add("KhoiLuongGD");
             dt.Columns.Add("GiaTriGD");
 
-
             Thread.Sleep(2000);
 
             IList<IWebElement> links = driver.FindElements(By.XPath("//*[@id=\"divSearchContentArticle\"]/ul/li[2]/div/div/div[2]/ul/li/label/input"));
@@ -64,7 +60,6 @@ namespace BUS
                 Console.WriteLine(MaCk);
                 int x = 2;
 
-
                 while (true)
                 {
                     try
@@ -76,7 +71,6 @@ namespace BUS
                         Thread.Sleep(2000);
                         for (int j = 1; j <= listtr.Count; j++)
                         {
-
                             IList<IWebElement> listCol = driver.FindElements(By.XPath($"//*[@id=\"TK_CungCau_tableDatas\"]/tbody/tr[{j}]/td"));
                             Console.WriteLine(listCol[0].Text);
                             Console.WriteLine(listCol[9].Text);
@@ -84,7 +78,6 @@ namespace BUS
 
                             if (CountGD(query, MaCk, NgayGiaoDich.ToString()) == false)
                             {
-
                                 double.TryParse(listCol[1].Text.Replace(",", "."), out double GiaDong);
                                 double.TryParse(listCol[2].Text.Replace(",", "."), out double SoLenhMua);
                                 double.TryParse(listCol[3].Text.Replace(",", "."), out double KhoiLuongMua);
@@ -96,7 +89,6 @@ namespace BUS
 
                                 dt.Rows.Add(NgayGiaoDich, MaCk, GiaDong, SoLenhMua, KhoiLuongMua, SoLenhBan, KhoiLuongBan, DuMu, DuBan, KhoiLuongGD, Convert.ToDouble(listCol[9].Text.Replace(".", "")));
                             }
-
                         }
                         Thread.Sleep(1000);
 
@@ -115,6 +107,7 @@ namespace BUS
             DataProvider.Instance.insertDB(dt);
             driver.Quit();
         }
+
         public bool CountGD(string query, string mack, string ngayGd)
         {
             var i = DataProvider.Instance.Executequery(query, new object[] { mack, ngayGd });

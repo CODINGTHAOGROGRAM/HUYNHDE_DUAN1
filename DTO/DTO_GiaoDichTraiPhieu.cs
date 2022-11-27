@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DTO
 {
@@ -62,7 +58,11 @@ namespace DTO
             this.Tong_KLGD_TT_LoLe = tong_KLGD_TT_LoLe;
             this.Tong_GTGD_TT_LoLe = tong_GTGD_TT_LoLe;
         }
-        public DTO_GiaoDichTraiPhieu() { }
-        public DTO_GiaoDichTraiPhieu(DataRow data) { }
+
+        public DTO_GiaoDichTraiPhieu()
+        { }
+
+        public DTO_GiaoDichTraiPhieu(DataRow data)
+        { }
     }
 }

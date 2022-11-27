@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DTO
 {
@@ -16,13 +12,16 @@ namespace DTO
 
             private set { DTO_VonHoa.instance = value; }
         }
+
         private DateTime ngayGiaoDich;
         private string maCk;
         private double giaDOng;
         private double giaTriVonHoa;
         private double phanTramThiTruong;
 
-        public DTO_VonHoa() { }
+        public DTO_VonHoa()
+        { }
+
         public DTO_VonHoa(DateTime ngayGiaoDich, string maCk, double giaDOng, double giaTriVonHoa, double phanTramThiTruong)
         {
             this.NgayGiaoDich = ngayGiaoDich;

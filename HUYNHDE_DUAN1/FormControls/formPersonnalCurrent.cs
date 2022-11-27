@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace HUYNHDE_DUAN1
@@ -25,21 +19,25 @@ namespace HUYNHDE_DUAN1
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
-
         }
+
         #region clear focus textbox
+
         private void panel1_Click(object sender, EventArgs e)
         {
             this.ActiveControl = null;
         }
+
         private void panel2_Click(object sender, EventArgs e)
         {
             this.ActiveControl = null;
         }
+
         private void panel3_Click(object sender, EventArgs e)
         {
             this.ActiveControl = null;
         }
-        #endregion
+
+        #endregion clear focus textbox
     }
 }

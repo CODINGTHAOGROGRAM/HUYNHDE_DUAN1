@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Data;
 using System.Data.SqlClient;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DAL
 {
@@ -13,10 +8,10 @@ namespace DAL
         private static DataProvider instance;
 
         //private string connectionSTR = @"Data Source=DESKTOP-VQE9HMG\SQLEXPRESS;Initial Catalog=DuLieuChungKhoan;Integrated Security=True";
-         private string connectionSTR = @"Data Source=LAMSAMCHANPC;Initial Catalog=DuLieuChungKhoan;Integrated Security=True";
+        private string connectionSTR = @"Data Source=LAMSAMCHANPC;Initial Catalog=DuLieuChungKhoan;Integrated Security=True";
+
         // private string connectionSTR = @"Data Source=PARAONG-YODANH\SQLEXPRESS;Initial Catalog=DuLieuChungKhoan;Integrated Security=True";
 
-        
         public static DataProvider Instance
         {
             get { if (instance == null) instance = new DataProvider(); return DataProvider.instance; }
@@ -24,7 +19,9 @@ namespace DAL
             private set { DataProvider.instance = value; }
         }
 
-        private DataProvider() { }
+        private DataProvider()
+        { }
+
         public DataTable Executequery(string query, object[] parameter = null)
         {
             DataTable data = new DataTable();
@@ -47,7 +44,6 @@ namespace DAL
                             i++;
                         }
                     }
-
                 }
 
                 SqlDataAdapter adapter = new SqlDataAdapter(command);
@@ -81,7 +77,6 @@ namespace DAL
                             i++;
                         }
                     }
-
                 }
 
                 data = command.ExecuteNonQuery();
@@ -112,7 +107,6 @@ namespace DAL
                             i++;
                         }
                     }
-
                 }
 
                 data = command.ExecuteScalar();
@@ -122,6 +116,7 @@ namespace DAL
 
             return data;
         }
+
         public DataTable insertDB(DataTable dt)
         {
             ;
@@ -132,11 +127,9 @@ namespace DAL
                 foreach (var column in dt.Columns)
                 {
                     bulkCopy.ColumnMappings.Add(column.ToString(), column.ToString());
-
                 }
-                
-                bulkCopy.WriteToServer(dt);
 
+                bulkCopy.WriteToServer(dt);
             }
             return dt;
         }

@@ -31,16 +31,17 @@ namespace HUYNHDE_DUAN1
         private void formDataTP_Load(object sender, EventArgs e)
         {
             dataGridGDTP.ForeColor = System.Drawing.Color.Black;
-            dataGridGDTP.DataSource = BUS_GiaoDichTraiPhieu.Instance.loadData();
+            BUS_GiaoDichTraiPhieu.Instance.loadData(dataGridGDTP);
         }
 
         private void dataGridGDTP_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            
-            List<string> binding = new List<string>();
+
+            //var binding;
             foreach (DataGridViewRow r in dataGridGDTP.SelectedRows)
-            { 
-                binding.Add(r.Cells[2].Value.ToString());
+            {
+                textBox3.Text = r.Cells[2].Value.ToString();
+                /*binding.Add(r.Cells[2].Value.ToString());
                 binding.Add(r.Cells[3].Value.ToString());
                 binding.Add(r.Cells[4].Value.ToString());
                 binding.Add(r.Cells[5].Value.ToString());
@@ -50,10 +51,10 @@ namespace HUYNHDE_DUAN1
                 binding.Add(r.Cells[9].Value.ToString());
                 binding.Add(r.Cells[10].Value.ToString());
                 binding.Add(r.Cells[11].Value.ToString());
-                binding.Add(r.Cells[12].Value.ToString());
+                binding.Add(r.Cells[12].Value.ToString());*/
             }
 
-            textBox3.Text = binding.Count.ToString();
+            /*textBox3.Text = binding.Count.ToString();*/
             //formShowGDTP show = new formShowGDTP();
             //show.showData(binding);
         }

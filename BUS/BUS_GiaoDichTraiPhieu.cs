@@ -17,6 +17,7 @@ using DAL;
 using NPOI.SS.Formula.Functions;
 using DTO;
 using System.Collections;
+using System.Windows.Forms;
 
 namespace BUS
 {
@@ -33,7 +34,7 @@ namespace BUS
 
         public void loadData(DataGridView grid)
         {
-            return DAL_GiaoDichTraiPhieu.Instance.loadData();
+            grid.DataSource =DAL_GiaoDichTraiPhieu.Instance.loadData();
         }
         public void Update(string fromd,string tod)
         {

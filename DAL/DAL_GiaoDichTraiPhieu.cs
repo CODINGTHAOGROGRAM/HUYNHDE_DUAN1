@@ -21,10 +21,10 @@ namespace DAL
             private set { DAL_GiaoDichTraiPhieu.instance = value; }
         }
 
-        public List<DTO_GiaoDichTraiPhieu> loadData()
+        /*public List<DTO_GiaoDichTraiPhieu> loadData()
         {
             List<DTO_GiaoDichTraiPhieu> list = new List<DTO_GiaoDichTraiPhieu>();
-            string query = "exec ShowData_GDTP";
+            string query = "ShowData_GDTP";
 
             DataTable data = DataProvider.Instance.Executequery(query);
 
@@ -34,6 +34,14 @@ namespace DAL
                 list.Add(gdtp);
             }
             return list;
+        }*/
+
+        public DataTable loadData()
+        {
+            DataTable dtb = new DataTable();
+            string query = "ShowData_GDTP";
+
+            return dtb= DataProvider.Instance.Executequery(query);
         }
         public void ImportExcelInDB(string filename)
         {

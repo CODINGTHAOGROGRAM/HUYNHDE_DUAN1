@@ -2,6 +2,7 @@
 using HUYNHDE_DUAN1.FormChildCotrols;
 using HUYNHDE_DUAN1.formShowClickGrid;
 using System.Windows.Forms;
+using System.Windows.Media;
 using static HUYNHDE_DUAN1.formMessage;
 
 namespace HUYNHDE_DUAN1
@@ -38,7 +39,17 @@ namespace HUYNHDE_DUAN1
 
         private void btnUpGradeBDG_Click(object sender, System.EventArgs e)
         {
-            BUS_BienDongGia.Instance.DongBoBDG();
+           
+            formMessage f = new formMessage();
+            f.PreProcessMessage(this);
+            if (BUS_BienDongGia.Instance.DongBoBDG() == true)
+            { 
+                f.showMessage("Thông báo", "Dung cap nhat", "icon_info.png", "OK");
+            }
+            else
+            {
+                f.showMessage("Thông báo", "dang cap nhat", "icon_info.png", "OK");
+            }
         }
         #endregion   
 
@@ -77,11 +88,12 @@ namespace HUYNHDE_DUAN1
 
         }
         #endregion
-         private void Load()
+         public void Loadd()
         {
             BUS_BienDongGia.Instance.LoadBGD(GridBDG);
             BUS_CungCau.Instance.loadCungCau(GridCungCau);
             BUS_VonHoa.Instance.loadCVonHoa(GridVonHoa);
+            
         }
 
         private void GridBDG_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -140,9 +152,11 @@ namespace HUYNHDE_DUAN1
         {
             
         }
-        private void formGDBDG_Load(object sender, System.EventArgs e)
+
+        public void formGDBDG_Load(object sender, System.EventArgs e)
         {
-            Load();
+            Loadd();
+            
         }
     }
 }

@@ -60,6 +60,8 @@ namespace HUYNHDE_DUAN1.formShowClickGrid
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+            formGDBDG formGDBDG = new formGDBDG();
+            formGDBDG.Loadd();
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
@@ -81,6 +83,7 @@ namespace HUYNHDE_DUAN1.formShowClickGrid
                 f.tt.Text = "Luu Thanh Cong";
                 f.info.Text = "Da luu";
                 f.ShowDialog();
+                
             }
         }
     }

@@ -31,6 +31,14 @@ namespace HUYNHDE_DUAN1
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -143,10 +151,22 @@ namespace HUYNHDE_DUAN1
             // 
             // GridBDG
             // 
+            this.GridBDG.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.GridBDG.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.GridBDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GridBDG.Dock = System.Windows.Forms.DockStyle.Fill;
             this.GridBDG.Location = new System.Drawing.Point(0, 0);
             this.GridBDG.Name = "GridBDG";
+            this.GridBDG.RowHeadersWidth = 10;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.GridBDG.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.GridBDG.Size = new System.Drawing.Size(1411, 541);
             this.GridBDG.TabIndex = 0;
             this.GridBDG.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridBDG_CellClick);
@@ -460,10 +480,21 @@ namespace HUYNHDE_DUAN1
             // 
             // GridCungCau
             // 
+            this.GridCungCau.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.GridCungCau.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.GridCungCau.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GridCungCau.Dock = System.Windows.Forms.DockStyle.Fill;
             this.GridCungCau.Location = new System.Drawing.Point(3, 135);
             this.GridCungCau.Name = "GridCungCau";
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.GridCungCau.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.GridCungCau.Size = new System.Drawing.Size(1411, 757);
             this.GridCungCau.TabIndex = 5;
             this.GridCungCau.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridCungCau_CellClick);
@@ -698,10 +729,32 @@ namespace HUYNHDE_DUAN1
             // 
             // GridVonHoa
             // 
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Blue;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.White;
+            this.GridVonHoa.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            this.GridVonHoa.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.GridVonHoa.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.GridVonHoa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GridVonHoa.Dock = System.Windows.Forms.DockStyle.Fill;
             this.GridVonHoa.Location = new System.Drawing.Point(3, 135);
             this.GridVonHoa.Name = "GridVonHoa";
+            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.GridVonHoa.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.GridVonHoa.RowsDefaultCellStyle = dataGridViewCellStyle16;
             this.GridVonHoa.Size = new System.Drawing.Size(1411, 757);
             this.GridVonHoa.TabIndex = 5;
             this.GridVonHoa.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridVonHoa_CellClick);
@@ -853,7 +906,7 @@ namespace HUYNHDE_DUAN1
             this.Controls.Add(this.tabControl1);
             this.Name = "formGDBDG";
             this.Text = "Quản lý dữ liệu giao dịch ";
-            
+            this.Load += new System.EventHandler(this.formGDBDG_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.panel6.ResumeLayout(false);

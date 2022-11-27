@@ -41,7 +41,6 @@ namespace HUYNHDE_DUAN1
         {
            
             formMessage f = new formMessage();
-            f.PreProcessMessage(this);
             if (BUS_BienDongGia.Instance.DongBoBDG() == true)
             { 
                 f.showMessage("Thông báo", "Dung cap nhat", "icon_info.png", "OK");
@@ -90,17 +89,27 @@ namespace HUYNHDE_DUAN1
         #endregion
          public void Loadd()
         {
+            GridBDG.ForeColor = System.Drawing.Color.Black;
+            GridCungCau.ForeColor = System.Drawing.Color.Black;
+            GridVonHoa.ForeColor = System.Drawing.Color.Black;
             BUS_BienDongGia.Instance.LoadBGD(GridBDG);
             BUS_CungCau.Instance.loadCungCau(GridCungCau);
             BUS_VonHoa.Instance.loadCVonHoa(GridVonHoa);
             
         }
+        public void loadformBDG()
+        {
+            formShowBDG fr = new formShowBDG(this);
+            GridBDG.DataSource = null;
+            GridBDG.ForeColor = System.Drawing.Color.Black;
+            BUS_BienDongGia.Instance.LoadBGD(GridBDG);
+        }
 
         private void GridBDG_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            formShowBDG f = new formShowBDG();
+            formShowBDG f = new formShowBDG(this);
 
-            f.txtNgayGiaoDich.Text = GridBDG.CurrentRow.Cells[1].Value.ToString();
+            f.txtNgayGiaoDich.Text = GridBDG.CurrentRow.Cells[1].Value.ToString().Replace('-','/');
             f.txtMaCk.Text = GridBDG.CurrentRow.Cells[2].Value.ToString();
             f.txtThamChieu.Text = GridBDG.CurrentRow.Cells[3].Value.ToString();
             f.txtGiaTran.Text = GridBDG.CurrentRow.Cells[4].Value.ToString();

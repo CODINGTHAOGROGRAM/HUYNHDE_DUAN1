@@ -45,7 +45,7 @@ namespace HUYNHDE_DUAN1
 
         private void dataGridGDTP_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            List<string> binding = new List<string>();
+           List<string> binding = new List<string>();
             for (int i = 0; i < dataGridGDTP.Columns.Count; i++)
             {
                 binding.Add(dataGridGDTP.CurrentRow.Cells[i].Value.ToString());

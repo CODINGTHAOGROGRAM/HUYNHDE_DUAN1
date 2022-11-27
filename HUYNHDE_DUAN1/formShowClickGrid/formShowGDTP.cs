@@ -84,7 +84,7 @@ namespace HUYNHDE_DUAN1.formShowClickGrid
             this.Close();
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void btnSave_Click_1(object sender, EventArgs e)
         {
             try
             {

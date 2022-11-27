@@ -29,7 +29,7 @@ namespace HUYNHDE_DUAN1.formShowClickGrid
         );
 
         #endregion Border Forms
-
+        private formGDBDG gdbdg;
         #region MouseDown Form
 
         public const int WM_NCLBUTTONDOWN = 0xA1;
@@ -49,12 +49,13 @@ namespace HUYNHDE_DUAN1.formShowClickGrid
             }
         }
         #endregion MouseDown Form
-        public formShowBDG()
+        public formShowBDG(formGDBDG _gdbdg)
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             // CallBack BorderForms
             this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 30, 30));
+            gdbdg = _gdbdg;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -65,25 +66,34 @@ namespace HUYNHDE_DUAN1.formShowClickGrid
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
-            string mack = txtMaCk.Text;
-            DateTime ngayGiaoDich = Convert.ToDateTime(txtNgayGiaoDich.Text);
-            double giaThamChieu = Convert.ToDouble(txtThamChieu.Text);
-            double giaTran = Convert.ToDouble(txtGiaTran.Text);
-            double giaSan = Convert.ToDouble(txtGiaSan.Text);
-            double giaMo = Convert.ToDouble(txtGiaMo.Text);
-            double giaDong = Convert.ToDouble(txtGiaDong.Text);
-            double giaCao = Convert.ToDouble(txtGiaCao.Text);
-            double giaThap = Convert.ToDouble(txtGiaThap.Text);
-            double diem = Convert.ToDouble(txtGia.Text);
-            double phanTram = Convert.ToDouble(txtPhanTram.Text);
-
-            if (BUS_BienDongGia.Instance.UpdateBDG(ngayGiaoDich, mack, giaThamChieu, giaTran, giaSan, giaMo, giaDong, giaCao, giaThap, diem, phanTram))
+            try
             {
-               formMessage f = new formMessage();
-                f.tt.Text = "Luu Thanh Cong";
-                f.info.Text = "Da luu";
-                f.ShowDialog();
-                
+                string mack = txtMaCk.Text;
+                DateTime ngayGiaoDich = DateTime.ParseExact(txtNgayGiaoDich.Text, "dd/MM/yyyy", null);
+                double giaThamChieu = Convert.ToDouble(txtThamChieu.Text);
+                double giaTran = Convert.ToDouble(txtGiaTran.Text);
+                double giaSan = Convert.ToDouble(txtGiaSan.Text);
+                double giaMo = Convert.ToDouble(txtGiaMo.Text);
+                double giaDong = Convert.ToDouble(txtGiaDong.Text);
+                double giaCao = Convert.ToDouble(txtGiaCao.Text);
+                double giaThap = Convert.ToDouble(txtGiaThap.Text);
+                double diem = Convert.ToDouble(txtGia.Text);
+                double phanTram = Convert.ToDouble(txtPhanTram.Text);
+
+                if (BUS_BienDongGia.Instance.UpdateBDG(ngayGiaoDich, mack, giaThamChieu, giaTran, giaSan, giaMo, giaDong, giaCao, giaThap, diem, phanTram))
+                {
+                    formMessage f = new formMessage();
+                    f.showMessage("Thông báo", "Cập nhật thông tin thành công.", "icon_success.png", "Đóng");
+                }
+            }
+            catch (Exception)
+            {
+                formMessage f = new formMessage();
+                f.showMessage("Thông báo", "Có lỗi khi cập nhật dữ liệu, hãy kiểm tra lại!", "icon_error.png", "Đóng");
+            }
+            finally
+            {
+                gdbdg.loadformBDG();
             }
         }
     }

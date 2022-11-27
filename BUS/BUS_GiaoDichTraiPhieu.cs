@@ -1,21 +1,16 @@
-﻿using OpenQA.Selenium.Chrome;
+﻿using Aspose.Cells;
+using DAL;
+using DTO;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Support.Extensions;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.IO;
 using System.Linq;
 using System.Net;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
-using OpenQA.Selenium.Support.Extensions;
-using Aspose.Cells;
-using System.Data.OleDb;
-using System.Data.SqlClient;
-using System.Data;
-using DAL;
-using NPOI.SS.Formula.Functions;
-using DTO;
 
 namespace BUS
 {
@@ -30,7 +25,19 @@ namespace BUS
             private set { BUS_GiaoDichTraiPhieu.instance = value; }
         }
 
-        public void Update(string fromd,string tod)
+        public DataTable loadData()
+        {
+            return DAL_GiaoDichTraiPhieu.Instance.loadData();
+        }
+
+        public bool editData(int ID, int STT, DateTime Ngay_GD, string Ma_CK, float Gia_DC, float TKL_GDKL_LoChan, float TGT_GDKL_LoChan, float TKL_GDKL_LoLe,
+            float TGT_GDKL_LoLe, float Tong_KLGD_TT_LoChan, float Tong_GTGD_TT_LoChan, float Tong_KLGD_TT_LoLe, float Tong_GTGD_TT_LoLe)
+        {
+            return DAL_GiaoDichTraiPhieu.Instance.editData(ID, STT, Ngay_GD, Ma_CK, Gia_DC, TKL_GDKL_LoChan, TGT_GDKL_LoChan,
+            TKL_GDKL_LoLe, TGT_GDKL_LoLe, Tong_KLGD_TT_LoChan, Tong_GTGD_TT_LoChan, Tong_KLGD_TT_LoLe, Tong_GTGD_TT_LoLe);
+        }
+
+        public void Update(string fromd, string tod)
         {
             DTO_GiaoDichTraiPhieu GDTP = new DTO_GiaoDichTraiPhieu();
             char[] charsToTrim = { '1', '.', ' ' };
@@ -52,7 +59,6 @@ namespace BUS
                 System.IO.File.Create(pathfile).Close();
             }
 
-            
             chromeOptions.AddUserProfilePreference("download.default_directory", downloadDirectory);
             chromeOptions.AddUserProfilePreference("download.prompt_for_download", false);
             chromeOptions.AddUserProfilePreference("disable-popup-blocking", "true");
@@ -67,7 +73,6 @@ namespace BUS
             //read file .txt
             var logFile = System.IO.File.ReadAllLines(pathfile);
             var xlsFileExist = new List<string>(logFile);
-
 
             var from = chromeDriver.FindElement(By.XPath("//*[@id=\"txtTuNgay\"]"));
             //from.SendKeys(Convert.ToDateTime(fromd).ToString("dd/MM/yyyy"));
@@ -142,7 +147,7 @@ namespace BUS
                             break;
                         }
                     }
-                    
+
                     chromeDriver.FindElement(By.XPath($"//*[@id=\"next\"]")).Click();
                 }
                 catch (Exception)
@@ -159,6 +164,7 @@ namespace BUS
                 .OrderByDescending(f => (f == null ? DateTime.MinValue : f.LastWriteTime))
                 .FirstOrDefault();
         }
+
         private void DeleteRows(string filename, int rows)
         {
             var CurrentDirectory = Directory.GetCurrentDirectory();
@@ -203,7 +209,5 @@ namespace BUS
 
             workbook.Save(path);
         }
-        
     }
-    
 }

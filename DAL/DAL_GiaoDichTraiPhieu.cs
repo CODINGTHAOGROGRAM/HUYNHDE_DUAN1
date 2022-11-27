@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DTO;
 
 namespace DAL
 {
@@ -20,6 +21,10 @@ namespace DAL
             private set { DAL_GiaoDichTraiPhieu.instance = value; }
         }
 
+        public DataTable loadData()
+        {
+            return DataProvider.Instance.Executequery("ShowData_GDTP");
+        }
         public void ImportExcelInDB(string filename)
         {
             var CurrentDirectory = Directory.GetCurrentDirectory();

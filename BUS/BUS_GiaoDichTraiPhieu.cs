@@ -30,6 +30,11 @@ namespace BUS
             private set { BUS_GiaoDichTraiPhieu.instance = value; }
         }
 
+        public DataTable loadData()
+        {
+
+            return DAL_GiaoDichTraiPhieu.Instance.loadData();
+        }
         public void Update(string fromd,string tod)
         {
             DTO_GiaoDichTraiPhieu GDTP = new DTO_GiaoDichTraiPhieu();

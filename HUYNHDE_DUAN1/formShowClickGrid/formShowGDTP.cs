@@ -56,7 +56,23 @@ namespace HUYNHDE_DUAN1.formShowClickGrid
             // CallBack BorderForms
             this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 30, 30));
         }
+        public void showData(List<string> data)
+        {
+            title.Text = data[1];
+            maCK.Text = data[1];
+            ngay.Text = data[0];
+            GiaDC.Text= data[2];
+            TKLLC.Text= data[3];
+            TGTLC.Text= data[4];
+            TKLLL.Text= data[5];
+            TGTLL.Text= data[6];
+            tongKLGDLC.Text= data[7];
+            tongGTGDLC.Text= data[8];
+            tongKLGDLL.Text= data[9];
+            tongGTGDLL.Text= data[10];
 
+            this.ShowDialog();
+        }
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();

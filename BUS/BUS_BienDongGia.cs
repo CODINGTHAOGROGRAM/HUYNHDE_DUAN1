@@ -140,7 +140,7 @@ namespace BUS
         {
             DTO_BienDongGia BDG = new DTO_BienDongGia(ngayGiaoDich, maCK, giaThamChieu, giaTran, giaSan, giaMo, giaDong, giaCao, giaThap, diem, phanTram);
 
-            return DAL_BienDongGia.Instance.update(maCK, ngayGiaoDich, BDG);
+            return DAL_BienDongGia.Instance.update(BDG);
         }
     }
 }

@@ -31,12 +31,11 @@ namespace DAL
         }
         
        
-        public bool update(string maCk , DateTime ngayGiaoDich , DTO_BienDongGia BDG)
+        public bool update( DTO_BienDongGia BDG)
         {
-            string query = "update BienDongGia set GiaThamChieu = @giaThamChieu , GiaTran = @giaTran , GiaSan = @giaSan , GiaMo = @giaMo ," +
-                            " GiaDong = @giaDong , GiaCao = @giaCao , GiaThap = @giaThap , Diem = @diem , PhanTram = @phanTram where MaCk = @maCk and NgayGiaoDich = @ngayGiaoDich ";
+            string query = "Update_BDG @ngayGiaoDich , @maCk , @giaThamChieu , @giaTran , @giaSan , @giaMo , @giaDong , @giaCao , @giaThap , @diem , @phanTram ";
 
-            object[] para = new object[] { BDG.GiaThamChieu, BDG.GiaTran, BDG.GiaSan, BDG.GiaMo, BDG.GiaDong, BDG.GiaCao, BDG.GiaThap, BDG.Diem, BDG.PhanTram , maCk, ngayGiaoDich };
+            object[] para = new object[] {BDG.NgayGiaoDich,BDG.MaCk, BDG.GiaThamChieu, BDG.GiaTran, BDG.GiaSan, BDG.GiaMo, BDG.GiaDong, BDG.GiaCao, BDG.GiaThap, BDG.Diem, BDG.PhanTram  };
 
             if(DataProvider.Instance.ExecuteNonquery(query,para) > 0) { return true; }
             return false;

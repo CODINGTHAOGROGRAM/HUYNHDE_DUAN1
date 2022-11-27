@@ -93,7 +93,7 @@ namespace HUYNHDE_DUAN1.formShowClickGrid
             }
             finally
             {
-                gdbdg.loadformBDG();
+                gdbdg.loadform();
             }
         }
     }

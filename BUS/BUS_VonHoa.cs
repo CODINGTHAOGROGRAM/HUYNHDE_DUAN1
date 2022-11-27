@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DTO;
 
 namespace BUS
 {
@@ -111,6 +112,12 @@ namespace BUS
         public void loadCVonHoa(DataGridView data)
         {
             data.DataSource = DAL_VonHoa.Instance.getListVonHoa();
+        }
+        public bool UpdateVH(DateTime ngayGiaoDich, string maCK, double GiaDong, double VonHoa, double ThiTruong)
+        {
+            DTO_VonHoa VH = new DTO_VonHoa(ngayGiaoDich, maCK, GiaDong, VonHoa, ThiTruong);
+
+            return DAL_VonHoa.Instance.update(VH);
         }
     }
 }

@@ -97,12 +97,16 @@ namespace HUYNHDE_DUAN1
             BUS_VonHoa.Instance.loadCVonHoa(GridVonHoa);
             
         }
-        public void loadformBDG()
+        public void loadform()
         {
-            formShowBDG fr = new formShowBDG(this);
+            formShowBDG BDG = new formShowBDG(this);
+            formShowTKCC CC = new formShowTKCC(this);
+            formShowVH VH = new formShowVH(this);
             GridBDG.DataSource = null;
             GridBDG.ForeColor = System.Drawing.Color.Black;
             BUS_BienDongGia.Instance.LoadBGD(GridBDG);
+            BUS_CungCau.Instance.loadCungCau(GridCungCau);
+            BUS_VonHoa.Instance.loadCVonHoa(GridVonHoa);
         }
 
         private void GridBDG_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -127,9 +131,9 @@ namespace HUYNHDE_DUAN1
 
         private void GridCungCau_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            formShowTKCC f = new formShowTKCC();
+            formShowTKCC f = new formShowTKCC(this);
 
-            f.txtNgayGiaoDich.Text = GridCungCau.CurrentRow.Cells[1].Value.ToString();
+            f.txtNgayGiaoDich.Text = GridCungCau.CurrentRow.Cells[1].Value.ToString().Replace('-', '/');
             f.txtMaCK.Text = GridCungCau.CurrentRow.Cells[2].Value.ToString();
             f.txtGiaDong.Text = GridCungCau.CurrentRow.Cells[3].Value.ToString();
             f.txtLenhMua.Text = GridCungCau.CurrentRow.Cells[4].Value.ToString();
@@ -146,10 +150,9 @@ namespace HUYNHDE_DUAN1
 
         private void GridVonHoa_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            formShowVH f = new formShowVH();
-
-            f.txtNgayGiaoDich.Text = GridVonHoa.CurrentRow.Cells[1].Value.ToString();
-            f.txtMaCK.Text = GridVonHoa.CurrentRow.Cells[2].Value.ToString();
+            formShowVH f = new formShowVH(this);
+            f.txtMaCK.Text = GridVonHoa.CurrentRow.Cells[1].Value.ToString();
+            f.txtNgayGiaoDich.Text = GridVonHoa.CurrentRow.Cells[2].Value.ToString().Replace('-', '/');
             f.txtGiaDong.Text = GridVonHoa.CurrentRow.Cells[3].Value.ToString();
             f.txtVonHoa.Text = GridVonHoa.CurrentRow.Cells[4].Value.ToString();
             f.txtThiTruong.Text = GridVonHoa.CurrentRow.Cells[5].Value.ToString();

@@ -16,6 +16,7 @@ using System.Data;
 using DAL;
 using NPOI.SS.Formula.Functions;
 using DTO;
+using System.Collections;
 
 namespace BUS
 {
@@ -30,9 +31,8 @@ namespace BUS
             private set { BUS_GiaoDichTraiPhieu.instance = value; }
         }
 
-        public DataTable loadData()
+        public List<DTO_GiaoDichTraiPhieu> loadData()
         {
-
             return DAL_GiaoDichTraiPhieu.Instance.loadData();
         }
         public void Update(string fromd,string tod)

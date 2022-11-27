@@ -145,8 +145,8 @@
         #endregion
 
         private contructions_functions.panelLinearGradient panelLinearGradient1;
-        private System.Windows.Forms.Label tt;
-        private System.Windows.Forms.Label info;
+        public System.Windows.Forms.Label tt;
+        public System.Windows.Forms.Label info;
         private FontAwesome.Sharp.IconButton btnEx;
         private System.Windows.Forms.PictureBox pic;
         private FontAwesome.Sharp.IconButton button;

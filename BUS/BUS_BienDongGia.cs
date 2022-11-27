@@ -119,5 +119,15 @@ namespace BUS
         {
             data.DataSource = DAL_BienDongGia.Instance.getListBDG();
         }
+        public List<DTO_BienDongGia> getListBDG()
+        {
+            return DAL_BienDongGia.Instance.getListBGD1();
+        }
+        public bool UpdateBDG(DateTime ngayGiaoDich, string maCK,  double giaThamChieu, double giaTran, double giaSan, double giaMo, double giaDong, double giaCao, double giaThap, double diem, double phanTram)
+        {
+            DTO_BienDongGia BDG = new DTO_BienDongGia(ngayGiaoDich,maCK,giaThamChieu,giaTran,giaSan,giaMo,giaDong,giaCao,giaThap,diem,phanTram);
+
+            return DAL_BienDongGia.Instance.update(maCK, ngayGiaoDich, BDG);
+        }
     }
 }

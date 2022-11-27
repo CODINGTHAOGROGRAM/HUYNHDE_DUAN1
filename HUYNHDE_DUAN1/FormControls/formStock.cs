@@ -70,5 +70,10 @@ namespace HUYNHDE_DUAN1
             }
 
         }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

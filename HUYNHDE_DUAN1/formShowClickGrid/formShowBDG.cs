@@ -1,8 +1,10 @@
-﻿using System;
+﻿using BUS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -59,7 +61,27 @@ namespace HUYNHDE_DUAN1.formShowClickGrid
         {
             this.Close();
         }
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            string mack = txtMaCk.Text;
+            DateTime ngayGiaoDich = Convert.ToDateTime(txtNgayGiaoDich.Text);
+            double giaThamChieu = Convert.ToDouble(txtThamChieu.Text);
+            double giaTran = Convert.ToDouble(txtGiaTran.Text);
+            double giaSan = Convert.ToDouble(txtGiaSan.Text);
+            double giaMo = Convert.ToDouble(txtGiaMo.Text);
+            double giaDong = Convert.ToDouble(txtGiaDong.Text);
+            double giaCao = Convert.ToDouble(txtGiaCao.Text);
+            double giaThap = Convert.ToDouble(txtGiaThap.Text);
+            double diem = Convert.ToDouble(txtGia.Text);
+            double phanTram = Convert.ToDouble(txtPhanTram.Text);
 
-      
+            if (BUS_BienDongGia.Instance.UpdateBDG(ngayGiaoDich, mack, giaThamChieu, giaTran, giaSan, giaMo, giaDong, giaCao, giaThap, diem, phanTram))
+            {
+               formMessage f = new formMessage();
+                f.tt.Text = "Luu Thanh Cong";
+                f.info.Text = "Da luu";
+                f.ShowDialog();
+            }
+        }
     }
 }

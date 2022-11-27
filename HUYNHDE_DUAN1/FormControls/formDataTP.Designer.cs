@@ -274,6 +274,7 @@
             this.dataGridGDTP.ReadOnly = true;
             this.dataGridGDTP.Size = new System.Drawing.Size(1284, 660);
             this.dataGridGDTP.TabIndex = 5;
+            this.dataGridGDTP.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridGDTP_CellClick);
             // 
             // formDataTP
             // 
@@ -285,6 +286,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "formDataTP";
             this.Text = "Quản lý dữ liệu giao dịch trái phiếu";
+            this.Load += new System.EventHandler(this.formDataTP_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

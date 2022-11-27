@@ -31,7 +31,7 @@ namespace BUS
             private set { BUS_GiaoDichTraiPhieu.instance = value; }
         }
 
-        public List<DTO_GiaoDichTraiPhieu> loadData()
+        public void loadData(DataGridView grid)
         {
             return DAL_GiaoDichTraiPhieu.Instance.loadData();
         }

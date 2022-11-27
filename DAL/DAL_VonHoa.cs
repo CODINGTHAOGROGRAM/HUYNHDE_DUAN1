@@ -22,7 +22,7 @@ namespace DAL
         {
             DataTable dt = new DataTable();
 
-            string query = "select * from VonHoa";
+            string query = "exec ShowData_VH";
 
             dt = DataProvider.Instance.Executequery(query);
 

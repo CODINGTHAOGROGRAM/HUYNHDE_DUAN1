@@ -80,6 +80,9 @@ namespace HUYNHDE_DUAN1
             {
                 Application.Exit();
             }
+            else if(button.Text == "OK"){
+               this. Close();
+            }
             else
             {
                 this.Close();

@@ -21,7 +21,7 @@ namespace DAL
         {
             DataTable dt = new DataTable();
 
-            string query = "select * from ThongKeCungCau";
+            string query = "exec ShowData_TKCC";
 
             dt = DataProvider.Instance.Executequery(query);
 

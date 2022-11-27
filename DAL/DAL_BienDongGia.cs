@@ -23,24 +23,14 @@ namespace DAL
         {
             DataTable dt = new DataTable();
 
-            string query = "select * from BienDongGia";
+            string query = "exec ShowData_BDG";
 
             dt = DataProvider.Instance.Executequery(query);
 
             return dt;
         }
-        public List<DTO_BienDongGia> getListBGD1()
-        {
-            List<DTO_BienDongGia> newList = new List<DTO_BienDongGia>();
-            string queryPerform = "select * from BienDongGia";
-            DataTable data = DataProvider.Instance.Executequery(queryPerform);
-            foreach (DataRow rowItem in data.Rows)
-            {
-                DTO_BienDongGia dtHoSo = new DTO_BienDongGia(rowItem);
-                newList.Add(dtHoSo);
-            }
-            return newList;
-        }
+        
+       
         public bool update(string maCk , DateTime ngayGiaoDich , DTO_BienDongGia BDG)
         {
             string query = "update BienDongGia set GiaThamChieu = @giaThamChieu , GiaTran = @giaTran , GiaSan = @giaSan , GiaMo = @giaMo ," +

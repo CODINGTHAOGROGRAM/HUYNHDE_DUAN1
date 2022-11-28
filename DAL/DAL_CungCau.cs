@@ -1,10 +1,5 @@
 ﻿using DTO;
-using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DAL
 {
@@ -18,6 +13,7 @@ namespace DAL
 
             private set { DAL_CungCau.instance = value; }
         }
+
         public DataTable getListCungCau()
         {
             DataTable dt = new DataTable();
@@ -28,6 +24,7 @@ namespace DAL
 
             return dt;
         }
+
         public bool update(DTO_CungCau CC)
         {
             string query = "Update_TKCC @NgayGiaoDich , @MaCk , @GiaDong , @SoLenhMua , @KhoiLuongMua , @SoLenhBan , @KhoiLuongban , @DuMua , @DuBan , @KhoiLuongGD , @GiaTriGD ";

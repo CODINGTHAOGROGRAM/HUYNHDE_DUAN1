@@ -37,13 +37,11 @@
             this.TGTLC = new System.Windows.Forms.TextBox();
             this.TKLLC = new System.Windows.Forms.TextBox();
             this.GiaDC = new System.Windows.Forms.TextBox();
-            this.ngay = new System.Windows.Forms.TextBox();
             this.maCK = new System.Windows.Forms.TextBox();
             this.panel18 = new System.Windows.Forms.Panel();
             this.panel17 = new System.Windows.Forms.Panel();
             this.panel15 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
-            this.panel13 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -66,6 +64,8 @@
             this.btnSave = new FontAwesome.Sharp.IconButton();
             this.btnClose = new FontAwesome.Sharp.IconButton();
             this.TGTLL = new System.Windows.Forms.TextBox();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.ngay = new System.Windows.Forms.DateTimePicker();
             this.panelControlForm.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -177,19 +177,6 @@
             this.GiaDC.TabIndex = 201;
             this.GiaDC.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // ngay
-            // 
-            this.ngay.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ngay.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.ngay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.ngay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.ngay.Location = new System.Drawing.Point(152, 178);
-            this.ngay.Name = "ngay";
-            this.ngay.ReadOnly = true;
-            this.ngay.Size = new System.Drawing.Size(347, 19);
-            this.ngay.TabIndex = 200;
-            this.ngay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // maCK
             // 
             this.maCK.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
@@ -234,14 +221,6 @@
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(299, 2);
             this.panel14.TabIndex = 185;
-            // 
-            // panel13
-            // 
-            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.panel13.Location = new System.Drawing.Point(152, 206);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(347, 2);
-            this.panel13.TabIndex = 184;
             // 
             // panel12
             // 
@@ -443,6 +422,7 @@
             this.btnExports.Text = "Xuất";
             this.btnExports.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExports.UseVisualStyleBackColor = true;
+            this.btnExports.Click += new System.EventHandler(this.btnExports_Click);
             // 
             // btnSave
             // 
@@ -499,12 +479,37 @@
             this.TGTLL.TabIndex = 205;
             this.TGTLL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.panel13.Location = new System.Drawing.Point(152, 206);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(347, 2);
+            this.panel13.TabIndex = 184;
+            // 
+            // ngay
+            // 
+            this.ngay.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ngay.CalendarForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ngay.CalendarMonthBackground = System.Drawing.Color.Transparent;
+            this.ngay.CalendarTitleForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ngay.CalendarTrailingForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.ngay.CustomFormat = "dd/MM/yyyy";
+            this.ngay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.ngay.Location = new System.Drawing.Point(152, 180);
+            this.ngay.MaxDate = new System.DateTime(9998, 12, 30, 0, 0, 0, 0);
+            this.ngay.Name = "ngay";
+            this.ngay.Size = new System.Drawing.Size(347, 20);
+            this.ngay.TabIndex = 353;
+            this.ngay.Value = new System.DateTime(2022, 11, 28, 0, 0, 0, 0);
+            // 
             // formShowGDTP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(1100, 499);
+            this.Controls.Add(this.ngay);
             this.Controls.Add(this.btnExports);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnClose);
@@ -517,7 +522,6 @@
             this.Controls.Add(this.TGTLC);
             this.Controls.Add(this.TKLLC);
             this.Controls.Add(this.GiaDC);
-            this.Controls.Add(this.ngay);
             this.Controls.Add(this.maCK);
             this.Controls.Add(this.panel18);
             this.Controls.Add(this.panel17);
@@ -563,13 +567,11 @@
         private System.Windows.Forms.TextBox TGTLC;
         private System.Windows.Forms.TextBox TKLLC;
         private System.Windows.Forms.TextBox GiaDC;
-        private System.Windows.Forms.TextBox ngay;
         private System.Windows.Forms.TextBox maCK;
         private System.Windows.Forms.Panel panel18;
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.Panel panel14;
-        private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel9;
@@ -592,5 +594,7 @@
         private FontAwesome.Sharp.IconButton btnSave;
         private FontAwesome.Sharp.IconButton btnClose;
         private System.Windows.Forms.TextBox TGTLL;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.DateTimePicker ngay;
     }
 }

@@ -1,10 +1,6 @@
 ﻿using DTO;
-using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DAL
 {
@@ -18,7 +14,10 @@ namespace DAL
 
             private set { DAL_HoSoCoPhieu.instance = value; }
         }
-        public DAL_HoSoCoPhieu() { }
+
+        public DAL_HoSoCoPhieu()
+        { }
+
         public List<DTO_HoSoCoPhieu> getListHoSo()
         {
             List<DTO_HoSoCoPhieu> newList = new List<DTO_HoSoCoPhieu>();

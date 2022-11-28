@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DTO
+﻿namespace DTO
 {
     public class DTO_TaiKhoan
     {
@@ -16,6 +10,7 @@ namespace DTO
 
             private set { DTO_TaiKhoan.instance = value; }
         }
+
         private string maNV;
         private string taiKhoan;
         private string matKhau;
@@ -33,6 +28,8 @@ namespace DTO
             this.MatKhau = matKhau;
             this.VaiTro = vaiTro;
         }
-        public DTO_TaiKhoan() { }
+
+        public DTO_TaiKhoan()
+        { }
     }
 }

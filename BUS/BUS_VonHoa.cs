@@ -1,16 +1,13 @@
 ﻿using DAL;
-using OpenQA.Selenium.Chrome;
+using DTO;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Globalization;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using DTO;
 
 namespace BUS
 {
@@ -24,6 +21,7 @@ namespace BUS
 
             private set { BUS_VonHoa.instance = value; }
         }
+
         public void DongBoVonHoa()
         {
             ChromeDriverService service = ChromeDriverService.CreateDefaultService();
@@ -58,7 +56,6 @@ namespace BUS
                 Console.WriteLine(MaCk);
                 int x = 2;
 
-
                 while (true)
                 {
                     try
@@ -71,20 +68,17 @@ namespace BUS
 
                         for (int j = 1; j <= listtr.Count; j++)
                         {
-
                             IList<IWebElement> listCol = driver.FindElements(By.XPath($"//*[@id=\"VonHoa_tableDatas\"]/tbody/tr[{j}]/td"));
                             DateTime NgayGiaoDich = DateTime.ParseExact(listCol[0].Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
 
                             if (CountGD(query, MaCk, NgayGiaoDich.ToString()) == false)
                             {
-
                                 double.TryParse(listCol[1].Text.Replace(",", "."), out double GiaDong);
                                 double.TryParse(listCol[2].Text.Replace(",", "."), out double GiaTriVonHoa);
                                 double.TryParse(listCol[3].Text.Replace(",", "."), out double PhanTramThiTruong);
 
                                 dt.Rows.Add(NgayGiaoDich, MaCk, GiaDong, Convert.ToDouble(listCol[2].Text.Replace(".", "")), PhanTramThiTruong);
                             }
-
                         }
                         Thread.Sleep(500);
 
@@ -103,16 +97,19 @@ namespace BUS
             DataProvider.Instance.insertDB(dt);
             driver.Close();
         }
+
         public bool CountGD(string query, string mack, string ngayGd)
         {
             var i = DataProvider.Instance.Executequery(query, new object[] { mack, ngayGd });
             if (i.Rows.Count > 0) { return true; }
             return false;
         }
+
         public void loadCVonHoa(DataGridView data)
         {
             data.DataSource = DAL_VonHoa.Instance.getListVonHoa();
         }
+
         public bool UpdateVH(DateTime ngayGiaoDich, string maCK, double GiaDong, double VonHoa, double ThiTruong)
         {
             DTO_VonHoa VH = new DTO_VonHoa(ngayGiaoDich, maCK, GiaDong, VonHoa, ThiTruong);

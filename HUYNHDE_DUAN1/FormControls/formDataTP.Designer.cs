@@ -178,6 +178,7 @@
             this.btnFind.Text = "Tìm";
             this.btnFind.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnFind.UseVisualStyleBackColor = true;
+            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
             // panel5
             // 
@@ -220,6 +221,7 @@
             this.btnExports.Text = "Xuất";
             this.btnExports.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExports.UseVisualStyleBackColor = true;
+            this.btnExports.Click += new System.EventHandler(this.btnExports_Click);
             // 
             // btnAdd
             // 

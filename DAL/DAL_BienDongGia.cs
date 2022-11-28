@@ -1,11 +1,5 @@
 ﻿using DTO;
-using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DAL
 {
@@ -19,6 +13,7 @@ namespace DAL
 
             private set { DAL_BienDongGia.instance = value; }
         }
+
         public DataTable getListBDG()
         {
             DataTable dt = new DataTable();
@@ -29,15 +24,14 @@ namespace DAL
 
             return dt;
         }
-        
-       
-        public bool update( DTO_BienDongGia BDG)
+
+        public bool update(DTO_BienDongGia BDG)
         {
             string query = "Update_BDG @ngayGiaoDich , @maCk , @giaThamChieu , @giaTran , @giaSan , @giaMo , @giaDong , @giaCao , @giaThap , @diem , @phanTram ";
 
-            object[] para = new object[] {BDG.NgayGiaoDich,BDG.MaCk, BDG.GiaThamChieu, BDG.GiaTran, BDG.GiaSan, BDG.GiaMo, BDG.GiaDong, BDG.GiaCao, BDG.GiaThap, BDG.Diem, BDG.PhanTram  };
+            object[] para = new object[] { BDG.NgayGiaoDich, BDG.MaCk, BDG.GiaThamChieu, BDG.GiaTran, BDG.GiaSan, BDG.GiaMo, BDG.GiaDong, BDG.GiaCao, BDG.GiaThap, BDG.Diem, BDG.PhanTram };
 
-            if(DataProvider.Instance.ExecuteNonquery(query,para) > 0) { return true; }
+            if (DataProvider.Instance.ExecuteNonquery(query, para) > 0) { return true; }
             return false;
         }
     }

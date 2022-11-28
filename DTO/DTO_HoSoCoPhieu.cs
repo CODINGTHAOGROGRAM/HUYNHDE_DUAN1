@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DTO
 {
@@ -24,7 +20,6 @@ namespace DTO
 
         private string tenTCPH;
         public string TenTCPH { get => tenTCPH; set => tenTCPH = value; }
-
 
         private string truSoChinh;
         public string TruSoChinh { get => truSoChinh; set => truSoChinh = value; }
@@ -69,8 +64,9 @@ namespace DTO
         private double kLNY;
         public double KLNY { get => kLNY; set => kLNY = value; }
 
+        public DTO_HoSoCoPhieu()
+        { }
 
-        public DTO_HoSoCoPhieu() { }
         public DTO_HoSoCoPhieu(DataRow row)
         {
             this.MaCk = (string)row["mack"];
@@ -89,6 +85,7 @@ namespace DTO
             this.KLLH = (double)row["kLLH"];
             this.KLNY = (double)row["kLNY"];
         }
+
         public DTO_HoSoCoPhieu(string mack, string tenTCPH, string truSoChinh, string diaChiLienLac, string gPTL, string tenNganh, string nguoiDaiDien,
             string nguoiCongBo, string banCaoBach, string trangThaiKiemSoat, string trangThaiGiaoDich, DateTime ngayGDDauTien, double vonDieuLe, double kLLH, double kLNY)
         {
@@ -108,6 +105,5 @@ namespace DTO
             this.kLLH = kLLH;
             this.kLNY = kLNY;
         }
-
     }
 }

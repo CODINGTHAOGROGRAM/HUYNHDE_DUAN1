@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DTO
 {
@@ -17,6 +13,7 @@ namespace DTO
 
             private set { DTO_BienDongGia.instance = value; }
         }
+
         private DateTime ngayGiaoDich;
         private string maCk;
         private double giaThamChieu;
@@ -41,7 +38,9 @@ namespace DTO
         public double PhanTram { get => phanTram; set => phanTram = value; }
         public DateTime NgayGiaoDich { get => ngayGiaoDich; set => ngayGiaoDich = value; }
 
-        public DTO_BienDongGia() { }
+        public DTO_BienDongGia()
+        { }
+
         public DTO_BienDongGia(DateTime ngayGiaoDich, string maCk, double giaThamChieu, double giaTran, double giaSan, double giaMo, double giaDong, double giaCao, double giaThap, double diem, double phanTram)
         {
             this.NgayGiaoDich = ngayGiaoDich;
@@ -55,7 +54,6 @@ namespace DTO
             this.GiaThap = giaThap;
             this.Diem = diem;
             this.PhanTram = phanTram;
-
         }
 
         public DTO_BienDongGia(DataRow rowItem)

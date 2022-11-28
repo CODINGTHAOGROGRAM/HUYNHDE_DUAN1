@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DTO
 {
@@ -40,7 +36,9 @@ namespace DTO
         public double SoLenhBan { get => soLenhBan; set => soLenhBan = value; }
         public DateTime NgayGiaoDich { get => ngayGiaoDich; set => ngayGiaoDich = value; }
 
-        public DTO_CungCau() { }
+        public DTO_CungCau()
+        { }
+
         public DTO_CungCau(DateTime ngayGiaoDich, string mack, double giaDong, double soLenhMua, double khoiLuongMua, double soLenhBan, double khoiLuongBan, double duMua, double duBan, double khoiLuongGD, double giaTriGD)
         {
             this.NgayGiaoDich = ngayGiaoDich;
@@ -54,7 +52,6 @@ namespace DTO
             this.DuBan = duBan;
             this.KhoiLuongGD = khoiLuongGD;
             this.GiaTriGD = giaTriGD;
-
         }
     }
 }

@@ -61,11 +61,15 @@ namespace HUYNHDE_DUAN1.formShowClickGrid
 
         public void showData(List<string> data)
         {
+            DateTime dateTimeParsed;
+            if (DateTime.TryParse(data[2], out dateTimeParsed))
+                ngay.Value = dateTimeParsed;
+            
             id = Convert.ToInt32(data[0]);
             stt = Convert.ToInt32(data[1]);
             title.Text = data[3];
             maCK.Text = data[3];
-            ngay.Text = data[2].Replace('-', '/');
+            /*ngay.Value = Convert.ToDateTime(data[2]);*/
             GiaDC.Text = data[4];
             TKLLC.Text = data[5];
             TGTLC.Text = data[6];
@@ -82,6 +86,11 @@ namespace HUYNHDE_DUAN1.formShowClickGrid
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnExports_Click(object sender, EventArgs e)
+        {
+            
         }
 
         private void btnSave_Click_1(object sender, EventArgs e)

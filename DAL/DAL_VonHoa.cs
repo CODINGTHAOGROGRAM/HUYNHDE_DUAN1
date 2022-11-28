@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
+﻿using DTO;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DTO;
 
 namespace DAL
 {
@@ -19,6 +13,7 @@ namespace DAL
 
             private set { DAL_VonHoa.instance = value; }
         }
+
         public DataTable getListVonHoa()
         {
             DataTable dt = new DataTable();
@@ -29,6 +24,7 @@ namespace DAL
 
             return dt;
         }
+
         public bool update(DTO_VonHoa VH)
         {
             string query = "Update_VH @NgayGiaoDich , @MaCk , @GiaDong , @VonHoa , @ThiTruong ";

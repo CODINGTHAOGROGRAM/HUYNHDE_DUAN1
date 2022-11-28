@@ -1,16 +1,12 @@
 ﻿using DAL;
 using DTO;
-using NPOI.XSSF.UserModel;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Globalization;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BUS
@@ -25,6 +21,7 @@ namespace BUS
 
             private set { BUS_BienDongGia.instance = value; }
         }
+
         public bool DongBoBDG()
         {
             try
@@ -94,7 +91,6 @@ namespace BUS
 
                                         dt.Rows.Add(NgayGiaoDich, MaCk, GiaThamChieu, GiaTran, GiaSan, GiaMo, GiaDong, GiaCao, GiaThap, Diem, PhanTram);
                                     }
-
                                 }
                                 Thread.Sleep(2000);
 
@@ -124,6 +120,7 @@ namespace BUS
             }
             return false;
         }
+
         public bool CountGD(string query, string mack, string ngayGd)
         {
             var i = DataProvider.Instance.Executequery(query, new object[] { mack, ngayGd });

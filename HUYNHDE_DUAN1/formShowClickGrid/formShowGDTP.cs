@@ -63,9 +63,14 @@ namespace HUYNHDE_DUAN1.formShowClickGrid
         {
             id = Convert.ToInt32(data[0]);
             stt = Convert.ToInt32(data[1]);
+            
+            DateTime dateTimeParsed;
+            if (DateTime.TryParse(data[2], out dateTimeParsed))
+                ngay.Value = dateTimeParsed;
+            ngay.Enabled= false;
             title.Text = data[3];
             maCK.Text = data[3];
-            ngay.Text = data[2].Replace('-', '/');
+            //ngay.Text = data[2].Replace('-', '/');
             GiaDC.Text = data[4];
             TKLLC.Text = data[5];
             TGTLC.Text = data[6];
@@ -75,7 +80,6 @@ namespace HUYNHDE_DUAN1.formShowClickGrid
             tongGTGDLC.Text = data[10];
             tongKLGDLL.Text = data[11];
             tongGTGDLL.Text = data[12];
-
             this.ShowDialog();
         }
 

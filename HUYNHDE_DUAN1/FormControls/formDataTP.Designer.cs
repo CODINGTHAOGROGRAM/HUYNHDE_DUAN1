@@ -44,9 +44,11 @@
             this.btnAdd = new FontAwesome.Sharp.IconButton();
             this.btnUpGrade = new FontAwesome.Sharp.IconButton();
             this.dataGridGDTP = new System.Windows.Forms.DataGridView();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridGDTP)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -269,20 +271,29 @@
             this.dataGridGDTP.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridGDTP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridGDTP.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridGDTP.Location = new System.Drawing.Point(0, 151);
+            this.dataGridGDTP.Location = new System.Drawing.Point(0, 0);
             this.dataGridGDTP.Name = "dataGridGDTP";
             this.dataGridGDTP.ReadOnly = true;
-            this.dataGridGDTP.Size = new System.Drawing.Size(1284, 660);
+            this.dataGridGDTP.Size = new System.Drawing.Size(1284, 553);
             this.dataGridGDTP.TabIndex = 5;
             this.dataGridGDTP.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridGDTP_CellClick);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.dataGridGDTP);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(0, 151);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1284, 553);
+            this.panel3.TabIndex = 7;
             // 
             // formDataTP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1284, 811);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.dataGridGDTP);
             this.Controls.Add(this.panel1);
             this.Name = "formDataTP";
             this.Text = "Quản lý dữ liệu giao dịch trái phiếu";
@@ -291,6 +302,7 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridGDTP)).EndInit();
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -313,5 +325,6 @@
         private FontAwesome.Sharp.IconButton btnAdd;
         private FontAwesome.Sharp.IconButton btnUpGrade;
         private System.Windows.Forms.DataGridView dataGridGDTP;
+        private System.Windows.Forms.Panel panel3;
     }
 }

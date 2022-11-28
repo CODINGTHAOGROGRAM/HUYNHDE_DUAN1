@@ -93,5 +93,10 @@ namespace HUYNHDE_DUAN1.formShowClickGrid
             //    gdbdg.loadform();
             //}
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -48,6 +48,13 @@ namespace HUYNHDE_DUAN1
            List<string> binding = new List<string>();
             for (int i = 0; i < dataGridGDTP.Columns.Count; i++)
             {
+                if (i == 2)
+                {
+                    string[] date = dataGridGDTP.CurrentRow.Cells[i].Value.ToString().Split('-');
+                    string new_format = date[2] + "/" + date[1] + "/" + date[0];
+                    binding.Add(new_format);
+                    continue;
+                }
                 binding.Add(dataGridGDTP.CurrentRow.Cells[i].Value.ToString());
             }
             formShowGDTP show = new formShowGDTP(this);

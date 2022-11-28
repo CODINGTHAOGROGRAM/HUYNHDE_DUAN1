@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.title = new System.Windows.Forms.Label();
             this.tongGTGDLL = new System.Windows.Forms.TextBox();
             this.tongKLGDLL = new System.Windows.Forms.TextBox();
             this.tongGTGDLC = new System.Windows.Forms.TextBox();
@@ -59,28 +58,17 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.panelControlForm = new HUYNHDE_DUAN1.contructions_functions.panelLinearGradient();
             this.btnExports = new FontAwesome.Sharp.IconButton();
             this.btnSave = new FontAwesome.Sharp.IconButton();
             this.btnClose = new FontAwesome.Sharp.IconButton();
             this.TGTLL = new System.Windows.Forms.TextBox();
             this.btnDelete = new FontAwesome.Sharp.IconButton();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.ngay = new System.Windows.Forms.TextBox();
+            this.ngay = new System.Windows.Forms.DateTimePicker();
+            this.panelControlForm = new HUYNHDE_DUAN1.contructions_functions.panelLinearGradient();
+            this.title = new System.Windows.Forms.Label();
             this.panelControlForm.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // title
-            // 
-            this.title.AutoSize = true;
-            this.title.BackColor = System.Drawing.Color.Transparent;
-            this.title.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.title.Location = new System.Drawing.Point(3, 9);
-            this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(51, 25);
-            this.title.TabIndex = 2;
-            this.title.Text = "title";
             // 
             // tongGTGDLL
             // 
@@ -392,18 +380,6 @@
             this.label1.TabIndex = 177;
             this.label1.Text = "Tổng GTGD thỏa thuận lô chẵn:";
             // 
-            // panelControlForm
-            // 
-            this.panelControlForm.Colorleft = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(254)))), ((int)(((byte)(250)))));
-            this.panelControlForm.ColorRight = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.panelControlForm.Controls.Add(this.title);
-            this.panelControlForm.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControlForm.Location = new System.Drawing.Point(0, 0);
-            this.panelControlForm.Name = "panelControlForm";
-            this.panelControlForm.Size = new System.Drawing.Size(1100, 50);
-            this.panelControlForm.TabIndex = 176;
-            this.panelControlForm.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelControlForm_MouseDown);
-            // 
             // btnExports
             // 
             this.btnExports.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -415,7 +391,7 @@
             this.btnExports.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
             this.btnExports.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnExports.IconSize = 20;
-            this.btnExports.Location = new System.Drawing.Point(270, 431);
+            this.btnExports.Location = new System.Drawing.Point(162, 431);
             this.btnExports.Name = "btnExports";
             this.btnExports.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnExports.Size = new System.Drawing.Size(119, 45);
@@ -435,7 +411,7 @@
             this.btnSave.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
             this.btnSave.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSave.IconSize = 20;
-            this.btnSave.Location = new System.Drawing.Point(145, 431);
+            this.btnSave.Location = new System.Drawing.Point(37, 431);
             this.btnSave.Name = "btnSave";
             this.btnSave.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnSave.Size = new System.Drawing.Size(119, 45);
@@ -457,7 +433,7 @@
             this.btnClose.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClose.IconSize = 20;
-            this.btnClose.Location = new System.Drawing.Point(395, 431);
+            this.btnClose.Location = new System.Drawing.Point(412, 431);
             this.btnClose.Name = "btnClose";
             this.btnClose.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnClose.Size = new System.Drawing.Size(119, 45);
@@ -491,7 +467,7 @@
             this.btnDelete.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
             this.btnDelete.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDelete.IconSize = 20;
-            this.btnDelete.Location = new System.Drawing.Point(20, 431);
+            this.btnDelete.Location = new System.Drawing.Point(287, 431);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnDelete.Size = new System.Drawing.Size(119, 45);
@@ -510,16 +486,37 @@
             // 
             // ngay
             // 
-            this.ngay.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ngay.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.ngay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.ngay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.ngay.Location = new System.Drawing.Point(152, 178);
+            this.ngay.CustomFormat = "dd/MM/yyyy";
+            this.ngay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.ngay.Location = new System.Drawing.Point(152, 180);
             this.ngay.Name = "ngay";
-            this.ngay.ReadOnly = true;
-            this.ngay.Size = new System.Drawing.Size(347, 19);
-            this.ngay.TabIndex = 200;
-            this.ngay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ngay.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.ngay.Size = new System.Drawing.Size(347, 20);
+            this.ngay.TabIndex = 354;
+            // 
+            // panelControlForm
+            // 
+            this.panelControlForm.Colorleft = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(254)))), ((int)(((byte)(250)))));
+            this.panelControlForm.ColorRight = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.panelControlForm.Controls.Add(this.title);
+            this.panelControlForm.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelControlForm.Location = new System.Drawing.Point(0, 0);
+            this.panelControlForm.Name = "panelControlForm";
+            this.panelControlForm.Size = new System.Drawing.Size(1100, 50);
+            this.panelControlForm.TabIndex = 176;
+            this.panelControlForm.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelControlForm_MouseDown);
+            // 
+            // title
+            // 
+            this.title.AutoSize = true;
+            this.title.BackColor = System.Drawing.Color.Transparent;
+            this.title.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.title.Location = new System.Drawing.Point(3, 9);
+            this.title.Name = "title";
+            this.title.Size = new System.Drawing.Size(51, 25);
+            this.title.TabIndex = 2;
+            this.title.Text = "title";
             // 
             // formShowGDTP
             // 
@@ -527,6 +524,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(1100, 499);
+            this.Controls.Add(this.ngay);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnExports);
             this.Controls.Add(this.btnSave);
@@ -540,7 +538,6 @@
             this.Controls.Add(this.TGTLC);
             this.Controls.Add(this.TKLLC);
             this.Controls.Add(this.GiaDC);
-            this.Controls.Add(this.ngay);
             this.Controls.Add(this.maCK);
             this.Controls.Add(this.panel18);
             this.Controls.Add(this.panel17);
@@ -615,6 +612,6 @@
         private System.Windows.Forms.TextBox TGTLL;
         private FontAwesome.Sharp.IconButton btnDelete;
         private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.TextBox ngay;
+        private System.Windows.Forms.DateTimePicker ngay;
     }
 }

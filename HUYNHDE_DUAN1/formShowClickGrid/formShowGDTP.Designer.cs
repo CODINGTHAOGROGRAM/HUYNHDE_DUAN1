@@ -37,13 +37,11 @@
             this.TGTLC = new System.Windows.Forms.TextBox();
             this.TKLLC = new System.Windows.Forms.TextBox();
             this.GiaDC = new System.Windows.Forms.TextBox();
-            this.ngay = new System.Windows.Forms.TextBox();
             this.maCK = new System.Windows.Forms.TextBox();
             this.panel18 = new System.Windows.Forms.Panel();
             this.panel17 = new System.Windows.Forms.Panel();
             this.panel15 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
-            this.panel13 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -66,6 +64,9 @@
             this.btnSave = new FontAwesome.Sharp.IconButton();
             this.btnClose = new FontAwesome.Sharp.IconButton();
             this.TGTLL = new System.Windows.Forms.TextBox();
+            this.btnDelete = new FontAwesome.Sharp.IconButton();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.ngay = new System.Windows.Forms.TextBox();
             this.panelControlForm.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -177,19 +178,6 @@
             this.GiaDC.TabIndex = 201;
             this.GiaDC.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // ngay
-            // 
-            this.ngay.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ngay.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.ngay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.ngay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.ngay.Location = new System.Drawing.Point(152, 178);
-            this.ngay.Name = "ngay";
-            this.ngay.ReadOnly = true;
-            this.ngay.Size = new System.Drawing.Size(347, 19);
-            this.ngay.TabIndex = 200;
-            this.ngay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // maCK
             // 
             this.maCK.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
@@ -234,14 +222,6 @@
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(299, 2);
             this.panel14.TabIndex = 185;
-            // 
-            // panel13
-            // 
-            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.panel13.Location = new System.Drawing.Point(152, 206);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(347, 2);
-            this.panel13.TabIndex = 184;
             // 
             // panel12
             // 
@@ -435,7 +415,7 @@
             this.btnExports.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
             this.btnExports.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnExports.IconSize = 20;
-            this.btnExports.Location = new System.Drawing.Point(217, 431);
+            this.btnExports.Location = new System.Drawing.Point(270, 431);
             this.btnExports.Name = "btnExports";
             this.btnExports.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnExports.Size = new System.Drawing.Size(119, 45);
@@ -455,7 +435,7 @@
             this.btnSave.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
             this.btnSave.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSave.IconSize = 20;
-            this.btnSave.Location = new System.Drawing.Point(37, 431);
+            this.btnSave.Location = new System.Drawing.Point(145, 431);
             this.btnSave.Name = "btnSave";
             this.btnSave.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnSave.Size = new System.Drawing.Size(119, 45);
@@ -499,12 +479,55 @@
             this.TGTLL.TabIndex = 205;
             this.TGTLL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // btnDelete
+            // 
+            this.btnDelete.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelete.FlatAppearance.BorderSize = 4;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.btnDelete.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
+            this.btnDelete.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.btnDelete.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnDelete.IconSize = 20;
+            this.btnDelete.Location = new System.Drawing.Point(20, 431);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnDelete.Size = new System.Drawing.Size(119, 45);
+            this.btnDelete.TabIndex = 353;
+            this.btnDelete.Text = "Xóa";
+            this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDelete.UseVisualStyleBackColor = true;
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.panel13.Location = new System.Drawing.Point(152, 206);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(347, 2);
+            this.panel13.TabIndex = 184;
+            // 
+            // ngay
+            // 
+            this.ngay.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.ngay.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ngay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.ngay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.ngay.Location = new System.Drawing.Point(152, 178);
+            this.ngay.Name = "ngay";
+            this.ngay.ReadOnly = true;
+            this.ngay.Size = new System.Drawing.Size(347, 19);
+            this.ngay.TabIndex = 200;
+            this.ngay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // formShowGDTP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(1100, 499);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnExports);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnClose);
@@ -563,13 +586,11 @@
         private System.Windows.Forms.TextBox TGTLC;
         private System.Windows.Forms.TextBox TKLLC;
         private System.Windows.Forms.TextBox GiaDC;
-        private System.Windows.Forms.TextBox ngay;
         private System.Windows.Forms.TextBox maCK;
         private System.Windows.Forms.Panel panel18;
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.Panel panel14;
-        private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel9;
@@ -592,5 +613,8 @@
         private FontAwesome.Sharp.IconButton btnSave;
         private FontAwesome.Sharp.IconButton btnClose;
         private System.Windows.Forms.TextBox TGTLL;
+        private FontAwesome.Sharp.IconButton btnDelete;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.TextBox ngay;
     }
 }

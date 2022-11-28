@@ -77,6 +77,7 @@
             this.btnSave = new FontAwesome.Sharp.IconButton();
             this.panelLinearGradient1 = new HUYNHDE_DUAN1.contructions_functions.panelLinearGradient();
             this.title = new System.Windows.Forms.Label();
+            this.btnDelete = new FontAwesome.Sharp.IconButton();
             this.panelLinearGradient1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -92,7 +93,7 @@
             this.btnClose.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClose.IconSize = 20;
-            this.btnClose.Location = new System.Drawing.Point(629, 701);
+            this.btnClose.Location = new System.Drawing.Point(548, 704);
             this.btnClose.Name = "btnClose";
             this.btnClose.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnClose.Size = new System.Drawing.Size(119, 45);
@@ -570,7 +571,7 @@
             this.btnExports.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
             this.btnExports.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnExports.IconSize = 20;
-            this.btnExports.Location = new System.Drawing.Point(447, 701);
+            this.btnExports.Location = new System.Drawing.Point(366, 704);
             this.btnExports.Name = "btnExports";
             this.btnExports.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnExports.Size = new System.Drawing.Size(119, 45);
@@ -590,7 +591,7 @@
             this.btnSave.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
             this.btnSave.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSave.IconSize = 20;
-            this.btnSave.Location = new System.Drawing.Point(267, 701);
+            this.btnSave.Location = new System.Drawing.Point(186, 704);
             this.btnSave.Name = "btnSave";
             this.btnSave.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnSave.Size = new System.Drawing.Size(119, 45);
@@ -623,12 +624,34 @@
             this.title.TabIndex = 3;
             this.title.Text = "title\r\n";
             // 
+            // btnDelete
+            // 
+            this.btnDelete.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelete.FlatAppearance.BorderSize = 4;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.btnDelete.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
+            this.btnDelete.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.btnDelete.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnDelete.IconSize = 20;
+            this.btnDelete.Location = new System.Drawing.Point(720, 704);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnDelete.Size = new System.Drawing.Size(119, 45);
+            this.btnDelete.TabIndex = 354;
+            this.btnDelete.Text = "Xóa";
+            this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDelete.UseVisualStyleBackColor = true;
+            // 
             // formShowStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(1040, 761);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnExports);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnClose);
@@ -736,5 +759,6 @@
         private contructions_functions.panelLinearGradient panelLinearGradient1;
         private FontAwesome.Sharp.IconButton btnExports;
         private FontAwesome.Sharp.IconButton btnSave;
+        private FontAwesome.Sharp.IconButton btnDelete;
     }
 }

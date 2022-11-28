@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DTO;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -26,6 +27,15 @@ namespace DAL
             dt = DataProvider.Instance.Executequery(query);
 
             return dt;
+        }
+        public bool update(DTO_CungCau CC)
+        {
+            string query = "Update_TKCC @NgayGiaoDich , @MaCk , @GiaDong , @SoLenhMua , @KhoiLuongMua , @SoLenhBan , @KhoiLuongban , @DuMua , @DuBan , @KhoiLuongGD , @GiaTriGD ";
+
+            object[] para = new object[] { CC.NgayGiaoDich, CC.Mack, CC.GiaDong, CC.SoLenhMua, CC.KhoiLuongMua, CC.SoLenhBan, CC.KhoiLuongBan, CC.DuMua, CC.DuBan, CC.KhoiLuongGD, CC.GiaTriGD };
+
+            if (DataProvider.Instance.ExecuteNonquery(query, para) > 0) { return true; }
+            return false;
         }
     }
 }

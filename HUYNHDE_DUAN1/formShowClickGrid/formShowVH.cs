@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BUS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -49,19 +50,48 @@ namespace HUYNHDE_DUAN1.formShowClickGrid
             }
         }
         #endregion MouseDown Form
-        public formShowVH()
+        private formGDBDG gdbdg;
+        public formShowVH(formGDBDG _gdbdg)
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             // CallBack BorderForms
             this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 30, 30));
+            gdbdg = _gdbdg;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+            formGDBDG formGDBDG = new formGDBDG();
+            formGDBDG.Loadd();
         }
 
-       
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            //try
+            //{
+                string mack = txtMaCK.Text;
+                DateTime ngayGiaoDich = DateTime.ParseExact(txtNgayGiaoDich.Text, "dd/MM/yyyy", null);
+                double GiaDong = Convert.ToDouble(txtGiaDong.Text);
+                double VonHoa = Convert.ToDouble(txtVonHoa.Text);
+                double ThiTruong = Convert.ToDouble(txtThiTruong.Text);
+
+                if (BUS_VonHoa.Instance.UpdateVH(ngayGiaoDich, mack, GiaDong, VonHoa, ThiTruong))
+                {
+                    formMessage f = new formMessage();
+                    f.showMessage("Thông báo", "Cập nhật thông tin thành công.", "icon_success.png", "Đóng");
+                }
+            //}
+            //catch (Exception)
+            //{
+            //    formMessage f = new formMessage();
+            //    f.showMessage("Thông báo", "Có lỗi khi cập nhật dữ liệu, hãy kiểm tra lại!", "icon_error.png", "Đóng");
+            //}
+            //finally
+            //{
+            //    gdbdg.loadform();
+            //}
+        }
     }
 }

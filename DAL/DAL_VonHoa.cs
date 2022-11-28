@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DTO;
 
 namespace DAL
 {
@@ -27,6 +28,15 @@ namespace DAL
             dt = DataProvider.Instance.Executequery(query);
 
             return dt;
+        }
+        public bool update(DTO_VonHoa VH)
+        {
+            string query = "Update_VH @NgayGiaoDich , @MaCk , @GiaDong , @VonHoa , @ThiTruong ";
+
+            object[] para = new object[] { VH.NgayGiaoDich, VH.MaCk, VH.GiaDOng, VH.GiaTriVonHoa, VH.PhanTramThiTruong };
+
+            if (DataProvider.Instance.ExecuteNonquery(query, para) > 0) { return true; }
+            return false;
         }
     }
 }

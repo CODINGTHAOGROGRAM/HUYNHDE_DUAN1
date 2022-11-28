@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DTO;
 
 namespace BUS
 {
@@ -126,6 +127,12 @@ namespace BUS
         public void loadCungCau(DataGridView data) 
         {
             data.DataSource = DAL_CungCau.Instance.getListCungCau();
+        }
+        public bool UpdateCC(DateTime ngayGiaoDich, string maCK, double GiaDong, double LenhMua, double LuongMua, double LenhBan, double LuongBan, double DuMua, double DuBan, double KhoiLuongGD, double GiaTriGD)
+        {
+            DTO_CungCau CC = new DTO_CungCau(ngayGiaoDich, maCK, GiaDong, LenhMua, LuongMua, LenhBan, LuongBan, DuMua, DuBan, KhoiLuongGD, GiaTriGD);
+
+            return DAL_CungCau.Instance.update(CC);
         }
     }
 }

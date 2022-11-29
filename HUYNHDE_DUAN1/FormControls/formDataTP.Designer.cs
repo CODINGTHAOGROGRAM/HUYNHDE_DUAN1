@@ -28,8 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.todate = new System.Windows.Forms.DateTimePicker();
+            this.fromdate = new System.Windows.Forms.DateTimePicker();
+            this.tb_mack = new System.Windows.Forms.TextBox();
             this.panel16 = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -43,8 +47,6 @@
             this.btnUpGrade = new FontAwesome.Sharp.IconButton();
             this.dataGridGDTP = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.fromdate = new System.Windows.Forms.DateTimePicker();
-            this.todate = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridGDTP)).BeginInit();
@@ -56,7 +58,7 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.todate);
             this.panel1.Controls.Add(this.fromdate);
-            this.panel1.Controls.Add(this.textBox3);
+            this.panel1.Controls.Add(this.tb_mack);
             this.panel1.Controls.Add(this.panel16);
             this.panel1.Controls.Add(this.label17);
             this.panel1.Controls.Add(this.label16);
@@ -71,17 +73,43 @@
             this.panel1.TabIndex = 0;
             this.panel1.Click += new System.EventHandler(this.panel1_Click);
             // 
-            // textBox3
+            // todate
             // 
-            this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox3.BackColor = System.Drawing.Color.White;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox3.Location = new System.Drawing.Point(243, 93);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(152, 19);
-            this.textBox3.TabIndex = 112;
+            this.todate.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.todate.CustomFormat = "dd/MM/yyyy";
+            this.todate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.todate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.todate.Location = new System.Drawing.Point(872, 93);
+            this.todate.MaximumSize = new System.Drawing.Size(347, 25);
+            this.todate.Name = "todate";
+            this.todate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.todate.Size = new System.Drawing.Size(150, 23);
+            this.todate.TabIndex = 356;
+            // 
+            // fromdate
+            // 
+            this.fromdate.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.fromdate.CustomFormat = "dd/MM/yyyy";
+            this.fromdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fromdate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.fromdate.Location = new System.Drawing.Point(551, 93);
+            this.fromdate.MaximumSize = new System.Drawing.Size(347, 25);
+            this.fromdate.Name = "fromdate";
+            this.fromdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.fromdate.Size = new System.Drawing.Size(150, 23);
+            this.fromdate.TabIndex = 355;
+            // 
+            // tb_mack
+            // 
+            this.tb_mack.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.tb_mack.BackColor = System.Drawing.Color.White;
+            this.tb_mack.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_mack.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.tb_mack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.tb_mack.Location = new System.Drawing.Point(243, 93);
+            this.tb_mack.Name = "tb_mack";
+            this.tb_mack.Size = new System.Drawing.Size(152, 19);
+            this.tb_mack.TabIndex = 112;
             // 
             // panel16
             // 
@@ -250,9 +278,20 @@
             this.dataGridGDTP.Location = new System.Drawing.Point(0, 0);
             this.dataGridGDTP.Name = "dataGridGDTP";
             this.dataGridGDTP.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridGDTP.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridGDTP.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridGDTP.Size = new System.Drawing.Size(1284, 553);
             this.dataGridGDTP.TabIndex = 5;
             this.dataGridGDTP.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridGDTP_CellClick);
+            this.dataGridGDTP.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridGDTP_ColumnHeaderMouseClick);
             // 
             // panel3
             // 
@@ -262,32 +301,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1284, 553);
             this.panel3.TabIndex = 7;
-            // 
-            // fromdate
-            // 
-            this.fromdate.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.fromdate.CustomFormat = "dd/MM/yyyy";
-            this.fromdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fromdate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.fromdate.Location = new System.Drawing.Point(551, 93);
-            this.fromdate.MaximumSize = new System.Drawing.Size(347, 25);
-            this.fromdate.Name = "fromdate";
-            this.fromdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.fromdate.Size = new System.Drawing.Size(150, 23);
-            this.fromdate.TabIndex = 355;
-            // 
-            // todate
-            // 
-            this.todate.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.todate.CustomFormat = "dd/MM/yyyy";
-            this.todate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.todate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.todate.Location = new System.Drawing.Point(872, 93);
-            this.todate.MaximumSize = new System.Drawing.Size(347, 25);
-            this.todate.Name = "todate";
-            this.todate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.todate.Size = new System.Drawing.Size(150, 23);
-            this.todate.TabIndex = 356;
             // 
             // formDataTP
             // 
@@ -319,7 +332,7 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel16;
         private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tb_mack;
         private System.Windows.Forms.Panel panel2;
         private FontAwesome.Sharp.IconButton btnExports;
         private FontAwesome.Sharp.IconButton btnAdd;

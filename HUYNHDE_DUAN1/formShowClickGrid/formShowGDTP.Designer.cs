@@ -419,7 +419,7 @@
             this.btnSave.Text = "Lưu";
             this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click_1);
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnClose
             // 
@@ -475,6 +475,7 @@
             this.btnDelete.Text = "Xóa";
             this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // panel13
             // 
@@ -487,11 +488,13 @@
             // ngay
             // 
             this.ngay.CustomFormat = "dd/MM/yyyy";
+            this.ngay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ngay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.ngay.Location = new System.Drawing.Point(152, 180);
+            this.ngay.Location = new System.Drawing.Point(152, 175);
+            this.ngay.MinimumSize = new System.Drawing.Size(347, 25);
             this.ngay.Name = "ngay";
             this.ngay.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.ngay.Size = new System.Drawing.Size(347, 20);
+            this.ngay.Size = new System.Drawing.Size(347, 25);
             this.ngay.TabIndex = 354;
             // 
             // panelControlForm
@@ -565,6 +568,7 @@
             this.Name = "formShowGDTP";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "formShowGDTP";
+            this.Click += new System.EventHandler(this.btnDelete_Click);
             this.panelControlForm.ResumeLayout(false);
             this.panelControlForm.PerformLayout();
             this.ResumeLayout(false);

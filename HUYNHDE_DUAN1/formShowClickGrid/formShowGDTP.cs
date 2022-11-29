@@ -113,7 +113,7 @@ namespace HUYNHDE_DUAN1.formShowClickGrid
 
         }
 
-        private void btnSave_Click_1(object sender, EventArgs e)
+        private void btnSave_Click(object sender, EventArgs e)
         {
             try
             {
@@ -133,6 +133,7 @@ namespace HUYNHDE_DUAN1.formShowClickGrid
 
                 if (BUS_GiaoDichTraiPhieu.Instance.editData(Id, Stt, ngayGD, Ma_CK, Gia_DC, TKL_LC, TGT_LC, TKL_LL, TGT_LL, tong_KLGDLC, tong_GTGDLC, tong_KLGDLL, tong_GTGDLL))
                 {
+                    gdtp.loadform();
                     formMessage f = new formMessage();
                     f.showMessage("Thông báo", "Cập nhật thông tin thành công.", "icon_success.png", "Đóng");
                 }
@@ -141,10 +142,6 @@ namespace HUYNHDE_DUAN1.formShowClickGrid
             {
                 formMessage f = new formMessage();
                 f.showMessage("Thông báo", "Có lỗi khi cập nhật dữ liệu, hãy kiểm tra lại!", "icon_error.png", "Đóng");
-            }
-            finally
-            {
-                gdtp.loadform();
             }
         }
     }

@@ -30,19 +30,20 @@ namespace HUYNHDE_DUAN1
 
         private void btnUpGrade_Click_1(object sender, EventArgs e)
         {
+            Thread mess = new Thread(new ThreadStart(() =>
+            {
+                f.showMessage("Thông báo", "Đang cập nhật dữ liệu...", "icon_info.png", "Đóng");
+            }));
             try
             {
-                Thread mess = new Thread(new ThreadStart(() =>
-                {
-                    f.showMessage("Thông báo", "Đang cập nhật dữ liệu...", "icon_info.png", "Đóng");
-                }));
                 mess.Start();
                 BUS_GiaoDichTraiPhieu.Instance.Update(fromdate.Text, todate.Text);
-                f.Close();
+                mess.Abort();
                 f.showMessage("Thông báo", "Cập nhật dữ liệu thành công.", "icon_success.png", "Đóng");
             }
             catch (Exception)
             {
+                mess.Abort();
                 f.showMessage("Thông báo", "Đã lỗi trong quá trình cập nhật,\nvui lòng kiểm tra và thử lại!", "icon_error.png", "Đóng");
             }
         }

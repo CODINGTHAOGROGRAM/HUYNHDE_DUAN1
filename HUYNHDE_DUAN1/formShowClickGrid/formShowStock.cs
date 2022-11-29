@@ -57,6 +57,9 @@ namespace HUYNHDE_DUAN1.formShowClickGrid
             this.FormBorderStyle = FormBorderStyle.None;
             // CallBack BorderForms
             this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 30, 30));
+            
+
+           
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -65,27 +68,26 @@ namespace HUYNHDE_DUAN1.formShowClickGrid
             
         }
 
-        public void bindindDataGrid(object dataSource)
+
+        public void bindindDataGrid(List<string> data)
         {
-            title.DataBindings.Add(new Binding("Text", dataSource, "MaCK"));
-            txtMaCK.DataBindings.Add(new Binding("Text", dataSource, "MaCK"));
-            txtTen.DataBindings.Add(new Binding("Text", dataSource, "TenTCPH"));
-            txtTruSo.DataBindings.Add(new Binding("Text", dataSource, "TruSoChinh"));
-            txtSdt.DataBindings.Add(new Binding("Text", dataSource, "DiaChiLienlac"));
-            txtGPTL.DataBindings.Add(new Binding("Text", dataSource, "GPTL"));
-            txtNganh.DataBindings.Add(new Binding("Text", dataSource, "TenNganh"));
-            txtNguoiDD.DataBindings.Add(new Binding("Text", dataSource, "NguoiDaiDien"));
-            txtNguoiCB.DataBindings.Add(new Binding("Text", dataSource, "NguoiCongBo"));
-            txtBangCao.DataBindings.Add(new Binding("Text", dataSource, "BanCaoBach"));
-            txtKiemSoat.DataBindings.Add(new Binding("Text", dataSource, "TrangThaiKiemSoat"));
-            txtGiaoDich.DataBindings.Add(new Binding("Text", dataSource, "TrangThaiGiaoDich"));
-            txtNgay.DataBindings.Add(new Binding("Text", dataSource, "NgayGDDauTien"));
-            txtVon.DataBindings.Add(new Binding("Text", dataSource, "VonDieuLe"));
-            txtKLLH.DataBindings.Add(new Binding("Text", dataSource, "KLLH"));
-            txtKLNY.DataBindings.Add(new Binding("Text", dataSource, "KLNY"));
+            title.Text = data[0];  
+            txtMaCK.Text = data[0];
+            txtTen.Text = data[1];
+            txtTruSo.Text = data[2];
+            txtSdt.Text = data[3];
+            txtGPTL.Text = data[4];
+            txtNganh.Text = data[5];
+            txtNguoiDD.Text = data[6];
+            txtNguoiCB.Text = data[7];
+            txtBangCao.Text = data[8]; 
+            txtKiemSoat.Text = data[9];
+            txtGiaoDich.Text = data[10];
+            txtNgay.Text = data[11].Replace("/", "-");
+            txtVon.Text = data[12];
+            txtKLLH.Text = data[13];
+            txtKLNY.Text = data[14];
             
-        }
-
-
+        }    
     }
 }

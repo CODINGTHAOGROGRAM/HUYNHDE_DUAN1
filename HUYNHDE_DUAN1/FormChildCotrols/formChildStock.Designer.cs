@@ -77,6 +77,9 @@
             this.btnAdd = new FontAwesome.Sharp.IconButton();
             this.btnClose = new FontAwesome.Sharp.IconButton();
             this.btnRefesh = new FontAwesome.Sharp.IconButton();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label17 = new System.Windows.Forms.Label();
             this.panelLinearGradient1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -110,9 +113,9 @@
             this.textBox15.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBox15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox15.Location = new System.Drawing.Point(723, 554);
+            this.textBox15.Location = new System.Drawing.Point(698, 554);
             this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(282, 19);
+            this.textBox15.Size = new System.Drawing.Size(307, 19);
             this.textBox15.TabIndex = 164;
             // 
             // textBox14
@@ -121,9 +124,9 @@
             this.textBox14.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBox14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox14.Location = new System.Drawing.Point(712, 472);
+            this.textBox14.Location = new System.Drawing.Point(698, 472);
             this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(286, 19);
+            this.textBox14.Size = new System.Drawing.Size(300, 19);
             this.textBox14.TabIndex = 163;
             // 
             // textBox13
@@ -132,9 +135,9 @@
             this.textBox13.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBox13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox13.Location = new System.Drawing.Point(778, 391);
+            this.textBox13.Location = new System.Drawing.Point(721, 391);
             this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(223, 19);
+            this.textBox13.Size = new System.Drawing.Size(280, 19);
             this.textBox13.TabIndex = 162;
             // 
             // textBox12
@@ -143,9 +146,9 @@
             this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBox12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox12.Location = new System.Drawing.Point(726, 309);
+            this.textBox12.Location = new System.Drawing.Point(693, 309);
             this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(275, 19);
+            this.textBox12.Size = new System.Drawing.Size(308, 19);
             this.textBox12.TabIndex = 161;
             // 
             // textBox11
@@ -154,9 +157,9 @@
             this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBox11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox11.Location = new System.Drawing.Point(748, 227);
+            this.textBox11.Location = new System.Drawing.Point(698, 227);
             this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(252, 19);
+            this.textBox11.Size = new System.Drawing.Size(302, 19);
             this.textBox11.TabIndex = 160;
             // 
             // textBox10
@@ -165,9 +168,9 @@
             this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBox10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox10.Location = new System.Drawing.Point(753, 145);
+            this.textBox10.Location = new System.Drawing.Point(698, 145);
             this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(248, 19);
+            this.textBox10.Size = new System.Drawing.Size(303, 19);
             this.textBox10.TabIndex = 159;
             // 
             // textBox9
@@ -176,9 +179,9 @@
             this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBox9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox9.Location = new System.Drawing.Point(678, 63);
+            this.textBox9.Location = new System.Drawing.Point(698, 63);
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(323, 19);
+            this.textBox9.Size = new System.Drawing.Size(303, 19);
             this.textBox9.TabIndex = 158;
             // 
             // textBox8
@@ -187,9 +190,9 @@
             this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBox8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox8.Location = new System.Drawing.Point(458, 620);
+            this.textBox8.Location = new System.Drawing.Point(231, 640);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(350, 19);
+            this.textBox8.Size = new System.Drawing.Size(269, 19);
             this.textBox8.TabIndex = 157;
             // 
             // textBox7
@@ -198,9 +201,9 @@
             this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox7.Location = new System.Drawing.Point(292, 554);
+            this.textBox7.Location = new System.Drawing.Point(231, 554);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(208, 19);
+            this.textBox7.Size = new System.Drawing.Size(269, 19);
             this.textBox7.TabIndex = 156;
             // 
             // textBox6
@@ -209,9 +212,9 @@
             this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox6.Location = new System.Drawing.Point(159, 472);
+            this.textBox6.Location = new System.Drawing.Point(150, 472);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(341, 19);
+            this.textBox6.Size = new System.Drawing.Size(350, 19);
             this.textBox6.TabIndex = 155;
             // 
             // textBox5
@@ -220,9 +223,9 @@
             this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox5.Location = new System.Drawing.Point(174, 391);
+            this.textBox5.Location = new System.Drawing.Point(150, 391);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(326, 19);
+            this.textBox5.Size = new System.Drawing.Size(350, 19);
             this.textBox5.TabIndex = 154;
             // 
             // textBox4
@@ -231,9 +234,9 @@
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox4.Location = new System.Drawing.Point(185, 309);
+            this.textBox4.Location = new System.Drawing.Point(150, 309);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(315, 19);
+            this.textBox4.Size = new System.Drawing.Size(350, 19);
             this.textBox4.TabIndex = 153;
             // 
             // textBox3
@@ -261,9 +264,9 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.panel8.Location = new System.Drawing.Point(723, 582);
+            this.panel8.Location = new System.Drawing.Point(698, 582);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(275, 2);
+            this.panel8.Size = new System.Drawing.Size(300, 2);
             this.panel8.TabIndex = 136;
             // 
             // richTextBox1
@@ -272,98 +275,98 @@
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.richTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.richTextBox1.Location = new System.Drawing.Point(172, 214);
+            this.richTextBox1.Location = new System.Drawing.Point(150, 214);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(328, 64);
+            this.richTextBox1.Size = new System.Drawing.Size(350, 64);
             this.richTextBox1.TabIndex = 151;
             this.richTextBox1.Text = "";
             // 
             // panel20
             // 
             this.panel20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.panel20.Location = new System.Drawing.Point(678, 89);
+            this.panel20.Location = new System.Drawing.Point(698, 89);
             this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(322, 2);
+            this.panel20.Size = new System.Drawing.Size(302, 2);
             this.panel20.TabIndex = 137;
             // 
             // panel19
             // 
             this.panel19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.panel19.Location = new System.Drawing.Point(753, 173);
+            this.panel19.Location = new System.Drawing.Point(698, 173);
             this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(247, 2);
+            this.panel19.Size = new System.Drawing.Size(302, 2);
             this.panel19.TabIndex = 138;
             // 
             // panel18
             // 
             this.panel18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.panel18.Location = new System.Drawing.Point(748, 255);
+            this.panel18.Location = new System.Drawing.Point(698, 255);
             this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(250, 2);
+            this.panel18.Size = new System.Drawing.Size(300, 2);
             this.panel18.TabIndex = 139;
             // 
             // panel16
             // 
             this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.panel16.Location = new System.Drawing.Point(775, 420);
+            this.panel16.Location = new System.Drawing.Point(718, 420);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(225, 2);
+            this.panel16.Size = new System.Drawing.Size(282, 2);
             this.panel16.TabIndex = 132;
             // 
             // panel15
             // 
             this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.panel15.Location = new System.Drawing.Point(712, 500);
+            this.panel15.Location = new System.Drawing.Point(698, 500);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(290, 2);
+            this.panel15.Size = new System.Drawing.Size(304, 2);
             this.panel15.TabIndex = 133;
             // 
             // panel14
             // 
             this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.panel14.Location = new System.Drawing.Point(731, 338);
+            this.panel14.Location = new System.Drawing.Point(698, 338);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(270, 2);
+            this.panel14.Size = new System.Drawing.Size(303, 2);
             this.panel14.TabIndex = 134;
             // 
             // panel13
             // 
             this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.panel13.Location = new System.Drawing.Point(458, 648);
+            this.panel13.Location = new System.Drawing.Point(231, 668);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(350, 2);
+            this.panel13.Size = new System.Drawing.Size(269, 2);
             this.panel13.TabIndex = 127;
             // 
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.panel12.Location = new System.Drawing.Point(292, 582);
+            this.panel12.Location = new System.Drawing.Point(231, 582);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(208, 2);
+            this.panel12.Size = new System.Drawing.Size(269, 2);
             this.panel12.TabIndex = 129;
             // 
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.panel11.Location = new System.Drawing.Point(159, 500);
+            this.panel11.Location = new System.Drawing.Point(150, 500);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(341, 2);
+            this.panel11.Size = new System.Drawing.Size(350, 2);
             this.panel11.TabIndex = 126;
             // 
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.panel10.Location = new System.Drawing.Point(174, 419);
+            this.panel10.Location = new System.Drawing.Point(150, 419);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(326, 2);
+            this.panel10.Size = new System.Drawing.Size(350, 2);
             this.panel10.TabIndex = 125;
             // 
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.panel9.Location = new System.Drawing.Point(185, 337);
+            this.panel9.Location = new System.Drawing.Point(150, 337);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(315, 2);
+            this.panel9.Size = new System.Drawing.Size(350, 2);
             this.panel9.TabIndex = 128;
             // 
             // panel7
@@ -541,7 +544,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.label11.Location = new System.Drawing.Point(192, 628);
+            this.label11.Location = new System.Drawing.Point(26, 640);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(181, 20);
             this.label11.TabIndex = 145;
@@ -610,12 +613,45 @@
             this.btnRefesh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRefesh.UseVisualStyleBackColor = true;
             // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.textBox1.Location = new System.Drawing.Point(698, 630);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(307, 19);
+            this.textBox1.TabIndex = 170;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.panel1.Location = new System.Drawing.Point(698, 658);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(300, 2);
+            this.panel1.TabIndex = 168;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.label17.Location = new System.Drawing.Point(528, 640);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(142, 20);
+            this.label17.TabIndex = 169;
+            this.label17.Text = "Link bản cáo bạch:";
+            // 
             // formChildStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(1040, 761);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.label17);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnRefesh);
@@ -726,5 +762,8 @@
         private FontAwesome.Sharp.IconButton btnClose;
         private FontAwesome.Sharp.IconButton btnRefesh;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label17;
     }
 }

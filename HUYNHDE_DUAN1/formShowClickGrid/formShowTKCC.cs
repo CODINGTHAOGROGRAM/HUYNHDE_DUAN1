@@ -64,7 +64,7 @@ namespace HUYNHDE_DUAN1.formShowClickGrid
         {
             this.Close();
             formGDBDG formGDBDG = new formGDBDG();
-            formGDBDG.Loadd();
+         //   formGDBDG.Loadd();
         }
 
         private void btnSave_Click(object sender, EventArgs e)

@@ -59,5 +59,10 @@ namespace HUYNHDE_DUAN1
         {
             this.ActiveControl = null;
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

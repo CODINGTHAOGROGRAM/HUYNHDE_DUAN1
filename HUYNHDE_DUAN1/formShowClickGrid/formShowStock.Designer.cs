@@ -75,9 +75,12 @@
             this.label11 = new System.Windows.Forms.Label();
             this.btnExports = new FontAwesome.Sharp.IconButton();
             this.btnSave = new FontAwesome.Sharp.IconButton();
+            this.btnDelete = new FontAwesome.Sharp.IconButton();
             this.panelLinearGradient1 = new HUYNHDE_DUAN1.contructions_functions.panelLinearGradient();
             this.title = new System.Windows.Forms.Label();
-            this.btnDelete = new FontAwesome.Sharp.IconButton();
+            this.txtLink = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.panelLinearGradient1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -193,9 +196,9 @@
             this.txtNguoiCB.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNguoiCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtNguoiCB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.txtNguoiCB.Location = new System.Drawing.Point(379, 634);
+            this.txtNguoiCB.Location = new System.Drawing.Point(215, 643);
             this.txtNguoiCB.Name = "txtNguoiCB";
-            this.txtNguoiCB.Size = new System.Drawing.Size(429, 19);
+            this.txtNguoiCB.Size = new System.Drawing.Size(285, 19);
             this.txtNguoiCB.TabIndex = 205;
             this.txtNguoiCB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -342,9 +345,9 @@
             // panel13
             // 
             this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.panel13.Location = new System.Drawing.Point(379, 662);
+            this.panel13.Location = new System.Drawing.Point(215, 671);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(429, 2);
+            this.panel13.Size = new System.Drawing.Size(285, 2);
             this.panel13.TabIndex = 176;
             // 
             // panel12
@@ -545,16 +548,16 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
             this.label1.Location = new System.Drawing.Point(528, 86);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 20);
+            this.label1.Size = new System.Drawing.Size(111, 20);
             this.label1.TabIndex = 169;
-            this.label1.Text = "Bảng cáo bạch:";
+            this.label1.Text = "Bản cáo bạch:";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.label11.Location = new System.Drawing.Point(192, 642);
+            this.label11.Location = new System.Drawing.Point(28, 651);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(181, 20);
             this.label11.TabIndex = 193;
@@ -600,6 +603,27 @@
             this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSave.UseVisualStyleBackColor = true;
             // 
+            // btnDelete
+            // 
+            this.btnDelete.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelete.FlatAppearance.BorderSize = 4;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.btnDelete.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
+            this.btnDelete.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.btnDelete.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnDelete.IconSize = 20;
+            this.btnDelete.Location = new System.Drawing.Point(720, 704);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnDelete.Size = new System.Drawing.Size(119, 45);
+            this.btnDelete.TabIndex = 354;
+            this.btnDelete.Text = "Xóa";
+            this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDelete.UseVisualStyleBackColor = true;
+            // 
             // panelLinearGradient1
             // 
             this.panelLinearGradient1.Colorleft = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(254)))), ((int)(((byte)(250)))));
@@ -624,26 +648,36 @@
             this.title.TabIndex = 3;
             this.title.Text = "title\r\n";
             // 
-            // btnDelete
+            // txtLink
             // 
-            this.btnDelete.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDelete.FlatAppearance.BorderSize = 4;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.btnDelete.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
-            this.btnDelete.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.btnDelete.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnDelete.IconSize = 20;
-            this.btnDelete.Location = new System.Drawing.Point(720, 704);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnDelete.Size = new System.Drawing.Size(119, 45);
-            this.btnDelete.TabIndex = 354;
-            this.btnDelete.Text = "Xóa";
-            this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDelete.UseVisualStyleBackColor = true;
+            this.txtLink.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.txtLink.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtLink.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtLink.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.txtLink.Location = new System.Drawing.Point(690, 642);
+            this.txtLink.Name = "txtLink";
+            this.txtLink.Size = new System.Drawing.Size(311, 19);
+            this.txtLink.TabIndex = 357;
+            this.txtLink.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.panel1.Location = new System.Drawing.Point(690, 668);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(310, 2);
+            this.panel1.TabIndex = 356;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.label2.Location = new System.Drawing.Point(528, 651);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(142, 20);
+            this.label2.TabIndex = 355;
+            this.label2.Text = "Link bản cáo bạch:";
             // 
             // formShowStock
             // 
@@ -651,6 +685,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(1040, 761);
+            this.Controls.Add(this.txtLink);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnExports);
             this.Controls.Add(this.btnSave);
@@ -760,5 +797,8 @@
         private FontAwesome.Sharp.IconButton btnExports;
         private FontAwesome.Sharp.IconButton btnSave;
         private FontAwesome.Sharp.IconButton btnDelete;
+        private System.Windows.Forms.TextBox txtLink;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label2;
     }
 }

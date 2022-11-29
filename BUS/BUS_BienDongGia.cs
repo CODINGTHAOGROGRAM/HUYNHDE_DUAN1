@@ -35,7 +35,7 @@ namespace BUS
                 var options = new ChromeOptions();
                 options.AddArgument("window-position=-32000,-32000");
 
-                IWebDriver driver = new ChromeDriver(service, options);
+                IWebDriver driver = new ChromeDriver();
                 driver.Navigate().GoToUrl("https://www.hnx.vn/cophieu-etfs/chi-tiet-chung-khoan-ny-AAV.html?_des_tab=2");
 
                 DataTable dt = new DataTable("BienDongGia");
@@ -58,7 +58,7 @@ namespace BUS
                 string query = "exec dbo.BDGiaProc_getByMaCk @mack , @ngayGiaoDich";
                 try
                 {
-                    for (int i = 0; i < 3; i++)
+                    for (int i = 9; i < links.Count; i++)
                     {
                         string MaCk = links[i].GetAttribute("value");
                         var url = "https://www.hnx.vn/cophieu-etfs/chi-tiet-chung-khoan-ny-" + links[i].GetAttribute("value").ToLower() + ".html?_ces_tab=2";
@@ -98,12 +98,10 @@ namespace BUS
                                 }
                                 Thread.Sleep(2000);
 
-                                var netpage = driver.FindElement(By.XPath($"//*[@id=\"{x}\"]"));
-                                netpage.Click();
-
+                                driver.FindElement(By.XPath($"//*[@id=\"{x}\"]")).Click();
                                 x++;
                             }
-                            catch (NoSuchElementException ex)
+                            catch (Exception ex)
                             {
                                 break;
                             }
@@ -116,13 +114,14 @@ namespace BUS
                     return true;
                 }
                 DataProvider.Instance.insertDB(dt);
-                driver.Quit();
+                driver.Close();
             }
             catch (WebDriverException ex)
             {
                 return true;
             }
             return false;
+
         }
         public bool CountGD(string query, string mack, string ngayGd)
         {

@@ -24,14 +24,15 @@ namespace BUS
 
             private set { BUS_VonHoa.instance = value; }
         }
-        public void DongBoVonHoa()
+        public bool DongBoVonHoa()
         {
+            try { 
             ChromeDriverService service = ChromeDriverService.CreateDefaultService();
             service.HideCommandPromptWindow = true;
 
             var options = new ChromeOptions();
             options.AddArgument("window-position=-32000,-32000");
-            IWebDriver driver = new ChromeDriver();
+            IWebDriver driver = new ChromeDriver(service,options);
 
             driver.Navigate().GoToUrl("https://www.hnx.vn/cophieu-etfs/chi-tiet-chung-khoan-ny-AAV.html?_des_tab=2");
 
@@ -47,61 +48,66 @@ namespace BUS
 
             IList<IWebElement> links = driver.FindElements(By.XPath("//*[@id=\"divSearchContentArticle\"]/ul/li[2]/div/div/div[2]/ul/li/label/input"));
             string query = "exec dbo.VonHoaProc_getByMaCk @mack , @ngayGiaoDich";
-
-            for (int i = 0; i < 3; i++)
-            {
-                string MaCk = links[i].GetAttribute("value");
-                var url = "https://www.hnx.vn/cophieu-etfs/chi-tiet-chung-khoan-ny-" + links[i].GetAttribute("value").ToLower() + ".html?_ces_tab=4";
-                driver.Navigate().GoToUrl(url);
-                Thread.Sleep(1000);
-
-                Console.WriteLine(MaCk);
-                int x = 2;
-
-
-                while (true)
+            try { 
+                for (int i = 0; i < links.Count; i++)
                 {
-                    try
+                    string MaCk = links[i].GetAttribute("value");
+                    var url = "https://www.hnx.vn/cophieu-etfs/chi-tiet-chung-khoan-ny-" + links[i].GetAttribute("value").ToLower() + ".html?_ces_tab=4";
+                    driver.Navigate().GoToUrl(url);
+                    Thread.Sleep(1000);
+                    int x = 2;
+                    while (true)
                     {
-                        driver.FindElement(By.XPath("//*[@id=\"VonHoadivNumberRecordOnPage\"]/option[5]")).Click();
-                        Thread.Sleep(1000);
-
-                        IList<IWebElement> listtr = driver.FindElements(By.XPath("//*[@id=\"VonHoa_tableDatas\"]/tbody/tr"));
-                        Thread.Sleep(1000);
-
-                        for (int j = 1; j <= listtr.Count; j++)
+                        try
                         {
+                            driver.FindElement(By.XPath("//*[@id=\"VonHoadivNumberRecordOnPage\"]/option[5]")).Click();
+                            Thread.Sleep(1000);
 
-                            IList<IWebElement> listCol = driver.FindElements(By.XPath($"//*[@id=\"VonHoa_tableDatas\"]/tbody/tr[{j}]/td"));
-                            DateTime NgayGiaoDich = DateTime.ParseExact(listCol[0].Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                            IList<IWebElement> listtr = driver.FindElements(By.XPath("//*[@id=\"VonHoa_tableDatas\"]/tbody/tr"));
+                            Thread.Sleep(1000);
 
-                            if (CountGD(query, MaCk, NgayGiaoDich.ToString()) == false)
+                            for (int j = 1; j <= listtr.Count; j++)
                             {
 
-                                double.TryParse(listCol[1].Text.Replace(",", "."), out double GiaDong);
-                                double.TryParse(listCol[2].Text.Replace(",", "."), out double GiaTriVonHoa);
-                                double.TryParse(listCol[3].Text.Replace(",", "."), out double PhanTramThiTruong);
+                                IList<IWebElement> listCol = driver.FindElements(By.XPath($"//*[@id=\"VonHoa_tableDatas\"]/tbody/tr[{j}]/td"));
+                                DateTime NgayGiaoDich = DateTime.ParseExact(listCol[0].Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
 
-                                dt.Rows.Add(NgayGiaoDich, MaCk, GiaDong, Convert.ToDouble(listCol[2].Text.Replace(".", "")), PhanTramThiTruong);
+                                if (CountGD(query, MaCk, NgayGiaoDich.ToString()) == false)
+                                {
+
+                                    double.TryParse(listCol[1].Text.Replace(",", "."), out double GiaDong);
+                                    double.TryParse(listCol[2].Text.Replace(",", "."), out double GiaTriVonHoa);
+                                    double.TryParse(listCol[3].Text.Replace(",", "."), out double PhanTramThiTruong);
+
+                                    dt.Rows.Add(NgayGiaoDich, MaCk, GiaDong, Convert.ToDouble(listCol[2].Text.Replace(".", "")), PhanTramThiTruong);
+                                }
+
                             }
+                            Thread.Sleep(500);
 
+                            driver.FindElement(By.XPath($"//*[@id=\"{x}\"]")).Click();
+                            x++;
                         }
-                        Thread.Sleep(500);
-
-                        driver.FindElement(By.XPath($"//*[@id=\"{x}\"]")).Click();
-                        x++;
+                        catch (Exception ex)
+                        {
+                            break;
+                        }
                     }
-                    catch (Exception ex)
-                    {
-                        break;
-                    }
+                    driver.Navigate().Back();
                 }
-
-                driver.Navigate().Back();
             }
-            Console.WriteLine(dt.Rows.Count);
+            catch (NoSuchWindowException ex)
+            {
+                return true;
+            }
             DataProvider.Instance.insertDB(dt);
             driver.Close();
+        }
+            catch (WebDriverException ex)
+            {
+                return true;
+            }
+            return false;
         }
         public bool CountGD(string query, string mack, string ngayGd)
         {

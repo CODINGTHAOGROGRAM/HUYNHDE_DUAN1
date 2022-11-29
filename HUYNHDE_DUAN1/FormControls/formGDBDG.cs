@@ -47,8 +47,9 @@ namespace HUYNHDE_DUAN1
         {
            
             formMessage f = new formMessage();
+            //BUS_BienDongGia.Instance.DongBoBDG();
             if (BUS_BienDongGia.Instance.DongBoBDG() == true)
-            { 
+            {
                 f.showMessage("Thông báo", "Dung cap nhat", "icon_info.png", "OK");
             }
             else

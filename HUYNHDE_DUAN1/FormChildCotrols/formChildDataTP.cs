@@ -64,53 +64,5 @@ namespace HUYNHDE_DUAN1
             this.ActiveControl = null;
         }
 
-        private void btnRefesh_Click(object sender, EventArgs e)
-        {
-            stt.Text = "";
-            mack.Text = "";
-            ngay.Value = DateTime.Today;
-            giadc.Text = "";
-            tkl_lc.Text = "";
-            tgt_lochan.Text = "";
-            tkl_ll.Text = "";
-            tgt_ll.Text = "";
-            tong_gt_ll.Text = "";
-            tong_kl_ll.Text = "";
-            tong_kl_lc.Text = "";
-            tong_gt_lc.Text = "";
-        }
-
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            formMessage f = new formMessage();
-            try
-            {
-                int Stt = Convert.ToInt32(stt.Text);
-                string Ma_CK = mack.Text;
-                float Gia_DC = float.Parse(giadc.Text);
-                float TKL_LC = float.Parse(tkl_lc.Text);
-                float TGT_LC = float.Parse(tgt_lochan.Text);
-                float TKL_LL = float.Parse(tkl_ll.Text);
-                float TGT_LL = float.Parse(tgt_ll.Text);
-                float tong_KLGDLC = float.Parse(tong_kl_lc.Text);
-                float tong_GTGDLC = float.Parse(tong_gt_lc.Text);
-                float tong_KLGDLL = float.Parse(tong_kl_ll.Text);
-                float tong_GTGDLL = float.Parse(tong_gt_ll.Text);
-                DateTime ngayGD = DateTime.ParseExact(ngay.Text, "dd/MM/yyyy", null);
-
-                if (BUS_GiaoDichTraiPhieu.Instance.addData( Stt, ngayGD, Ma_CK, Gia_DC, TKL_LC, TGT_LC, TKL_LL, TGT_LL, tong_KLGDLC, tong_GTGDLC, tong_KLGDLL, tong_GTGDLL))
-                {
-                    f.showMessage("Thông báo", "Thêm thông tin thành công.", "icon_success.png", "Đóng");
-                }
-            }
-            catch (Exception)
-            {
-                f.showMessage("Thông báo", "Có lỗi khi thêm dữ liệu, hãy kiểm tra lại!", "icon_error.png", "Đóng");
-            }
-            finally
-            {
-                gdtp.loadform();
-            }
-        }
     }
 }

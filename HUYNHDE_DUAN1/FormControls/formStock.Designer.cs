@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel4 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.GridViewHoSo = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnExports = new FontAwesome.Sharp.IconButton();
@@ -39,6 +40,7 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.iconButton6 = new FontAwesome.Sharp.IconButton();
             this.panel4.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridViewHoSo)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -46,7 +48,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Controls.Add(this.GridViewHoSo);
+            this.panel4.Controls.Add(this.panel2);
             this.panel4.Controls.Add(this.panel1);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.textBox1);
@@ -60,16 +62,26 @@
             this.panel4.Click += new System.EventHandler(this.panel4_Click);
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
-            // GridViewHoSo
+            // panel2
             // 
-            this.GridViewHoSo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Controls.Add(this.GridViewHoSo);
+            this.panel2.Location = new System.Drawing.Point(0, 157);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1300, 533);
+            this.panel2.TabIndex = 132;
+            // 
+            // GridViewHoSo
+            // 
             this.GridViewHoSo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.GridViewHoSo.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
             this.GridViewHoSo.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
             this.GridViewHoSo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridViewHoSo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.GridViewHoSo.GridColor = System.Drawing.SystemColors.AppWorkspace;
-            this.GridViewHoSo.Location = new System.Drawing.Point(0, 158);
+            this.GridViewHoSo.Location = new System.Drawing.Point(0, 0);
             this.GridViewHoSo.Name = "GridViewHoSo";
             this.GridViewHoSo.Size = new System.Drawing.Size(1300, 533);
             this.GridViewHoSo.TabIndex = 131;
@@ -213,6 +225,7 @@
             this.Load += new System.EventHandler(this.formStock_Load);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.GridViewHoSo)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -230,5 +243,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView GridViewHoSo;
         private FontAwesome.Sharp.IconButton btnExports;
+        private System.Windows.Forms.Panel panel2;
     }
 }

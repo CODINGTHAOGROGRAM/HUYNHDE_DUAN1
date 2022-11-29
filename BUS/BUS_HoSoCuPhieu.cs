@@ -22,9 +22,10 @@ namespace BUS
             private set { BUS_HoSoCuPhieu.instance = value; }
         }
         private BUS_HoSoCuPhieu() { }
-        public List<DTO_HoSoCoPhieu> getListHoSo()
+       
+        public DataTable LoadGriHoSo()
         {
-            return hoso.getListHoSo();
+            return hoso.LoadGriHoSo();
         }
     }
 }

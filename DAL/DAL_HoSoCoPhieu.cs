@@ -19,17 +19,12 @@ namespace DAL
             private set { DAL_HoSoCoPhieu.instance = value; }
         }
         public DAL_HoSoCoPhieu() { }
-        public List<DTO_HoSoCoPhieu> getListHoSo()
+        public DataTable LoadGriHoSo()
         {
-            List<DTO_HoSoCoPhieu> newList = new List<DTO_HoSoCoPhieu>();
-            string queryPerform = "select * from HoSoCoPhieu";
-            DataTable data = DataProvider.Instance.Executequery(queryPerform);
-            foreach (DataRow rowItem in data.Rows)
-            {
-                DTO_HoSoCoPhieu dtHoSo = new DTO_HoSoCoPhieu(rowItem);
-                newList.Add(dtHoSo);
-            }
-            return newList;
+            DataTable tableGrip = new DataTable();
+            string queryExcute = "ShowData_HSCP";
+            return DataProvider.Instance.Executequery(queryExcute);
         }
+       
     }
 }

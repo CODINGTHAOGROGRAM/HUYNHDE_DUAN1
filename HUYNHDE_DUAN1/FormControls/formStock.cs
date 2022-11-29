@@ -22,12 +22,13 @@ namespace HUYNHDE_DUAN1
         //Methods
         void LoadGrid()
         {
-            GridViewHoSo.DataSource = BUS_HoSoCuPhieu.Instance.getListHoSo();
+          // GridViewHoSo.DataSource = BUS_HoSoCuPhieu.Instance.getListHoSo();
+            GridViewHoSo.DataSource = BUS_HoSoCuPhieu.Instance.LoadGriHoSo();
             //show.tt.DataBindings.Add(new Binding("Text", GridViewHoSo.DataSource, "MaCK"));
 
 
         }
-       
+
         //
 
 
@@ -56,20 +57,16 @@ namespace HUYNHDE_DUAN1
 
         private void GridViewHoSo_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            List<string> binding = new List<string>();
             for (int i = 0; i < GridViewHoSo.Columns.Count; i++)
             {
-                if (GridViewHoSo.Rows[e.RowIndex].Cells[i].Selected == true || GridViewHoSo.CurrentRow.Selected == true)
-                {
-                    formShowStock show = new formShowStock();
-                    show.bindindDataGrid(GridViewHoSo.DataSource);
-                    show.ShowDialog();
-                   
-                  
-
-                }
+                binding.Add(GridViewHoSo.CurrentRow.Cells[i].Value.ToString());
             }
-
+            formShowStock show = new formShowStock();
+            show.bindindDataGrid(binding);
+            show.ShowDialog();
         }
+
 
         private void panel4_Paint(object sender, PaintEventArgs e)
         {

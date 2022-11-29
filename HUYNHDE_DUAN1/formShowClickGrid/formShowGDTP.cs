@@ -63,11 +63,11 @@ namespace HUYNHDE_DUAN1.formShowClickGrid
         {
             id = Convert.ToInt32(data[0]);
             stt = Convert.ToInt32(data[1]);
-            
+
             DateTime dateTimeParsed;
             if (DateTime.TryParse(data[2], out dateTimeParsed))
                 ngay.Value = dateTimeParsed;
-            ngay.Enabled= false;
+            ngay.Enabled = false;
             title.Text = data[3];
             maCK.Text = data[3];
             //ngay.Text = data[2].Replace('-', '/');
@@ -86,6 +86,31 @@ namespace HUYNHDE_DUAN1.formShowClickGrid
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            formMessage f = new formMessage();
+            f.showMessage("Thông báo", "Bạn có chắc muốn xoá dữ liệu không?", "icon_info.png", "Xác nhận");
+
+            try
+            {
+                if (f.xacnhan)
+                {
+                    BUS_GiaoDichTraiPhieu.Instance.deleteData(id);
+                    this.Close();
+                    f.showMessage("Thông báo", "Xoá dữ liệu thành công.", "icon_success.png", "Đóng");
+                }
+            }
+            catch (Exception)
+            {
+                f.showMessage("Thông báo", "Có lỗi khi xoá dữ liệu, hãy kiểm tra lại!", "icon_error.png", "Đóng");
+            }
+            finally
+            {
+                gdtp.loadform();
+            }
+
         }
 
         private void btnSave_Click_1(object sender, EventArgs e)

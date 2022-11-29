@@ -35,6 +35,25 @@ namespace DAL
             return result > 0;
         }
 
+        public bool deleteData(int ID)
+        {
+            string query = "Delete_GDTP @ID";
+            int result = DataProvider.Instance.ExecuteNonquery(query, new object[] { ID });
+            return result > 0;
+
+        }
+
+        public bool addData(int STT, DateTime Ngay_GD, string Ma_CK, float Gia_DC, float TKL_GDKL_LoChan, float TGT_GDKL_LoChan, float TKL_GDKL_LoLe,
+            float TGT_GDKL_LoLe, float Tong_KLGD_TT_LoChan, float Tong_GTGD_TT_LoChan, float Tong_KLGD_TT_LoLe, float Tong_GTGD_TT_LoLe)
+        {
+            string query = "Add_GDTP @STT , @Ngay_GD , @Ma_CK , @Gia_DC , @TKL_GDKL_LoChan , @TGT_GDKL_LoChan , @TKL_GDKL_LoLe , @TGT_GDKL_LoLe , @Tong_KLGD_TT_LoChan , @Tong_GTGD_TT_LoChan , @Tong_KLGD_TT_LoLe , @Tong_GTGD_TT_LoLe";
+
+            int result = DataProvider.Instance.ExecuteNonquery(query, new object[] {STT , Ngay_GD.ToString("MM/dd/yyyy"), Ma_CK, Gia_DC , TKL_GDKL_LoChan, TGT_GDKL_LoChan,
+            TKL_GDKL_LoLe, TGT_GDKL_LoLe, Tong_KLGD_TT_LoChan, Tong_GTGD_TT_LoChan,Tong_KLGD_TT_LoLe,Tong_GTGD_TT_LoLe});
+
+            return result > 0;
+        }
+
         public void ImportExcelInDB(string filename)
         {
             var CurrentDirectory = Directory.GetCurrentDirectory();

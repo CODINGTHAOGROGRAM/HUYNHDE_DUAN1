@@ -15,6 +15,8 @@ namespace HUYNHDE_DUAN1
             InitializeComponent();
             fromdate.Value = DateTime.Today;
             todate.Value = DateTime.Today;
+           
+
         }
 
         private void panel1_Click(object sender, System.EventArgs e)
@@ -46,6 +48,10 @@ namespace HUYNHDE_DUAN1
                 mess.Abort();
                 f.showMessage("Thông báo", "Đã lỗi trong quá trình cập nhật,\nvui lòng kiểm tra và thử lại!", "icon_error.png", "Đóng");
             }
+            finally
+            {
+                loadform();
+            }
         }
 
         private void formDataTP_Load(object sender, EventArgs e)
@@ -60,10 +66,12 @@ namespace HUYNHDE_DUAN1
             dataGridGDTP.DataSource = null;
             dataGridGDTP.ForeColor = System.Drawing.Color.Black;
             dataGridGDTP.DataSource = BUS_GiaoDichTraiPhieu.Instance.loadData();
+            
         }
 
         private void dataGridGDTP_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            
             List<string> binding = new List<string>();
             for (int i = 0; i < dataGridGDTP.Columns.Count; i++)
             {
@@ -82,6 +90,11 @@ namespace HUYNHDE_DUAN1
 
         private void btnFind_Click(object sender, EventArgs e)
         {
+        }
+
+        private void dataGridGDTP_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            
         }
     }
 }

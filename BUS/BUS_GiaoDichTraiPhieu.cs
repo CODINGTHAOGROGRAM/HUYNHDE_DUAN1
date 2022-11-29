@@ -105,20 +105,22 @@ namespace BUS
             select_show_more.Click();
 
             Thread.Sleep(1000);
-            var select = chromeDriver.FindElement(By.XPath("//*[@id=\"divNumberRecordOnPage\"]/option[1]"));
+            var select = chromeDriver.FindElement(By.XPath("//*[@id=\"divNumberRecordOnPage\"]/option[0]"));
             select.Click();
-
+            
             while (true)
             {
                 try
                 {
-                    int stt = 1;
-                    while (true)
+
+                    IList<IWebElement> stt = chromeDriver.FindElements(By.XPath("//*[@id=\"_tableDatas\"]/tbody/tr"));
+                    
+                    for (int i = 1; i <= stt.Count; i++)
                     {
                         bool check_filename = false;
 
                         Thread.Sleep(1000);
-                        chromeDriver.ExecuteJavaScript($"var content = document.querySelector(\"#_tableDatas > tbody > tr:nth-child({stt}) > td.tdLeftAlign > a\").click()");
+                        chromeDriver.ExecuteJavaScript($"var content = document.querySelector(\"#_tableDatas > tbody > tr:nth-child({i}) > td.tdLeftAlign > a\").click()");
 
                         Thread.Sleep(3000);
                         var file_text = chromeDriver.FindElement(By.XPath("//*[@id=\"divViewDetailArticles\"]/div[2]/div[3]/p/a")).Text.ToUpper().Trim(charsToTrim);
@@ -150,20 +152,14 @@ namespace BUS
                             System.IO.File.Delete($"{downloadDirectory}" + @"\" + $"{file_text}");
                         }
                         var esc = chromeDriver.FindElement(By.XPath("//*[@id=\"divViewDetailArticles\"]/div[5]/input"));
-                        esc.Click();
-                        stt++;
-
-                        if (stt == 51)
-                        {
-                            break;
-                        }
+                        esc.Click(); 
                     }
 
                     chromeDriver.FindElement(By.XPath($"//*[@id=\"next\"]")).Click();
                 }
                 catch (Exception)
                 {
-                    chromeDriver.Quit();
+                    throw;
                 }
             }
         }

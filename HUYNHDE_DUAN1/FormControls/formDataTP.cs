@@ -2,15 +2,19 @@
 using HUYNHDE_DUAN1.formShowClickGrid;
 using System;
 using System.Collections.Generic;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace HUYNHDE_DUAN1
 {
     public partial class formDataTP : Form
     {
+        formMessage f = new formMessage();
         public formDataTP()
         {
             InitializeComponent();
+            fromdate.Value = DateTime.Today;
+            todate.Value = DateTime.Today;
         }
 
         private void panel1_Click(object sender, System.EventArgs e)
@@ -20,13 +24,27 @@ namespace HUYNHDE_DUAN1
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            formChildDataTP tp = new formChildDataTP();
+            formChildDataTP tp = new formChildDataTP(this);
             tp.ShowDialog();
         }
 
         private void btnUpGrade_Click_1(object sender, EventArgs e)
         {
-            BUS_GiaoDichTraiPhieu.Instance.Update(fromdate.ToString(), todate.ToString());
+            try
+            {
+                Thread mess = new Thread(new ThreadStart(() =>
+                {
+                    f.showMessage("Thông báo", "Đang cập nhật dữ liệu...", "icon_info.png", "Đóng");
+                }));
+                mess.Start();
+                BUS_GiaoDichTraiPhieu.Instance.Update(fromdate.Text, todate.Text);
+                f.Close();
+                f.showMessage("Thông báo", "Cập nhật dữ liệu thành công.", "icon_success.png", "Đóng");
+            }
+            catch (Exception)
+            {
+                f.showMessage("Thông báo", "Đã lỗi trong quá trình cập nhật,\nvui lòng kiểm tra và thử lại!", "icon_error.png", "Đóng");
+            }
         }
 
         private void formDataTP_Load(object sender, EventArgs e)

@@ -31,14 +31,14 @@ namespace HUYNHDE_DUAN1
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -49,12 +49,10 @@ namespace HUYNHDE_DUAN1
             this.btnUpGradeBDG = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel16 = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel11 = new System.Windows.Forms.Panel();
             this.btnFindBDG = new FontAwesome.Sharp.IconButton();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -66,7 +64,6 @@ namespace HUYNHDE_DUAN1
             this.GridCungCau = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -88,10 +85,15 @@ namespace HUYNHDE_DUAN1
             this.label25 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
-            this.textBox31 = new System.Windows.Forms.TextBox();
             this.panel37 = new System.Windows.Forms.Panel();
             this.btnFindVH = new FontAwesome.Sharp.IconButton();
             this.panel38 = new System.Windows.Forms.Panel();
+            this.fromdate_bdg = new System.Windows.Forms.DateTimePicker();
+            this.todate_bdg = new System.Windows.Forms.DateTimePicker();
+            this.fromdate_tkcc = new System.Windows.Forms.DateTimePicker();
+            this.todate_tkcc = new System.Windows.Forms.DateTimePicker();
+            this.fromdate_vh = new System.Windows.Forms.DateTimePicker();
+            this.todate_vh = new System.Windows.Forms.DateTimePicker();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -152,21 +154,21 @@ namespace HUYNHDE_DUAN1
             // GridBDG
             // 
             this.GridBDG.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.GridBDG.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.GridBDG.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.GridBDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GridBDG.Dock = System.Windows.Forms.DockStyle.Fill;
             this.GridBDG.Location = new System.Drawing.Point(0, 0);
             this.GridBDG.Name = "GridBDG";
             this.GridBDG.RowHeadersWidth = 10;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.GridBDG.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.GridBDG.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.GridBDG.Size = new System.Drawing.Size(1411, 541);
             this.GridBDG.TabIndex = 0;
             this.GridBDG.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridBDG_CellClick);
@@ -251,13 +253,13 @@ namespace HUYNHDE_DUAN1
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.todate_bdg);
+            this.panel1.Controls.Add(this.fromdate_bdg);
             this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.panel16);
             this.panel1.Controls.Add(this.label17);
             this.panel1.Controls.Add(this.label16);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.panel11);
             this.panel1.Controls.Add(this.btnFindBDG);
             this.panel1.Controls.Add(this.panel5);
@@ -278,18 +280,6 @@ namespace HUYNHDE_DUAN1
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(152, 19);
             this.textBox3.TabIndex = 112;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox2.Location = new System.Drawing.Point(610, 82);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(152, 19);
-            this.textBox2.TabIndex = 111;
             // 
             // panel16
             // 
@@ -335,18 +325,6 @@ namespace HUYNHDE_DUAN1
             this.label2.Size = new System.Drawing.Size(81, 20);
             this.label2.TabIndex = 92;
             this.label2.Text = "Đến ngày:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox1.Location = new System.Drawing.Point(930, 82);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(152, 19);
-            this.textBox1.TabIndex = 91;
             // 
             // panel11
             // 
@@ -481,20 +459,20 @@ namespace HUYNHDE_DUAN1
             // GridCungCau
             // 
             this.GridCungCau.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.GridCungCau.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.GridCungCau.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.GridCungCau.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GridCungCau.Dock = System.Windows.Forms.DockStyle.Fill;
             this.GridCungCau.Location = new System.Drawing.Point(3, 135);
             this.GridCungCau.Name = "GridCungCau";
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.GridCungCau.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.GridCungCau.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.GridCungCau.Size = new System.Drawing.Size(1411, 757);
             this.GridCungCau.TabIndex = 5;
             this.GridCungCau.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridCungCau_CellClick);
@@ -502,8 +480,9 @@ namespace HUYNHDE_DUAN1
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.todate_tkcc);
+            this.panel3.Controls.Add(this.fromdate_tkcc);
             this.panel3.Controls.Add(this.textBox15);
-            this.panel3.Controls.Add(this.textBox16);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.label11);
             this.panel3.Controls.Add(this.label12);
@@ -529,18 +508,6 @@ namespace HUYNHDE_DUAN1
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new System.Drawing.Size(152, 19);
             this.textBox15.TabIndex = 122;
-            // 
-            // textBox16
-            // 
-            this.textBox16.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox16.BackColor = System.Drawing.Color.White;
-            this.textBox16.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox16.Location = new System.Drawing.Point(603, 55);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(152, 19);
-            this.textBox16.TabIndex = 121;
             // 
             // panel4
             // 
@@ -729,32 +696,32 @@ namespace HUYNHDE_DUAN1
             // 
             // GridVonHoa
             // 
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Blue;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.White;
-            this.GridVonHoa.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Blue;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            this.GridVonHoa.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.GridVonHoa.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.GridVonHoa.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.GridVonHoa.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.GridVonHoa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GridVonHoa.Dock = System.Windows.Forms.DockStyle.Fill;
             this.GridVonHoa.Location = new System.Drawing.Point(3, 135);
             this.GridVonHoa.Name = "GridVonHoa";
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.GridVonHoa.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.GridVonHoa.RowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.GridVonHoa.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.GridVonHoa.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.GridVonHoa.Size = new System.Drawing.Size(1411, 757);
             this.GridVonHoa.TabIndex = 5;
             this.GridVonHoa.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridVonHoa_CellClick);
@@ -762,13 +729,14 @@ namespace HUYNHDE_DUAN1
             // panel34
             // 
             this.panel34.BackColor = System.Drawing.Color.White;
+            this.panel34.Controls.Add(this.todate_vh);
+            this.panel34.Controls.Add(this.fromdate_vh);
             this.panel34.Controls.Add(this.textBox18);
             this.panel34.Controls.Add(this.textBox30);
             this.panel34.Controls.Add(this.panel36);
             this.panel34.Controls.Add(this.label25);
             this.panel34.Controls.Add(this.label32);
             this.panel34.Controls.Add(this.label33);
-            this.panel34.Controls.Add(this.textBox31);
             this.panel34.Controls.Add(this.panel37);
             this.panel34.Controls.Add(this.btnFindVH);
             this.panel34.Controls.Add(this.panel38);
@@ -847,18 +815,6 @@ namespace HUYNHDE_DUAN1
             this.label33.TabIndex = 124;
             this.label33.Text = "Đến ngày:";
             // 
-            // textBox31
-            // 
-            this.textBox31.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox31.BackColor = System.Drawing.Color.White;
-            this.textBox31.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox31.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox31.Location = new System.Drawing.Point(921, 55);
-            this.textBox31.Name = "textBox31";
-            this.textBox31.Size = new System.Drawing.Size(152, 19);
-            this.textBox31.TabIndex = 123;
-            // 
             // panel37
             // 
             this.panel37.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -896,6 +852,84 @@ namespace HUYNHDE_DUAN1
             this.panel38.Name = "panel38";
             this.panel38.Size = new System.Drawing.Size(150, 2);
             this.panel38.TabIndex = 126;
+            // 
+            // fromdate_bdg
+            // 
+            this.fromdate_bdg.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.fromdate_bdg.CustomFormat = "dd/MM/yyyy";
+            this.fromdate_bdg.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fromdate_bdg.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.fromdate_bdg.Location = new System.Drawing.Point(610, 82);
+            this.fromdate_bdg.MaximumSize = new System.Drawing.Size(347, 25);
+            this.fromdate_bdg.Name = "fromdate_bdg";
+            this.fromdate_bdg.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.fromdate_bdg.Size = new System.Drawing.Size(150, 23);
+            this.fromdate_bdg.TabIndex = 357;
+            // 
+            // todate_bdg
+            // 
+            this.todate_bdg.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.todate_bdg.CustomFormat = "dd/MM/yyyy";
+            this.todate_bdg.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.todate_bdg.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.todate_bdg.Location = new System.Drawing.Point(931, 82);
+            this.todate_bdg.MaximumSize = new System.Drawing.Size(347, 25);
+            this.todate_bdg.Name = "todate_bdg";
+            this.todate_bdg.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.todate_bdg.Size = new System.Drawing.Size(150, 23);
+            this.todate_bdg.TabIndex = 358;
+            // 
+            // fromdate_tkcc
+            // 
+            this.fromdate_tkcc.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.fromdate_tkcc.CustomFormat = "dd/MM/yyyy";
+            this.fromdate_tkcc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fromdate_tkcc.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.fromdate_tkcc.Location = new System.Drawing.Point(603, 55);
+            this.fromdate_tkcc.MaximumSize = new System.Drawing.Size(347, 25);
+            this.fromdate_tkcc.Name = "fromdate_tkcc";
+            this.fromdate_tkcc.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.fromdate_tkcc.Size = new System.Drawing.Size(150, 23);
+            this.fromdate_tkcc.TabIndex = 358;
+            // 
+            // todate_tkcc
+            // 
+            this.todate_tkcc.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.todate_tkcc.CustomFormat = "dd/MM/yyyy";
+            this.todate_tkcc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.todate_tkcc.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.todate_tkcc.Location = new System.Drawing.Point(924, 55);
+            this.todate_tkcc.MaximumSize = new System.Drawing.Size(347, 25);
+            this.todate_tkcc.Name = "todate_tkcc";
+            this.todate_tkcc.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.todate_tkcc.Size = new System.Drawing.Size(150, 23);
+            this.todate_tkcc.TabIndex = 359;
+            // 
+            // fromdate_vh
+            // 
+            this.fromdate_vh.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.fromdate_vh.CustomFormat = "dd/MM/yyyy";
+            this.fromdate_vh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fromdate_vh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.fromdate_vh.Location = new System.Drawing.Point(603, 55);
+            this.fromdate_vh.MaximumSize = new System.Drawing.Size(347, 25);
+            this.fromdate_vh.Name = "fromdate_vh";
+            this.fromdate_vh.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.fromdate_vh.Size = new System.Drawing.Size(150, 23);
+            this.fromdate_vh.TabIndex = 359;
+            // 
+            // todate_vh
+            // 
+            this.todate_vh.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.todate_vh.CustomFormat = "dd/MM/yyyy";
+            this.todate_vh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.todate_vh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.todate_vh.Location = new System.Drawing.Point(924, 55);
+            this.todate_vh.MaximumSize = new System.Drawing.Size(347, 25);
+            this.todate_vh.Name = "todate_vh";
+            this.todate_vh.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.todate_vh.Size = new System.Drawing.Size(150, 23);
+            this.todate_vh.TabIndex = 360;
             // 
             // formGDBDG
             // 
@@ -939,12 +973,10 @@ namespace HUYNHDE_DUAN1
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Panel panel16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel panel11;
         private FontAwesome.Sharp.IconButton btnFindBDG;
         private System.Windows.Forms.Panel panel5;
@@ -952,7 +984,6 @@ namespace HUYNHDE_DUAN1
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox16;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
@@ -968,7 +999,6 @@ namespace HUYNHDE_DUAN1
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.TextBox textBox31;
         private System.Windows.Forms.Panel panel37;
         private FontAwesome.Sharp.IconButton btnFindVH;
         private System.Windows.Forms.Panel panel38;
@@ -988,5 +1018,11 @@ namespace HUYNHDE_DUAN1
         private FontAwesome.Sharp.IconButton btnAddVH;
         private FontAwesome.Sharp.IconButton btnUpgradeVH;
         private System.Windows.Forms.DataGridView GridVonHoa;
+        private System.Windows.Forms.DateTimePicker todate_bdg;
+        private System.Windows.Forms.DateTimePicker fromdate_bdg;
+        private System.Windows.Forms.DateTimePicker todate_tkcc;
+        private System.Windows.Forms.DateTimePicker fromdate_tkcc;
+        private System.Windows.Forms.DateTimePicker todate_vh;
+        private System.Windows.Forms.DateTimePicker fromdate_vh;
     }
 }

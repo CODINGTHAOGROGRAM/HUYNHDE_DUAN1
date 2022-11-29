@@ -54,7 +54,7 @@ namespace HUYNHDE_DUAN1
             this.FormBorderStyle = FormBorderStyle.None;
             // CallBack BorderForms
             this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 50, 50));
-           
+
         }
         public void showMessage(string title, string text, string icon, string textbutton)
         {
@@ -73,21 +73,28 @@ namespace HUYNHDE_DUAN1
             this.Close();
 
         }
-
+        public bool xacnhan = false;
         private void btnThoat_Click(object sender, EventArgs e)
         {
+
             if (button.Text == "Thoát")
             {
                 Application.Exit();
             }
-            else if(button.Text == "OK"){
-               this. Close();
+            else if (button.Text == "OK")
+            {
+                this.Close();
+            }
+            else if (button.Text == "Xác nhận")
+            {
+                this.Close();
+                xacnhan = true;
             }
             else
             {
                 this.Close();
             }
-            
+
         }
     }
 }

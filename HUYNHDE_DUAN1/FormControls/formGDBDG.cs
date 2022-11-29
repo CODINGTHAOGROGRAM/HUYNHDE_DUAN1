@@ -1,6 +1,7 @@
 ﻿using BUS;
 using HUYNHDE_DUAN1.FormChildCotrols;
 using HUYNHDE_DUAN1.formShowClickGrid;
+using System;
 using System.Windows.Forms;
 using System.Windows.Media;
 using static HUYNHDE_DUAN1.formMessage;
@@ -12,7 +13,12 @@ namespace HUYNHDE_DUAN1
         public formGDBDG()
         {
             InitializeComponent();
-            
+            fromdate_bdg.Value = DateTime.Today;
+            fromdate_tkcc.Value = DateTime.Today;
+            fromdate_vh.Value = DateTime.Today;
+            todate_tkcc.Value = DateTime.Today;
+            fromdate_bdg.Value = DateTime.Today;
+            todate_vh.Value = DateTime.Today;
         }
         private void panel1_Click(object sender, System.EventArgs e)
         {

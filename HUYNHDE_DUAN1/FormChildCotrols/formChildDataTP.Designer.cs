@@ -28,17 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.tong_gt_lcgf = new System.Windows.Forms.TextBox();
+            this.tong_kl_llgg = new System.Windows.Forms.TextBox();
+            this.tong_gt_ll = new System.Windows.Forms.TextBox();
+            this.tong_kl_lc = new System.Windows.Forms.TextBox();
+            this.tgt_ll = new System.Windows.Forms.TextBox();
+            this.tkl_ll = new System.Windows.Forms.TextBox();
+            this.tgt_lochan = new System.Windows.Forms.TextBox();
+            this.tkl_lc = new System.Windows.Forms.TextBox();
+            this.giadc = new System.Windows.Forms.TextBox();
+            this.mack = new System.Windows.Forms.TextBox();
             this.panel18 = new System.Windows.Forms.Panel();
             this.panel17 = new System.Windows.Forms.Panel();
             this.panel15 = new System.Windows.Forms.Panel();
@@ -66,129 +65,122 @@
             this.btnRefesh = new FontAwesome.Sharp.IconButton();
             this.panelControlForm = new HUYNHDE_DUAN1.contructions_functions.panelLinearGradient();
             this.label2 = new System.Windows.Forms.Label();
+            this.ngay = new System.Windows.Forms.DateTimePicker();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.stt = new System.Windows.Forms.TextBox();
             this.panelControlForm.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox14
+            // tong_gt_lcgf
             // 
-            this.textBox14.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.textBox14.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox14.Location = new System.Drawing.Point(819, 424);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(244, 19);
-            this.textBox14.TabIndex = 156;
+            this.tong_gt_lcgf.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.tong_gt_lcgf.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tong_gt_lcgf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.tong_gt_lcgf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.tong_gt_lcgf.Location = new System.Drawing.Point(819, 424);
+            this.tong_gt_lcgf.Name = "tong_gt_lcgf";
+            this.tong_gt_lcgf.Size = new System.Drawing.Size(244, 19);
+            this.tong_gt_lcgf.TabIndex = 156;
             // 
-            // textBox13
+            // tong_kl_llgg
             // 
-            this.textBox13.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.textBox13.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox13.Location = new System.Drawing.Point(819, 360);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(244, 19);
-            this.textBox13.TabIndex = 155;
+            this.tong_kl_llgg.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.tong_kl_llgg.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tong_kl_llgg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.tong_kl_llgg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.tong_kl_llgg.Location = new System.Drawing.Point(819, 360);
+            this.tong_kl_llgg.Name = "tong_kl_llgg";
+            this.tong_kl_llgg.Size = new System.Drawing.Size(244, 19);
+            this.tong_kl_llgg.TabIndex = 155;
             // 
-            // textBox12
+            // tong_gt_ll
             // 
-            this.textBox12.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox12.Location = new System.Drawing.Point(820, 296);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(244, 19);
-            this.textBox12.TabIndex = 154;
+            this.tong_gt_ll.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.tong_gt_ll.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tong_gt_ll.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.tong_gt_ll.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.tong_gt_ll.Location = new System.Drawing.Point(820, 296);
+            this.tong_gt_ll.Name = "tong_gt_ll";
+            this.tong_gt_ll.Size = new System.Drawing.Size(244, 19);
+            this.tong_gt_ll.TabIndex = 154;
             // 
-            // textBox11
+            // tong_kl_lc
             // 
-            this.textBox11.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox11.Location = new System.Drawing.Point(819, 232);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(244, 19);
-            this.textBox11.TabIndex = 153;
+            this.tong_kl_lc.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.tong_kl_lc.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tong_kl_lc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.tong_kl_lc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.tong_kl_lc.Location = new System.Drawing.Point(819, 232);
+            this.tong_kl_lc.Name = "tong_kl_lc";
+            this.tong_kl_lc.Size = new System.Drawing.Size(244, 19);
+            this.tong_kl_lc.TabIndex = 153;
             // 
-            // textBox10
+            // tgt_ll
             // 
-            this.textBox10.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox10.Location = new System.Drawing.Point(737, 168);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(330, 19);
-            this.textBox10.TabIndex = 152;
+            this.tgt_ll.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.tgt_ll.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tgt_ll.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.tgt_ll.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.tgt_ll.Location = new System.Drawing.Point(737, 168);
+            this.tgt_ll.Name = "tgt_ll";
+            this.tgt_ll.Size = new System.Drawing.Size(330, 19);
+            this.tgt_ll.TabIndex = 152;
             // 
-            // textBox9
+            // tkl_ll
             // 
-            this.textBox9.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox9.Location = new System.Drawing.Point(737, 107);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(330, 19);
-            this.textBox9.TabIndex = 151;
+            this.tkl_ll.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.tkl_ll.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tkl_ll.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.tkl_ll.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.tkl_ll.Location = new System.Drawing.Point(737, 107);
+            this.tkl_ll.Name = "tkl_ll";
+            this.tkl_ll.Size = new System.Drawing.Size(330, 19);
+            this.tkl_ll.TabIndex = 151;
             // 
-            // textBox8
+            // tgt_lochan
             // 
-            this.textBox8.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox8.Location = new System.Drawing.Point(201, 360);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(299, 19);
-            this.textBox8.TabIndex = 150;
+            this.tgt_lochan.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.tgt_lochan.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tgt_lochan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.tgt_lochan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.tgt_lochan.Location = new System.Drawing.Point(201, 360);
+            this.tgt_lochan.Name = "tgt_lochan";
+            this.tgt_lochan.Size = new System.Drawing.Size(299, 19);
+            this.tgt_lochan.TabIndex = 150;
             // 
-            // textBox7
+            // tkl_lc
             // 
-            this.textBox7.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox7.Location = new System.Drawing.Point(201, 296);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(299, 19);
-            this.textBox7.TabIndex = 149;
+            this.tkl_lc.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.tkl_lc.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tkl_lc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.tkl_lc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.tkl_lc.Location = new System.Drawing.Point(201, 296);
+            this.tkl_lc.Name = "tkl_lc";
+            this.tkl_lc.Size = new System.Drawing.Size(299, 19);
+            this.tkl_lc.TabIndex = 149;
             // 
-            // textBox6
+            // giadc
             // 
-            this.textBox6.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox6.Location = new System.Drawing.Point(152, 232);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(347, 19);
-            this.textBox6.TabIndex = 148;
+            this.giadc.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.giadc.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.giadc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.giadc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.giadc.Location = new System.Drawing.Point(152, 232);
+            this.giadc.Name = "giadc";
+            this.giadc.Size = new System.Drawing.Size(347, 19);
+            this.giadc.TabIndex = 148;
             // 
-            // textBox5
+            // mack
             // 
-            this.textBox5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox5.Location = new System.Drawing.Point(152, 168);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(347, 19);
-            this.textBox5.TabIndex = 147;
-            // 
-            // textBox4
-            // 
-            this.textBox4.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox4.Location = new System.Drawing.Point(152, 107);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(347, 19);
-            this.textBox4.TabIndex = 146;
+            this.mack.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.mack.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mack.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.mack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.mack.Location = new System.Drawing.Point(152, 107);
+            this.mack.Name = "mack";
+            this.mack.Size = new System.Drawing.Size(347, 19);
+            this.mack.TabIndex = 146;
             // 
             // panel18
             // 
@@ -462,6 +454,7 @@
             this.btnRefesh.Text = "Làm mới";
             this.btnRefesh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRefesh.UseVisualStyleBackColor = true;
+            this.btnRefesh.Click += new System.EventHandler(this.btnRefesh_Click);
             // 
             // panelControlForm
             // 
@@ -487,26 +480,71 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Thêm dữ liệu giao dịch trái phiếu";
             // 
+            // ngay
+            // 
+            this.ngay.CustomFormat = "dd/MM/yyyy";
+            this.ngay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ngay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.ngay.Location = new System.Drawing.Point(152, 165);
+            this.ngay.MinimumSize = new System.Drawing.Size(347, 25);
+            this.ngay.Name = "ngay";
+            this.ngay.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.ngay.Size = new System.Drawing.Size(347, 25);
+            this.ngay.TabIndex = 355;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.panel1.Location = new System.Drawing.Point(496, 88);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(347, 2);
+            this.panel1.TabIndex = 356;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.label4.Location = new System.Drawing.Point(377, 69);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(42, 20);
+            this.label4.TabIndex = 357;
+            this.label4.Text = "STT:";
+            // 
+            // stt
+            // 
+            this.stt.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.stt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.stt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.stt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.stt.Location = new System.Drawing.Point(496, 63);
+            this.stt.Name = "stt";
+            this.stt.Size = new System.Drawing.Size(347, 19);
+            this.stt.TabIndex = 358;
+            // 
             // formChildDataTP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(1100, 499);
+            this.Controls.Add(this.stt);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.ngay);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnRefesh);
-            this.Controls.Add(this.textBox14);
-            this.Controls.Add(this.textBox13);
-            this.Controls.Add(this.textBox12);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.tong_gt_lcgf);
+            this.Controls.Add(this.tong_kl_llgg);
+            this.Controls.Add(this.tong_gt_ll);
+            this.Controls.Add(this.tong_kl_lc);
+            this.Controls.Add(this.tgt_ll);
+            this.Controls.Add(this.tkl_ll);
+            this.Controls.Add(this.tgt_lochan);
+            this.Controls.Add(this.tkl_lc);
+            this.Controls.Add(this.giadc);
+            this.Controls.Add(this.mack);
             this.Controls.Add(this.panel18);
             this.Controls.Add(this.panel17);
             this.Controls.Add(this.panel15);
@@ -544,17 +582,16 @@
         #endregion
 
         private contructions_functions.panelLinearGradient panelControlForm;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox tong_gt_lcgf;
+        private System.Windows.Forms.TextBox tong_kl_llgg;
+        private System.Windows.Forms.TextBox tong_gt_ll;
+        private System.Windows.Forms.TextBox tong_kl_lc;
+        private System.Windows.Forms.TextBox tgt_ll;
+        private System.Windows.Forms.TextBox tkl_ll;
+        private System.Windows.Forms.TextBox tgt_lochan;
+        private System.Windows.Forms.TextBox tkl_lc;
+        private System.Windows.Forms.TextBox giadc;
+        private System.Windows.Forms.TextBox mack;
         private System.Windows.Forms.Panel panel18;
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.Panel panel15;
@@ -581,5 +618,9 @@
         private FontAwesome.Sharp.IconButton btnClose;
         private FontAwesome.Sharp.IconButton btnRefesh;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DateTimePicker ngay;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox stt;
     }
 }

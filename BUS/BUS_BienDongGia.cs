@@ -103,7 +103,7 @@ namespace BUS
 
                                 x++;
                             }
-                            catch (NoSuchElementException ex)
+                            catch (Exception ex)
                             {
                                 break;
                             }

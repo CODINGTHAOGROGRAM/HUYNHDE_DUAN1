@@ -54,6 +54,20 @@ namespace DAL
             return result > 0;
         }
 
+        public DataTable findData(string MACK, DateTime from, DateTime to)
+        {
+            DataTable dtb = new DataTable();
+            string query = " Find_GDTP @MaCK , @fromDate , @toDate";
+            return dtb = DataProvider.Instance.Executequery(query, new object[] { MACK, from.ToString("MM/dd/yyyy"), to.ToString("MM/dd/yyyy") });  
+        }
+
+        public DataTable showcb()
+        {
+            DataTable dtb = new DataTable();
+            string query = "cb_GDTP";
+            return dtb = DataProvider.Instance.Executequery(query);
+        }
+
         public void ImportExcelInDB(string filename)
         {
             var CurrentDirectory = Directory.GetCurrentDirectory();

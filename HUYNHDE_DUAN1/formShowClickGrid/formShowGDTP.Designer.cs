@@ -568,7 +568,6 @@
             this.Name = "formShowGDTP";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "formShowGDTP";
-            this.Click += new System.EventHandler(this.btnDelete_Click);
             this.panelControlForm.ResumeLayout(false);
             this.panelControlForm.PerformLayout();
             this.ResumeLayout(false);

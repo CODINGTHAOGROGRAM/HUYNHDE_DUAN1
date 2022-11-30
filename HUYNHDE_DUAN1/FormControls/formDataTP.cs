@@ -1,22 +1,32 @@
-﻿using BUS;
+﻿using Aspose.Cells;
+using BUS;
 using HUYNHDE_DUAN1.formShowClickGrid;
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.IO;
+using System.Text;
 using System.Threading;
 using System.Windows.Forms;
+using System.Windows.Shapes;
+using Syncfusion.XlsIO;
+using System.Drawing;
+using System.Xml.Linq;
+using LoadOptions = Aspose.Cells.LoadOptions;
 
 namespace HUYNHDE_DUAN1
 {
     public partial class formDataTP : Form
     {
-        formMessage f = new formMessage();
+        private formMessage f = new formMessage();
+
         public formDataTP()
         {
             InitializeComponent();
             fromdate.Value = DateTime.Today;
             todate.Value = DateTime.Today;
-           
-
+            dataGridGDTP.ForeColor = System.Drawing.Color.Black;
+            loadcb();
         }
 
         private void panel1_Click(object sender, System.EventArgs e)
@@ -56,7 +66,6 @@ namespace HUYNHDE_DUAN1
 
         private void formDataTP_Load(object sender, EventArgs e)
         {
-            dataGridGDTP.ForeColor = System.Drawing.Color.Black;
             dataGridGDTP.DataSource = BUS_GiaoDichTraiPhieu.Instance.loadData();
         }
 
@@ -64,14 +73,11 @@ namespace HUYNHDE_DUAN1
         {
             formShowGDTP fr = new formShowGDTP(this);
             dataGridGDTP.DataSource = null;
-            dataGridGDTP.ForeColor = System.Drawing.Color.Black;
             dataGridGDTP.DataSource = BUS_GiaoDichTraiPhieu.Instance.loadData();
-            
         }
 
-        private void dataGridGDTP_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridGDTP_CellClick(object sender, DataGridViewCellEventArgs e) 
         {
-            
             List<string> binding = new List<string>();
             for (int i = 0; i < dataGridGDTP.Columns.Count; i++)
             {
@@ -90,11 +96,28 @@ namespace HUYNHDE_DUAN1
 
         private void btnFind_Click(object sender, EventArgs e)
         {
+            DateTime temp;
+            if (fromdate.Value > todate.Value)
+            {
+                temp = fromdate.Value;
+                fromdate.Value = todate.Value;
+                todate.Value = temp;
+            }
+            dataGridGDTP.DataSource = BUS_GiaoDichTraiPhieu.Instance.findData(cb_mack.SelectedValue.ToString(), fromdate.Value, todate.Value);
         }
 
-        private void dataGridGDTP_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        public void loadcb()
         {
-            
+            cb_mack.DataSource = BUS_GiaoDichTraiPhieu.Instance.showcb();
+            cb_mack.DisplayMember = "Ma_CK";
+            cb_mack.ValueMember = "Ma_CK";
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            fromdate.Value = DateTime.Today;
+            todate.Value = DateTime.Today;
+            loadform(); 
         }
     }
 }

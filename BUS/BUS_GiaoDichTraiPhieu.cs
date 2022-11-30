@@ -48,6 +48,19 @@ namespace BUS
             return DAL_GiaoDichTraiPhieu.Instance.addData(STT, Ngay_GD, Ma_CK, Gia_DC, TKL_GDKL_LoChan, TGT_GDKL_LoChan,
             TKL_GDKL_LoLe, TGT_GDKL_LoLe, Tong_KLGD_TT_LoChan, Tong_GTGD_TT_LoChan, Tong_KLGD_TT_LoLe, Tong_GTGD_TT_LoLe);
         }
+
+        public DataTable findData(string MACK, DateTime from, DateTime to)
+        {
+            return DAL_GiaoDichTraiPhieu.Instance.findData(MACK,from,to);
+        }
+
+        public DataTable showcb()
+        {
+            DataTable sort = new DataTable();
+            sort = DAL_GiaoDichTraiPhieu.Instance.showcb();
+            sort.DefaultView.Sort = "Ma_CK ASC";
+            return sort;
+        }
         public void Update(string fromd, string tod)
         {
             DTO_GiaoDichTraiPhieu GDTP = new DTO_GiaoDichTraiPhieu();

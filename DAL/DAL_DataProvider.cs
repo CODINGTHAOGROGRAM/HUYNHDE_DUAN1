@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace DAL
 {
     public class DataProvider
-    {fff
+    {
         private static DataProvider instance;
 
           // private string connectionSTR = @"Data Source=DESKTOP-5IDSEJ0\SQLEXPRESS;Initial Catalog=DuLieuChungKhoan;Integrated Security=True";

@@ -30,7 +30,6 @@ namespace DAL
             return dt;
         }
         
-       
         public bool update( DTO_BienDongGia BDG)
         {
             string query = "Update_BDG @ngayGiaoDich , @maCk , @giaThamChieu , @giaTran , @giaSan , @giaMo , @giaDong , @giaCao , @giaThap , @diem , @phanTram ";
@@ -38,6 +37,21 @@ namespace DAL
             object[] para = new object[] {BDG.NgayGiaoDich,BDG.MaCk, BDG.GiaThamChieu, BDG.GiaTran, BDG.GiaSan, BDG.GiaMo, BDG.GiaDong, BDG.GiaCao, BDG.GiaThap, BDG.Diem, BDG.PhanTram  };
 
             if(DataProvider.Instance.ExecuteNonquery(query,para) > 0) { return true; }
+            return false;
+        }
+        public bool deleteData(DateTime ngayGiaoDich, string maCk )
+        {
+            string query = "Delete_BDG @ngayGiaoDich , @maCk";
+            int result = DataProvider.Instance.ExecuteNonquery(query, new object[] { ngayGiaoDich , maCk });
+            return result > 0;
+        }
+        public bool adddata(DTO_BienDongGia BDG)
+        {
+            string query = "Add_BDG  @NgayGiaoDich , @MaCk , @GiaThamChieu , @GiaTran , @GiaSan , @GiaMo , @GiaDong , @GiaCao , @GiaThap , @Diem , @PhanTram  ";
+
+            object[] para = new object[] { BDG.NgayGiaoDich, BDG.MaCk, BDG.GiaThamChieu, BDG.GiaTran, BDG.GiaSan, BDG.GiaMo, BDG.GiaDong, BDG.GiaCao, BDG.GiaThap, BDG.Diem, BDG.PhanTram };
+
+            if (DataProvider.Instance.ExecuteNonquery(query, para) > 0) { return true; }
             return false;
         }
     }

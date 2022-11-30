@@ -99,5 +99,30 @@ namespace HUYNHDE_DUAN1.formShowClickGrid
                 gdbdg.loadform();
             }
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            formMessage f = new formMessage();
+            f.showMessage("Thông báo", "Bạn có chắc muốn xoá dữ liệu không?", "icon_info.png", "Xác nhận");
+            string mack = txtMaCK.Text;
+            DateTime ngayGiaoDich = DateTime.ParseExact(txtNgayGiaoDich.Text, "dd/MM/yyyy", null);
+            try
+            {
+                if (f.xacnhan)
+                {
+                    BUS_CungCau.Instance.deleteCC(mack, ngayGiaoDich);
+                    this.Close();
+                    f.showMessage("Thông báo", "Xoá dữ liệu thành công.", "icon_success.png", "Đóng");
+                }
+            }
+            catch (Exception)
+            {
+                f.showMessage("Thông báo", "Có lỗi khi xoá dữ liệu, hãy kiểm tra lại!", "icon_error.png", "Đóng");
+            }
+            finally
+            {
+                gdbdg.loadform();
+            }
+        }
     }
 }

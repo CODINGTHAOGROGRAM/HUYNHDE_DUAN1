@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BUS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -48,13 +49,14 @@ namespace HUYNHDE_DUAN1.FormChildCotrols
         }
 
         #endregion
-
-        public formChildTKCC()
+        private formGDBDG gdbdg;
+        public formChildTKCC(formGDBDG _gdbdg)
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             // CallBack BorderForms
             this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 30, 30));
+            gdbdg = _gdbdg;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -65,6 +67,39 @@ namespace HUYNHDE_DUAN1.FormChildCotrols
         private void formChildTKCC_Click(object sender, EventArgs e)
         {
             this.ActiveControl = null;
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string mack = txtMaCK.Text;
+                DateTime ngayGiaoDich = DateTime.ParseExact(txtNgayGiaoDich.Text, "dd/MM/yyyy", null);
+                double giaDong = Convert.ToDouble(txtGiaDong.Text);
+                double lenhMua = Convert.ToDouble(txtLenhMua.Text);
+                double luongMua = Convert.ToDouble(txtLuongMua.Text);
+                double lenhBan = Convert.ToDouble(txtLenhBan.Text);
+                double luongBan = Convert.ToDouble(txtLuongban.Text);
+                double duMua = Convert.ToDouble(txtDuMua.Text);
+                double duBan = Convert.ToDouble(txtDuBan.Text);
+                double kLGD = Convert.ToDouble(txtKLGD.Text);
+                double gTGD = Convert.ToDouble(txtGTGD.Text);
+
+                if (BUS_CungCau.Instance.AddCC(ngayGiaoDich, mack, giaDong, lenhMua, luongMua, lenhBan, luongBan, duMua, duBan, kLGD, gTGD))
+                {
+                    formMessage f = new formMessage();
+                    f.showMessage("Thông báo", "Cập nhật thông tin thành công.", "icon_success.png", "Đóng");
+                }
+            }
+            catch (Exception)
+            {
+                formMessage f = new formMessage();
+                f.showMessage("Thông báo", "Có lỗi khi cập nhật dữ liệu, hãy kiểm tra lại!", "icon_error.png", "Đóng");
+            }
+            finally
+            {
+                gdbdg.loadform();
+            }
         }
     }
 }

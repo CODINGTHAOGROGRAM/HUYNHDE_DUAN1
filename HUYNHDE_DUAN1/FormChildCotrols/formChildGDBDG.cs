@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BUS;
+using System;
 using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
@@ -42,12 +43,14 @@ namespace HUYNHDE_DUAN1
         }
 
         #endregion
-        public formChildGDBDG()
+        private formGDBDG gdbdg;
+        public formChildGDBDG(formGDBDG _gdbdg)
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             // CallBack BorderForms
             this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 30, 30));
+            gdbdg = _gdbdg;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -62,7 +65,35 @@ namespace HUYNHDE_DUAN1
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            try
+            {
+                string mack = txtMaCk.Text;
+                DateTime ngayGiaoDich = DateTime.ParseExact(txtNgayGiaoDich.Text, "dd/MM/yyyy", null);
+                double giaThamChieu = Convert.ToDouble(txtThamChieu.Text);
+                double giaTran = Convert.ToDouble(txtGiaTran.Text);
+                double giaSan = Convert.ToDouble(txtGiaSan.Text);
+                double giaMo = Convert.ToDouble(txtGiaMo.Text);
+                double giaDong = Convert.ToDouble(txtGiaDong.Text);
+                double giaCao = Convert.ToDouble(txtGiaCao.Text);
+                double giaThap = Convert.ToDouble(txtGiaThap.Text);
+                double diem = Convert.ToDouble(txtGia.Text);
+                double phanTram = Convert.ToDouble(txtPhanTram.Text);
 
+                if (BUS_BienDongGia.Instance.AddBDG(ngayGiaoDich, mack, giaThamChieu, giaTran, giaSan, giaMo, giaDong, giaCao, giaThap, diem, phanTram))
+                {
+                    formMessage f = new formMessage();
+                    f.showMessage("Thông báo", "Cập nhật thông tin thành công.", "icon_success.png", "Đóng");
+                }
+            }
+            catch (Exception)
+            {
+                formMessage f = new formMessage();
+                f.showMessage("Thông báo", "Có lỗi khi cập nhật dữ liệu, hãy kiểm tra lại!", "icon_error.png", "Đóng");
+            }
+            finally
+            {
+                gdbdg.loadform();
+            }
         }
     }
 }

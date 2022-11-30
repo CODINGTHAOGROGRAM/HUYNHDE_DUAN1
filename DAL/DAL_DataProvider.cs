@@ -12,9 +12,9 @@ namespace DAL
     {
         private static DataProvider instance;
 
-          // private string connectionSTR = @"Data Source=DESKTOP-5IDSEJ0\SQLEXPRESS;Initial Catalog=DuLieuChungKhoan;Integrated Security=True";
+           private string connectionSTR = @"Data Source=DESKTOP-5IDSEJ0\SQLEXPRESS;Initial Catalog=DuLieuChungKhoan;Integrated Security=True";
          //private string connectionSTR = @"Data Source=LAMSAMCHAN;Initial Catalog=DuLieuChungKhoan;Integrated Security=True";
-         private string connectionSTR = @"Data Source=PARAONG-YODANH\SQLEXPRESS;Initial Catalog=DuLieuChungKhoan;Integrated Security=True";
+         //private string connectionSTR = @"Data Source=PARAONG-YODANH\SQLEXPRESS;Initial Catalog=DuLieuChungKhoan;Integrated Security=True";
 
 
         public static DataProvider Instance
@@ -34,7 +34,7 @@ namespace DAL
                 connection.Open();
 
                 SqlCommand command = new SqlCommand(query, connection);
-               // command.CommandTimeout = 0;
+                command.CommandTimeout = 0;
                 if (parameter != null)
                 {
                     string[] listPara = query.Split(' ');
@@ -68,7 +68,7 @@ namespace DAL
                 connection.Open();
 
                 SqlCommand command = new SqlCommand(query, connection);
-
+                command.CommandTimeout = 0;
                 if (parameter != null)
                 {
                     string[] listPara = query.Split(' ');
@@ -99,7 +99,7 @@ namespace DAL
                 connection.Open();
 
                 SqlCommand command = new SqlCommand(query, connection);
-
+                command.CommandTimeout = 0;
                 if (parameter != null)
                 {
                     string[] listPara = query.Split(' ');

@@ -147,5 +147,15 @@ namespace BUS
 
             return DAL_CungCau.Instance.update(CC);
         }
+        public bool deleteCC(string maCK, DateTime ngayGiaoDich)
+        {
+            return DAL_CungCau.Instance.deleteData(maCK, ngayGiaoDich);
+        }
+        public bool AddCC(DateTime ngayGiaoDich, string maCK, double GiaDong, double LenhMua, double LuongMua, double LenhBan, double LuongBan, double DuMua, double DuBan, double KhoiLuongGD, double GiaTriGD)
+        {
+            DTO_CungCau CC = new DTO_CungCau(ngayGiaoDich, maCK, GiaDong, LenhMua, LuongMua, LenhBan, LuongBan, DuMua, DuBan, KhoiLuongGD, GiaTriGD);
+
+            return DAL_CungCau.Instance.adddata(CC);
+        }
     }
 }

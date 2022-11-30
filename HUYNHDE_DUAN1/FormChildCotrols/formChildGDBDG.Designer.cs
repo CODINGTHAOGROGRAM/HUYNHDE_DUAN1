@@ -40,7 +40,7 @@
             this.txtGiaDong = new System.Windows.Forms.TextBox();
             this.txtGiaCao = new System.Windows.Forms.TextBox();
             this.txtGiaThap = new System.Windows.Forms.TextBox();
-            this.PhanTram = new System.Windows.Forms.TextBox();
+            this.txtPhanTram = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel23 = new System.Windows.Forms.Panel();
             this.panel22 = new System.Windows.Forms.Panel();
@@ -210,16 +210,16 @@
             this.txtGiaThap.Size = new System.Drawing.Size(235, 19);
             this.txtGiaThap.TabIndex = 162;
             // 
-            // PhanTram
+            // txtPhanTram
             // 
-            this.PhanTram.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.PhanTram.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.PhanTram.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.PhanTram.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.PhanTram.Location = new System.Drawing.Point(833, 192);
-            this.PhanTram.Name = "PhanTram";
-            this.PhanTram.Size = new System.Drawing.Size(213, 19);
-            this.PhanTram.TabIndex = 161;
+            this.txtPhanTram.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.txtPhanTram.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPhanTram.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtPhanTram.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.txtPhanTram.Location = new System.Drawing.Point(833, 192);
+            this.txtPhanTram.Name = "txtPhanTram";
+            this.txtPhanTram.Size = new System.Drawing.Size(213, 19);
+            this.txtPhanTram.TabIndex = 161;
             // 
             // panel6
             // 
@@ -565,7 +565,7 @@
             this.Controls.Add(this.txtGiaDong);
             this.Controls.Add(this.txtGiaCao);
             this.Controls.Add(this.txtGiaThap);
-            this.Controls.Add(this.PhanTram);
+            this.Controls.Add(this.txtPhanTram);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel23);
             this.Controls.Add(this.panel22);
@@ -620,7 +620,7 @@
         public System.Windows.Forms.TextBox txtGiaDong;
         public System.Windows.Forms.TextBox txtGiaCao;
         public System.Windows.Forms.TextBox txtGiaThap;
-        public System.Windows.Forms.TextBox PhanTram;
+        public System.Windows.Forms.TextBox txtPhanTram;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel23;
         private System.Windows.Forms.Panel panel22;

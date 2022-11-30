@@ -36,7 +36,7 @@ namespace HUYNHDE_DUAN1
         #region Controls btn BDG
         private void btnAddBDG_Click(object sender, System.EventArgs e)
         {
-            formChildGDBDG dg = new formChildGDBDG();
+            formChildGDBDG dg = new formChildGDBDG(this);
             dg.ShowDialog();
         }
         private void btnExportsBDG_Click(object sender, System.EventArgs e)
@@ -78,7 +78,7 @@ namespace HUYNHDE_DUAN1
 
         private void btnAddTKCC_Click(object sender, System.EventArgs e)
         {
-            formChildTKCC tk = new formChildTKCC();
+            formChildTKCC tk = new formChildTKCC(this );
             tk.ShowDialog();
         }
 
@@ -106,7 +106,7 @@ namespace HUYNHDE_DUAN1
 
         private void btnAddVH_Click(object sender, System.EventArgs e)
         {
-            formChildVH vh = new formChildVH();
+            formChildVH vh = new formChildVH(this );
             vh.ShowDialog();
         }
 

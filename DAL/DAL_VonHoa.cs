@@ -38,5 +38,20 @@ namespace DAL
             if (DataProvider.Instance.ExecuteNonquery(query, para) > 0) { return true; }
             return false;
         }
+        public bool deleteData(string maCk, DateTime ngayGiaoDich)
+        {
+            string query = "Delete_VH @maCk , @ngayGiaoDich";
+            int result = DataProvider.Instance.ExecuteNonquery(query, new object[] { maCk, ngayGiaoDich });
+            return result > 0;
+        }
+        public bool adddata(DTO_VonHoa VH)
+        {
+            string query = "Add_VH @NgayGiaoDich , @MaCk , @GiaDong , @VonHoa , @ThiTruong ";
+
+            object[] para = new object[] { VH.NgayGiaoDich, VH.MaCk, VH.GiaDOng, VH.GiaTriVonHoa, VH.PhanTramThiTruong };
+
+            if (DataProvider.Instance.ExecuteNonquery(query, para) > 0) { return true; }
+            return false;
+        }
     }
 }

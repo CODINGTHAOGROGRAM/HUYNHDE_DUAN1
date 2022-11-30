@@ -48,6 +48,8 @@ namespace HUYNHDE_DUAN1
             this.btnAddBDG = new FontAwesome.Sharp.IconButton();
             this.btnUpGradeBDG = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.todate_bdg = new System.Windows.Forms.DateTimePicker();
+            this.fromdate_bdg = new System.Windows.Forms.DateTimePicker();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.panel16 = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
@@ -63,6 +65,8 @@ namespace HUYNHDE_DUAN1
             this.btnUpGradeTKCC = new FontAwesome.Sharp.IconButton();
             this.GridCungCau = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.todate_tkcc = new System.Windows.Forms.DateTimePicker();
+            this.fromdate_tkcc = new System.Windows.Forms.DateTimePicker();
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
@@ -79,6 +83,8 @@ namespace HUYNHDE_DUAN1
             this.btnUpgradeVH = new FontAwesome.Sharp.IconButton();
             this.GridVonHoa = new System.Windows.Forms.DataGridView();
             this.panel34 = new System.Windows.Forms.Panel();
+            this.todate_vh = new System.Windows.Forms.DateTimePicker();
+            this.fromdate_vh = new System.Windows.Forms.DateTimePicker();
             this.textBox18 = new System.Windows.Forms.TextBox();
             this.textBox30 = new System.Windows.Forms.TextBox();
             this.panel36 = new System.Windows.Forms.Panel();
@@ -88,12 +94,6 @@ namespace HUYNHDE_DUAN1
             this.panel37 = new System.Windows.Forms.Panel();
             this.btnFindVH = new FontAwesome.Sharp.IconButton();
             this.panel38 = new System.Windows.Forms.Panel();
-            this.fromdate_bdg = new System.Windows.Forms.DateTimePicker();
-            this.todate_bdg = new System.Windows.Forms.DateTimePicker();
-            this.fromdate_tkcc = new System.Windows.Forms.DateTimePicker();
-            this.todate_tkcc = new System.Windows.Forms.DateTimePicker();
-            this.fromdate_vh = new System.Windows.Forms.DateTimePicker();
-            this.todate_vh = new System.Windows.Forms.DateTimePicker();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -153,6 +153,7 @@ namespace HUYNHDE_DUAN1
             // 
             // GridBDG
             // 
+            this.GridBDG.AllowUserToAddRows = false;
             this.GridBDG.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -268,6 +269,32 @@ namespace HUYNHDE_DUAN1
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1411, 132);
             this.panel1.TabIndex = 3;
+            // 
+            // todate_bdg
+            // 
+            this.todate_bdg.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.todate_bdg.CustomFormat = "dd/MM/yyyy";
+            this.todate_bdg.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.todate_bdg.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.todate_bdg.Location = new System.Drawing.Point(931, 82);
+            this.todate_bdg.MaximumSize = new System.Drawing.Size(347, 25);
+            this.todate_bdg.Name = "todate_bdg";
+            this.todate_bdg.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.todate_bdg.Size = new System.Drawing.Size(150, 23);
+            this.todate_bdg.TabIndex = 358;
+            // 
+            // fromdate_bdg
+            // 
+            this.fromdate_bdg.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.fromdate_bdg.CustomFormat = "dd/MM/yyyy";
+            this.fromdate_bdg.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fromdate_bdg.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.fromdate_bdg.Location = new System.Drawing.Point(610, 82);
+            this.fromdate_bdg.MaximumSize = new System.Drawing.Size(347, 25);
+            this.fromdate_bdg.Name = "fromdate_bdg";
+            this.fromdate_bdg.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.fromdate_bdg.Size = new System.Drawing.Size(150, 23);
+            this.fromdate_bdg.TabIndex = 357;
             // 
             // textBox3
             // 
@@ -458,6 +485,7 @@ namespace HUYNHDE_DUAN1
             // 
             // GridCungCau
             // 
+            this.GridCungCau.AllowUserToAddRows = false;
             this.GridCungCau.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
@@ -496,6 +524,32 @@ namespace HUYNHDE_DUAN1
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1411, 132);
             this.panel3.TabIndex = 0;
+            // 
+            // todate_tkcc
+            // 
+            this.todate_tkcc.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.todate_tkcc.CustomFormat = "dd/MM/yyyy";
+            this.todate_tkcc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.todate_tkcc.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.todate_tkcc.Location = new System.Drawing.Point(924, 55);
+            this.todate_tkcc.MaximumSize = new System.Drawing.Size(347, 25);
+            this.todate_tkcc.Name = "todate_tkcc";
+            this.todate_tkcc.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.todate_tkcc.Size = new System.Drawing.Size(150, 23);
+            this.todate_tkcc.TabIndex = 359;
+            // 
+            // fromdate_tkcc
+            // 
+            this.fromdate_tkcc.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.fromdate_tkcc.CustomFormat = "dd/MM/yyyy";
+            this.fromdate_tkcc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fromdate_tkcc.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.fromdate_tkcc.Location = new System.Drawing.Point(603, 55);
+            this.fromdate_tkcc.MaximumSize = new System.Drawing.Size(347, 25);
+            this.fromdate_tkcc.Name = "fromdate_tkcc";
+            this.fromdate_tkcc.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.fromdate_tkcc.Size = new System.Drawing.Size(150, 23);
+            this.fromdate_tkcc.TabIndex = 358;
             // 
             // textBox15
             // 
@@ -696,6 +750,7 @@ namespace HUYNHDE_DUAN1
             // 
             // GridVonHoa
             // 
+            this.GridVonHoa.AllowUserToAddRows = false;
             dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Blue;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
             this.GridVonHoa.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
@@ -745,6 +800,32 @@ namespace HUYNHDE_DUAN1
             this.panel34.Name = "panel34";
             this.panel34.Size = new System.Drawing.Size(1411, 132);
             this.panel34.TabIndex = 0;
+            // 
+            // todate_vh
+            // 
+            this.todate_vh.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.todate_vh.CustomFormat = "dd/MM/yyyy";
+            this.todate_vh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.todate_vh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.todate_vh.Location = new System.Drawing.Point(924, 55);
+            this.todate_vh.MaximumSize = new System.Drawing.Size(347, 25);
+            this.todate_vh.Name = "todate_vh";
+            this.todate_vh.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.todate_vh.Size = new System.Drawing.Size(150, 23);
+            this.todate_vh.TabIndex = 360;
+            // 
+            // fromdate_vh
+            // 
+            this.fromdate_vh.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.fromdate_vh.CustomFormat = "dd/MM/yyyy";
+            this.fromdate_vh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fromdate_vh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.fromdate_vh.Location = new System.Drawing.Point(603, 55);
+            this.fromdate_vh.MaximumSize = new System.Drawing.Size(347, 25);
+            this.fromdate_vh.Name = "fromdate_vh";
+            this.fromdate_vh.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.fromdate_vh.Size = new System.Drawing.Size(150, 23);
+            this.fromdate_vh.TabIndex = 359;
             // 
             // textBox18
             // 
@@ -852,84 +933,6 @@ namespace HUYNHDE_DUAN1
             this.panel38.Name = "panel38";
             this.panel38.Size = new System.Drawing.Size(150, 2);
             this.panel38.TabIndex = 126;
-            // 
-            // fromdate_bdg
-            // 
-            this.fromdate_bdg.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.fromdate_bdg.CustomFormat = "dd/MM/yyyy";
-            this.fromdate_bdg.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fromdate_bdg.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.fromdate_bdg.Location = new System.Drawing.Point(610, 82);
-            this.fromdate_bdg.MaximumSize = new System.Drawing.Size(347, 25);
-            this.fromdate_bdg.Name = "fromdate_bdg";
-            this.fromdate_bdg.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.fromdate_bdg.Size = new System.Drawing.Size(150, 23);
-            this.fromdate_bdg.TabIndex = 357;
-            // 
-            // todate_bdg
-            // 
-            this.todate_bdg.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.todate_bdg.CustomFormat = "dd/MM/yyyy";
-            this.todate_bdg.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.todate_bdg.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.todate_bdg.Location = new System.Drawing.Point(931, 82);
-            this.todate_bdg.MaximumSize = new System.Drawing.Size(347, 25);
-            this.todate_bdg.Name = "todate_bdg";
-            this.todate_bdg.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.todate_bdg.Size = new System.Drawing.Size(150, 23);
-            this.todate_bdg.TabIndex = 358;
-            // 
-            // fromdate_tkcc
-            // 
-            this.fromdate_tkcc.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.fromdate_tkcc.CustomFormat = "dd/MM/yyyy";
-            this.fromdate_tkcc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fromdate_tkcc.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.fromdate_tkcc.Location = new System.Drawing.Point(603, 55);
-            this.fromdate_tkcc.MaximumSize = new System.Drawing.Size(347, 25);
-            this.fromdate_tkcc.Name = "fromdate_tkcc";
-            this.fromdate_tkcc.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.fromdate_tkcc.Size = new System.Drawing.Size(150, 23);
-            this.fromdate_tkcc.TabIndex = 358;
-            // 
-            // todate_tkcc
-            // 
-            this.todate_tkcc.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.todate_tkcc.CustomFormat = "dd/MM/yyyy";
-            this.todate_tkcc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.todate_tkcc.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.todate_tkcc.Location = new System.Drawing.Point(924, 55);
-            this.todate_tkcc.MaximumSize = new System.Drawing.Size(347, 25);
-            this.todate_tkcc.Name = "todate_tkcc";
-            this.todate_tkcc.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.todate_tkcc.Size = new System.Drawing.Size(150, 23);
-            this.todate_tkcc.TabIndex = 359;
-            // 
-            // fromdate_vh
-            // 
-            this.fromdate_vh.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.fromdate_vh.CustomFormat = "dd/MM/yyyy";
-            this.fromdate_vh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fromdate_vh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.fromdate_vh.Location = new System.Drawing.Point(603, 55);
-            this.fromdate_vh.MaximumSize = new System.Drawing.Size(347, 25);
-            this.fromdate_vh.Name = "fromdate_vh";
-            this.fromdate_vh.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.fromdate_vh.Size = new System.Drawing.Size(150, 23);
-            this.fromdate_vh.TabIndex = 359;
-            // 
-            // todate_vh
-            // 
-            this.todate_vh.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.todate_vh.CustomFormat = "dd/MM/yyyy";
-            this.todate_vh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.todate_vh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.todate_vh.Location = new System.Drawing.Point(924, 55);
-            this.todate_vh.MaximumSize = new System.Drawing.Size(347, 25);
-            this.todate_vh.Name = "todate_vh";
-            this.todate_vh.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.todate_vh.Size = new System.Drawing.Size(150, 23);
-            this.todate_vh.TabIndex = 360;
             // 
             // formGDBDG
             // 

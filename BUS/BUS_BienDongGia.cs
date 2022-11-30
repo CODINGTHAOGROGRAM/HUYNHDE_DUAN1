@@ -142,5 +142,15 @@ namespace BUS
 
             return DAL_BienDongGia.Instance.update(BDG);
         }
+        public bool deleteBDG(DateTime ngayGiaoDich,string maCK )
+        {
+            return DAL_BienDongGia.Instance.deleteData( ngayGiaoDich , maCK);
+        }
+        public bool AddBDG(DateTime ngayGiaoDich, string maCK, double giaThamChieu, double giaTran, double giaSan, double giaMo, double giaDong, double giaCao, double giaThap, double diem, double phanTram)
+        {
+            DTO_BienDongGia BDG = new DTO_BienDongGia(ngayGiaoDich, maCK, giaThamChieu, giaTran, giaSan, giaMo, giaDong, giaCao, giaThap, diem, phanTram);
+
+            return DAL_BienDongGia.Instance.adddata(BDG);
+        }
     }
 }

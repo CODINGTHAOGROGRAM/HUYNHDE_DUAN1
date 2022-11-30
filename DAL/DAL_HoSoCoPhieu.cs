@@ -21,10 +21,14 @@ namespace DAL
         public DAL_HoSoCoPhieu() { }
         public DataTable LoadGriHoSo()
         {
-            DataTable tableGrip = new DataTable();
+          //  DataTable tableGrip = new DataTable();
             string queryExcute = "ShowData_HSCP";
             return DataProvider.Instance.Executequery(queryExcute);
         }
-       
+        //public bool upGradeHoSo(DTO_HoSoCoPhieu listData)
+        //{
+        //    string SyncDataQuery = "Update_HSCP @MaCk, @TenTCPH, @TruSoChinh, @DiaChiLienlac, @GPTL, @TenNganh, @NguoiDaiDien, @NguoiCongBo, @BanCaoBach, @TrangThaiKiemSoat, TrangThaiGiaoDich, NgayGDDauTien, VonDieuLe, KLLH, KLNY, Link_BanCaoBach"
+        //}
+        
     }
 }

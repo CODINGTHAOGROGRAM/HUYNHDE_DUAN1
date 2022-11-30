@@ -72,5 +72,11 @@ namespace HUYNHDE_DUAN1
         {
 
         }
+
+        private void btnUpGrade_Click(object sender, EventArgs e)
+        {
+            BUS_HoSoCuPhieu.Instance.upGradeHoSo();
+            LoadGrid();
+        }
     }
 }

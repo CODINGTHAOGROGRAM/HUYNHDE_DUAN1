@@ -138,6 +138,7 @@
             this.btnUpGrade.Text = "Cập nhật";
             this.btnUpGrade.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnUpGrade.UseVisualStyleBackColor = true;
+            this.btnUpGrade.Click += new System.EventHandler(this.btnUpGrade_Click);
             // 
             // btnAdd
             // 

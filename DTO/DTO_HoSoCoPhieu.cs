@@ -19,58 +19,43 @@ namespace DTO
         }
 
         private string maCk;
+        private string tenTCPH;
+        private string truSoChinh;
+        private string diaChiLienlac;
+        private string gPTL;
+        private string tenNganh;
+        private string nguoiDaiDien;
+        private string nguoiCongBo;
+        private string banCaoBach;
+        private string trangThaiKiemSoat;
+        private string trangThaiGiaoDich;
+        private DateTime ngayGDDauTien;
+        private double vonDieuLe;
+        private double kLLH;
+        private double kLNY;
+        private string link_BanCaoBach;
+
 
         public string MaCk { get => maCk; set => maCk = value; }
-
-        private string tenTCPH;
         public string TenTCPH { get => tenTCPH; set => tenTCPH = value; }
-
-
-        private string truSoChinh;
         public string TruSoChinh { get => truSoChinh; set => truSoChinh = value; }
-
-        private string diaChiLienlac;
         public string DiaChiLienlac { get => diaChiLienlac; set => diaChiLienlac = value; }
-
-        private string gPTL;
         public string GPTL { get => gPTL; set => gPTL = value; }
-
-        private string tenNganh;
         public string TenNganh { get => tenNganh; set => tenNganh = value; }
-
-        private string nguoiDaiDien;
         public string NguoiDaiDien { get => nguoiDaiDien; set => nguoiDaiDien = value; }
-
-        private string nguoiCongBo;
         public string NguoiCongBo { get => nguoiCongBo; set => nguoiCongBo = value; }
-
-        private string banCaoBach;
         public string BanCaoBach { get => banCaoBach; set => banCaoBach = value; }
-
-        private string trangThaiKiemSoat;
-
         public string TrangThaiKiemSoat { get => trangThaiKiemSoat; set => trangThaiKiemSoat = value; }
-
-        private string trangThaiGiaoDich;
-
         public string TrangThaiGiaoDich { get => trangThaiGiaoDich; set => trangThaiGiaoDich = value; }
         public DateTime NgayGDDauTien { get => ngayGDDauTien; set => ngayGDDauTien = value; }
-
-        private DateTime ngayGDDauTien;
-
-        private double vonDieuLe;
-
         public double VonDieuLe { get => vonDieuLe; set => vonDieuLe = value; }
-
-        private double kLLH;
-
         public double KLLH { get => kLLH; set => kLLH = value; }
-
-        private double kLNY;
         public double KLNY { get => kLNY; set => kLNY = value; }
+        public string Link_BanCaoBach { get => link_BanCaoBach; set => link_BanCaoBach = value; }
 
 
         public DTO_HoSoCoPhieu() { }
+
         public DTO_HoSoCoPhieu(DataRow row)
         {
             this.MaCk = (string)row["mack"];
@@ -88,9 +73,10 @@ namespace DTO
             this.VonDieuLe = (double)row["vonDieuLe"];
             this.KLLH = (double)row["kLLH"];
             this.KLNY = (double)row["kLNY"];
+            this.Link_BanCaoBach = (string)row["link_BanCaoBach"];
         }
         public DTO_HoSoCoPhieu(string mack, string tenTCPH, string truSoChinh, string diaChiLienLac, string gPTL, string tenNganh, string nguoiDaiDien,
-            string nguoiCongBo, string banCaoBach, string trangThaiKiemSoat, string trangThaiGiaoDich, DateTime ngayGDDauTien, double vonDieuLe, double kLLH, double kLNY)
+            string nguoiCongBo, string banCaoBach, string trangThaiKiemSoat, string trangThaiGiaoDich, DateTime ngayGDDauTien, double vonDieuLe, double kLLH, double kLNY,string link_BanCaoBach)
         {
             this.maCk = mack;
             this.tenTCPH = tenTCPH;
@@ -107,6 +93,7 @@ namespace DTO
             this.vonDieuLe = vonDieuLe;
             this.kLLH = kLLH;
             this.kLNY = kLNY;
+            this.link_BanCaoBach = link_BanCaoBach;
         }
 
     }

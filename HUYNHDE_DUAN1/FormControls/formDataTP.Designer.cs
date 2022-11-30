@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cb_mack = new System.Windows.Forms.ComboBox();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.todate = new System.Windows.Forms.DateTimePicker();
             this.fromdate = new System.Windows.Forms.DateTimePicker();
-            this.tb_mack = new System.Windows.Forms.TextBox();
             this.panel16 = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -47,6 +48,7 @@
             this.btnUpGrade = new FontAwesome.Sharp.IconButton();
             this.dataGridGDTP = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.nhaps = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridGDTP)).BeginInit();
@@ -56,9 +58,10 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.cb_mack);
+            this.panel1.Controls.Add(this.iconButton1);
             this.panel1.Controls.Add(this.todate);
             this.panel1.Controls.Add(this.fromdate);
-            this.panel1.Controls.Add(this.tb_mack);
             this.panel1.Controls.Add(this.panel16);
             this.panel1.Controls.Add(this.label17);
             this.panel1.Controls.Add(this.label16);
@@ -73,13 +76,45 @@
             this.panel1.TabIndex = 0;
             this.panel1.Click += new System.EventHandler(this.panel1_Click);
             // 
+            // cb_mack
+            // 
+            this.cb_mack.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cb_mack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_mack.FormattingEnabled = true;
+            this.cb_mack.Location = new System.Drawing.Point(174, 79);
+            this.cb_mack.MinimumSize = new System.Drawing.Size(150, 0);
+            this.cb_mack.Name = "cb_mack";
+            this.cb_mack.Size = new System.Drawing.Size(150, 24);
+            this.cb_mack.TabIndex = 358;
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.iconButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton1.FlatAppearance.BorderSize = 4;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.iconButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.ArrowRotateForward;
+            this.iconButton1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 25;
+            this.iconButton1.Location = new System.Drawing.Point(1089, 70);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(114, 45);
+            this.iconButton1.TabIndex = 357;
+            this.iconButton1.Text = "Làm mới";
+            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton1.UseVisualStyleBackColor = true;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+            // 
             // todate
             // 
             this.todate.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.todate.CustomFormat = "dd/MM/yyyy";
             this.todate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.todate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.todate.Location = new System.Drawing.Point(872, 93);
+            this.todate.Location = new System.Drawing.Point(803, 80);
             this.todate.MaximumSize = new System.Drawing.Size(347, 25);
             this.todate.Name = "todate";
             this.todate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -92,30 +127,18 @@
             this.fromdate.CustomFormat = "dd/MM/yyyy";
             this.fromdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fromdate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.fromdate.Location = new System.Drawing.Point(551, 93);
+            this.fromdate.Location = new System.Drawing.Point(482, 80);
             this.fromdate.MaximumSize = new System.Drawing.Size(347, 25);
             this.fromdate.Name = "fromdate";
             this.fromdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.fromdate.Size = new System.Drawing.Size(150, 23);
             this.fromdate.TabIndex = 355;
             // 
-            // tb_mack
-            // 
-            this.tb_mack.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.tb_mack.BackColor = System.Drawing.Color.White;
-            this.tb_mack.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tb_mack.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.tb_mack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.tb_mack.Location = new System.Drawing.Point(243, 93);
-            this.tb_mack.Name = "tb_mack";
-            this.tb_mack.Size = new System.Drawing.Size(152, 19);
-            this.tb_mack.TabIndex = 112;
-            // 
             // panel16
             // 
             this.panel16.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.panel16.Location = new System.Drawing.Point(551, 122);
+            this.panel16.Location = new System.Drawing.Point(482, 109);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(150, 2);
             this.panel16.TabIndex = 97;
@@ -126,7 +149,7 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.label17.Location = new System.Drawing.Point(149, 103);
+            this.label17.Location = new System.Drawing.Point(80, 90);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(60, 20);
             this.label17.TabIndex = 110;
@@ -138,7 +161,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.label16.Location = new System.Drawing.Point(443, 103);
+            this.label16.Location = new System.Drawing.Point(374, 90);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(69, 20);
             this.label16.TabIndex = 109;
@@ -150,7 +173,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.label2.Location = new System.Drawing.Point(751, 103);
+            this.label2.Location = new System.Drawing.Point(682, 90);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 20);
             this.label2.TabIndex = 92;
@@ -160,7 +183,7 @@
             // 
             this.panel11.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.panel11.Location = new System.Drawing.Point(243, 122);
+            this.panel11.Location = new System.Drawing.Point(174, 109);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(150, 2);
             this.panel11.TabIndex = 96;
@@ -177,19 +200,20 @@
             this.btnFind.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
             this.btnFind.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnFind.IconSize = 25;
-            this.btnFind.Location = new System.Drawing.Point(1072, 82);
+            this.btnFind.Location = new System.Drawing.Point(983, 70);
             this.btnFind.Name = "btnFind";
             this.btnFind.Size = new System.Drawing.Size(87, 45);
             this.btnFind.TabIndex = 93;
             this.btnFind.Text = "Tìm";
             this.btnFind.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnFind.UseVisualStyleBackColor = true;
+            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
             // panel5
             // 
             this.panel5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.panel5.Location = new System.Drawing.Point(872, 122);
+            this.panel5.Location = new System.Drawing.Point(803, 109);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(150, 2);
             this.panel5.TabIndex = 94;
@@ -197,6 +221,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.nhaps);
             this.panel2.Controls.Add(this.btnExports);
             this.panel2.Controls.Add(this.btnAdd);
             this.panel2.Controls.Add(this.btnUpGrade);
@@ -278,20 +303,19 @@
             this.dataGridGDTP.Location = new System.Drawing.Point(0, 0);
             this.dataGridGDTP.Name = "dataGridGDTP";
             this.dataGridGDTP.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridGDTP.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridGDTP.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridGDTP.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridGDTP.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridGDTP.Size = new System.Drawing.Size(1284, 553);
             this.dataGridGDTP.TabIndex = 5;
             this.dataGridGDTP.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridGDTP_CellClick);
-            this.dataGridGDTP.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridGDTP_ColumnHeaderMouseClick);
             // 
             // panel3
             // 
@@ -301,6 +325,27 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1284, 553);
             this.panel3.TabIndex = 7;
+            // 
+            // nhaps
+            // 
+            this.nhaps.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.nhaps.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.nhaps.FlatAppearance.BorderSize = 4;
+            this.nhaps.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nhaps.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.nhaps.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.nhaps.IconChar = FontAwesome.Sharp.IconChar.Upload;
+            this.nhaps.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.nhaps.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.nhaps.IconSize = 20;
+            this.nhaps.Location = new System.Drawing.Point(996, 29);
+            this.nhaps.Name = "nhaps";
+            this.nhaps.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.nhaps.Size = new System.Drawing.Size(119, 45);
+            this.nhaps.TabIndex = 170;
+            this.nhaps.Text = "Xuất";
+            this.nhaps.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.nhaps.UseVisualStyleBackColor = true;
             // 
             // formDataTP
             // 
@@ -332,7 +377,6 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel16;
         private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.TextBox tb_mack;
         private System.Windows.Forms.Panel panel2;
         private FontAwesome.Sharp.IconButton btnExports;
         private FontAwesome.Sharp.IconButton btnAdd;
@@ -341,5 +385,8 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DateTimePicker fromdate;
         private System.Windows.Forms.DateTimePicker todate;
+        private FontAwesome.Sharp.IconButton iconButton1;
+        private System.Windows.Forms.ComboBox cb_mack;
+        private FontAwesome.Sharp.IconButton nhaps;
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HUYNHDE_DUAN1.FormUI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -57,22 +58,22 @@ namespace HUYNHDE_DUAN1.formShowClickGrid
             this.FormBorderStyle = FormBorderStyle.None;
             // CallBack BorderForms
             this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 30, 30));
-            
 
-           
+
+
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
-            
+
         }
         private int iD;
 
         public void bindindDataGrid(List<string> data)
         {
-            iD =Convert.ToInt32(data[0]);
-            title.Text = data[1];  
+            iD = Convert.ToInt32(data[0]);
+            title.Text = data[1];
             txtMaCK.Text = data[1];
             txtTen.Text = data[2];
             txtTruSo.Text = data[3];
@@ -81,7 +82,7 @@ namespace HUYNHDE_DUAN1.formShowClickGrid
             txtNganh.Text = data[6];
             txtNguoiDD.Text = data[7];
             txtNguoiCB.Text = data[8];
-            txtBangCao.Text = data[9]; 
+            txtBangCao.Text = data[9];
             txtKiemSoat.Text = data[10];
             txtGiaoDich.Text = data[11];
             txtNgay.Text = data[12].Replace("/", "-");
@@ -89,7 +90,14 @@ namespace HUYNHDE_DUAN1.formShowClickGrid
             txtKLLH.Text = data[14];
             txtKLNY.Text = data[15];
             txtLink.Text = data[16];
-            
-        }    
+
+        }
+
+        private void btnExports_Click(object sender, EventArgs e)
+        {
+            formMesageExFile showFormMessageEx = new formMesageExFile();
+            showFormMessageEx.ShowDialog();
+        }
+
     }
 }

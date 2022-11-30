@@ -1,6 +1,7 @@
 ﻿using BUS;
 using HUYNHDE_DUAN1.FormChildCotrols;
 using HUYNHDE_DUAN1.formShowClickGrid;
+using HUYNHDE_DUAN1.FormUI;
 using System;
 using System.Threading;
 using System.Windows.Forms;
@@ -41,6 +42,8 @@ namespace HUYNHDE_DUAN1
         }
         private void btnExportsBDG_Click(object sender, System.EventArgs e)
         {
+            formMesageExFile showFormMessageEx = new formMesageExFile();
+            showFormMessageEx.ShowDialog();
 
         }
 
@@ -51,9 +54,9 @@ namespace HUYNHDE_DUAN1
             {
                 f.showMessage("Thông báo", "Đang cập nhật dữ liệu...", "icon_info.png", "Đóng");
             }));
-            
+
             if (BUS_BienDongGia.Instance.DongBoBDG() == true)
-            { 
+            {
                 f.showMessage("Thông báo", "Dung cap nhat", "icon_info.png", "Đóng");
             }
             else { f.showMessage("Thông báo", "câp nhật thành công", "icon_info.png", "Đóng"); loadform(); }
@@ -78,13 +81,14 @@ namespace HUYNHDE_DUAN1
 
         private void btnAddTKCC_Click(object sender, System.EventArgs e)
         {
-            formChildTKCC tk = new formChildTKCC(this );
+            formChildTKCC tk = new formChildTKCC(this);
             tk.ShowDialog();
         }
 
         private void btnExportTKCC_Click(object sender, System.EventArgs e)
         {
-
+            formMesageExFile showFormMessageEx = new formMesageExFile();
+            showFormMessageEx.ShowDialog();
         }
         #endregion
 
@@ -106,16 +110,17 @@ namespace HUYNHDE_DUAN1
 
         private void btnAddVH_Click(object sender, System.EventArgs e)
         {
-            formChildVH vh = new formChildVH(this );
+            formChildVH vh = new formChildVH(this);
             vh.ShowDialog();
         }
 
         private void btnExportVH_Click(object sender, System.EventArgs e)
         {
-
+            formMesageExFile showFormMessageEx = new formMesageExFile();
+            showFormMessageEx.ShowDialog();
         }
         #endregion
-         public void Loadd()
+        public void Loadd()
         {
             GridBDG.ForeColor = System.Drawing.Color.Black;
             GridCungCau.ForeColor = System.Drawing.Color.Black;
@@ -123,7 +128,7 @@ namespace HUYNHDE_DUAN1
             BUS_BienDongGia.Instance.LoadBGD(GridBDG);
             BUS_CungCau.Instance.loadCungCau(GridCungCau);
             BUS_VonHoa.Instance.loadCVonHoa(GridVonHoa);
-            
+
         }
         public void loadform()
         {
@@ -141,7 +146,7 @@ namespace HUYNHDE_DUAN1
         {
             formShowBDG f = new formShowBDG(this);
 
-            f.txtNgayGiaoDich.Text = GridBDG.CurrentRow.Cells[1].Value.ToString().Replace('-','/');
+            f.txtNgayGiaoDich.Text = GridBDG.CurrentRow.Cells[1].Value.ToString().Replace('-', '/');
             f.txtMaCk.Text = GridBDG.CurrentRow.Cells[2].Value.ToString();
             f.txtThamChieu.Text = GridBDG.CurrentRow.Cells[3].Value.ToString();
             f.txtGiaTran.Text = GridBDG.CurrentRow.Cells[4].Value.ToString();
@@ -154,7 +159,7 @@ namespace HUYNHDE_DUAN1
             f.txtPhanTram.Text = GridBDG.CurrentRow.Cells[11].Value.ToString();
 
             f.ShowDialog();
-            
+
         }
 
         private void GridCungCau_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -190,13 +195,13 @@ namespace HUYNHDE_DUAN1
 
         private void btnFindBDG_Click(object sender, System.EventArgs e)
         {
-            
+
         }
 
         public void formGDBDG_Load(object sender, System.EventArgs e)
         {
             Loadd();
-            
+
         }
     }
 }

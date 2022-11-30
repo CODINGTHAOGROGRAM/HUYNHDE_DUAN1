@@ -2,6 +2,7 @@
 using HUYNHDE_DUAN1.FormChildCotrols;
 using HUYNHDE_DUAN1.formShowClickGrid;
 using System;
+using System.Threading;
 using System.Windows.Forms;
 using System.Windows.Media;
 using static HUYNHDE_DUAN1.formMessage;
@@ -45,23 +46,34 @@ namespace HUYNHDE_DUAN1
 
         private void btnUpGradeBDG_Click(object sender, System.EventArgs e)
         {
-           
             formMessage f = new formMessage();
+            Thread mess = new Thread(new ThreadStart(() =>
+            {
+                f.showMessage("Thông báo", "Đang cập nhật dữ liệu...", "icon_info.png", "Đóng");
+            }));
+            
             if (BUS_BienDongGia.Instance.DongBoBDG() == true)
             { 
-                f.showMessage("Thông báo", "Dung cap nhat", "icon_info.png", "OK");
+                f.showMessage("Thông báo", "Dung cap nhat", "icon_info.png", "Đóng");
             }
-            else
-            {
-                f.showMessage("Thông báo", "dang cap nhat", "icon_info.png", "OK");
-            }
+            else { f.showMessage("Thông báo", "câp nhật thành công", "icon_info.png", "Đóng"); loadform(); }
         }
         #endregion   
 
         #region Controls btn TKCC
         private void btnUpGradeTKCC_Click(object sender, System.EventArgs e)
         {
-            BUS_CungCau.Instance.DongBoCungCau();
+            formMessage f = new formMessage();
+            Thread mess = new Thread(new ThreadStart(() =>
+            {
+                f.showMessage("Thông báo", "Đang cập nhật dữ liệu...", "icon_info.png", "Đóng");
+            }));
+
+            if (BUS_CungCau.Instance.DongBoCungCau() == true)
+            {
+                f.showMessage("Thông báo", "Dung cap nhat", "icon_info.png", "Đóng");
+            }
+            else { f.showMessage("Thông báo", "câp nhật thành công", "icon_info.png", "Đóng"); loadform(); }
         }
 
         private void btnAddTKCC_Click(object sender, System.EventArgs e)
@@ -79,7 +91,17 @@ namespace HUYNHDE_DUAN1
         #region Controls btn VH
         private void btnUpgradeVH_Click(object sender, System.EventArgs e)
         {
+            formMessage f = new formMessage();
+            Thread mess = new Thread(new ThreadStart(() =>
+            {
+                f.showMessage("Thông báo", "Đang cập nhật dữ liệu...", "icon_info.png", "Đóng");
+            }));
 
+            if (BUS_VonHoa.Instance.DongBoVonHoa() == true)
+            {
+                f.showMessage("Thông báo", "Dung cap nhat", "icon_info.png", "Đóng");
+            }
+            else { f.showMessage("Thông báo", "câp nhật thành công", "icon_info.png", "Đóng"); loadform(); }
         }
 
         private void btnAddVH_Click(object sender, System.EventArgs e)

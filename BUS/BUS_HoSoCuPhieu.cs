@@ -66,8 +66,8 @@ namespace BUS
             dataTableGridHoSo.Columns.Add("KLNY");
             dataTableGridHoSo.Columns.Add("Link_BanCaoBach");
             Thread.Sleep(2000);
-            try
-            {
+          //  try
+          // {
                 IList<IWebElement> listCount = chromeDriver.FindElements(By.XPath($"//*[@id=\"divSearchContentArticle\"]/ul/li[2]/div/div/div[2]/ul/li"));
                 // MessageBox.Show(Convert.ToString(listCount.Count));
                 for (int i = 1; i < listCount.Count; i++)
@@ -104,12 +104,12 @@ namespace BUS
                 }
                 DataProvider.Instance.insertDB(dataTableGridHoSo);
                 chromeDriver.Quit();
-            }
-            catch (Exception ex)
-            {
-                chromeDriver.Quit();
+            //}
+            //catch (Exception ex)
+            //{
+            //    chromeDriver.Quit();
 
-            }
+            //}
 
         }
         public bool checkColumnsData(string mack, string queryEx)

@@ -1,6 +1,7 @@
 ﻿using BUS;
 using HUYNHDE_DUAN1.FormChildCotrols;
 using HUYNHDE_DUAN1.formShowClickGrid;
+using HUYNHDE_DUAN1.FormUI;
 using System;
 using System.Threading;
 using System.Windows.Forms;
@@ -41,7 +42,8 @@ namespace HUYNHDE_DUAN1
         }
         private void btnExportsBDG_Click(object sender, System.EventArgs e)
         {
-
+            formMessageExFile displayExFile = new formMessageExFile();
+            displayExFile.ShowDialog();
         }
 
         private void btnUpGradeBDG_Click(object sender, System.EventArgs e)

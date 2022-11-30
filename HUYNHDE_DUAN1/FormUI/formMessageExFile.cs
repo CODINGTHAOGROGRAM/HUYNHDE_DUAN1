@@ -9,9 +9,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace HUYNHDE_DUAN1
+namespace HUYNHDE_DUAN1.FormUI
 {
-    public partial class formMessage : Form
+    public partial class formMessageExFile : Form
     {
         #region Border Forms
 
@@ -36,7 +36,7 @@ namespace HUYNHDE_DUAN1
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
         [DllImportAttribute("user32.dll")]
         public static extern bool ReleaseCapture();
-        private void panelLinearGradient1_MouseDown(object sender, MouseEventArgs e)
+        private void panelLinearGradient1_MouseDown_1(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -46,60 +46,27 @@ namespace HUYNHDE_DUAN1
 
             }
         }
-        #endregion
 
-        public formMessage()
+        #endregion
+        public formMessageExFile()
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             // CallBack BorderForms
             this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 50, 50));
-
-        }
-        public void showMessage(string title, string text, string icon, string textbutton)
-        {
-            tt.Text = title;
-            info.Text = text;
-            pic.Image = Image.FromFile($"../../img/icon_info/{icon}");
-            button.Text = textbutton.Trim();
-            this.ShowDialog();
-
-            //using static HUYNHDE_DUAN1.formMessage;
-            /*formMessage form = new formMessage();
-            form.showMessage("Thông báo", "Thiếu thông tin", "icon_info_main.png");*/
         }
         private void btnEx_Click(object sender, EventArgs e)
         {
             this.Close();
-
-        }
-        public bool xacnhan = false;
-        private void btnThoat_Click(object sender, EventArgs e)
-        {
-
-            if (button.Text == "Thoát")
-            {
-                Application.Exit();
-            }
-            else if (button.Text == "OK")
-            {
-                this.Close();
-            }
-            else if (button.Text == "Xác nhận")
-            {
-                this.Close();
-                xacnhan = true;
-            }
-            else
-            {
-                this.Close();
-            }
-
         }
 
-        private void formMessage_Load(object sender, EventArgs e)
+
+        private void formMessageExFile_Load(object sender, EventArgs e)
         {
 
         }
+
+       
+
     }
 }

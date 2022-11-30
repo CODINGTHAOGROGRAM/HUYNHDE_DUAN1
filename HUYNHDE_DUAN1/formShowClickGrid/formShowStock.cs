@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HUYNHDE_DUAN1.FormUI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -90,6 +91,12 @@ namespace HUYNHDE_DUAN1.formShowClickGrid
             txtKLNY.Text = data[15];
             txtLink.Text = data[16];
             
-        }    
+        }
+
+        private void btnExports_Click(object sender, EventArgs e)
+        {
+            formMessageExFile displayExFile = new formMessageExFile();
+            displayExFile.ShowDialog();
+        }
     }
 }

@@ -141,6 +141,12 @@
     <Compile Include="formShowClickGrid\formShowVH.Designer.cs">
       <DependentUpon>formShowVH.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormUI\formMessageExFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUI\formMessageExFile.Designer.cs">
+      <DependentUpon>formMessageExFile.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUI\formMessageLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -229,6 +235,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formShowClickGrid\formShowVH.resx">
       <DependentUpon>formShowVH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUI\formMessageExFile.resx">
+      <DependentUpon>formMessageExFile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUI\formMessageLogin.resx">
       <DependentUpon>formMessageLogin.cs</DependentUpon>

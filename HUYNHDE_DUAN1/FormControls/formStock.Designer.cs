@@ -28,7 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.cmbValueFind = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.GridViewHoSo = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -36,7 +39,6 @@
             this.btnUpGrade = new FontAwesome.Sharp.IconButton();
             this.btnAdd = new FontAwesome.Sharp.IconButton();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.iconButton6 = new FontAwesome.Sharp.IconButton();
             this.panel4.SuspendLayout();
@@ -48,10 +50,10 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Controls.Add(this.cmbValueFind);
             this.panel4.Controls.Add(this.panel2);
             this.panel4.Controls.Add(this.panel1);
             this.panel4.Controls.Add(this.label2);
-            this.panel4.Controls.Add(this.textBox1);
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Controls.Add(this.iconButton6);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -61,6 +63,18 @@
             this.panel4.TabIndex = 4;
             this.panel4.Click += new System.EventHandler(this.panel4_Click);
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            // 
+            // cmbValueFind
+            // 
+            this.cmbValueFind.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cmbValueFind.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.cmbValueFind.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbValueFind.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.cmbValueFind.FormattingEnabled = true;
+            this.cmbValueFind.Location = new System.Drawing.Point(527, 103);
+            this.cmbValueFind.Name = "cmbValueFind";
+            this.cmbValueFind.Size = new System.Drawing.Size(300, 28);
+            this.cmbValueFind.TabIndex = 133;
             // 
             // panel2
             // 
@@ -78,7 +92,23 @@
             this.GridViewHoSo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.GridViewHoSo.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
             this.GridViewHoSo.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.GridViewHoSo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.GridViewHoSo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.GridViewHoSo.DefaultCellStyle = dataGridViewCellStyle2;
             this.GridViewHoSo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.GridViewHoSo.GridColor = System.Drawing.SystemColors.AppWorkspace;
             this.GridViewHoSo.Location = new System.Drawing.Point(0, 0);
@@ -118,6 +148,7 @@
             this.btnExports.Text = "Xuất";
             this.btnExports.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExports.UseVisualStyleBackColor = true;
+            this.btnExports.Click += new System.EventHandler(this.btnExports_Click);
             // 
             // btnUpGrade
             // 
@@ -174,18 +205,6 @@
             this.label2.TabIndex = 122;
             this.label2.Text = "Tìm kiếm:";
             // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox1.Location = new System.Drawing.Point(527, 104);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(300, 19);
-            this.textBox1.TabIndex = 121;
-            // 
             // panel5
             // 
             this.panel5.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -238,12 +257,12 @@
         private FontAwesome.Sharp.IconButton btnUpGrade;
         private FontAwesome.Sharp.IconButton btnAdd;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel panel5;
         private FontAwesome.Sharp.IconButton iconButton6;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView GridViewHoSo;
         private FontAwesome.Sharp.IconButton btnExports;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.ComboBox cmbValueFind;
     }
 }

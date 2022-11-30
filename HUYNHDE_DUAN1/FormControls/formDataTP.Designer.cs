@@ -48,7 +48,6 @@
             this.btnUpGrade = new FontAwesome.Sharp.IconButton();
             this.dataGridGDTP = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.nhaps = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridGDTP)).BeginInit();
@@ -221,7 +220,6 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.nhaps);
             this.panel2.Controls.Add(this.btnExports);
             this.panel2.Controls.Add(this.btnAdd);
             this.panel2.Controls.Add(this.btnUpGrade);
@@ -251,6 +249,7 @@
             this.btnExports.Text = "Xuất";
             this.btnExports.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExports.UseVisualStyleBackColor = true;
+            this.btnExports.Click += new System.EventHandler(this.btnExports_Click);
             // 
             // btnAdd
             // 
@@ -326,27 +325,6 @@
             this.panel3.Size = new System.Drawing.Size(1284, 553);
             this.panel3.TabIndex = 7;
             // 
-            // nhaps
-            // 
-            this.nhaps.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.nhaps.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.nhaps.FlatAppearance.BorderSize = 4;
-            this.nhaps.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.nhaps.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.nhaps.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.nhaps.IconChar = FontAwesome.Sharp.IconChar.Upload;
-            this.nhaps.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.nhaps.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.nhaps.IconSize = 20;
-            this.nhaps.Location = new System.Drawing.Point(996, 29);
-            this.nhaps.Name = "nhaps";
-            this.nhaps.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.nhaps.Size = new System.Drawing.Size(119, 45);
-            this.nhaps.TabIndex = 170;
-            this.nhaps.Text = "Xuất";
-            this.nhaps.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.nhaps.UseVisualStyleBackColor = true;
-            // 
             // formDataTP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -387,6 +365,5 @@
         private System.Windows.Forms.DateTimePicker todate;
         private FontAwesome.Sharp.IconButton iconButton1;
         private System.Windows.Forms.ComboBox cb_mack;
-        private FontAwesome.Sharp.IconButton nhaps;
     }
 }

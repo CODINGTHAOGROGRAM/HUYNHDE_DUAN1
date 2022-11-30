@@ -13,6 +13,7 @@ using Syncfusion.XlsIO;
 using System.Drawing;
 using System.Xml.Linq;
 using LoadOptions = Aspose.Cells.LoadOptions;
+using HUYNHDE_DUAN1.FormUI;
 
 namespace HUYNHDE_DUAN1
 {
@@ -119,5 +120,12 @@ namespace HUYNHDE_DUAN1
             todate.Value = DateTime.Today;
             loadform(); 
         }
+
+        private void btnExports_Click(object sender, EventArgs e)
+        {
+            formMesageExFile showFormMessageEx = new formMesageExFile();
+            showFormMessageEx.ShowDialog();
+        }
     }
+    
 }

@@ -1,4 +1,5 @@
 ﻿using BUS;
+using HUYNHDE_DUAN1.FormUI;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -110,6 +111,13 @@ namespace HUYNHDE_DUAN1.formShowClickGrid
             {
                 gdtp.loadform();
             }
+
+        }
+
+        private void btnExports_Click(object sender, EventArgs e)
+        {
+            formMesageExFile showFormMessageEx = new formMesageExFile();
+            showFormMessageEx.ShowDialog();
 
         }
 

@@ -85,6 +85,5 @@ namespace HUYNHDE_DUAN1
             formMesageExFile showFormMessageEx = new formMesageExFile();
             showFormMessageEx.ShowDialog();
         }
-    
     }
 }

@@ -67,8 +67,8 @@ namespace HUYNHDE_DUAN1
         private void btnAdd_Click(object sender, EventArgs e)
         {
             formMessage mess = new formMessage();
-            //try
-            //{
+            try
+            {
                 string MaCk = txtMack.Text;
                 string TenTCPH = txtTen.Text;
                 string TruSoChinh = txtTruSo.Text;
@@ -87,14 +87,14 @@ namespace HUYNHDE_DUAN1
                 string Link_BanCaoBach = txtLink.Text;
                 if (BUS_HoSoCuPhieu.Instance.addDataHoSo(MaCk, TenTCPH, TruSoChinh, DiaChiLienlac, GPTL, TenNganh, NguoiDaiDien, NguoiCongBo, BanCaoBach, TrangThaiKiemSoat, TrangThaiGiaoDich, NgayGDDauTien, VonDieuLe, KLLH, KLNY, Link_BanCaoBach))
                 {
-                    mess.showMessage("Thông báo", "Thêm thông tin thành công.", "icon_success.png", "Đóng");
+                    mess.showMessage("Thông báo", "Chỉnh sửa thông tin thành công.", "icon_success.png", "Đóng");
                     stock.LoadGrid();
                 }
-            //}
-            //catch (Exception)
-            //{
-            //    mess.showMessage("Thông báo", "Có lỗi khi thêm dữ liệu, hãy kiểm tra lại!", "icon_error.png", "Đóng");
-            //}
+            }
+            catch (Exception)
+            {
+                mess.showMessage("Thông báo", "Có lỗi khi thêm dữ liệu, hãy kiểm tra lại!", "icon_error.png", "Đóng");
+            }
         }
     }
 }

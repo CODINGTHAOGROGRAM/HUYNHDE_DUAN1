@@ -29,13 +29,15 @@ namespace BUS
             return hoso.LoadGriHoSo();
         }
 
-       
+        public DataTable FindListHoSo(string MaCk, string TenTCPH)
+        {
+            return DAL_HoSoCoPhieu.Instance.FindListHoSo(MaCk, TenTCPH);
+        }
 
-        //public DataTable FindListCbbHoSo()
-        //{
-        //    return DAL_HoSoCoPhieu.Instance.FindListCbbHoSo();
-        //}
-
+       public bool upGradeDataHoSo(string MaCk, string TenTCPH, string TruSoChinh, string DiaChiLienlac, string GPTL, string TenNganh, string NguoiDaiDien, string NguoiCongBo, string BanCaoBach, string TrangThaiKiemSoat, string TrangThaiGiaoDich, DateTime NgayGDDauTien, float VonDieuLe, float KLLH, float KLNY, string Link_BanCaoBach)
+       {
+            return DAL_HoSoCoPhieu.Instance.upGradeDataHoSo(MaCk, TenTCPH, TruSoChinh, DiaChiLienlac, GPTL, TenNganh, NguoiDaiDien, NguoiCongBo, BanCaoBach, TrangThaiKiemSoat, TrangThaiGiaoDich, NgayGDDauTien, VonDieuLe, KLLH, KLNY, Link_BanCaoBach);
+       }
 
         public bool addDataHoSo(string MaCk, string TenTCPH, string TruSoChinh, string DiaChiLienlac, string GPTL, string TenNganh, string NguoiDaiDien, string NguoiCongBo, string BanCaoBach, string TrangThaiKiemSoat, string TrangThaiGiaoDich, DateTime NgayGDDauTien, float VonDieuLe, float KLLH, float KLNY, string Link_BanCaoBach)
         {

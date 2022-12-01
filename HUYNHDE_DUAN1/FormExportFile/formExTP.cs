@@ -53,6 +53,8 @@ namespace HUYNHDE_DUAN1.FormUI
 
         #endregion
         private formDataTP gdtp;
+        formMessage f = new formMessage();
+        
         public formExTP(formDataTP _gdtp)
         {
             InitializeComponent();
@@ -75,7 +77,7 @@ namespace HUYNHDE_DUAN1.FormUI
             {
                 SaveFileDialog sfd = new SaveFileDialog();
                 sfd.Filter = "XLSX (*.xlsx)|*.xlsx";
-                sfd.FileName = "Dữ liệu giao dịch trái phiếu.xlsx";
+                sfd.FileName = "DuLieuGDTP.xlsx";
                 bool fileError = false;
                 if (sfd.ShowDialog() == DialogResult.OK)
                 {
@@ -88,7 +90,7 @@ namespace HUYNHDE_DUAN1.FormUI
                         catch (IOException ex)
                         {
                             fileError = true;
-                            MessageBox.Show("It wasn't possible to write the data to the disk." + ex.Message);
+                            f.showMessage("ex.Message", $"Không thể lưu dữ liệu vào ổ đĩa!", "icon_error", "Đóng");
                         }
                     }
                     if (!fileError)
@@ -96,9 +98,54 @@ namespace HUYNHDE_DUAN1.FormUI
                         try
                         {
                             BUS_ExportFile.Instance.ExportFileXLSX(sfd.FileName,data);
-                            MessageBox.Show("Data Exported Successfully !!!", "Info");
+                            f.showMessage("Thông báo", "Xuất dữ liệu thành công!", "icon_success.png", "Đóng");
                         }
                         catch (Exception ex)
+                        {
+                            f.showMessage("Thông báo", $"{ex.Message}", "icon_error","Đóng");
+                        }
+                    }
+                }
+            }
+            else
+            {
+                f.showMessage("Thông báo", "Không có dữ liệu để xuất!", "icon_error.png", "Đóng");
+            }
+            
+        }
+
+        private void pdf_Click(object sender, EventArgs e)
+        {
+            DataTable data = new DataTable();
+            data = gdtp.export();
+            if (data.Rows.Count > 0)
+            {
+                SaveFileDialog sfd = new SaveFileDialog();
+                sfd.Filter = "PDF (*.pdf)|*.pdf";
+                sfd.FileName = "DuLieuGDTP.pdf";
+                bool fileError = false;
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    if (File.Exists(sfd.FileName))
+                    {
+                        try
+                        {
+                            File.Delete(sfd.FileName);
+                        }
+                        catch (IOException ex)
+                        {
+                            fileError = true;
+                            f.showMessage($"{ex.Message}", $"Không thể lưu dữ liệu vào ổ đĩa!", "icon_error", "Đóng");
+                        }
+                    }
+                    if (!fileError)
+                    {
+                        try
+                        {
+                            BUS_ExportFile.Instance.ExportFilePDF(sfd.FileName, data);
+                            f.showMessage("Thông báo", "Xuất dữ liệu thành công!", "icon_success.png", "Đóng");
+                        }
+                        catch (IOException ex)
                         {
                             MessageBox.Show("Error :" + ex.Message);
                         }
@@ -107,14 +154,10 @@ namespace HUYNHDE_DUAN1.FormUI
             }
             else
             {
-                MessageBox.Show("No Record To Export !!!", "Info");
+                f.showMessage("Thông báo", "Không có dữ liệu để xuất!", "icon_error.png", "Đóng");
             }
-            
-        }
-
-        private void pdf_Click(object sender, EventArgs e)
-        {
 
         }
     }
+    
 }

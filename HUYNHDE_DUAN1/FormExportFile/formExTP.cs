@@ -15,7 +15,7 @@ using System.Windows.Controls;
 
 namespace HUYNHDE_DUAN1.FormUI
 {
-    public partial class formMesageExFile : Form
+    public partial class formExTP : Form
     {
         #region Border Forms
 
@@ -31,7 +31,6 @@ namespace HUYNHDE_DUAN1.FormUI
         );
 
         #endregion
-        private formDataTP gdtp;
         #region MoveDownForm
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
@@ -53,7 +52,8 @@ namespace HUYNHDE_DUAN1.FormUI
         }
 
         #endregion
-        public formMesageExFile(formDataTP _gdtp)
+        private formDataTP gdtp;
+        public formExTP(formDataTP _gdtp)
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;

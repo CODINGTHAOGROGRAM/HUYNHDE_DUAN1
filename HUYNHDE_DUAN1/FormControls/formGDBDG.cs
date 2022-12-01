@@ -1,5 +1,6 @@
 ﻿using BUS;
 using HUYNHDE_DUAN1.FormChildCotrols;
+using HUYNHDE_DUAN1.FormExportFile;
 using HUYNHDE_DUAN1.formShowClickGrid;
 using HUYNHDE_DUAN1.FormUI;
 using System;
@@ -202,6 +203,24 @@ namespace HUYNHDE_DUAN1
         {
             Loadd();
 
+        }
+
+        private void btnExportsBDG_Click(object sender, EventArgs e)
+        {
+            formExBDG show = new formExBDG();
+            show.ShowDialog();
+        }
+
+        private void btnExportTKCC_Click(object sender, EventArgs e)
+        {
+            formExKC show = new formExKC();
+            show.ShowDialog();
+        }
+
+        private void btnExportVH_Click(object sender, EventArgs e)
+        {
+            formExVH show = new formExVH();
+            show.ShowDialog();
         }
     }
 }

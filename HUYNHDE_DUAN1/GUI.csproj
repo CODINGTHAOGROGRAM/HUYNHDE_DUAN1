@@ -114,6 +114,54 @@
     <Compile Include="FormControls\formDataTP.Designer.cs">
       <DependentUpon>formDataTP.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormExportFile\formExBDG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormExportFile\formExBDG.Designer.cs">
+      <DependentUpon>formExBDG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormExportFile\formExKC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormExportFile\formExKC.Designer.cs">
+      <DependentUpon>formExKC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormExportFile\formExShowBDG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormExportFile\formExShowBDG.Designer.cs">
+      <DependentUpon>formExShowBDG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormExportFile\FormExShowKC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormExportFile\FormExShowKC.Designer.cs">
+      <DependentUpon>FormExShowKC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormExportFile\formExShowStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormExportFile\formExShowStock.Designer.cs">
+      <DependentUpon>formExShowStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormExportFile\formExShowTP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormExportFile\formExShowTP.Designer.cs">
+      <DependentUpon>formExShowTP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormExportFile\formExShowVH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormExportFile\formExShowVH.Designer.cs">
+      <DependentUpon>formExShowVH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormExportFile\formExVH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormExportFile\formExVH.Designer.cs">
+      <DependentUpon>formExVH.cs</DependentUpon>
+    </Compile>
     <Compile Include="formShowClickGrid\formShowBDG.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,11 +192,17 @@
     <Compile Include="formShowClickGrid\formShowVH.Designer.cs">
       <DependentUpon>formShowVH.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormUI\formMesageExFile.cs">
+    <Compile Include="FormExportFile\formExFileStock.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormUI\formMesageExFile.Designer.cs">
-      <DependentUpon>formMesageExFile.cs</DependentUpon>
+    <Compile Include="FormExportFile\formExFileStock.Designer.cs">
+      <DependentUpon>formExFileStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormExportFile\formExTP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormExportFile\formExTP.Designer.cs">
+      <DependentUpon>formExTP.cs</DependentUpon>
     </Compile>
     <Compile Include="FormUI\formMessageLogin.cs">
       <SubType>Form</SubType>
@@ -224,6 +278,33 @@
     <EmbeddedResource Include="FormControls\formDataTP.resx">
       <DependentUpon>formDataTP.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormExportFile\formExBDG.resx">
+      <DependentUpon>formExBDG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormExportFile\formExFileStock.resx">
+      <DependentUpon>formExFileStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormExportFile\formExKC.resx">
+      <DependentUpon>formExKC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormExportFile\formExShowBDG.resx">
+      <DependentUpon>formExShowBDG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormExportFile\FormExShowKC.resx">
+      <DependentUpon>FormExShowKC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormExportFile\formExShowStock.resx">
+      <DependentUpon>formExShowStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormExportFile\formExShowTP.resx">
+      <DependentUpon>formExShowTP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormExportFile\formExShowVH.resx">
+      <DependentUpon>formExShowVH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormExportFile\formExVH.resx">
+      <DependentUpon>formExVH.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formShowClickGrid\formShowBDG.resx">
       <DependentUpon>formShowBDG.cs</DependentUpon>
     </EmbeddedResource>
@@ -239,8 +320,8 @@
     <EmbeddedResource Include="formShowClickGrid\formShowVH.resx">
       <DependentUpon>formShowVH.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormUI\formMesageExFile.resx">
-      <DependentUpon>formMesageExFile.cs</DependentUpon>
+    <EmbeddedResource Include="FormExportFile\formExTP.resx">
+      <DependentUpon>formExTP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUI\formMessageLogin.resx">
       <DependentUpon>formMessageLogin.cs</DependentUpon>

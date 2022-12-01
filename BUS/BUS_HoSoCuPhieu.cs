@@ -38,7 +38,10 @@ namespace BUS
        {
             return DAL_HoSoCoPhieu.Instance.upGradeDataHoSo(MaCk, TenTCPH, TruSoChinh, DiaChiLienlac, GPTL, TenNganh, NguoiDaiDien, NguoiCongBo, BanCaoBach, TrangThaiKiemSoat, TrangThaiGiaoDich, NgayGDDauTien, VonDieuLe, KLLH, KLNY, Link_BanCaoBach);
        }
-
+        public void DeleteData(string MaCK)
+        {
+            DataProvider.Instance.Executequery("Delete_HSCP @Mack",new object[] {MaCK});
+        }
         public bool addDataHoSo(string MaCk, string TenTCPH, string TruSoChinh, string DiaChiLienlac, string GPTL, string TenNganh, string NguoiDaiDien, string NguoiCongBo, string BanCaoBach, string TrangThaiKiemSoat, string TrangThaiGiaoDich, DateTime NgayGDDauTien, float VonDieuLe, float KLLH, float KLNY, string Link_BanCaoBach)
         {
             return DAL_HoSoCoPhieu.Instance.addDataHoSo(MaCk, TenTCPH, TruSoChinh, DiaChiLienlac, GPTL, TenNganh, NguoiDaiDien, NguoiCongBo, BanCaoBach, TrangThaiKiemSoat, TrangThaiGiaoDich, NgayGDDauTien, VonDieuLe, KLLH, KLNY, Link_BanCaoBach);

@@ -31,6 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ma_CK = new System.Windows.Forms.TextBox();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.todate = new System.Windows.Forms.DateTimePicker();
             this.fromdate = new System.Windows.Forms.DateTimePicker();
@@ -47,7 +48,6 @@
             this.btnUpGrade = new FontAwesome.Sharp.IconButton();
             this.dataGridGDTP = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.ma_CK = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridGDTP)).BeginInit();
@@ -74,6 +74,20 @@
             this.panel1.Size = new System.Drawing.Size(1284, 151);
             this.panel1.TabIndex = 0;
             this.panel1.Click += new System.EventHandler(this.panel1_Click);
+            // 
+            // ma_CK
+            // 
+            this.ma_CK.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.ma_CK.BackColor = System.Drawing.Color.White;
+            this.ma_CK.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ma_CK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.ma_CK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.ma_CK.Location = new System.Drawing.Point(174, 84);
+            this.ma_CK.MinimumSize = new System.Drawing.Size(150, 25);
+            this.ma_CK.Name = "ma_CK";
+            this.ma_CK.Size = new System.Drawing.Size(150, 19);
+            this.ma_CK.TabIndex = 358;
+            this.ma_CK.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // iconButton1
             // 
@@ -314,20 +328,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1284, 553);
             this.panel3.TabIndex = 7;
-            // 
-            // ma_CK
-            // 
-            this.ma_CK.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.ma_CK.BackColor = System.Drawing.Color.White;
-            this.ma_CK.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.ma_CK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.ma_CK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.ma_CK.Location = new System.Drawing.Point(174, 84);
-            this.ma_CK.MinimumSize = new System.Drawing.Size(150, 25);
-            this.ma_CK.Name = "ma_CK";
-            this.ma_CK.Size = new System.Drawing.Size(150, 19);
-            this.ma_CK.TabIndex = 358;
-            this.ma_CK.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // formDataTP
             // 

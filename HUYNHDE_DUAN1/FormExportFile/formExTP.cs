@@ -97,7 +97,7 @@ namespace HUYNHDE_DUAN1.FormUI
                     {
                         try
                         {
-                            BUS_ExportFile.Instance.ExportFileXLSX(sfd.FileName,data);
+                            BUS_ExportFile.Instance.ExportFileXLSX_GDTP(sfd.FileName,data);
                             f.showMessage("Thông báo", "Xuất dữ liệu thành công!", "icon_success.png", "Đóng");
                         }
                         catch (Exception ex)
@@ -142,7 +142,7 @@ namespace HUYNHDE_DUAN1.FormUI
                     {
                         try
                         {
-                            BUS_ExportFile.Instance.ExportFilePDF(sfd.FileName, data);
+                            BUS_ExportFile.Instance.ExportFilePDF_GDTP(sfd.FileName, data);
                             f.showMessage("Thông báo", "Xuất dữ liệu thành công!", "icon_success.png", "Đóng");
                         }
                         catch (IOException ex)

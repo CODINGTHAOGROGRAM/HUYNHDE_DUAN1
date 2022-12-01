@@ -20,17 +20,17 @@ namespace BUS
             private set { BUS_ExportFile.instance = value; }
         }
 
-        public void ExportFileXLSX(string filepath, DataTable dataGrid)
+        public void ExportFileXLSX_GDTP(string filepath, DataTable dataGrid)
         {
             SaveDataGridViewToCSV(filepath, dataGrid);
-            ConvertCSVtoXLSX(filepath);
+            ConvertCSVtoXLSX_GDTP(filepath);
         }
 
-        public void ExportFilePDF(string filepath, DataTable dataGrid)
+        public void ExportFilePDF_GDTP(string filepath, DataTable dataGrid)
         {
             SaveDataGridViewToCSV(filepath, dataGrid);
-            ConvertCSVtoXLSX(filepath);
-            ConvertXLSXtoPDF(filepath);
+            ConvertCSVtoXLSX_GDTP(filepath);
+            ConvertDataTabletoPDF(filepath);
 
         }
 
@@ -77,7 +77,7 @@ namespace BUS
             sw.Close();
         }
 
-        private void ConvertCSVtoXLSX(string xlsx)
+        private void ConvertCSVtoXLSX_GDTP(string xlsx)
         {
             Excel.Application xlApp = new Excel.Application();
             xlApp.DisplayAlerts = false;
@@ -205,10 +205,9 @@ namespace BUS
             xlWorkBook.Close();
         }
 
-        private void ConvertXLSXtoPDF(string pdf)
+        private void ConvertDataTabletoPDF(string pdf)
         {
-            var workbook = new Workbook("input.xlsx");
-            workbook.Save("Output.pdf");
+            
         }
     }
 }

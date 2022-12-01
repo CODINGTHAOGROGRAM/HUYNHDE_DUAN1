@@ -110,7 +110,7 @@ namespace HUYNHDE_DUAN1
                 fromdate.Value = todate.Value;
                 todate.Value = temp;
             }
-            dataGridGDTP.DataSource = BUS_GiaoDichTraiPhieu.Instance.findData(ma_CK.ToString(), fromdate.Value, todate.Value);
+            dataGridGDTP.DataSource = BUS_GiaoDichTraiPhieu.Instance.findData(ma_CK.Text, fromdate.Value, todate.Value);
         }
 
         private void iconButton1_Click(object sender, EventArgs e)
@@ -125,6 +125,7 @@ namespace HUYNHDE_DUAN1
             formExTP showFormMessageEx = new formExTP(this);
             showFormMessageEx.ShowDialog();
         }
+
     }
     
 }

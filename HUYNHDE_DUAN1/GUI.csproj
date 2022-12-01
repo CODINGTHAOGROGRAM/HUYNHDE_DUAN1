@@ -387,6 +387,7 @@
     <Content Include="img\Group 2.png" />
     <Content Include="img\bannerForget.png" />
     <Content Include="img\forgetUseLogin.png" />
+    <Resource Include="img\huynhde_small.png" />
     <Content Include="img\icon_info\icon_error.png" />
     <Content Include="img\icon_info\icon_error_login.png" />
     <Content Include="img\icon_info\icon_info.png" />

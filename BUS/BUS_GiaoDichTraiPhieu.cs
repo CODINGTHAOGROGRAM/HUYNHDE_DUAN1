@@ -54,13 +54,6 @@ namespace BUS
             return DAL_GiaoDichTraiPhieu.Instance.findData(MACK,from,to);
         }
 
-        public DataTable showcb()
-        {
-            DataTable sort = new DataTable();
-            sort = DAL_GiaoDichTraiPhieu.Instance.showcb();
-            sort.DefaultView.Sort = "Ma_CK ASC";
-            return sort;
-        }
         public void Update(string fromd, string tod)
         {
             DTO_GiaoDichTraiPhieu GDTP = new DTO_GiaoDichTraiPhieu();

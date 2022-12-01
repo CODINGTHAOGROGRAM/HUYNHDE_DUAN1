@@ -31,7 +31,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cb_mack = new System.Windows.Forms.ComboBox();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.todate = new System.Windows.Forms.DateTimePicker();
             this.fromdate = new System.Windows.Forms.DateTimePicker();
@@ -48,6 +47,7 @@
             this.btnUpGrade = new FontAwesome.Sharp.IconButton();
             this.dataGridGDTP = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.ma_CK = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridGDTP)).BeginInit();
@@ -57,7 +57,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.cb_mack);
+            this.panel1.Controls.Add(this.ma_CK);
             this.panel1.Controls.Add(this.iconButton1);
             this.panel1.Controls.Add(this.todate);
             this.panel1.Controls.Add(this.fromdate);
@@ -74,17 +74,6 @@
             this.panel1.Size = new System.Drawing.Size(1284, 151);
             this.panel1.TabIndex = 0;
             this.panel1.Click += new System.EventHandler(this.panel1_Click);
-            // 
-            // cb_mack
-            // 
-            this.cb_mack.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cb_mack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_mack.FormattingEnabled = true;
-            this.cb_mack.Location = new System.Drawing.Point(174, 79);
-            this.cb_mack.MinimumSize = new System.Drawing.Size(150, 0);
-            this.cb_mack.Name = "cb_mack";
-            this.cb_mack.Size = new System.Drawing.Size(150, 24);
-            this.cb_mack.TabIndex = 358;
             // 
             // iconButton1
             // 
@@ -296,6 +285,7 @@
             // 
             // dataGridGDTP
             // 
+            this.dataGridGDTP.AllowUserToAddRows = false;
             this.dataGridGDTP.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridGDTP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridGDTP.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -324,6 +314,20 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1284, 553);
             this.panel3.TabIndex = 7;
+            // 
+            // ma_CK
+            // 
+            this.ma_CK.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.ma_CK.BackColor = System.Drawing.Color.White;
+            this.ma_CK.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ma_CK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.ma_CK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.ma_CK.Location = new System.Drawing.Point(174, 84);
+            this.ma_CK.MinimumSize = new System.Drawing.Size(150, 25);
+            this.ma_CK.Name = "ma_CK";
+            this.ma_CK.Size = new System.Drawing.Size(150, 19);
+            this.ma_CK.TabIndex = 358;
+            this.ma_CK.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // formDataTP
             // 
@@ -364,6 +368,6 @@
         private System.Windows.Forms.DateTimePicker fromdate;
         private System.Windows.Forms.DateTimePicker todate;
         private FontAwesome.Sharp.IconButton iconButton1;
-        private System.Windows.Forms.ComboBox cb_mack;
+        public System.Windows.Forms.TextBox ma_CK;
     }
 }

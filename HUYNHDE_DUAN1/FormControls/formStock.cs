@@ -23,14 +23,17 @@ namespace HUYNHDE_DUAN1
         //Methods
         public void LoadGrid()
         {
-          // GridViewHoSo.DataSource = BUS_HoSoCuPhieu.Instance.getListHoSo();
+           
             GridViewHoSo.DataSource = BUS_HoSoCuPhieu.Instance.LoadGriHoSo();
-            //show.tt.DataBindings.Add(new Binding("Text", GridViewHoSo.DataSource, "MaCK"));
-
+            loadCombobox();
 
         }
-
-        //
+        public void loadCombobox()
+        {
+            DataTable tableListComboBox  = BUS_HoSoCuPhieu.Instance.ListCombobox();
+            cbbListHoSo.DataSource = tableListComboBox;
+            cbbListHoSo.DisplayMember = "Tên TCPH";
+        }
 
 
         private void btnAdd_Click(object sender, EventArgs e)

@@ -109,5 +109,10 @@ namespace HUYNHDE_DUAN1
                 f.showMessage("Thông báo", "Có lỗi khi thêm dữ liệu, hãy kiểm tra lại!", "icon_error.png", "Đóng");
             }
         }
+
+        private void formChildDataTP_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

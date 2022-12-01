@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.cbbListValue = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.GridViewHoSo = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -39,28 +39,28 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.iconButton6 = new FontAwesome.Sharp.IconButton();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.panel4.SuspendLayout();
+            this.cbbListValue.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridViewHoSo)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel4
+            // cbbListValue
             // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Controls.Add(this.comboBox1);
-            this.panel4.Controls.Add(this.panel2);
-            this.panel4.Controls.Add(this.panel1);
-            this.panel4.Controls.Add(this.label2);
-            this.panel4.Controls.Add(this.panel5);
-            this.panel4.Controls.Add(this.iconButton6);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1300, 850);
-            this.panel4.TabIndex = 4;
-            this.panel4.Click += new System.EventHandler(this.panel4_Click);
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            this.cbbListValue.BackColor = System.Drawing.Color.White;
+            this.cbbListValue.Controls.Add(this.comboBox1);
+            this.cbbListValue.Controls.Add(this.panel2);
+            this.cbbListValue.Controls.Add(this.panel1);
+            this.cbbListValue.Controls.Add(this.label2);
+            this.cbbListValue.Controls.Add(this.panel5);
+            this.cbbListValue.Controls.Add(this.iconButton6);
+            this.cbbListValue.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cbbListValue.Location = new System.Drawing.Point(0, 0);
+            this.cbbListValue.Name = "cbbListValue";
+            this.cbbListValue.Size = new System.Drawing.Size(1300, 850);
+            this.cbbListValue.TabIndex = 4;
+            this.cbbListValue.Click += new System.EventHandler(this.panel4_Click);
+            this.cbbListValue.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // panel2
             // 
@@ -207,12 +207,13 @@
             // comboBox1
             // 
             this.comboBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.comboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(527, 98);
+            this.comboBox1.Location = new System.Drawing.Point(527, 99);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(300, 28);
+            this.comboBox1.Size = new System.Drawing.Size(300, 27);
             this.comboBox1.TabIndex = 133;
             // 
             // formStock
@@ -220,12 +221,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1300, 850);
-            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.cbbListValue);
             this.Name = "formStock";
             this.Text = "Quản lý hồ sơ chứng khoán";
             this.Load += new System.EventHandler(this.formStock_Load);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            this.cbbListValue.ResumeLayout(false);
+            this.cbbListValue.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.GridViewHoSo)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -234,7 +235,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel cbbListValue;
         private FontAwesome.Sharp.IconButton btnUpGrade;
         private FontAwesome.Sharp.IconButton btnAdd;
         private System.Windows.Forms.Label label2;

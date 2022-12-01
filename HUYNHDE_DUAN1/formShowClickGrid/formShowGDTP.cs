@@ -1,4 +1,5 @@
 ﻿using BUS;
+using HUYNHDE_DUAN1.FormExportFile;
 using HUYNHDE_DUAN1.FormUI;
 using System;
 using System.Collections.Generic;
@@ -114,12 +115,14 @@ namespace HUYNHDE_DUAN1.formShowClickGrid
 
         }
 
-        /*private void btnExports_Click(object sender, EventArgs e)
+        private void btnExports_Click(object sender, EventArgs e)
         {
-            formMesageExFile showFormMessageEx = new formMesageExFile();
-            showFormMessageEx.ShowDialog();
+            formExShowTP show = new formExShowTP();
+            show.ShowDialog();
 
-        }*/
+        }
+
+        
 
         private void btnSave_Click(object sender, EventArgs e)
         {

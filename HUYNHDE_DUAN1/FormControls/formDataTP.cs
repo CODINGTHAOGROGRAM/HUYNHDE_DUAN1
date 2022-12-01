@@ -130,7 +130,7 @@ namespace HUYNHDE_DUAN1
 
         private void btnExports_Click(object sender, EventArgs e)
         {
-            formMesageExFile showFormMessageEx = new formMesageExFile(this);
+            formExTP showFormMessageEx = new formExTP(this);
             showFormMessageEx.ShowDialog();
         }
     }

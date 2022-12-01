@@ -1,4 +1,5 @@
-﻿using HUYNHDE_DUAN1.FormUI;
+﻿using HUYNHDE_DUAN1.FormExportFile;
+using HUYNHDE_DUAN1.FormUI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -93,11 +94,13 @@ namespace HUYNHDE_DUAN1.formShowClickGrid
 
         }
 
-        /*private void btnExports_Click(object sender, EventArgs e)
+        private void btnExports_Click(object sender, EventArgs e)
         {
-            formMesageExFile showFormMessageEx = new formMesageExFile();
-            showFormMessageEx.ShowDialog();
+            formExShowStock show = new formExShowStock();
+            show.ShowDialog();  
         }
-*/
+
+       
+
     }
 }

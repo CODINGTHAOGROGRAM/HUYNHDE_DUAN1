@@ -399,7 +399,7 @@
             this.btnExports.Text = "Xuất";
             this.btnExports.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExports.UseVisualStyleBackColor = true;
-            /*this.btnExports.Click += new System.EventHandler(this.btnExports_Click);*/
+            this.btnExports.Click += new System.EventHandler(this.btnExports_Click);
             // 
             // btnSave
             // 

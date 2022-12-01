@@ -1,6 +1,6 @@
 ﻿namespace HUYNHDE_DUAN1.FormUI
 {
-    partial class formMesageExFile
+    partial class formExTP
     {
         /// <summary>
         /// Required designer variable.

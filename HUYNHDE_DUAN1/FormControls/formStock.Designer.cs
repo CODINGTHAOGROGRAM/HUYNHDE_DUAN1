@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.cbbListValue = new System.Windows.Forms.Panel();
+            this.btnRefesh = new FontAwesome.Sharp.IconButton();
+            this.txtFind = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.GridViewHoSo = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -37,8 +39,7 @@
             this.btnAdd = new FontAwesome.Sharp.IconButton();
             this.label2 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.iconButton6 = new FontAwesome.Sharp.IconButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnFind = new FontAwesome.Sharp.IconButton();
             this.cbbListValue.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridViewHoSo)).BeginInit();
@@ -48,12 +49,13 @@
             // cbbListValue
             // 
             this.cbbListValue.BackColor = System.Drawing.Color.White;
-            this.cbbListValue.Controls.Add(this.textBox1);
+            this.cbbListValue.Controls.Add(this.btnRefesh);
+            this.cbbListValue.Controls.Add(this.txtFind);
             this.cbbListValue.Controls.Add(this.panel2);
             this.cbbListValue.Controls.Add(this.panel1);
             this.cbbListValue.Controls.Add(this.label2);
             this.cbbListValue.Controls.Add(this.panel5);
-            this.cbbListValue.Controls.Add(this.iconButton6);
+            this.cbbListValue.Controls.Add(this.btnFind);
             this.cbbListValue.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cbbListValue.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.cbbListValue.Location = new System.Drawing.Point(0, 0);
@@ -61,7 +63,40 @@
             this.cbbListValue.Size = new System.Drawing.Size(1300, 850);
             this.cbbListValue.TabIndex = 4;
             this.cbbListValue.Click += new System.EventHandler(this.panel4_Click);
-            this.cbbListValue.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            // 
+            // btnRefesh
+            // 
+            this.btnRefesh.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnRefesh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRefesh.FlatAppearance.BorderSize = 4;
+            this.btnRefesh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefesh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnRefesh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.btnRefesh.IconChar = FontAwesome.Sharp.IconChar.ArrowRotateForward;
+            this.btnRefesh.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.btnRefesh.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnRefesh.IconSize = 25;
+            this.btnRefesh.Location = new System.Drawing.Point(1007, 89);
+            this.btnRefesh.Name = "btnRefesh";
+            this.btnRefesh.Size = new System.Drawing.Size(114, 45);
+            this.btnRefesh.TabIndex = 358;
+            this.btnRefesh.Text = "Làm mới";
+            this.btnRefesh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRefesh.UseVisualStyleBackColor = true;
+            this.btnRefesh.Click += new System.EventHandler(this.btnRefesh_Click);
+            // 
+            // txtFind
+            // 
+            this.txtFind.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtFind.BackColor = System.Drawing.Color.White;
+            this.txtFind.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtFind.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFind.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.txtFind.Location = new System.Drawing.Point(527, 109);
+            this.txtFind.Name = "txtFind";
+            this.txtFind.Size = new System.Drawing.Size(300, 19);
+            this.txtFind.TabIndex = 133;
+            this.txtFind.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel2
             // 
@@ -185,36 +220,26 @@
             this.panel5.Size = new System.Drawing.Size(300, 2);
             this.panel5.TabIndex = 124;
             // 
-            // iconButton6
+            // btnFind
             // 
-            this.iconButton6.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.iconButton6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton6.FlatAppearance.BorderSize = 4;
-            this.iconButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.iconButton6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.iconButton6.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.iconButton6.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton6.IconSize = 25;
-            this.iconButton6.Location = new System.Drawing.Point(885, 89);
-            this.iconButton6.Name = "iconButton6";
-            this.iconButton6.Size = new System.Drawing.Size(87, 45);
-            this.iconButton6.TabIndex = 123;
-            this.iconButton6.Text = "Tìm";
-            this.iconButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton6.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox1.Location = new System.Drawing.Point(527, 109);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(300, 15);
-            this.textBox1.TabIndex = 133;
+            this.btnFind.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnFind.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFind.FlatAppearance.BorderSize = 4;
+            this.btnFind.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFind.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnFind.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.btnFind.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.btnFind.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.btnFind.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnFind.IconSize = 25;
+            this.btnFind.Location = new System.Drawing.Point(885, 89);
+            this.btnFind.Name = "btnFind";
+            this.btnFind.Size = new System.Drawing.Size(87, 45);
+            this.btnFind.TabIndex = 123;
+            this.btnFind.Text = "Tìm";
+            this.btnFind.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnFind.UseVisualStyleBackColor = true;
+            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
             // formStock
             // 
@@ -240,11 +265,12 @@
         private FontAwesome.Sharp.IconButton btnAdd;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel5;
-        private FontAwesome.Sharp.IconButton iconButton6;
+        private FontAwesome.Sharp.IconButton btnFind;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView GridViewHoSo;
         private FontAwesome.Sharp.IconButton btnExports;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtFind;
+        private FontAwesome.Sharp.IconButton btnRefesh;
     }
 }

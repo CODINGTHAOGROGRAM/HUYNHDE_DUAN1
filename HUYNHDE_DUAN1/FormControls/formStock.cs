@@ -3,13 +3,7 @@ using HUYNHDE_DUAN1.formShowClickGrid;
 using HUYNHDE_DUAN1.FormUI;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace HUYNHDE_DUAN1
@@ -23,12 +17,10 @@ namespace HUYNHDE_DUAN1
         //Methods
         public void LoadGrid()
         {
-           
-            GridViewHoSo.DataSource = BUS_HoSoCuPhieu.Instance.LoadGriHoSo();
-            
 
+            GridViewHoSo.DataSource = BUS_HoSoCuPhieu.Instance.LoadGriHoSo();
         }
-       
+
 
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -52,23 +44,29 @@ namespace HUYNHDE_DUAN1
             GridViewHoSo.ForeColor = Color.Black;
 
 
+
         }
 
         private void GridViewHoSo_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            try
+            {
+                if (GridViewHoSo.Rows[e.RowIndex].Cells[9].Selected)
+                {
+                    System.Diagnostics.Process.Start(GridViewHoSo.Rows[e.RowIndex].Cells[16].Value.ToString());
+                }
+            }
+            catch { }
+
+
             List<string> binding = new List<string>();
             for (int i = 0; i < GridViewHoSo.Columns.Count; i++)
             {
                 binding.Add(GridViewHoSo.CurrentRow.Cells[i].Value.ToString());
             }
-            formShowStock show = new formShowStock();
+            formShowStock show = new formShowStock(this);
             show.bindindDataGrid(binding);
             show.ShowDialog();
-        }
-
-
-        private void panel4_Paint(object sender, PaintEventArgs e)
-        {
 
         }
 
@@ -84,6 +82,15 @@ namespace HUYNHDE_DUAN1
             show.ShowDialog();
         }
 
-       
+        private void btnFind_Click(object sender, EventArgs e)
+        {
+            GridViewHoSo.DataSource = BUS_HoSoCuPhieu.Instance.FindListHoSo(txtFind.Text, txtFind.Text);
+        }
+
+        private void btnRefesh_Click(object sender, EventArgs e)
+        {
+            LoadGrid();
+            txtFind.Text = "";
+        }
     }
 }

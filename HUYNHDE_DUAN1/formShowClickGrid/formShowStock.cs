@@ -1,14 +1,9 @@
-﻿using HUYNHDE_DUAN1.FormExportFile;
-using HUYNHDE_DUAN1.FormUI;
+﻿using BUS;
+using HUYNHDE_DUAN1.FormExportFile;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace HUYNHDE_DUAN1.formShowClickGrid
@@ -52,13 +47,15 @@ namespace HUYNHDE_DUAN1.formShowClickGrid
 
         #endregion MouseDown Form
 
+        private formStock stock;
 
-        public formShowStock()
+        public formShowStock(formStock _stock)
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             // CallBack BorderForms
             this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 30, 30));
+            stock = _stock;
 
 
 
@@ -86,7 +83,9 @@ namespace HUYNHDE_DUAN1.formShowClickGrid
             txtBangCao.Text = data[9];
             txtKiemSoat.Text = data[10];
             txtGiaoDich.Text = data[11];
-            txtNgay.Text = data[12].Replace("/", "-");
+            DateTime dateTimeParsed;
+            if (DateTime.TryParse(data[12], out dateTimeParsed))
+                dateTimePicker.Value = dateTimeParsed;
             txtVon.Text = data[13];
             txtKLLH.Text = data[14];
             txtKLNY.Text = data[15];
@@ -97,10 +96,59 @@ namespace HUYNHDE_DUAN1.formShowClickGrid
         private void btnExports_Click(object sender, EventArgs e)
         {
             formExShowStock show = new formExShowStock();
-            show.ShowDialog();  
+            show.ShowDialog();
         }
 
-       
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            formMessage mess = new formMessage();
 
+            try
+            {
+                string MaCk = txtMaCK.Text;
+                string TenTCPH = txtTen.Text;
+                string TruSoChinh = txtTruSo.Text;
+                string DiaChiLienlac = txtSdt.Text;
+                string GPTL = txtGPTL.Text;
+                string TenNganh = txtNganh.Text;
+                string NguoiDaiDien = txtNguoiDD.Text;
+                string NguoiCongBo = txtNguoiCB.Text;
+                string BanCaoBach = txtBangCao.Text;
+                string TrangThaiKiemSoat = txtKiemSoat.Text;
+                string TrangThaiGiaoDich = txtGiaoDich.Text;
+                DateTime NgayGDDauTien = DateTime.ParseExact(dateTimePicker.Text, "dd/MM/yyyy", null);
+                float VonDieuLe = float.Parse(txtVon.Text);
+                float KLLH = float.Parse(txtKLLH.Text);
+                float KLNY = float.Parse(txtKLNY.Text);
+                string Link_BanCaoBach = txtLink.Text;
+                if (BUS_HoSoCuPhieu.Instance.upGradeDataHoSo(MaCk, TenTCPH, TruSoChinh, DiaChiLienlac, GPTL, TenNganh, NguoiDaiDien, NguoiCongBo, BanCaoBach, TrangThaiKiemSoat, TrangThaiGiaoDich, NgayGDDauTien, VonDieuLe, KLLH, KLNY, Link_BanCaoBach))
+                {
+                    mess.showMessage("Thông báo", "Thêm thông tin thành công.", "icon_success.png", "Đóng");
+                    stock.LoadGrid();
+                }
+            }
+            catch (Exception)
+            {
+                mess.showMessage("Thông báo", "Có lỗi khi thêm dữ liệu, hãy kiểm tra lại!", "icon_error.png", "Đóng");
+
+            }
+
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            formMessage mess = new formMessage();
+            try
+            {
+                 BUS_HoSoCuPhieu.Instance.DeleteData(txtMaCK.Text);
+                mess.showMessage("Thông báo", "Xóa thông tin thành công.", "icon_success.png", "Đóng");
+                stock.LoadGrid();
+            }
+            catch 
+            {
+                mess.showMessage("Thông báo", "Có lỗi khi thêm dữ liệu, hãy kiểm tra lại!", "icon_error.png", "Đóng");
+
+            }
+        }
     }
 }

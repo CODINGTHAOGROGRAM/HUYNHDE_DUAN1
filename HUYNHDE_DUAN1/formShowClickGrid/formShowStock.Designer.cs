@@ -32,7 +32,6 @@
             this.txtKLNY = new System.Windows.Forms.TextBox();
             this.txtKLLH = new System.Windows.Forms.TextBox();
             this.txtVon = new System.Windows.Forms.TextBox();
-            this.txtNgay = new System.Windows.Forms.TextBox();
             this.txtGiaoDich = new System.Windows.Forms.TextBox();
             this.txtKiemSoat = new System.Windows.Forms.TextBox();
             this.txtBangCao = new System.Windows.Forms.TextBox();
@@ -81,6 +80,7 @@
             this.txtLink = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.panelLinearGradient1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -141,18 +141,6 @@
             this.txtVon.Size = new System.Drawing.Size(278, 19);
             this.txtVon.TabIndex = 210;
             this.txtVon.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtNgay
-            // 
-            this.txtNgay.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.txtNgay.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNgay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtNgay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.txtNgay.Location = new System.Drawing.Point(690, 323);
-            this.txtNgay.Name = "txtNgay";
-            this.txtNgay.Size = new System.Drawing.Size(311, 19);
-            this.txtNgay.TabIndex = 209;
-            this.txtNgay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtGiaoDich
             // 
@@ -603,6 +591,7 @@
             this.btnSave.Text = "Lưu";
             this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnDelete
             // 
@@ -624,6 +613,7 @@
             this.btnDelete.Text = "Xóa";
             this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // panelLinearGradient1
             // 
@@ -680,12 +670,23 @@
             this.label2.TabIndex = 355;
             this.label2.Text = "Link bản cáo bạch:";
             // 
+            // dateTimePicker
+            // 
+            this.dateTimePicker.CustomFormat = "dd/MM/yyyy";
+            this.dateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker.Location = new System.Drawing.Point(695, 323);
+            this.dateTimePicker.Name = "dateTimePicker";
+            this.dateTimePicker.Size = new System.Drawing.Size(303, 23);
+            this.dateTimePicker.TabIndex = 358;
+            // 
             // formShowStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(1040, 761);
+            this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.txtLink);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
@@ -696,7 +697,6 @@
             this.Controls.Add(this.txtKLNY);
             this.Controls.Add(this.txtKLLH);
             this.Controls.Add(this.txtVon);
-            this.Controls.Add(this.txtNgay);
             this.Controls.Add(this.txtGiaoDich);
             this.Controls.Add(this.txtKiemSoat);
             this.Controls.Add(this.txtBangCao);
@@ -752,7 +752,6 @@
         private System.Windows.Forms.TextBox txtKLNY;
         private System.Windows.Forms.TextBox txtKLLH;
         private System.Windows.Forms.TextBox txtVon;
-        private System.Windows.Forms.TextBox txtNgay;
         private System.Windows.Forms.TextBox txtGiaoDich;
         private System.Windows.Forms.TextBox txtKiemSoat;
         private System.Windows.Forms.TextBox txtBangCao;
@@ -801,5 +800,6 @@
         private System.Windows.Forms.TextBox txtLink;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker;
     }
 }

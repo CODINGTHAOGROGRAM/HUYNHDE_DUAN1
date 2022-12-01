@@ -21,7 +21,7 @@ namespace HUYNHDE_DUAN1
             InitializeComponent();
         }
         //Methods
-        void LoadGrid()
+        public void LoadGrid()
         {
           // GridViewHoSo.DataSource = BUS_HoSoCuPhieu.Instance.getListHoSo();
             GridViewHoSo.DataSource = BUS_HoSoCuPhieu.Instance.LoadGriHoSo();
@@ -35,7 +35,7 @@ namespace HUYNHDE_DUAN1
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            formChildStock ct = new formChildStock();
+            formChildStock ct = new formChildStock(this);
             ct.ShowDialog();
         }
 

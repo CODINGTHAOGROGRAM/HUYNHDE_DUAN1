@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BUS;
+using System;
 using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
@@ -43,13 +44,14 @@ namespace HUYNHDE_DUAN1
 
 
         #endregion MouseDown Form
-
-        public formChildStock()
+        private formStock stock;
+        public formChildStock(formStock _stock)
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             // CallBack BorderForms
             this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 30, 30));
+            stock = _stock;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -62,6 +64,37 @@ namespace HUYNHDE_DUAN1
             this.ActiveControl = null;
         }
 
-        
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            formMessage mess = new formMessage();
+            //try
+            //{
+                string MaCk = txtMack.Text;
+                string TenTCPH = txtTen.Text;
+                string TruSoChinh = txtTruSo.Text;
+                string DiaChiLienlac = txtSdt.Text;
+                string GPTL = txtGPTL.Text;
+                string TenNganh = txtNganh.Text;
+                string NguoiDaiDien = txtNguoiDD.Text;
+                string NguoiCongBo = txtNguoiCB.Text;
+                string BanCaoBach = txtBanCao.Text;
+                string TrangThaiKiemSoat = txtKiemSoat.Text;
+                string TrangThaiGiaoDich = txtGiaoDich.Text;
+                DateTime NgayGDDauTien = DateTime.ParseExact(dateTimePicker.Text, "dd/MM/yyyy", null);
+                float VonDieuLe = float.Parse(txtVon.Text);
+                float KLLH = float.Parse(txtKL.Text);
+                float KLNY = float.Parse(txtKN.Text);
+                string Link_BanCaoBach = txtLink.Text;
+                if (BUS_HoSoCuPhieu.Instance.addDataHoSo(MaCk, TenTCPH, TruSoChinh, DiaChiLienlac, GPTL, TenNganh, NguoiDaiDien, NguoiCongBo, BanCaoBach, TrangThaiKiemSoat, TrangThaiGiaoDich, NgayGDDauTien, VonDieuLe, KLLH, KLNY, Link_BanCaoBach))
+                {
+                    mess.showMessage("Thông báo", "Thêm thông tin thành công.", "icon_success.png", "Đóng");
+                    stock.LoadGrid();
+                }
+            //}
+            //catch (Exception)
+            //{
+            //    mess.showMessage("Thông báo", "Có lỗi khi thêm dữ liệu, hãy kiểm tra lại!", "icon_error.png", "Đóng");
+            //}
+        }
     }
 }

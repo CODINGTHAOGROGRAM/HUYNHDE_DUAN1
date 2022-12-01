@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.cbbListValue = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbbListHoSo = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.GridViewHoSo = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -48,13 +48,14 @@
             // cbbListValue
             // 
             this.cbbListValue.BackColor = System.Drawing.Color.White;
-            this.cbbListValue.Controls.Add(this.comboBox1);
+            this.cbbListValue.Controls.Add(this.cbbListHoSo);
             this.cbbListValue.Controls.Add(this.panel2);
             this.cbbListValue.Controls.Add(this.panel1);
             this.cbbListValue.Controls.Add(this.label2);
             this.cbbListValue.Controls.Add(this.panel5);
             this.cbbListValue.Controls.Add(this.iconButton6);
             this.cbbListValue.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cbbListValue.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.cbbListValue.Location = new System.Drawing.Point(0, 0);
             this.cbbListValue.Name = "cbbListValue";
             this.cbbListValue.Size = new System.Drawing.Size(1300, 850);
@@ -62,17 +63,20 @@
             this.cbbListValue.Click += new System.EventHandler(this.panel4_Click);
             this.cbbListValue.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
-            // comboBox1
+            // cbbListHoSo
             // 
-            this.comboBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.comboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(527, 99);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(300, 27);
-            this.comboBox1.TabIndex = 133;
+            this.cbbListHoSo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cbbListHoSo.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.cbbListHoSo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbListHoSo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbListHoSo.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.cbbListHoSo.FormattingEnabled = true;
+            this.cbbListHoSo.Items.AddRange(new object[] {
+            "(ALLS)"});
+            this.cbbListHoSo.Location = new System.Drawing.Point(527, 103);
+            this.cbbListHoSo.Name = "cbbListHoSo";
+            this.cbbListHoSo.Size = new System.Drawing.Size(300, 24);
+            this.cbbListHoSo.TabIndex = 133;
             // 
             // panel2
             // 
@@ -245,6 +249,6 @@
         private System.Windows.Forms.DataGridView GridViewHoSo;
         private FontAwesome.Sharp.IconButton btnExports;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbbListHoSo;
     }
 }

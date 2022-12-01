@@ -571,6 +571,7 @@
             this.Name = "formChildDataTP";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "formChildDataTP";
+            this.Load += new System.EventHandler(this.formChildDataTP_Load);
             this.Click += new System.EventHandler(this.formChildDataTP_Click);
             this.panelControlForm.ResumeLayout(false);
             this.panelControlForm.PerformLayout();

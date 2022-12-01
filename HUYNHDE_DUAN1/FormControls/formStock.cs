@@ -25,15 +25,10 @@ namespace HUYNHDE_DUAN1
         {
            
             GridViewHoSo.DataSource = BUS_HoSoCuPhieu.Instance.LoadGriHoSo();
-            loadCombobox();
+            
 
         }
-        public void loadCombobox()
-        {
-            DataTable tableListComboBox  = BUS_HoSoCuPhieu.Instance.ListCombobox();
-            cbbListHoSo.DataSource = tableListComboBox;
-            cbbListHoSo.DisplayMember = "Tên TCPH";
-        }
+       
 
 
         private void btnAdd_Click(object sender, EventArgs e)

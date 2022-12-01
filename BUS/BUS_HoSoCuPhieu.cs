@@ -29,10 +29,13 @@ namespace BUS
             return hoso.LoadGriHoSo();
         }
 
-        public DataTable ListCombobox()
-        {
-            return DAL_HoSoCoPhieu.Instance.ListCombobox();
-        }
+       
+
+        //public DataTable FindListCbbHoSo()
+        //{
+        //    return DAL_HoSoCoPhieu.Instance.FindListCbbHoSo();
+        //}
+
 
         public bool addDataHoSo(string MaCk, string TenTCPH, string TruSoChinh, string DiaChiLienlac, string GPTL, string TenNganh, string NguoiDaiDien, string NguoiCongBo, string BanCaoBach, string TrangThaiKiemSoat, string TrangThaiGiaoDich, DateTime NgayGDDauTien, float VonDieuLe, float KLLH, float KLNY, string Link_BanCaoBach)
         {

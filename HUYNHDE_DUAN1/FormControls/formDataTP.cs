@@ -11,13 +11,14 @@ using System.Windows.Forms;
 using System.Windows.Shapes;
 using System.Drawing;
 using System.Xml.Linq;
-using LoadOptions = Aspose.Cells.LoadOptions;
 using HUYNHDE_DUAN1.FormUI;
+using System.Windows.Controls;
 
 namespace HUYNHDE_DUAN1
 {
     public partial class formDataTP : Form
     {
+
         private formMessage f = new formMessage();
 
         public formDataTP()
@@ -27,6 +28,13 @@ namespace HUYNHDE_DUAN1
             todate.Value = DateTime.Today;
             dataGridGDTP.ForeColor = System.Drawing.Color.Black;
             loadcb();
+        }
+
+       public DataTable export()
+        {
+            DataTable _datatable = dataGridGDTP.DataSource as DataTable;
+
+            return _datatable;
         }
 
         private void panel1_Click(object sender, System.EventArgs e)
@@ -122,7 +130,7 @@ namespace HUYNHDE_DUAN1
 
         private void btnExports_Click(object sender, EventArgs e)
         {
-            formMesageExFile showFormMessageEx = new formMesageExFile();
+            formMesageExFile showFormMessageEx = new formMesageExFile(this);
             showFormMessageEx.ShowDialog();
         }
     }

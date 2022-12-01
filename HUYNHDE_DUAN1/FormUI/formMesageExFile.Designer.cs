@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.panelLinearGradient1 = new HUYNHDE_DUAN1.contructions_functions.panelLinearGradient();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.button = new FontAwesome.Sharp.IconButton();
+            this.excel = new FontAwesome.Sharp.IconButton();
+            this.pdf = new FontAwesome.Sharp.IconButton();
             this.btnEx = new FontAwesome.Sharp.IconButton();
             this.tt = new System.Windows.Forms.Label();
             this.panelLinearGradient1.SuspendLayout();
@@ -41,8 +41,8 @@
             this.panelLinearGradient1.BackColor = System.Drawing.Color.Transparent;
             this.panelLinearGradient1.Colorleft = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.panelLinearGradient1.ColorRight = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(84)))), ((int)(((byte)(200)))));
-            this.panelLinearGradient1.Controls.Add(this.iconButton1);
-            this.panelLinearGradient1.Controls.Add(this.button);
+            this.panelLinearGradient1.Controls.Add(this.excel);
+            this.panelLinearGradient1.Controls.Add(this.pdf);
             this.panelLinearGradient1.Controls.Add(this.btnEx);
             this.panelLinearGradient1.Controls.Add(this.tt);
             this.panelLinearGradient1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -52,44 +52,46 @@
             this.panelLinearGradient1.TabIndex = 2;
             this.panelLinearGradient1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelLinearGradient1_MouseDown_1);
             // 
-            // iconButton1
+            // excel
             // 
-            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(153)))), ((int)(((byte)(142)))));
-            this.iconButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton1.FlatAppearance.BorderSize = 4;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.iconButton1.ForeColor = System.Drawing.Color.LightBlue;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(254)))), ((int)(((byte)(250)))));
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 25;
-            this.iconButton1.Location = new System.Drawing.Point(289, 139);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(201, 40);
-            this.iconButton1.TabIndex = 37;
-            this.iconButton1.Text = "Xuất EXCEL";
-            this.iconButton1.UseVisualStyleBackColor = false;
+            this.excel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(153)))), ((int)(((byte)(142)))));
+            this.excel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.excel.FlatAppearance.BorderSize = 4;
+            this.excel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.excel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.excel.ForeColor = System.Drawing.Color.LightBlue;
+            this.excel.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.excel.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(254)))), ((int)(((byte)(250)))));
+            this.excel.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.excel.IconSize = 25;
+            this.excel.Location = new System.Drawing.Point(289, 139);
+            this.excel.Name = "excel";
+            this.excel.Size = new System.Drawing.Size(201, 40);
+            this.excel.TabIndex = 37;
+            this.excel.Text = "Xuất EXCEL";
+            this.excel.UseVisualStyleBackColor = false;
+            this.excel.Click += new System.EventHandler(this.excel_Click);
             // 
-            // button
+            // pdf
             // 
-            this.button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(175)))), ((int)(((byte)(25)))));
-            this.button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button.FlatAppearance.BorderSize = 4;
-            this.button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button.ForeColor = System.Drawing.Color.PaleGoldenrod;
-            this.button.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.button.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(254)))), ((int)(((byte)(250)))));
-            this.button.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.button.IconSize = 25;
-            this.button.Location = new System.Drawing.Point(75, 139);
-            this.button.Name = "button";
-            this.button.Size = new System.Drawing.Size(201, 40);
-            this.button.TabIndex = 36;
-            this.button.Text = "Xuất PDF";
-            this.button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button.UseVisualStyleBackColor = false;
+            this.pdf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(175)))), ((int)(((byte)(25)))));
+            this.pdf.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pdf.FlatAppearance.BorderSize = 4;
+            this.pdf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.pdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.pdf.ForeColor = System.Drawing.Color.PaleGoldenrod;
+            this.pdf.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.pdf.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(254)))), ((int)(((byte)(250)))));
+            this.pdf.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.pdf.IconSize = 25;
+            this.pdf.Location = new System.Drawing.Point(75, 139);
+            this.pdf.Name = "pdf";
+            this.pdf.Size = new System.Drawing.Size(201, 40);
+            this.pdf.TabIndex = 36;
+            this.pdf.Text = "Xuất PDF";
+            this.pdf.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.pdf.UseVisualStyleBackColor = false;
+            this.pdf.Click += new System.EventHandler(this.pdf_Click);
             // 
             // btnEx
             // 
@@ -140,8 +142,8 @@
         #endregion
 
         private contructions_functions.panelLinearGradient panelLinearGradient1;
-        private FontAwesome.Sharp.IconButton iconButton1;
-        private FontAwesome.Sharp.IconButton button;
+        private FontAwesome.Sharp.IconButton excel;
+        private FontAwesome.Sharp.IconButton pdf;
         private FontAwesome.Sharp.IconButton btnEx;
         public System.Windows.Forms.Label tt;
     }

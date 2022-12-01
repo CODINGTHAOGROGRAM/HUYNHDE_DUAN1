@@ -206,7 +206,7 @@ namespace HUYNHDE_DUAN1
             this.btnExportsBDG.Text = "Xuất";
             this.btnExportsBDG.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExportsBDG.UseVisualStyleBackColor = true;
-            this.btnExportsBDG.Click += new System.EventHandler(this.btnExportsBDG_Click);
+            //this.btnExportsBDG.Click += new System.EventHandler(this.btnExportsBDG_Click);
             // 
             // btnAddBDG
             // 
@@ -438,7 +438,7 @@ namespace HUYNHDE_DUAN1
             this.btnExportTKCC.Text = "Xuất";
             this.btnExportTKCC.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExportTKCC.UseVisualStyleBackColor = true;
-            this.btnExportTKCC.Click += new System.EventHandler(this.btnExportTKCC_Click);
+            //this.btnExportTKCC.Click += new System.EventHandler(this.btnExportTKCC_Click);
             // 
             // btnAddTKCC
             // 
@@ -703,7 +703,7 @@ namespace HUYNHDE_DUAN1
             this.btnExportVH.Text = "Xuất";
             this.btnExportVH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExportVH.UseVisualStyleBackColor = true;
-            this.btnExportVH.Click += new System.EventHandler(this.btnExportVH_Click);
+            //this.btnExportVH.Click += new System.EventHandler(this.btnExportVH_Click);
             // 
             // btnAddVH
             // 

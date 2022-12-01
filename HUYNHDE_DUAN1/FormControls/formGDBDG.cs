@@ -40,12 +40,12 @@ namespace HUYNHDE_DUAN1
             formChildGDBDG dg = new formChildGDBDG(this);
             dg.ShowDialog();
         }
-        private void btnExportsBDG_Click(object sender, System.EventArgs e)
+       /* private void btnExportsBDG_Click(object sender, System.EventArgs e)
         {
             formMesageExFile showFormMessageEx = new formMesageExFile();
             showFormMessageEx.ShowDialog();
 
-        }
+        }*/
 
         private void btnUpGradeBDG_Click(object sender, System.EventArgs e)
         {
@@ -85,11 +85,11 @@ namespace HUYNHDE_DUAN1
             tk.ShowDialog();
         }
 
-        private void btnExportTKCC_Click(object sender, System.EventArgs e)
-        {
-            formMesageExFile showFormMessageEx = new formMesageExFile();
-            showFormMessageEx.ShowDialog();
-        }
+        /* private void btnExportTKCC_Click(object sender, System.EventArgs e)
+         {
+             formMesageExFile showFormMessageEx = new formMesageExFile();
+             showFormMessageEx.ShowDialog();
+         }*/
         #endregion
 
         #region Controls btn VH
@@ -114,11 +114,11 @@ namespace HUYNHDE_DUAN1
             vh.ShowDialog();
         }
 
-        private void btnExportVH_Click(object sender, System.EventArgs e)
+        /*private void btnExportVH_Click(object sender, System.EventArgs e)
         {
             formMesageExFile showFormMessageEx = new formMesageExFile();
             showFormMessageEx.ShowDialog();
-        }
+        }*/
         #endregion
         public void Loadd()
         {

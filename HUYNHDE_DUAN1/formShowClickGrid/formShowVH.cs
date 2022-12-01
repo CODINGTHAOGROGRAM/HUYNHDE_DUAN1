@@ -120,10 +120,10 @@ namespace HUYNHDE_DUAN1.formShowClickGrid
             }
         }
 
-        private void btnExports_Click(object sender, EventArgs e)
+       /* private void btnExports_Click(object sender, EventArgs e)
         {
             formMesageExFile showFormMessageEx = new formMesageExFile();
             showFormMessageEx.ShowDialog();
-        }
+        }*/
     }
 }

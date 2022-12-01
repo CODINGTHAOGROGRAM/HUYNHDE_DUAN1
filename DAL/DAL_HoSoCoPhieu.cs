@@ -1,10 +1,5 @@
-﻿using DTO;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DAL
 {
@@ -21,14 +16,18 @@ namespace DAL
         public DAL_HoSoCoPhieu() { }
         public DataTable LoadGriHoSo()
         {
-          //  DataTable tableGrip = new DataTable();
+            //  DataTable tableGrip = new DataTable();
             string queryExcute = "ShowData_HSCP";
             return DataProvider.Instance.Executequery(queryExcute);
         }
-        //public bool upGradeHoSo(DTO_HoSoCoPhieu listData)
-        //{
-        //    string SyncDataQuery = "Update_HSCP @MaCk, @TenTCPH, @TruSoChinh, @DiaChiLienlac, @GPTL, @TenNganh, @NguoiDaiDien, @NguoiCongBo, @BanCaoBach, @TrangThaiKiemSoat, TrangThaiGiaoDich, NgayGDDauTien, VonDieuLe, KLLH, KLNY, Link_BanCaoBach"
-        //}
-        
+
+        //    string SyncDataQuery = "Update_HSCP MaCk, TenTCPH, TruSoChinh, DiaChiLienlac, GPTL, TenNganh, NguoiDaiDien, @NguoiCongBo, BanCaoBach, TrangThaiKiemSoat, TrangThaiGiaoDich, NgayGDDauTien, VonDieuLe, KLLH, KLNY, Link_BanCaoBach"
+        //                                        @MaCk, @TenTCPH, @TruSoChinh, @DiaChiLienlac, @GPTL, @TenNganh, @NguoiDaiDien, @NguoiCongBo, @BanCaoBach, @TrangThaiKiemSoat, @TrangThaiGiaoDich, @NgayGDDauTien, @VonDieuLe, @KLLH, @KLNY, @Link_BanCaoBach
+        public bool addDataHoSo(string MaCk, string TenTCPH, string TruSoChinh, string DiaChiLienlac, string GPTL, string TenNganh, string NguoiDaiDien, string NguoiCongBo, string BanCaoBach, string TrangThaiKiemSoat, string TrangThaiGiaoDich, DateTime NgayGDDauTien, float VonDieuLe, float KLLH, float KLNY, string Link_BanCaoBach)
+        {
+            string queryProc = "Add_HSCP  @MaCk, @TenTCPH, @TruSoChinh, @DiaChiLienlac, @GPTL, @TenNganh, @NguoiDaiDien, @NguoiCongBo, @BanCaoBach, @TrangThaiKiemSoat, @TrangThaiGiaoDich, @NgayGDDauTien, @VonDieuLe, @KLLH, @KLNY, @Link_BanCaoBach ";
+            int rs = DataProvider.Instance.Executequery(queryProc, new object[] { MaCk, TenTCPH, TruSoChinh, DiaChiLienlac, GPTL, TenNganh, NguoiDaiDien, NguoiCongBo, BanCaoBach, TrangThaiKiemSoat, TrangThaiGiaoDich, NgayGDDauTien.ToString("MM/dd/yyyy"), VonDieuLe, KLLH, KLNY, Link_BanCaoBach });
+            return rs > 0;
+        }
     }
 }

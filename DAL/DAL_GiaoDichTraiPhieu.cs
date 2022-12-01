@@ -61,13 +61,6 @@ namespace DAL
             return dtb = DataProvider.Instance.Executequery(query, new object[] { MACK, from.ToString("MM/dd/yyyy"), to.ToString("MM/dd/yyyy") });  
         }
 
-        public DataTable showcb()
-        {
-            DataTable dtb = new DataTable();
-            string query = "cb_GDTP";
-            return dtb = DataProvider.Instance.Executequery(query);
-        }
-
         public void ImportExcelInDB(string filename)
         {
             var CurrentDirectory = Directory.GetCurrentDirectory();

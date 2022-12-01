@@ -196,13 +196,13 @@ namespace BUS
             }
                 Edit.Worksheets.RemoveAt(1);
                 Edit.Save(xlsx);
-            
 
-            /*Excel.Workbook xlWorkBook = xlApp.Workbooks.Open(xlsx, 0, false, 5, "", "", false, Microsoft.Office.Interop.Excel.XlPlatform.xlWindows, "", true, false, 0, true, false, false);
+
+            Excel.Workbook xlWorkBook = xlApp.Workbooks.Open(xlsx, 0, false, 5, "", "", false, Microsoft.Office.Interop.Excel.XlPlatform.xlWindows, "", true, false, 0, true, false, false);
             Excel.Sheets worksheets = xlWorkBook.Worksheets;
             worksheets[2].Delete();
             xlWorkBook.Save();
-            xlWorkBook.Close();*/
+            xlWorkBook.Close();
         }
 
         private void ConvertXLSXtoPDF(string pdf)

@@ -27,7 +27,6 @@ namespace HUYNHDE_DUAN1
             fromdate.Value = DateTime.Today;
             todate.Value = DateTime.Today;
             dataGridGDTP.ForeColor = System.Drawing.Color.Black;
-            loadcb();
         }
 
        public DataTable export()
@@ -111,14 +110,7 @@ namespace HUYNHDE_DUAN1
                 fromdate.Value = todate.Value;
                 todate.Value = temp;
             }
-            dataGridGDTP.DataSource = BUS_GiaoDichTraiPhieu.Instance.findData(cb_mack.SelectedValue.ToString(), fromdate.Value, todate.Value);
-        }
-
-        public void loadcb()
-        {
-            cb_mack.DataSource = BUS_GiaoDichTraiPhieu.Instance.showcb();
-            cb_mack.DisplayMember = "Ma_CK";
-            cb_mack.ValueMember = "Ma_CK";
+            dataGridGDTP.DataSource = BUS_GiaoDichTraiPhieu.Instance.findData(ma_CK.ToString(), fromdate.Value, todate.Value);
         }
 
         private void iconButton1_Click(object sender, EventArgs e)

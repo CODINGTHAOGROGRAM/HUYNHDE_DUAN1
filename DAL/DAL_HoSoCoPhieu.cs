@@ -20,11 +20,14 @@ namespace DAL
             string queryExcute = "ShowData_HSCP";
             return DataProvider.Instance.Executequery(queryExcute);
         }
-        public DataTable ListCombobox()
+       
+        public DataTable FindListCbbHoSo( string tenfind)
         {
-            string queryExcute = "ShowData_HSCP";
-            return DataProvider.Instance.Executequery(queryExcute);
+            string queryExProc = "Find_HSCP @tenTCPH";
+            return DataProvider.Instance.Executequery(queryExProc);
         }
+
+
 
         //    string SyncDataQuery = "Update_HSCP MaCk, TenTCPH, TruSoChinh, DiaChiLienlac, GPTL, TenNganh, NguoiDaiDien, @NguoiCongBo, BanCaoBach, TrangThaiKiemSoat, TrangThaiGiaoDich, NgayGDDauTien, VonDieuLe, KLLH, KLNY, Link_BanCaoBach"
         //                                        @MaCk, @TenTCPH, @TruSoChinh, @DiaChiLienlac, @GPTL, @TenNganh, @NguoiDaiDien, @NguoiCongBo, @BanCaoBach, @TrangThaiKiemSoat, @TrangThaiGiaoDich, @NgayGDDauTien, @VonDieuLe, @KLLH, @KLNY, @Link_BanCaoBach

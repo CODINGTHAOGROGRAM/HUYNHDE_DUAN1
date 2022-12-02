@@ -146,7 +146,7 @@ namespace HUYNHDE_DUAN1
         private void GridBDG_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             formShowBDG f = new formShowBDG(this);
-
+            f.title.Text = GridBDG.CurrentRow.Cells[0].Value.ToString();
             f.txtNgayGiaoDich.Text = GridBDG.CurrentRow.Cells[1].Value.ToString().Replace('-', '/');
             f.txtMaCk.Text = GridBDG.CurrentRow.Cells[2].Value.ToString();
             f.txtThamChieu.Text = GridBDG.CurrentRow.Cells[3].Value.ToString();
@@ -167,6 +167,7 @@ namespace HUYNHDE_DUAN1
         {
             formShowTKCC f = new formShowTKCC(this);
 
+            f.title.Text = GridCungCau.CurrentRow.Cells[0].Value.ToString();
             f.txtNgayGiaoDich.Text = GridCungCau.CurrentRow.Cells[1].Value.ToString().Replace('-', '/');
             f.txtMaCK.Text = GridCungCau.CurrentRow.Cells[2].Value.ToString();
             f.txtGiaDong.Text = GridCungCau.CurrentRow.Cells[3].Value.ToString();
@@ -185,6 +186,7 @@ namespace HUYNHDE_DUAN1
         private void GridVonHoa_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             formShowVH f = new formShowVH(this);
+            f.title.Text = GridVonHoa.CurrentRow.Cells[0].Value.ToString();
             f.txtMaCK.Text = GridVonHoa.CurrentRow.Cells[1].Value.ToString();
             f.txtNgayGiaoDich.Text = GridVonHoa.CurrentRow.Cells[2].Value.ToString().Replace('-', '/');
             f.txtGiaDong.Text = GridVonHoa.CurrentRow.Cells[3].Value.ToString();

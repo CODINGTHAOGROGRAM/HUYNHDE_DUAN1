@@ -39,10 +39,10 @@ namespace DAL
             if(DataProvider.Instance.ExecuteNonquery(query,para) > 0) { return true; }
             return false;
         }
-        public bool deleteData(DateTime ngayGiaoDich, string maCk )
+        public bool deleteData(int iD )
         {
-            string query = "Delete_BDG @ngayGiaoDich , @maCk";
-            int result = DataProvider.Instance.ExecuteNonquery(query, new object[] { ngayGiaoDich , maCk });
+            string query = "Delete_BDG @iD";
+            int result = DataProvider.Instance.ExecuteNonquery(query, new object[] { iD });
             return result > 0;
         }
         public bool adddata(DTO_BienDongGia BDG)

@@ -132,9 +132,9 @@ namespace BUS
 
             return DAL_VonHoa.Instance.update(VH);
         }
-        public bool deleteVH(string maCK, DateTime ngayGiaoDich)
+        public bool deleteVH(int id)
         {
-            return DAL_VonHoa.Instance.deleteData(maCK, ngayGiaoDich);
+            return DAL_VonHoa.Instance.deleteData(id);
         }
         public bool AddVH(DateTime ngayGiaoDich, string maCK, double GiaDong, double VonHoa, double ThiTruong)
         {

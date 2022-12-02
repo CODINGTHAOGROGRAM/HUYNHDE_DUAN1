@@ -32,8 +32,8 @@ namespace DTO
         private string matKhau;
         public string MatKhau { get => matKhau; set => matKhau = value; }
 
-        private int gioiTinh;
-        public int GioiTinh { get => gioiTinh; set => gioiTinh = value; }
+        private string gioiTinh;
+        public string GioiTinh { get => gioiTinh; set => gioiTinh = value; }
 
         private string soDienThoai;
         public string SoDienThoai { get => soDienThoai; set => soDienThoai = value; }
@@ -45,13 +45,16 @@ namespace DTO
         private string diaChi;
         public string DiaChi { get => diaChi; set => diaChi = value; }
 
-        private int vaiTro;
-        public int VaiTro { get => vaiTro; set => vaiTro = value; }
+        private string vaiTro;
+        public string VaiTro { get => vaiTro; set => vaiTro = value; }
 
         private string anh;
         public string Anh { get => anh; set => anh = value; }
 
-        public DTO_NhanVien(string manv, string ten, string email, string matkhau, int gioitinh, string sodienthoai, DateTime ngaysinh, string diachi, int vaitro, string anh)
+        private string ghichu;
+        public string GhiChu { get => ghichu; set => ghichu = value; }
+
+        public DTO_NhanVien(string manv, string ten, string email, string matkhau, string gioitinh, string sodienthoai, DateTime ngaysinh, string diachi, string vaitro, string anh,string ghichu)
         {
             this.maNV = manv;
             this.ten = ten;
@@ -63,6 +66,7 @@ namespace DTO
             this.diaChi = diachi;
             this.vaiTro = vaitro;
             this.anh = anh;
+            this.ghichu = ghichu;
         }
         public DTO_NhanVien() { }
     }

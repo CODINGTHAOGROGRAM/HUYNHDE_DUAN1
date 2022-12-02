@@ -142,5 +142,9 @@ namespace BUS
 
             return DAL_VonHoa.Instance.adddata(VH);
         }
+        public DataTable findDataVH(string MACK, DateTime from, DateTime to)
+        {
+            return DAL_VonHoa.Instance.findData(MACK, from, to);
+        }
     }
 }

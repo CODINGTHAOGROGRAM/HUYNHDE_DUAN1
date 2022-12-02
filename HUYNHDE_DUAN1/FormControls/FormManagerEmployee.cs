@@ -1,19 +1,16 @@
 ﻿using BUS;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Data;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Windows.Forms;
 
 namespace HUYNHDE_DUAN1
 {
     public partial class FormManagerEmployee : Form
     {
+        private formMessage f = new formMessage();
+
         public FormManagerEmployee()
         {
             InitializeComponent();
@@ -38,7 +35,7 @@ namespace HUYNHDE_DUAN1
             this.ActiveControl = null;
         }
 
-        void LoadData()
+        private void LoadData()
         {
             dataGridNV.ForeColor = System.Drawing.Color.Black;
             dataGridNV.DataSource = BUS_NhanVien.Instance.LoadData();
@@ -79,9 +76,66 @@ namespace HUYNHDE_DUAN1
             }
         }
 
+        private string filePathImg;
+
         private void btnLoadImg_Click(object sender, EventArgs e)
         {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                pic.Image = new Bitmap(ofd.FileName);
+                filePathImg = ofd.FileName;
 
+               
+            }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string maNV = tb_maNV.Text;
+                string hoTen = tb_hoTen.Text;
+                string Email = tb_Email.Text;
+                string GioiTinh;
+                if (Nam.Checked)
+                {
+                    GioiTinh = "Nam";
+                }
+                else
+                {
+                    GioiTinh = "Nữ";
+                }
+                string SoDienThoai = tb_sDth.Text;
+                string CMND = tb_CCCD.Text;
+                DateTime ngaySinh = DateTime.ParseExact(ngay.Text, "dd/MM/yyyy", null);
+                string DiaChi = tb_diaChi.Text;
+                string ChucVu;
+                if (qTri.Checked)
+                {
+                    ChucVu = "Quản Trị";
+                }
+                else
+                {
+                    ChucVu = "Nhân Viên";
+                }
+                string Anh = "";
+                string GhiChu = tb_note.Text;
+
+                if (BUS_NhanVien.Instance.editData(maNV, hoTen, Email, GioiTinh, SoDienThoai, CMND,
+                    ngaySinh, DiaChi, ChucVu, Anh, GhiChu))
+                {
+                    LoadData();
+                    formMessage f = new formMessage();
+                    f.showMessage("Thông báo", "Cập nhật thông tin thành công.", "icon_success.png", "Đóng");
+                }
+            }
+            catch (Exception)
+            {
+                formMessage f = new formMessage();
+                f.showMessage("Thông báo", "Có lỗi khi cập nhật dữ liệu, hãy kiểm tra lại!", "icon_error.png", "Đóng");
+            }
         }
     }
 }

@@ -4,6 +4,7 @@ using HUYNHDE_DUAN1.FormExportFile;
 using HUYNHDE_DUAN1.formShowClickGrid;
 using HUYNHDE_DUAN1.FormUI;
 using System;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Windows.Forms;
 using System.Windows.Media;
@@ -55,7 +56,6 @@ namespace HUYNHDE_DUAN1
             {
                 f.showMessage("Thông báo", "Đang cập nhật dữ liệu...", "icon_info.png", "Đóng");
             }));
-
             if (BUS_BienDongGia.Instance.DongBoBDG() == true)
             {
                 f.showMessage("Thông báo", "Dung cap nhat", "icon_info.png", "Đóng");
@@ -196,7 +196,14 @@ namespace HUYNHDE_DUAN1
 
         private void btnFindBDG_Click(object sender, System.EventArgs e)
         {
-
+            DateTime temp;
+            if (fromdate_bdg.Value > todate_bdg.Value)
+            {
+                temp = fromdate_bdg.Value;
+                fromdate_bdg.Value = todate_bdg.Value;
+                todate_bdg.Value = temp;
+            }
+            GridBDG.DataSource = BUS_BienDongGia.Instance.findDataBDG(txtMaCKBDG.Text, fromdate_bdg.Value, todate_bdg.Value);
         }
 
         public void formGDBDG_Load(object sender, System.EventArgs e)
@@ -221,6 +228,30 @@ namespace HUYNHDE_DUAN1
         {
             formExVH show = new formExVH();
             show.ShowDialog();
+        }
+
+        private void btnFindTKCC_Click(object sender, EventArgs e)
+        {
+            DateTime temp;
+            if (fromdate_tkcc.Value > todate_tkcc.Value)
+            {
+                temp = fromdate_tkcc.Value;
+                fromdate_tkcc.Value = todate_tkcc.Value;
+                todate_tkcc.Value = temp;
+            }
+            GridCungCau.DataSource = BUS_CungCau.Instance.findDataCC(txtMaCKCC.Text, fromdate_tkcc.Value, todate_tkcc.Value);
+        }
+
+        private void btnFindVH_Click(object sender, EventArgs e)
+        {
+            DateTime temp;
+            if (fromdate_vh.Value > todate_vh.Value)
+            {
+                temp = fromdate_vh.Value;
+                fromdate_vh.Value = todate_vh.Value;
+                todate_vh.Value = temp;
+            }
+            GridVonHoa.DataSource = BUS_VonHoa.Instance.findDataVH(txtMaCKVH.Text, fromdate_vh.Value, todate_vh.Value);
         }
     }
 }

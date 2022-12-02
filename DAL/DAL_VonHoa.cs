@@ -53,5 +53,11 @@ namespace DAL
             if (DataProvider.Instance.ExecuteNonquery(query, para) > 0) { return true; }
             return false;
         }
+        public DataTable findData(string MACK, DateTime from, DateTime to)
+        {
+            DataTable dtb = new DataTable();
+            string query = " Find_VH @MaCK , @fromDate , @toDate";
+            return dtb = DataProvider.Instance.Executequery(query, new object[] { MACK, from.ToString("MM/dd/yyyy"), to.ToString("MM/dd/yyyy") });
+        }
     }
 }

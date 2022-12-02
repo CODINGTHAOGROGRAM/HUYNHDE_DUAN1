@@ -157,5 +157,9 @@ namespace BUS
 
             return DAL_CungCau.Instance.adddata(CC);
         }
+        public DataTable findDataCC(string MACK, DateTime from, DateTime to)
+        {
+            return DAL_CungCau.Instance.findData(MACK, from, to);
+        }
     }
 }

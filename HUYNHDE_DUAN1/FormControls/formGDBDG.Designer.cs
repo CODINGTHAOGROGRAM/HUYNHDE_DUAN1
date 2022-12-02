@@ -31,14 +31,14 @@ namespace HUYNHDE_DUAN1
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -50,7 +50,7 @@ namespace HUYNHDE_DUAN1
             this.panel1 = new System.Windows.Forms.Panel();
             this.todate_bdg = new System.Windows.Forms.DateTimePicker();
             this.fromdate_bdg = new System.Windows.Forms.DateTimePicker();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtMaCKBDG = new System.Windows.Forms.TextBox();
             this.panel16 = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -67,7 +67,7 @@ namespace HUYNHDE_DUAN1
             this.panel3 = new System.Windows.Forms.Panel();
             this.todate_tkcc = new System.Windows.Forms.DateTimePicker();
             this.fromdate_tkcc = new System.Windows.Forms.DateTimePicker();
-            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.txtMaCKCC = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -85,7 +85,7 @@ namespace HUYNHDE_DUAN1
             this.panel34 = new System.Windows.Forms.Panel();
             this.todate_vh = new System.Windows.Forms.DateTimePicker();
             this.fromdate_vh = new System.Windows.Forms.DateTimePicker();
-            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.txtMaCKVH = new System.Windows.Forms.TextBox();
             this.textBox30 = new System.Windows.Forms.TextBox();
             this.panel36 = new System.Windows.Forms.Panel();
             this.label25 = new System.Windows.Forms.Label();
@@ -155,21 +155,21 @@ namespace HUYNHDE_DUAN1
             // 
             this.GridBDG.AllowUserToAddRows = false;
             this.GridBDG.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.GridBDG.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.GridBDG.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.GridBDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GridBDG.Dock = System.Windows.Forms.DockStyle.Fill;
             this.GridBDG.Location = new System.Drawing.Point(0, 0);
             this.GridBDG.Name = "GridBDG";
             this.GridBDG.RowHeadersWidth = 10;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.GridBDG.RowsDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.GridBDG.RowsDefaultCellStyle = dataGridViewCellStyle14;
             this.GridBDG.Size = new System.Drawing.Size(1411, 541);
             this.GridBDG.TabIndex = 0;
             this.GridBDG.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridBDG_CellClick);
@@ -256,7 +256,7 @@ namespace HUYNHDE_DUAN1
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.todate_bdg);
             this.panel1.Controls.Add(this.fromdate_bdg);
-            this.panel1.Controls.Add(this.textBox3);
+            this.panel1.Controls.Add(this.txtMaCKBDG);
             this.panel1.Controls.Add(this.panel16);
             this.panel1.Controls.Add(this.label17);
             this.panel1.Controls.Add(this.label16);
@@ -296,17 +296,17 @@ namespace HUYNHDE_DUAN1
             this.fromdate_bdg.Size = new System.Drawing.Size(150, 23);
             this.fromdate_bdg.TabIndex = 357;
             // 
-            // textBox3
+            // txtMaCKBDG
             // 
-            this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox3.BackColor = System.Drawing.Color.White;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox3.Location = new System.Drawing.Point(303, 82);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(152, 19);
-            this.textBox3.TabIndex = 112;
+            this.txtMaCKBDG.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtMaCKBDG.BackColor = System.Drawing.Color.White;
+            this.txtMaCKBDG.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMaCKBDG.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtMaCKBDG.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.txtMaCKBDG.Location = new System.Drawing.Point(303, 82);
+            this.txtMaCKBDG.Name = "txtMaCKBDG";
+            this.txtMaCKBDG.Size = new System.Drawing.Size(152, 19);
+            this.txtMaCKBDG.TabIndex = 112;
             // 
             // panel16
             // 
@@ -487,20 +487,20 @@ namespace HUYNHDE_DUAN1
             // 
             this.GridCungCau.AllowUserToAddRows = false;
             this.GridCungCau.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.GridCungCau.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.GridCungCau.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.GridCungCau.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GridCungCau.Dock = System.Windows.Forms.DockStyle.Fill;
             this.GridCungCau.Location = new System.Drawing.Point(3, 135);
             this.GridCungCau.Name = "GridCungCau";
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.GridCungCau.RowsDefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.GridCungCau.RowsDefaultCellStyle = dataGridViewCellStyle16;
             this.GridCungCau.Size = new System.Drawing.Size(1411, 757);
             this.GridCungCau.TabIndex = 5;
             this.GridCungCau.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridCungCau_CellClick);
@@ -510,7 +510,7 @@ namespace HUYNHDE_DUAN1
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.todate_tkcc);
             this.panel3.Controls.Add(this.fromdate_tkcc);
-            this.panel3.Controls.Add(this.textBox15);
+            this.panel3.Controls.Add(this.txtMaCKCC);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.label11);
             this.panel3.Controls.Add(this.label12);
@@ -551,17 +551,17 @@ namespace HUYNHDE_DUAN1
             this.fromdate_tkcc.Size = new System.Drawing.Size(150, 23);
             this.fromdate_tkcc.TabIndex = 358;
             // 
-            // textBox15
+            // txtMaCKCC
             // 
-            this.textBox15.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox15.BackColor = System.Drawing.Color.White;
-            this.textBox15.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox15.Location = new System.Drawing.Point(295, 55);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(152, 19);
-            this.textBox15.TabIndex = 122;
+            this.txtMaCKCC.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtMaCKCC.BackColor = System.Drawing.Color.White;
+            this.txtMaCKCC.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMaCKCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtMaCKCC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.txtMaCKCC.Location = new System.Drawing.Point(295, 55);
+            this.txtMaCKCC.Name = "txtMaCKCC";
+            this.txtMaCKCC.Size = new System.Drawing.Size(152, 19);
+            this.txtMaCKCC.TabIndex = 122;
             // 
             // panel4
             // 
@@ -648,6 +648,7 @@ namespace HUYNHDE_DUAN1
             this.btnFindTKCC.Text = "Tìm";
             this.btnFindTKCC.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnFindTKCC.UseVisualStyleBackColor = true;
+            this.btnFindTKCC.Click += new System.EventHandler(this.btnFindTKCC_Click);
             // 
             // panel17
             // 
@@ -751,32 +752,32 @@ namespace HUYNHDE_DUAN1
             // GridVonHoa
             // 
             this.GridVonHoa.AllowUserToAddRows = false;
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.Blue;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.White;
-            this.GridVonHoa.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Blue;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
+            this.GridVonHoa.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             this.GridVonHoa.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.GridVonHoa.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.GridVonHoa.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.GridVonHoa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GridVonHoa.Dock = System.Windows.Forms.DockStyle.Fill;
             this.GridVonHoa.Location = new System.Drawing.Point(3, 135);
             this.GridVonHoa.Name = "GridVonHoa";
-            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.GridVonHoa.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.GridVonHoa.RowsDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.GridVonHoa.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.GridVonHoa.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.GridVonHoa.Size = new System.Drawing.Size(1411, 757);
             this.GridVonHoa.TabIndex = 5;
             this.GridVonHoa.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridVonHoa_CellClick);
@@ -786,7 +787,7 @@ namespace HUYNHDE_DUAN1
             this.panel34.BackColor = System.Drawing.Color.White;
             this.panel34.Controls.Add(this.todate_vh);
             this.panel34.Controls.Add(this.fromdate_vh);
-            this.panel34.Controls.Add(this.textBox18);
+            this.panel34.Controls.Add(this.txtMaCKVH);
             this.panel34.Controls.Add(this.textBox30);
             this.panel34.Controls.Add(this.panel36);
             this.panel34.Controls.Add(this.label25);
@@ -827,17 +828,17 @@ namespace HUYNHDE_DUAN1
             this.fromdate_vh.Size = new System.Drawing.Size(150, 23);
             this.fromdate_vh.TabIndex = 359;
             // 
-            // textBox18
+            // txtMaCKVH
             // 
-            this.textBox18.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox18.BackColor = System.Drawing.Color.White;
-            this.textBox18.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox18.Location = new System.Drawing.Point(295, 55);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(152, 19);
-            this.textBox18.TabIndex = 132;
+            this.txtMaCKVH.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtMaCKVH.BackColor = System.Drawing.Color.White;
+            this.txtMaCKVH.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMaCKVH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtMaCKVH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.txtMaCKVH.Location = new System.Drawing.Point(295, 55);
+            this.txtMaCKVH.Name = "txtMaCKVH";
+            this.txtMaCKVH.Size = new System.Drawing.Size(152, 19);
+            this.txtMaCKVH.TabIndex = 132;
             // 
             // textBox30
             // 
@@ -924,6 +925,7 @@ namespace HUYNHDE_DUAN1
             this.btnFindVH.Text = "Tìm";
             this.btnFindVH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnFindVH.UseVisualStyleBackColor = true;
+            this.btnFindVH.Click += new System.EventHandler(this.btnFindVH_Click);
             // 
             // panel38
             // 
@@ -975,7 +977,7 @@ namespace HUYNHDE_DUAN1
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtMaCKBDG;
         private System.Windows.Forms.Panel panel16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
@@ -986,7 +988,7 @@ namespace HUYNHDE_DUAN1
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.TextBox txtMaCKCC;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
@@ -996,7 +998,7 @@ namespace HUYNHDE_DUAN1
         private FontAwesome.Sharp.IconButton btnFindTKCC;
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.Panel panel34;
-        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.TextBox txtMaCKVH;
         private System.Windows.Forms.TextBox textBox30;
         private System.Windows.Forms.Panel panel36;
         private System.Windows.Forms.Label label25;

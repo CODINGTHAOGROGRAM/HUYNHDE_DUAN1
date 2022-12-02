@@ -4,9 +4,13 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
+using iTextSharp.text.pdf;
 using System.IO;
 using System.Linq;
 using Excel = Microsoft.Office.Interop.Excel;
+using iTextSharp.text;
+using System.Threading;
+
 namespace BUS
 {
     public class BUS_ExportFile
@@ -24,14 +28,6 @@ namespace BUS
         {
             SaveDataGridViewToCSV(filepath, dataGrid);
             ConvertCSVtoXLSX_GDTP(filepath);
-        }
-
-        public void ExportFilePDF_GDTP(string filepath, DataTable dataGrid)
-        {
-            SaveDataGridViewToCSV(filepath, dataGrid);
-            ConvertCSVtoXLSX_GDTP(filepath);
-            ConvertDataTabletoPDF(filepath);
-
         }
 
         private void SaveDataGridViewToCSV(string filepath, DataTable dataGrid)
@@ -205,9 +201,88 @@ namespace BUS
             xlWorkBook.Close();
         }
 
-        private void ConvertDataTabletoPDF(string pdf)
+        public void ExportFilePDF(string pdf, DataTable data, string title)
         {
             
+            FileStream fs = new FileStream(pdf, FileMode.Create,FileAccess.Write, FileShare.None);
+            Document document= new Document();
+            document.SetPageSize(PageSize.A4);
+            PdfWriter writer = PdfWriter.GetInstance(document, fs);
+            document.Open();
+
+            var CurrentDirectory = Directory.GetCurrentDirectory();
+            string TextFont = Path.Combine($"{CurrentDirectory}\\Font\\Times New Roman 400.ttf");
+            //image
+            string imageURL = @"..\..\img\huynhde_small.png";
+            iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(imageURL);
+            img.ScaleToFit(90f, 70f);
+            img.Alignment = Element.ALIGN_LEFT;
+
+
+            //title
+            BaseFont bFont = BaseFont.CreateFont(TextFont, BaseFont.IDENTITY_H, BaseFont.NOT_EMBEDDED);
+            iTextSharp.text.Font font = new iTextSharp.text.Font(bFont,16,1,iTextSharp.text.BaseColor.DARK_GRAY);
+            Paragraph paraHead = new Paragraph();
+            paraHead.Alignment = Element.ALIGN_CENTER;
+            paraHead.Add(new Paragraph("\n"));
+            paraHead.Add(new Chunk(title.ToUpper(), font));
+            paraHead.Add(new Paragraph("\n"));
+            document.Add(img);
+            document.Add(paraHead);
+
+            //author
+            Paragraph paraAu = new Paragraph();
+            BaseFont bfAu = BaseFont.CreateFont(TextFont, BaseFont.IDENTITY_H, BaseFont.NOT_EMBEDDED);
+            iTextSharp.text.Font fAu = new iTextSharp.text.Font(bfAu, 8, 2, iTextSharp.text.BaseColor.GRAY);
+            paraAu.Alignment = Element.ALIGN_RIGHT;
+            paraAu.Add(new Chunk("Người xuất: [HuynhDe]\n",fAu));
+            paraAu.Add(new Chunk("Ngày xuất: "+ DateTime.Today.ToString("dd/MM/yyyy"),fAu));
+            document.Add(paraAu);
+
+            //line
+            Paragraph line = new Paragraph(new Chunk(new iTextSharp.text.pdf.draw.LineSeparator(0.0F, 100.0F, iTextSharp.text.BaseColor.BLACK, Element.ALIGN_LEFT,1)));
+            document.Add(line);
+            //Add line
+            document.Add(new Chunk("\n",font));
+
+            //add datatable
+            PdfPTable table = new PdfPTable(data.Columns.Count);
+            table.HorizontalAlignment = Element.ALIGN_CENTER;
+            table.TotalWidth = 570f;
+            table.LockedWidth = true;
+            float[] widths = new float[] { 20f, 20f, 40f, 40f, 50f, 50f, 50f, 50f, 50f, 50f, 50f, 50f, 50f };
+            table.SetWidths(widths);
+            BaseFont bFontColumnsName = BaseFont.CreateFont(TextFont, BaseFont.IDENTITY_H, BaseFont.NOT_EMBEDDED);
+            iTextSharp.text.Font FontColumnsName = new iTextSharp.text.Font(bFontColumnsName, 7, 1, iTextSharp.text.BaseColor.WHITE);
+            iTextSharp.text.Font FontCell = new iTextSharp.text.Font(bFontColumnsName, 5, 1, iTextSharp.text.BaseColor.BLACK);
+
+            //columns
+            for (int i = 0; i < data.Columns.Count; i++)
+            {
+                PdfPCell cell = new PdfPCell();
+                cell.BackgroundColor = iTextSharp.text.BaseColor.GRAY;
+                cell.AddElement(new Chunk(data.Columns[i].ColumnName, FontColumnsName));
+                cell.HorizontalAlignment = Element.ALIGN_CENTER;
+                cell.VerticalAlignment = Element.ALIGN_CENTER;
+                table.AddCell(cell);
+            }
+
+            //cells
+            for (int i = 0; i < data.Rows.Count; i++)
+            {
+                for (int j = 0; j < data.Columns.Count; j++)
+                {
+                    PdfPCell cell = new PdfPCell();
+                    cell.AddElement(new Chunk(data.Rows[i][j].ToString(), FontCell));
+                    table.AddCell(cell);
+                }
+            }
+
+            document.Add(table);
+            document.Close();
+            writer.Close();
+            fs.Close();
+
         }
     }
 }

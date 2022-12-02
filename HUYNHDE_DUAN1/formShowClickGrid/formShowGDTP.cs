@@ -3,8 +3,10 @@ using HUYNHDE_DUAN1.FormExportFile;
 using HUYNHDE_DUAN1.FormUI;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Drawing;
 using System.Runtime.InteropServices;
+using System.Windows.Documents;
 using System.Windows.Forms;
 
 namespace HUYNHDE_DUAN1.formShowClickGrid
@@ -85,6 +87,51 @@ namespace HUYNHDE_DUAN1.formShowClickGrid
             this.ShowDialog();
         }
 
+        public DataTable getdata()
+        {
+            DataTable data = new DataTable();
+
+            List<string> text = new List<string>();
+            text.Add(id.ToString());
+            text.Add(stt.ToString());
+            text.Add(ngay.Text);
+            text.Add(maCK.Text);
+            text.Add(GiaDC.Text);
+            text.Add(TKLLC.Text);
+            text.Add(TGTLC.Text);
+            text.Add(TKLLL.Text);
+            text.Add(TGTLL.Text);
+            text.Add(tongKLGDLC.Text);
+            text.Add(tongGTGDLC.Text);
+            text.Add(tongKLGDLL.Text);
+            text.Add(tongGTGDLL.Text);
+
+            data.Columns.Add("ID");
+            data.Columns.Add("STT");
+            data.Columns.Add("Ngày giao dịch");
+            data.Columns.Add("Mã chứng khoán");
+            data.Columns.Add("Giá ĐC");
+            data.Columns.Add("TKL GDKL lô chẵn");
+            data.Columns.Add("TGT GDKL lô chẵn");
+            data.Columns.Add("TKL GDKL lô lẻ");
+            data.Columns.Add("TGT GDKL lô lẻ");
+            data.Columns.Add("Tổng KLGD thỏa thuận lô chẵn");
+            data.Columns.Add("Tổng GTGD thỏa thuận lô chẵn");
+            data.Columns.Add("Tổng KLGD thỏa thuận lô lẻ");
+            data.Columns.Add("Tổng GTGD thỏa thuận lô lẻ");
+
+            DataRow row = data.NewRow();
+
+            for (int i = 0; i < data.Columns.Count; i++)
+            {
+                row[i] = text[i];
+            }
+            data.Rows.Add(row);
+
+            return data;
+
+        }
+
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -117,7 +164,7 @@ namespace HUYNHDE_DUAN1.formShowClickGrid
 
         private void btnExports_Click(object sender, EventArgs e)
         {
-            formExShowTP show = new formExShowTP();
+            formExShowTP show = new formExShowTP(this);
             show.ShowDialog();
 
         }

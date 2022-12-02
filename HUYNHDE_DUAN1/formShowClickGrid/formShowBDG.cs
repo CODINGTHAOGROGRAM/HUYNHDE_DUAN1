@@ -103,13 +103,13 @@ namespace HUYNHDE_DUAN1.formShowClickGrid
         {
             formMessage f = new formMessage();
             f.showMessage("Thông báo", "Bạn có chắc muốn xoá dữ liệu không?", "icon_info.png", "Xác nhận");
-            string mack = txtMaCk.Text;
+            int id = int.Parse(title.Text);
             DateTime ngayGiaoDich = DateTime.ParseExact(txtNgayGiaoDich.Text, "dd/MM/yyyy", null);
             try
             {
                 if (f.xacnhan)
                 {
-                    if (BUS_BienDongGia.Instance.deleteBDG(ngayGiaoDich, mack))
+                    if (BUS_BienDongGia.Instance.deleteBDG(id))
                     {
                         this.Close();
                         f.showMessage("Thông báo", "Xoá dữ liệu thành công.", "icon_success.png", "Đóng");

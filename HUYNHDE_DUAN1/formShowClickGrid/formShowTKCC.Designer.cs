@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label2 = new System.Windows.Forms.Label();
+            this.title = new System.Windows.Forms.Label();
             this.txtLuongBan = new System.Windows.Forms.TextBox();
             this.panel35 = new System.Windows.Forms.Panel();
             this.label31 = new System.Windows.Forms.Label();
@@ -70,17 +70,17 @@
             this.panelControlForm.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label2
+            // title
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.label2.Location = new System.Drawing.Point(3, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 25);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "title";
+            this.title.AutoSize = true;
+            this.title.BackColor = System.Drawing.Color.Transparent;
+            this.title.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.title.Location = new System.Drawing.Point(3, 9);
+            this.title.Name = "title";
+            this.title.Size = new System.Drawing.Size(51, 25);
+            this.title.TabIndex = 2;
+            this.title.Text = "title";
             // 
             // txtLuongBan
             // 
@@ -460,7 +460,7 @@
             // 
             this.panelControlForm.Colorleft = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(254)))), ((int)(((byte)(250)))));
             this.panelControlForm.ColorRight = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.panelControlForm.Controls.Add(this.label2);
+            this.panelControlForm.Controls.Add(this.title);
             this.panelControlForm.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControlForm.Location = new System.Drawing.Point(0, 0);
             this.panelControlForm.Name = "panelControlForm";
@@ -610,7 +610,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Label title;
         public System.Windows.Forms.TextBox txtLuongBan;
         private System.Windows.Forms.Panel panel35;
         private System.Windows.Forms.Label label31;

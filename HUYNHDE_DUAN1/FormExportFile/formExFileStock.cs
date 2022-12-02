@@ -62,5 +62,17 @@ namespace HUYNHDE_DUAN1.FormUI
             this.Close();
         }
 
+        private void excel_Click(object sender, EventArgs e)
+        {
+            string title = " Excel Export by Camellabs";
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "Excel Documents (*.xls)|*.xls";
+            sfd.FileName = "camellabs.xls";
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                excelImp.ToCsV(dataGridView1, textBox1.Text, textBox2.Text, textBox3.Text, title, sfd.FileName);
+                MessageBox.Show("Finish");
+            }
+        }
     }
 }

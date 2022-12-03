@@ -32,7 +32,7 @@
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnSignin = new System.Windows.Forms.Button();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkReme = new System.Windows.Forms.CheckBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
@@ -61,7 +61,7 @@
             this.panelLinearGradient2.Controls.Add(this.linkLabel2);
             this.panelLinearGradient2.Controls.Add(this.btnExit);
             this.panelLinearGradient2.Controls.Add(this.btnSignin);
-            this.panelLinearGradient2.Controls.Add(this.checkBox2);
+            this.panelLinearGradient2.Controls.Add(this.checkReme);
             this.panelLinearGradient2.Controls.Add(this.panel3);
             this.panelLinearGradient2.Controls.Add(this.txtPassword);
             this.panelLinearGradient2.Controls.Add(this.iconPictureBox2);
@@ -120,19 +120,19 @@
             this.btnSignin.UseVisualStyleBackColor = false;
             this.btnSignin.Click += new System.EventHandler(this.btnSignin_Click);
             // 
-            // checkBox2
+            // checkReme
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox2.ForeColor = System.Drawing.Color.White;
-            this.checkBox2.Location = new System.Drawing.Point(47, 354);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(88, 20);
-            this.checkBox2.TabIndex = 13;
-            this.checkBox2.Text = "Ghi nhớ tôi";
-            this.checkBox2.UseVisualStyleBackColor = false;
+            this.checkReme.AutoSize = true;
+            this.checkReme.BackColor = System.Drawing.Color.Transparent;
+            this.checkReme.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.checkReme.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkReme.ForeColor = System.Drawing.Color.White;
+            this.checkReme.Location = new System.Drawing.Point(47, 354);
+            this.checkReme.Name = "checkReme";
+            this.checkReme.Size = new System.Drawing.Size(88, 20);
+            this.checkReme.TabIndex = 13;
+            this.checkReme.Text = "Ghi nhớ tôi";
+            this.checkReme.UseVisualStyleBackColor = false;
             // 
             // panel3
             // 
@@ -286,7 +286,7 @@
         private System.Windows.Forms.PictureBox imgLogin;
         private contructions_functions.panelLinearGradient panelLinearGradient2;
         private System.Windows.Forms.LinkLabel linkLabel2;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkReme;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txtPassword;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox2;

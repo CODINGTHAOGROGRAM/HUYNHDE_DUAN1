@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
+using HUYNHDE_DUAN1.Properties;
 using static HUYNHDE_DUAN1.formMessageLogin;
 
 namespace HUYNHDE_DUAN1
@@ -47,6 +48,11 @@ namespace HUYNHDE_DUAN1
         {
             imgLogin.Image = Image.FromFile("../../img/login_bg.png");
             logoLogin.Image = Image.FromFile("../../img/user_login.png");
+            if(Properties.Settings.Default.UserName != string.Empty)
+            {
+                txtUsername.Text = Properties.Settings.Default.UserName;
+                txtPassword.Text = Properties.Settings.Default.PassWord;
+            }
             
         }
 
@@ -83,6 +89,17 @@ namespace HUYNHDE_DUAN1
         {
             var userName = txtUsername.Text;
             var passWord = txtPassword.Text;
+            if(checkReme.Checked == true)
+            {
+                Properties.Settings.Default.UserName = txtUsername.Text;
+                Properties.Settings.Default.PassWord = txtPassword.Text;
+                Properties.Settings.Default.Save();
+            }else if(checkReme.Checked == false)
+            {
+                Properties.Settings.Default.UserName = "";
+                Properties.Settings.Default.PassWord = "";
+                Properties.Settings.Default.Save();
+            }
            
             formMessageLogin msLogin = new formMessageLogin();
             if(txtUsername.Text == "" || txtPassword.Text == "")
@@ -134,5 +151,7 @@ namespace HUYNHDE_DUAN1
         {
             this.ActiveControl = null;
         }
+
+       
     }
 }

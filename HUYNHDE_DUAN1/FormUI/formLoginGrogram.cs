@@ -52,6 +52,7 @@ namespace HUYNHDE_DUAN1
             {
                 txtUsername.Text = Properties.Settings.Default.UserName;
                 txtPassword.Text = Properties.Settings.Default.PassWord;
+                checkReme.Checked = true;
             }
             
         }

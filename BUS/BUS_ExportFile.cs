@@ -7,9 +7,9 @@ using System.Drawing;
 using iTextSharp.text.pdf;
 using System.IO;
 using System.Linq;
-using Excel = Microsoft.Office.Interop.Excel;
 using iTextSharp.text;
 using System.Threading;
+using GemBox.Spreadsheet;
 
 namespace BUS
 {
@@ -75,11 +75,9 @@ namespace BUS
 
         private void ConvertCSVtoXLSX_GDTP(string xlsx)
         {
-            Excel.Application xlApp = new Excel.Application();
-            xlApp.DisplayAlerts = false;
-
+            SpreadsheetInfo.SetLicense("FREE-LIMITED-KEY");
             // Create LoadOptions for CSV file
-            LoadOptions loadOptions = new LoadOptions(LoadFormat.CSV);
+            Aspose.Cells.LoadOptions loadOptions = new Aspose.Cells.LoadOptions(LoadFormat.CSV);
 
             // Create a Workbook object and initialize with CSV file's path and the LoadOptions object
             Aspose.Cells.Workbook workbook = new Aspose.Cells.Workbook($"{xlsx}", loadOptions);
@@ -91,6 +89,7 @@ namespace BUS
             Aspose.Cells.Workbook Edit = new Aspose.Cells.Workbook(xlsx);
             Worksheet editSheet = Edit.Worksheets[0];
 
+            editSheet.Name = "Du Lieu Giao Dich Trai Phieu";
             byte[] imgBytes = File.ReadAllBytes("../../img/huynhde_small.png");
             MemoryStream ms = new MemoryStream();
             ms.Write(imgBytes, 0, imgBytes.Length);
@@ -109,7 +108,7 @@ namespace BUS
 
             Cell cellTitle = editSheet.Cells["F2"];
             cellTitle.PutValue("THÔNG TIN GIAO DỊCH CỦA CHỨNG KHOÁN CÁC CHỨNG KHOÁN");
-            Style styleTitle = cellTitle.GetStyle();
+            Aspose.Cells.Style styleTitle = cellTitle.GetStyle();
             styleTitle.HorizontalAlignment = TextAlignmentType.Left;
             styleTitle.VerticalAlignment = TextAlignmentType.Center;
             styleTitle.Font.IsBold = true;
@@ -119,7 +118,7 @@ namespace BUS
             DateTime today = DateTime.Today;
             Cell celldate = editSheet.Cells["G4"];
             celldate.PutValue($"Ngày xuất dữ liệu: {today.ToString("dd/MM/yyyy")}");
-            Style styleDate = celldate.GetStyle();
+            Aspose.Cells.Style styleDate = celldate.GetStyle();
             styleDate.HorizontalAlignment = TextAlignmentType.Left;
             styleDate.VerticalAlignment = TextAlignmentType.Center;
             styleDate.Font.Size = 12;
@@ -129,7 +128,7 @@ namespace BUS
             for (int i = 0; i < c.Count; i++)
             {
                 Cell cell = editSheet.Cells[$"{c[i].ToString()}7"];
-                Style style = cell.GetStyle();
+                Aspose.Cells.Style style = cell.GetStyle();
                 style.HorizontalAlignment = TextAlignmentType.Center;
                 style.VerticalAlignment = TextAlignmentType.Center;
                 style.Font.IsBold = true;
@@ -158,13 +157,13 @@ namespace BUS
                     Cell celldata = editSheet.Cells[$"{c[i].ToString()}{index}"];
                     switch (celldata.Type)
                     {
-                        case CellValueType.IsNull:
+                        case Aspose.Cells.CellValueType.IsNull:
                             checknull = true;
                             break;
                     }
                     if (!checknull)
                     {
-                        Style style = celldata.GetStyle();
+                        Aspose.Cells.Style style = celldata.GetStyle();
                         // Setting the color
                         style.Borders[BorderType.TopBorder].Color = Color.Black;
                         style.Borders[BorderType.BottomBorder].Color = Color.Black;
@@ -190,15 +189,12 @@ namespace BUS
                     break;
                 }
             }
-                Edit.Worksheets.RemoveAt(1);
-                Edit.Save(xlsx);
+            Edit.Worksheets.RemoveAt(1);
+            Edit.Save(xlsx);
+            var wb = ExcelFile.Load(xlsx);
+            wb.Worksheets.Remove(1);
+            wb.Save(xlsx);
 
-
-            Excel.Workbook xlWorkBook = xlApp.Workbooks.Open(xlsx, 0, false, 5, "", "", false, Microsoft.Office.Interop.Excel.XlPlatform.xlWindows, "", true, false, 0, true, false, false);
-            Excel.Sheets worksheets = xlWorkBook.Worksheets;
-            worksheets[2].Delete();
-            xlWorkBook.Save();
-            xlWorkBook.Close();
         }
 
         public void ExportFilePDF(string pdf, DataTable data, string title)

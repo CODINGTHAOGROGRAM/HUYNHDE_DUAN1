@@ -70,6 +70,7 @@
             this.excel.TabIndex = 37;
             this.excel.Text = "Xuất EXCEL";
             this.excel.UseVisualStyleBackColor = false;
+            this.excel.Click += new System.EventHandler(this.excel_Click);
             // 
             // pdf
             // 
@@ -90,6 +91,7 @@
             this.pdf.Text = "Xuất PDF";
             this.pdf.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.pdf.UseVisualStyleBackColor = false;
+            this.pdf.Click += new System.EventHandler(this.pdf_Click);
             // 
             // btnEx
             // 

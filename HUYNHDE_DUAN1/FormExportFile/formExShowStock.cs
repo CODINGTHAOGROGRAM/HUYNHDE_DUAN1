@@ -58,5 +58,10 @@ namespace HUYNHDE_DUAN1.FormExportFile
         {
             this.Close();
         }
+
+        private void panelLinearGradient1_Paint(object sender, PaintEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

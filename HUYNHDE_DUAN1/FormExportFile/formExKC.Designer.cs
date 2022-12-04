@@ -31,8 +31,8 @@
             this.panelLinearGradient1 = new HUYNHDE_DUAN1.contructions_functions.panelLinearGradient();
             this.excel = new FontAwesome.Sharp.IconButton();
             this.pdf = new FontAwesome.Sharp.IconButton();
-            this.btnEx = new FontAwesome.Sharp.IconButton();
             this.tt = new System.Windows.Forms.Label();
+            this.btnClose = new FontAwesome.Sharp.IconButton();
             this.panelLinearGradient1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -41,9 +41,9 @@
             this.panelLinearGradient1.BackColor = System.Drawing.Color.Transparent;
             this.panelLinearGradient1.Colorleft = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.panelLinearGradient1.ColorRight = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(84)))), ((int)(((byte)(200)))));
+            this.panelLinearGradient1.Controls.Add(this.btnClose);
             this.panelLinearGradient1.Controls.Add(this.excel);
             this.panelLinearGradient1.Controls.Add(this.pdf);
-            this.panelLinearGradient1.Controls.Add(this.btnEx);
             this.panelLinearGradient1.Controls.Add(this.tt);
             this.panelLinearGradient1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelLinearGradient1.Location = new System.Drawing.Point(0, 0);
@@ -64,7 +64,7 @@
             this.excel.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(254)))), ((int)(((byte)(250)))));
             this.excel.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.excel.IconSize = 25;
-            this.excel.Location = new System.Drawing.Point(289, 139);
+            this.excel.Location = new System.Drawing.Point(231, 95);
             this.excel.Name = "excel";
             this.excel.Size = new System.Drawing.Size(201, 40);
             this.excel.TabIndex = 37;
@@ -84,7 +84,7 @@
             this.pdf.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(254)))), ((int)(((byte)(250)))));
             this.pdf.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.pdf.IconSize = 25;
-            this.pdf.Location = new System.Drawing.Point(75, 139);
+            this.pdf.Location = new System.Drawing.Point(17, 95);
             this.pdf.Name = "pdf";
             this.pdf.Size = new System.Drawing.Size(201, 40);
             this.pdf.TabIndex = 36;
@@ -93,36 +93,39 @@
             this.pdf.UseVisualStyleBackColor = false;
             this.pdf.Click += new System.EventHandler(this.pdf_Click);
             // 
-            // btnEx
-            // 
-            this.btnEx.BackColor = System.Drawing.Color.Transparent;
-            this.btnEx.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEx.FlatAppearance.BorderSize = 0;
-            this.btnEx.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEx.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEx.ForeColor = System.Drawing.Color.Transparent;
-            this.btnEx.IconChar = FontAwesome.Sharp.IconChar.X;
-            this.btnEx.IconColor = System.Drawing.Color.White;
-            this.btnEx.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnEx.IconSize = 20;
-            this.btnEx.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnEx.Location = new System.Drawing.Point(513, 3);
-            this.btnEx.Name = "btnEx";
-            this.btnEx.Size = new System.Drawing.Size(33, 30);
-            this.btnEx.TabIndex = 12;
-            this.btnEx.UseVisualStyleBackColor = false;
-            this.btnEx.Click += new System.EventHandler(this.btnEx_Click);
-            // 
             // tt
             // 
             this.tt.AutoSize = true;
             this.tt.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tt.ForeColor = System.Drawing.Color.White;
-            this.tt.Location = new System.Drawing.Point(70, 69);
+            this.tt.Location = new System.Drawing.Point(12, 25);
             this.tt.Name = "tt";
             this.tt.Size = new System.Drawing.Size(433, 29);
             this.tt.TabIndex = 1;
             this.tt.Text = "Bạn muốn xuất theo định dạng nào ?";
+            // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.FlatAppearance.BorderSize = 4;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.IconChar = FontAwesome.Sharp.IconChar.XmarkSquare;
+            this.btnClose.IconColor = System.Drawing.Color.White;
+            this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnClose.IconSize = 20;
+            this.btnClose.Location = new System.Drawing.Point(431, 148);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnClose.Size = new System.Drawing.Size(106, 41);
+            this.btnClose.TabIndex = 352;
+            this.btnClose.Text = "Đóng";
+            this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // formExKC
             // 
@@ -144,7 +147,7 @@
         private contructions_functions.panelLinearGradient panelLinearGradient1;
         private FontAwesome.Sharp.IconButton excel;
         private FontAwesome.Sharp.IconButton pdf;
-        private FontAwesome.Sharp.IconButton btnEx;
         public System.Windows.Forms.Label tt;
+        private FontAwesome.Sharp.IconButton btnClose;
     }
 }

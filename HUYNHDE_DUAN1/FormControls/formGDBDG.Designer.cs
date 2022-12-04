@@ -1017,12 +1017,12 @@ namespace HUYNHDE_DUAN1
         private FontAwesome.Sharp.IconButton btnExportTKCC;
         private FontAwesome.Sharp.IconButton btnAddTKCC;
         private FontAwesome.Sharp.IconButton btnUpGradeTKCC;
-        private System.Windows.Forms.DataGridView GridCungCau;
+        public System.Windows.Forms.DataGridView GridCungCau;
         private System.Windows.Forms.Panel panel8;
         private FontAwesome.Sharp.IconButton btnExportVH;
         private FontAwesome.Sharp.IconButton btnAddVH;
         private FontAwesome.Sharp.IconButton btnUpgradeVH;
-        private System.Windows.Forms.DataGridView GridVonHoa;
+        public System.Windows.Forms.DataGridView GridVonHoa;
         private System.Windows.Forms.DateTimePicker todate_bdg;
         private System.Windows.Forms.DateTimePicker fromdate_bdg;
         private System.Windows.Forms.DateTimePicker todate_tkcc;

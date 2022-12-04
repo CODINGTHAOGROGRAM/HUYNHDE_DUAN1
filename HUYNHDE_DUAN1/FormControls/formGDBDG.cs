@@ -216,19 +216,19 @@ namespace HUYNHDE_DUAN1
 
         private void btnExportsBDG_Click(object sender, EventArgs e)
         {
-            formExBDG show = new formExBDG();
+            formExBDG show = new formExBDG(this);
             show.ShowDialog();
         }
 
         private void btnExportTKCC_Click(object sender, EventArgs e)
         {
-            formExKC show = new formExKC();
+            formExKC show = new formExKC(this );
             show.ShowDialog();
         }
 
         private void btnExportVH_Click(object sender, EventArgs e)
         {
-            formExVH show = new formExVH();
+            formExVH show = new formExVH(this);
             show.ShowDialog();
         }
 

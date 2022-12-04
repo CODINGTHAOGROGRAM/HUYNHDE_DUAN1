@@ -52,6 +52,9 @@ namespace HUYNHDE_DUAN1.FormExportFile
             this.Close();
         }
 
-
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

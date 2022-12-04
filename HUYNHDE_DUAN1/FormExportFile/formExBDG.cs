@@ -64,12 +64,12 @@ namespace HUYNHDE_DUAN1.FormExportFile
             GDBDG = _GDBDG;
 
         }
-
-       
-        private void btnEx_Click(object sender, EventArgs e)
+        private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
+
 
         private void excel_Click(object sender, EventArgs e)
         {
@@ -163,5 +163,7 @@ namespace HUYNHDE_DUAN1.FormExportFile
                 f.showMessage("Thông báo", "Không có dữ liệu để xuất!", "icon_error.png", "Đóng");
             }
         }
+
+       
     }
 }

@@ -189,7 +189,7 @@
             this.btnAdd.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
             this.btnAdd.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAdd.IconSize = 20;
-            this.btnAdd.Location = new System.Drawing.Point(613, 37);
+            this.btnAdd.Location = new System.Drawing.Point(605, 37);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnAdd.Size = new System.Drawing.Size(119, 45);
@@ -267,10 +267,10 @@
         private System.Windows.Forms.Panel panel5;
         private FontAwesome.Sharp.IconButton btnFind;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView GridViewHoSo;
         private FontAwesome.Sharp.IconButton btnExports;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txtFind;
         private FontAwesome.Sharp.IconButton btnRefesh;
+        public System.Windows.Forms.DataGridView GridViewHoSo;
     }
 }

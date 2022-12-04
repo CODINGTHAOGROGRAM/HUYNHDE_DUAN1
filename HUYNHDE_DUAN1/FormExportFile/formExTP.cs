@@ -64,10 +64,7 @@ namespace HUYNHDE_DUAN1.FormUI
             gdtp = _gdtp;
         }
 
-        private void btnEx_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+ 
 
         private void excel_Click(object sender, EventArgs e)
         {
@@ -158,6 +155,11 @@ namespace HUYNHDE_DUAN1.FormUI
                 f.showMessage("Thông báo", "Không có dữ liệu để xuất!", "icon_error.png", "Đóng");
             }
 
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
     

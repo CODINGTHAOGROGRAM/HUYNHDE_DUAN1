@@ -61,12 +61,6 @@ namespace HUYNHDE_DUAN1.FormExportFile
             this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 50, 50));
             GDBDG = _GDBDG;
         }
-
-        private void btnEx_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void excel_Click(object sender, EventArgs e)
         {
             DataGridView data = new DataGridView();
@@ -157,6 +151,11 @@ namespace HUYNHDE_DUAN1.FormExportFile
             {
                 f.showMessage("Thông báo", "Không có dữ liệu để xuất!", "icon_error.png", "Đóng");
             }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

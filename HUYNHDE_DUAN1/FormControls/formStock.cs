@@ -78,7 +78,7 @@ namespace HUYNHDE_DUAN1
 
         private void btnExports_Click(object sender, EventArgs e)
         {
-            formExFileStock show = new formExFileStock();
+            formExFileStock show = new formExFileStock(this);
             show.ShowDialog();
         }
 

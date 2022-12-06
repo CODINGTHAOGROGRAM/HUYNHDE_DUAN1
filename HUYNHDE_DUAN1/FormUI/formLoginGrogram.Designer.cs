@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panelLinearGradient2 = new HUYNHDE_DUAN1.contructions_functions.panelLinearGradient();
+            this.btnShowPass = new FontAwesome.Sharp.IconPictureBox();
+            this.btnHidePass = new FontAwesome.Sharp.IconPictureBox();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnSignin = new System.Windows.Forms.Button();
@@ -45,6 +47,8 @@
             this.panelLinearGradient1 = new HUYNHDE_DUAN1.contructions_functions.panelLinearGradient();
             this.imgLogin = new System.Windows.Forms.PictureBox();
             this.panelLinearGradient2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnShowPass)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnHidePass)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoLogin)).BeginInit();
@@ -58,6 +62,8 @@
             // 
             this.panelLinearGradient2.Colorleft = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(208)))), ((int)(((byte)(206)))));
             this.panelLinearGradient2.ColorRight = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(208)))), ((int)(((byte)(206)))));
+            this.panelLinearGradient2.Controls.Add(this.btnShowPass);
+            this.panelLinearGradient2.Controls.Add(this.btnHidePass);
             this.panelLinearGradient2.Controls.Add(this.linkLabel2);
             this.panelLinearGradient2.Controls.Add(this.btnExit);
             this.panelLinearGradient2.Controls.Add(this.btnSignin);
@@ -75,7 +81,32 @@
             this.panelLinearGradient2.Name = "panelLinearGradient2";
             this.panelLinearGradient2.Size = new System.Drawing.Size(350, 642);
             this.panelLinearGradient2.TabIndex = 1;
-            this.panelLinearGradient2.Click += new System.EventHandler(this.panelLinearGradient2_Click);
+            // 
+            // btnShowPass
+            // 
+            this.btnShowPass.BackColor = System.Drawing.Color.Transparent;
+            this.btnShowPass.IconChar = FontAwesome.Sharp.IconChar.Eye;
+            this.btnShowPass.IconColor = System.Drawing.Color.White;
+            this.btnShowPass.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnShowPass.Location = new System.Drawing.Point(278, 311);
+            this.btnShowPass.Name = "btnShowPass";
+            this.btnShowPass.Size = new System.Drawing.Size(32, 32);
+            this.btnShowPass.TabIndex = 18;
+            this.btnShowPass.TabStop = false;
+            this.btnShowPass.Click += new System.EventHandler(this.btnShowPass_Click);
+            // 
+            // btnHidePass
+            // 
+            this.btnHidePass.BackColor = System.Drawing.Color.Transparent;
+            this.btnHidePass.IconChar = FontAwesome.Sharp.IconChar.EyeSlash;
+            this.btnHidePass.IconColor = System.Drawing.Color.White;
+            this.btnHidePass.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnHidePass.Location = new System.Drawing.Point(278, 311);
+            this.btnHidePass.Name = "btnHidePass";
+            this.btnHidePass.Size = new System.Drawing.Size(32, 32);
+            this.btnHidePass.TabIndex = 17;
+            this.btnHidePass.TabStop = false;
+            this.btnHidePass.Click += new System.EventHandler(this.btnHidePass_Click);
             // 
             // linkLabel2
             // 
@@ -149,8 +180,7 @@
             this.txtPassword.ForeColor = System.Drawing.Color.White;
             this.txtPassword.Location = new System.Drawing.Point(85, 314);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(222, 19);
+            this.txtPassword.Size = new System.Drawing.Size(187, 19);
             this.txtPassword.TabIndex = 10;
             this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
             // 
@@ -269,6 +299,8 @@
             this.Load += new System.EventHandler(this.formLoginGrogram_Load);
             this.panelLinearGradient2.ResumeLayout(false);
             this.panelLinearGradient2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnShowPass)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnHidePass)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoLogin)).EndInit();
@@ -298,5 +330,7 @@
         private FontAwesome.Sharp.IconPictureBox ExitForms;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnSignin;
+        private FontAwesome.Sharp.IconPictureBox btnShowPass;
+        private FontAwesome.Sharp.IconPictureBox btnHidePass;
     }
 }

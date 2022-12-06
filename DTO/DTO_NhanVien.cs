@@ -29,14 +29,13 @@ namespace DTO
 
         public string Email { get => email; set => email = value; }
 
-        private string matKhau;
-        public string MatKhau { get => matKhau; set => matKhau = value; }
-
         private string gioiTinh;
         public string GioiTinh { get => gioiTinh; set => gioiTinh = value; }
 
         private string soDienThoai;
         public string SoDienThoai { get => soDienThoai; set => soDienThoai = value; }
+        private string cCCD;
+        public string CCCD { get => cCCD; set => cCCD = value; }
 
         private DateTime ngaySinh;
 
@@ -54,14 +53,14 @@ namespace DTO
         private string ghichu;
         public string GhiChu { get => ghichu; set => ghichu = value; }
 
-        public DTO_NhanVien(string manv, string ten, string email, string matkhau, string gioitinh, string sodienthoai, DateTime ngaysinh, string diachi, string vaitro, string anh,string ghichu)
+        public DTO_NhanVien(string manv, string ten, string email, string gioitinh, string sodienthoai, string cccd, DateTime ngaysinh, string diachi, string vaitro, string ghichu, string anh)
         {
             this.maNV = manv;
             this.ten = ten;
             this.email = email;
-            this.matKhau = matkhau;
             this.gioiTinh = gioitinh;
             this.soDienThoai = sodienthoai;
+            this.cCCD = cccd;
             this.ngaySinh = ngaysinh;
             this.diaChi = diachi;
             this.vaiTro = vaitro;

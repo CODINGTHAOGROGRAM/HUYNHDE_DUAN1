@@ -31,7 +31,7 @@ namespace DAL
         {
             string query = "Update_NV @MaNV , @Ten , @Email , @GioiTinh , @SoDienThoai , @CMND , @NgaySinh , @DiaChi , @ChucVu , @GhiChu , @Anh";
 
-            int result = DataProvider.Instance.ExecuteNonquery(query, new object[] { MaNV , Ten , GioiTinh, SoDienThoai, CMND , NgaySinh.ToString("MM/dd/yyyy"), DiaChi,
+            int result = DataProvider.Instance.ExecuteNonquery(query, new object[] { MaNV , Ten , Email, GioiTinh, SoDienThoai, CMND , NgaySinh.ToString("MM/dd/yyyy"), DiaChi,
             ChucVu, GhiChu, Anh});
 
             return result > 0;

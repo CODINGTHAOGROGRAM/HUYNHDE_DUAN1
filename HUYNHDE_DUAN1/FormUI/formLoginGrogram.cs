@@ -115,7 +115,8 @@ namespace HUYNHDE_DUAN1
             {
                 msLogin.showMessage("Thông báo", "Sai tài khoản hoặc mật khẩu!", "icon_error_login.png", "Đóng");
             }
-
+           //string x = BUS_TaiKhoan.Instance.enCodeOneWay(txtPassword.Text);
+           // MessageBox.Show(x);
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

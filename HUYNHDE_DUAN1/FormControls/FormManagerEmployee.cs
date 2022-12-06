@@ -1,10 +1,9 @@
-﻿using BUS;
+﻿using Aspose.Cells;
+using BUS;
 using System;
 using System.Drawing;
-using System.Drawing.Imaging;
 using System.IO;
 using System.Windows.Forms;
-using static System.Net.WebRequestMethods;
 
 namespace HUYNHDE_DUAN1
 {
@@ -21,7 +20,7 @@ namespace HUYNHDE_DUAN1
         private void btnAdd_Click(object sender, EventArgs e)
         {
             FormMain main = new FormMain();
-            formChildManagerEmployee mf = new formChildManagerEmployee();
+            formChildManagerEmployee mf = new formChildManagerEmployee(this);
             main.Opacity = 70;
             mf.ShowDialog();
         }
@@ -41,7 +40,7 @@ namespace HUYNHDE_DUAN1
             dataGridNV.ForeColor = System.Drawing.Color.Black;
             dataGridNV.DataSource = BUS_NhanVien.Instance.LoadData();
         }
-
+        string image_temp;
         private void dataGridNV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             foreach (DataGridViewRow r in dataGridNV.SelectedRows)
@@ -73,6 +72,7 @@ namespace HUYNHDE_DUAN1
                 }
                 pic.SizeMode = PictureBoxSizeMode.StretchImage;
                 pic.Image = Image.FromFile($"../../img/Avatar_user/{r.Cells[9].Value}");
+                image_temp = r.Cells[9].Value.ToString();
                 tb_note.Text = r.Cells[10].Value.ToString();
             }
         }
@@ -93,7 +93,6 @@ namespace HUYNHDE_DUAN1
                 {
                     pic.Image = new Bitmap(image);
                 }
-
             }
         }
 
@@ -101,14 +100,21 @@ namespace HUYNHDE_DUAN1
         {
             try
             {
-           
-            string workingDirectory = Environment.CurrentDirectory;
-            
-            string targetPath = Directory.GetParent(workingDirectory).Parent.FullName + @"\img\Avatar_user\";
-            string CorrectFile = System.IO.Path.GetFileName(filePathImg);
-            System.IO.File.Copy(filePathImg, targetPath+ CorrectFile, true);
+                string CorrectFile ="";
+                string targetPath = "";
+                string workingDirectory = "";
+                if (filePathImg != null)
+                {
+                    workingDirectory = Environment.CurrentDirectory;
 
-                
+                    targetPath = Directory.GetParent(workingDirectory).Parent.FullName + @"\img\Avatar_user\";
+                    CorrectFile = System.IO.Path.GetFileName(filePathImg);
+                    System.IO.File.Copy(filePathImg, targetPath + CorrectFile, true);
+                }
+                else
+                {
+                    CorrectFile = image_temp;
+                }
 
                 string maNV = tb_maNV.Text;
                 string hoTen = tb_hoTen.Text;
@@ -174,7 +180,7 @@ namespace HUYNHDE_DUAN1
             }
         }
 
-        void clear()
+        private void clear()
         {
             tb_maNV.Text = "";
             tb_hoTen.Text = "";
@@ -185,7 +191,6 @@ namespace HUYNHDE_DUAN1
             tb_sDth.Text = "";
             tb_CCCD.Text = "";
             tb_diaChi.Text = "";
-            pic.Image.Dispose();
             pic.Image = null;
             tb_note.Text = "";
             LoadData();

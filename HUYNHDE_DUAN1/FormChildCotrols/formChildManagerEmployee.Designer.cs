@@ -28,25 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tb_Email = new System.Windows.Forms.TextBox();
+            this.tb_cccD = new System.Windows.Forms.TextBox();
+            this.tb_soDienThoai = new System.Windows.Forms.TextBox();
+            this.tb_hoVaTen = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.Nu = new System.Windows.Forms.RadioButton();
+            this.Nam = new System.Windows.Forms.RadioButton();
+            this.NVien = new System.Windows.Forms.RadioButton();
+            this.QTri = new System.Windows.Forms.RadioButton();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.btnFind = new FontAwesome.Sharp.IconButton();
+            this.tb_Note = new System.Windows.Forms.RichTextBox();
+            this.tb_diaChi = new System.Windows.Forms.RichTextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -56,9 +53,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.btnLoadImg = new FontAwesome.Sharp.IconButton();
-            this.ImgAvtEmployee = new System.Windows.Forms.PictureBox();
+            this.avatar = new System.Windows.Forms.PictureBox();
             this.panelControlSizeForm = new HUYNHDE_DUAN1.contructions_functions.panelLinearGradient();
             this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
@@ -70,7 +66,11 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelControlForm = new HUYNHDE_DUAN1.contructions_functions.panelLinearGradient();
             this.label11 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.ImgAvtEmployee)).BeginInit();
+            this.tb_maNV = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.ngay = new System.Windows.Forms.DateTimePicker();
+            ((System.ComponentModel.ISupportInitialize)(this.avatar)).BeginInit();
             this.panelControlSizeForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
@@ -80,60 +80,49 @@
             this.panelControlForm.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox6
+            // tb_Email
             // 
-            this.textBox6.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox6.Location = new System.Drawing.Point(140, 196);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(396, 19);
-            this.textBox6.TabIndex = 91;
+            this.tb_Email.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.tb_Email.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.tb_Email.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.tb_Email.Location = new System.Drawing.Point(140, 196);
+            this.tb_Email.Name = "tb_Email";
+            this.tb_Email.Size = new System.Drawing.Size(396, 19);
+            this.tb_Email.TabIndex = 91;
             // 
-            // textBox5
+            // tb_cccD
             // 
-            this.textBox5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox5.Location = new System.Drawing.Point(207, 442);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(329, 19);
-            this.textBox5.TabIndex = 90;
+            this.tb_cccD.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.tb_cccD.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_cccD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.tb_cccD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.tb_cccD.Location = new System.Drawing.Point(207, 442);
+            this.tb_cccD.Name = "tb_cccD";
+            this.tb_cccD.Size = new System.Drawing.Size(329, 19);
+            this.tb_cccD.TabIndex = 90;
             // 
-            // textBox4
+            // tb_soDienThoai
             // 
-            this.textBox4.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox4.Location = new System.Drawing.Point(175, 388);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(361, 19);
-            this.textBox4.TabIndex = 89;
+            this.tb_soDienThoai.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.tb_soDienThoai.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_soDienThoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.tb_soDienThoai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.tb_soDienThoai.Location = new System.Drawing.Point(175, 388);
+            this.tb_soDienThoai.Name = "tb_soDienThoai";
+            this.tb_soDienThoai.Size = new System.Drawing.Size(361, 19);
+            this.tb_soDienThoai.TabIndex = 89;
             // 
-            // textBox3
+            // tb_hoVaTen
             // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox3.Location = new System.Drawing.Point(140, 334);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(396, 19);
-            this.textBox3.TabIndex = 88;
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox2.Location = new System.Drawing.Point(140, 142);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(396, 19);
-            this.textBox2.TabIndex = 87;
+            this.tb_hoVaTen.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.tb_hoVaTen.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_hoVaTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.tb_hoVaTen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.tb_hoVaTen.Location = new System.Drawing.Point(140, 142);
+            this.tb_hoVaTen.Name = "tb_hoVaTen";
+            this.tb_hoVaTen.Size = new System.Drawing.Size(396, 19);
+            this.tb_hoVaTen.TabIndex = 87;
             // 
             // textBox1
             // 
@@ -146,57 +135,57 @@
             this.textBox1.Size = new System.Drawing.Size(300, 19);
             this.textBox1.TabIndex = 64;
             // 
-            // radioButton4
+            // Nu
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.radioButton4.Location = new System.Drawing.Point(22, 39);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(42, 20);
-            this.radioButton4.TabIndex = 86;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Nữ";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.Nu.AutoSize = true;
+            this.Nu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Nu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.Nu.Location = new System.Drawing.Point(22, 39);
+            this.Nu.Name = "Nu";
+            this.Nu.Size = new System.Drawing.Size(42, 20);
+            this.Nu.TabIndex = 86;
+            this.Nu.TabStop = true;
+            this.Nu.Text = "Nữ";
+            this.Nu.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // Nam
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.radioButton3.Location = new System.Drawing.Point(22, 11);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(54, 20);
-            this.radioButton3.TabIndex = 85;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Nam";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.Nam.AutoSize = true;
+            this.Nam.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Nam.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.Nam.Location = new System.Drawing.Point(22, 11);
+            this.Nam.Name = "Nam";
+            this.Nam.Size = new System.Drawing.Size(54, 20);
+            this.Nam.TabIndex = 85;
+            this.Nam.TabStop = true;
+            this.Nam.Text = "Nam";
+            this.Nam.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // NVien
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.radioButton2.Location = new System.Drawing.Point(12, 39);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(85, 20);
-            this.radioButton2.TabIndex = 84;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Nhân viên";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.NVien.AutoSize = true;
+            this.NVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NVien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.NVien.Location = new System.Drawing.Point(12, 39);
+            this.NVien.Name = "NVien";
+            this.NVien.Size = new System.Drawing.Size(85, 20);
+            this.NVien.TabIndex = 84;
+            this.NVien.TabStop = true;
+            this.NVien.Text = "Nhân viên";
+            this.NVien.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // QTri
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.radioButton1.Location = new System.Drawing.Point(12, 11);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(70, 20);
-            this.radioButton1.TabIndex = 83;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Quản trị";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.QTri.AutoSize = true;
+            this.QTri.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QTri.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.QTri.Location = new System.Drawing.Point(12, 11);
+            this.QTri.Name = "QTri";
+            this.QTri.Size = new System.Drawing.Size(70, 20);
+            this.QTri.TabIndex = 83;
+            this.QTri.TabStop = true;
+            this.QTri.Text = "Quản trị";
+            this.QTri.UseVisualStyleBackColor = true;
             // 
             // panel10
             // 
@@ -238,55 +227,29 @@
             this.panel5.Size = new System.Drawing.Size(396, 2);
             this.panel5.TabIndex = 78;
             // 
-            // richTextBox2
+            // tb_Note
             // 
-            this.richTextBox2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.richTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.richTextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.richTextBox2.Location = new System.Drawing.Point(694, 409);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(247, 170);
-            this.richTextBox2.TabIndex = 82;
-            this.richTextBox2.Text = "";
+            this.tb_Note.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.tb_Note.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tb_Note.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.tb_Note.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.tb_Note.Location = new System.Drawing.Point(694, 409);
+            this.tb_Note.Name = "tb_Note";
+            this.tb_Note.Size = new System.Drawing.Size(247, 170);
+            this.tb_Note.TabIndex = 82;
+            this.tb_Note.Text = "";
             // 
-            // richTextBox1
+            // tb_diaChi
             // 
-            this.richTextBox1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.richTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.richTextBox1.Location = new System.Drawing.Point(140, 505);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(401, 74);
-            this.richTextBox1.TabIndex = 81;
-            this.richTextBox1.Text = "";
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.panel4.Location = new System.Drawing.Point(140, 116);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(300, 2);
-            this.panel4.TabIndex = 75;
-            // 
-            // btnFind
-            // 
-            this.btnFind.FlatAppearance.BorderSize = 4;
-            this.btnFind.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFind.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnFind.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.btnFind.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.btnFind.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.btnFind.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnFind.IconSize = 25;
-            this.btnFind.Location = new System.Drawing.Point(449, 71);
-            this.btnFind.Name = "btnFind";
-            this.btnFind.Size = new System.Drawing.Size(87, 45);
-            this.btnFind.TabIndex = 74;
-            this.btnFind.Text = "Tìm";
-            this.btnFind.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnFind.UseVisualStyleBackColor = true;
+            this.tb_diaChi.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.tb_diaChi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tb_diaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.tb_diaChi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.tb_diaChi.Location = new System.Drawing.Point(140, 505);
+            this.tb_diaChi.Name = "tb_diaChi";
+            this.tb_diaChi.Size = new System.Drawing.Size(401, 74);
+            this.tb_diaChi.TabIndex = 81;
+            this.tb_diaChi.Text = "";
             // 
             // label10
             // 
@@ -387,17 +350,6 @@
             this.label1.TabIndex = 65;
             this.label1.Text = "Email:";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.label2.Location = new System.Drawing.Point(18, 97);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 20);
-            this.label2.TabIndex = 63;
-            this.label2.Text = "Tìm kiếm:";
-            // 
             // btnLoadImg
             // 
             this.btnLoadImg.FlatAppearance.BorderSize = 4;
@@ -416,14 +368,14 @@
             this.btnLoadImg.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLoadImg.UseVisualStyleBackColor = true;
             // 
-            // ImgAvtEmployee
+            // avatar
             // 
-            this.ImgAvtEmployee.BackColor = System.Drawing.Color.DarkGray;
-            this.ImgAvtEmployee.Location = new System.Drawing.Point(611, 71);
-            this.ImgAvtEmployee.Name = "ImgAvtEmployee";
-            this.ImgAvtEmployee.Size = new System.Drawing.Size(331, 291);
-            this.ImgAvtEmployee.TabIndex = 61;
-            this.ImgAvtEmployee.TabStop = false;
+            this.avatar.BackColor = System.Drawing.Color.DarkGray;
+            this.avatar.Location = new System.Drawing.Point(611, 71);
+            this.avatar.Name = "avatar";
+            this.avatar.Size = new System.Drawing.Size(331, 291);
+            this.avatar.TabIndex = 61;
+            this.avatar.TabStop = false;
             // 
             // panelControlSizeForm
             // 
@@ -552,8 +504,8 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.radioButton2);
-            this.panel1.Controls.Add(this.radioButton1);
+            this.panel1.Controls.Add(this.NVien);
+            this.panel1.Controls.Add(this.QTri);
             this.panel1.Location = new System.Drawing.Point(130, 253);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(121, 75);
@@ -561,8 +513,8 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.radioButton3);
-            this.panel2.Controls.Add(this.radioButton4);
+            this.panel2.Controls.Add(this.Nam);
+            this.panel2.Controls.Add(this.Nu);
             this.panel2.Location = new System.Drawing.Point(414, 253);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(121, 75);
@@ -592,33 +544,79 @@
             this.label11.TabIndex = 2;
             this.label11.Text = "Thêm nhân viên";
             // 
+            // tb_maNV
+            // 
+            this.tb_maNV.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.tb_maNV.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_maNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.tb_maNV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.tb_maNV.Location = new System.Drawing.Point(140, 88);
+            this.tb_maNV.Name = "tb_maNV";
+            this.tb_maNV.Size = new System.Drawing.Size(396, 19);
+            this.tb_maNV.TabIndex = 101;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.panel3.Location = new System.Drawing.Point(140, 116);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(396, 2);
+            this.panel3.TabIndex = 100;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.label2.Location = new System.Drawing.Point(18, 97);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(107, 20);
+            this.label2.TabIndex = 99;
+            this.label2.Text = "Mã nhân viên:";
+            // 
+            // ngay
+            // 
+            this.ngay.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ngay.CustomFormat = "dd/MM/yyyy";
+            this.ngay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ngay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.ngay.Location = new System.Drawing.Point(140, 337);
+            this.ngay.MaximumSize = new System.Drawing.Size(41000, 25);
+            this.ngay.MinimumSize = new System.Drawing.Size(270, 25);
+            this.ngay.Name = "ngay";
+            this.ngay.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.ngay.Size = new System.Drawing.Size(396, 25);
+            this.ngay.TabIndex = 357;
+            // 
             // formChildManagerEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(1099, 696);
+            this.Controls.Add(this.ngay);
+            this.Controls.Add(this.tb_maNV);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.panelControlForm);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnRefesh);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.tb_Email);
+            this.Controls.Add(this.tb_cccD);
+            this.Controls.Add(this.tb_soDienThoai);
+            this.Controls.Add(this.tb_hoVaTen);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.panel10);
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
-            this.Controls.Add(this.richTextBox2);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.btnFind);
+            this.Controls.Add(this.tb_Note);
+            this.Controls.Add(this.tb_diaChi);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -628,14 +626,13 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnLoadImg);
-            this.Controls.Add(this.ImgAvtEmployee);
+            this.Controls.Add(this.avatar);
             this.Name = "formChildManagerEmployee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "formChildManagerStudent";
             this.Click += new System.EventHandler(this.formChildManagerEmployee_Click);
-            ((System.ComponentModel.ISupportInitialize)(this.ImgAvtEmployee)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.avatar)).EndInit();
             this.panelControlSizeForm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
@@ -653,25 +650,22 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tb_Email;
+        private System.Windows.Forms.TextBox tb_cccD;
+        private System.Windows.Forms.TextBox tb_soDienThoai;
+        private System.Windows.Forms.TextBox tb_hoVaTen;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton Nu;
+        private System.Windows.Forms.RadioButton Nam;
+        private System.Windows.Forms.RadioButton NVien;
+        private System.Windows.Forms.RadioButton QTri;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Panel panel4;
-        private FontAwesome.Sharp.IconButton btnFind;
+        private System.Windows.Forms.RichTextBox tb_Note;
+        private System.Windows.Forms.RichTextBox tb_diaChi;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
@@ -681,9 +675,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private FontAwesome.Sharp.IconButton btnLoadImg;
-        private System.Windows.Forms.PictureBox ImgAvtEmployee;
+        private System.Windows.Forms.PictureBox avatar;
         private contructions_functions.panelLinearGradient panelControlSizeForm;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
@@ -695,5 +688,9 @@
         private System.Windows.Forms.Panel panel2;
         private contructions_functions.panelLinearGradient panelControlForm;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox tb_maNV;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DateTimePicker ngay;
     }
 }

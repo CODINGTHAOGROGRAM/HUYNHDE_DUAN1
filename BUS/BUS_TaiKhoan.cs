@@ -23,7 +23,7 @@ namespace BUS
         {
             return DAL_TaiKhoan.Instance.Login(username, password);
         }
-        public  string enCodeOneWay(string _input)
+        public string enCodeOneWay(string _input)
         {
             using(MD5 md5Hash = MD5.Create())
             {

@@ -22,5 +22,17 @@ namespace BUS
         {
             return DAL_TaiKhoan.Instance.Login(username, password);
         }
+        public static string enCodeOneWay(string _input)
+        {
+
+        }
+        public static string enCodeTwoWay(string _input)
+        {
+            char[] inPut_PassEn = _input.ToCharArray();
+            var input_WithPass = inPut_PassEn.Select((val, ind) => new {val, ind }).ToArray();
+            var char_input_Encode = input_WithPass.Select( c => c.val + c.ind + (input_WithPass.Length > c.ind + 1 ? input_WithPass[c.ind + 1].val % 2 : 0)).Select(c =>(char)c).ToArray(); 
+            string res = new string(char_input_Encode);
+            return res;
+        }
     }
 }

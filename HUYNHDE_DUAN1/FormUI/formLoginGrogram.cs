@@ -1,23 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using BUS;
+using System;
 using System.Drawing;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using BUS;
-using HUYNHDE_DUAN1.Properties;
-using static HUYNHDE_DUAN1.formMessageLogin;
 
 namespace HUYNHDE_DUAN1
 {
     public partial class formLoginGrogram : Form
     {
         #region Border Forms
-        [DllImport("Gdi32.dll",EntryPoint = "CreateRoundRectRgn")]
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
         (
             int nleftRect,
@@ -34,7 +26,9 @@ namespace HUYNHDE_DUAN1
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             // CallBack BorderForms
-            this.Region = Region.FromHrgn(CreateRoundRectRgn(0,0,Width,Height,30,30));
+            this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 30, 30));
+            this.ActiveControl = null;
+
         }
 
 
@@ -48,13 +42,16 @@ namespace HUYNHDE_DUAN1
         {
             imgLogin.Image = Image.FromFile("../../img/login_bg.png");
             logoLogin.Image = Image.FromFile("../../img/user_login.png");
-            if(Properties.Settings.Default.UserName != string.Empty)
+            txtPassword.UseSystemPasswordChar = true;
+
+
+            if (Properties.Settings.Default.UserName != string.Empty)
             {
                 txtUsername.Text = Properties.Settings.Default.UserName;
                 txtPassword.Text = Properties.Settings.Default.PassWord;
                 checkReme.Checked = true;
             }
-            
+
         }
 
 
@@ -90,24 +87,25 @@ namespace HUYNHDE_DUAN1
         {
             var userName = txtUsername.Text;
             var passWord = txtPassword.Text;
-            if(checkReme.Checked == true)
+            if (checkReme.Checked == true)
             {
                 Properties.Settings.Default.UserName = txtUsername.Text;
                 Properties.Settings.Default.PassWord = txtPassword.Text;
                 Properties.Settings.Default.Save();
-            }else if(checkReme.Checked == false)
+            }
+            else if (checkReme.Checked == false)
             {
                 Properties.Settings.Default.UserName = "";
                 Properties.Settings.Default.PassWord = "";
                 Properties.Settings.Default.Save();
             }
-           
+
             formMessageLogin msLogin = new formMessageLogin();
-            if(txtUsername.Text == "" || txtPassword.Text == "")
+            if (txtUsername.Text == "" || txtPassword.Text == "")
             {
-                msLogin.showMessage("Thông báo","Không được để trống thông tin!", "icon_info_login.png","Đóng");
+                msLogin.showMessage("Thông báo", "Không được để trống thông tin!", "icon_info_login.png", "Đóng");
             }
-            else if(BUS_TaiKhoan.Instance.Login(userName, passWord))
+            else if (BUS_TaiKhoan.Instance.Login(userName, passWord))
             {
                 FormMain f = new FormMain();
                 this.Hide();
@@ -154,5 +152,44 @@ namespace HUYNHDE_DUAN1
         }
 
        
+
+        //private void txtUsername_Leave(object sender, EventArgs e)
+        //{
+        //    if (txtUsername.Text.Length == 0)
+        //    {
+        //        txtUsername.Text = "Enter UserName";
+        //        txtUsername.ForeColor = Color.Gray;
+        //        SelectNextControl(txtUsername, true, true, false, true);
+        //    }
+        //}
+
+        //private void txtPassword_Leave(object sender, EventArgs e)
+        //{
+        //    if (txtPassword.Text.Length == 0)
+        //    {
+        //        txtPassword.ForeColor = Color.Gray;
+        //        txtPassword.Text = "Enter PassWord";
+        //        txtPassword.UseSystemPasswordChar = false;
+        //        SelectNextControl(txtPassword, true, true, false, true);
+        //    }
+        //}
+
+        private void btnShowPass_Click(object sender, EventArgs e)
+        {
+            if(txtPassword.UseSystemPasswordChar == true)
+            {
+                btnHidePass.BringToFront();
+                txtPassword.UseSystemPasswordChar = false;
+            }
+        }
+
+        private void btnHidePass_Click(object sender, EventArgs e)
+        {
+            if (txtPassword.UseSystemPasswordChar == false)
+            {
+                btnShowPass.BringToFront();
+                txtPassword.UseSystemPasswordChar = true;
+            }
+        }
     }
 }

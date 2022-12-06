@@ -72,7 +72,7 @@ namespace HUYNHDE_DUAN1
                     nVien.Checked = true;
                 }
                 pic.SizeMode = PictureBoxSizeMode.StretchImage;
-                //pic.Image = Image.FromFile($"../../img/Avatar_user/{r.Cells[9].Value.ToString()}");
+                pic.Image = Image.FromFile($"../../img/Avatar_user/{r.Cells[9].Value}");
                 tb_note.Text = r.Cells[10].Value.ToString();
             }
         }
@@ -87,48 +87,12 @@ namespace HUYNHDE_DUAN1
             {
                 //pic.Image = new Bitmap(ofd.FileName);
                 filePathImg = ofd.FileName;
-                using (var bmpTemp = new Bitmap(ofd.FileName))
+                pic.SizeMode = PictureBoxSizeMode.StretchImage;
+
+                using (Image image = Image.FromFile(filePathImg, true))
                 {
-                    pic.Image = new Bitmap(bmpTemp);
+                    pic.Image = new Bitmap(image);
                 }
-                
-                string workingDirectory = Environment.CurrentDirectory;
-                string sourcePath = Directory.GetParent(filePathImg).Parent.FullName;
-                string targetPath = Directory.GetParent(workingDirectory).Parent.Parent.FullName+ @"\img\Avatar_user";
-
-                // Use Path class to manipulate file and directory paths.
-                string sourceFile = System.IO.Path.Combine(sourcePath, filePathImg);
-                string destFile = System.IO.Path.Combine(targetPath, filePathImg);
-
-                // To copy a file to another location and
-                // overwrite the destination file if it already exists.
-                System.IO.File.Copy(sourceFile, destFile, true);
-
-                // To copy all the files in one directory to another directory.
-                // Get the files in the source folder. (To recursively iterate through
-                // all subfolders under the current directory, see
-                // "How to: Iterate Through a Directory Tree.")
-                // Note: Check for target path was performed previously
-                //       in this code example.
-                if (System.IO.Directory.Exists(sourcePath))
-                {
-                    string[] files = System.IO.Directory.GetFiles(sourcePath);
-
-                    // Copy the files and overwrite destination files if they already exist.
-                    foreach (string s in files)
-                    {
-                        // Use static Path methods to extract only the file name from the path.
-                        filePathImg = System.IO.Path.GetFileName(s);
-                        destFile = System.IO.Path.Combine(targetPath, filePathImg);
-                        System.IO.File.Copy(s, destFile, true);
-                    }
-                }
-                else
-                {
-                    f.showMessage("Thông báo", "Có lỗi khi cập nhật dữ liệu, hãy kiểm tra lại!", "icon_error.png", "Đóng");
-                }
-
-
 
             }
         }
@@ -137,6 +101,15 @@ namespace HUYNHDE_DUAN1
         {
             try
             {
+           
+            string workingDirectory = Environment.CurrentDirectory;
+            
+            string targetPath = Directory.GetParent(workingDirectory).Parent.FullName + @"\img\Avatar_user\";
+            string CorrectFile = System.IO.Path.GetFileName(filePathImg);
+            System.IO.File.Copy(filePathImg, targetPath+ CorrectFile, true);
+
+                
+
                 string maNV = tb_maNV.Text;
                 string hoTen = tb_hoTen.Text;
                 string Email = tb_Email.Text;
@@ -162,7 +135,7 @@ namespace HUYNHDE_DUAN1
                 {
                     ChucVu = "Nhân Viên";
                 }
-                string Anh = "";
+                string Anh = CorrectFile;
                 string GhiChu = tb_note.Text;
 
                 if (BUS_NhanVien.Instance.editData(maNV, hoTen, Email, GioiTinh, SoDienThoai, CMND,
@@ -173,8 +146,9 @@ namespace HUYNHDE_DUAN1
                     f.showMessage("Thông báo", "Cập nhật thông tin thành công.", "icon_success.png", "Đóng");
                 }
             }
-            catch (Exception)
+            catch (IOException)
             {
+                throw;
                 formMessage f = new formMessage();
                 f.showMessage("Thông báo", "Có lỗi khi cập nhật dữ liệu, hãy kiểm tra lại!", "icon_error.png", "Đóng");
             }

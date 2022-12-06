@@ -70,6 +70,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnLoadImg = new FontAwesome.Sharp.IconButton();
             this.pic = new System.Windows.Forms.PictureBox();
+            this.btn_clear = new FontAwesome.Sharp.IconButton();
             this.panel11.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridNV)).BeginInit();
@@ -212,7 +213,7 @@
             this.btnAdd.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
             this.btnAdd.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAdd.IconSize = 30;
-            this.btnAdd.Location = new System.Drawing.Point(20, 122);
+            this.btnAdd.Location = new System.Drawing.Point(20, 69);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnAdd.Size = new System.Drawing.Size(120, 50);
@@ -240,6 +241,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.btn_clear);
             this.panel2.Controls.Add(this.btnAdd);
             this.panel2.Controls.Add(this.btnDelete);
             this.panel2.Controls.Add(this.btnSave);
@@ -262,7 +264,7 @@
             this.btnDelete.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
             this.btnDelete.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDelete.IconSize = 25;
-            this.btnDelete.Location = new System.Drawing.Point(20, 412);
+            this.btnDelete.Location = new System.Drawing.Point(20, 372);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnDelete.Size = new System.Drawing.Size(120, 50);
@@ -270,6 +272,7 @@
             this.btnDelete.Text = "Xóa";
             this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnSave
             // 
@@ -283,7 +286,7 @@
             this.btnSave.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
             this.btnSave.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSave.IconSize = 25;
-            this.btnSave.Location = new System.Drawing.Point(20, 267);
+            this.btnSave.Location = new System.Drawing.Point(20, 206);
             this.btnSave.Name = "btnSave";
             this.btnSave.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnSave.Size = new System.Drawing.Size(120, 50);
@@ -652,6 +655,28 @@
             this.pic.TabIndex = 0;
             this.pic.TabStop = false;
             // 
+            // btn_clear
+            // 
+            this.btn_clear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_clear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_clear.FlatAppearance.BorderSize = 4;
+            this.btn_clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_clear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.btn_clear.IconChar = FontAwesome.Sharp.IconChar.Rotate;
+            this.btn_clear.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.btn_clear.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_clear.IconSize = 25;
+            this.btn_clear.Location = new System.Drawing.Point(11, 506);
+            this.btn_clear.Name = "btn_clear";
+            this.btn_clear.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btn_clear.Size = new System.Drawing.Size(131, 50);
+            this.btn_clear.TabIndex = 37;
+            this.btn_clear.Text = "Làm mới";
+            this.btn_clear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_clear.UseVisualStyleBackColor = true;
+            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
+            // 
             // FormManagerEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -718,5 +743,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox tb_maNV;
         private System.Windows.Forms.Panel panel1;
+        private FontAwesome.Sharp.IconButton btn_clear;
     }
 }

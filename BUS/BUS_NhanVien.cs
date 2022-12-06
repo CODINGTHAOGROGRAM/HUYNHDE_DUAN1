@@ -33,5 +33,10 @@ namespace BUS
             ChucVu, GhiChu, Anh);
         }
 
+        public bool deleteData(string ID)
+        {
+            return DAL_NhanVien.Instance.deleteData(ID);
+        }
+
     }
 }

@@ -153,5 +153,47 @@ namespace HUYNHDE_DUAN1
                 f.showMessage("Thông báo", "Có lỗi khi cập nhật dữ liệu, hãy kiểm tra lại!", "icon_error.png", "Đóng");
             }
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            formMessage f = new formMessage();
+            f.showMessage("Thông báo", "Bạn có chắc muốn xoá dữ liệu không?", "icon_info.png", "Xác nhận");
+
+            try
+            {
+                if (f.xacnhan)
+                {
+                    BUS_NhanVien.Instance.deleteData(tb_maNV.Text);
+                    clear();
+                    f.showMessage("Thông báo", "Xoá dữ liệu thành công.", "icon_success.png", "Đóng");
+                }
+            }
+            catch (Exception)
+            {
+                f.showMessage("Thông báo", "Có lỗi khi xoá dữ liệu, hãy kiểm tra lại!", "icon_error.png", "Đóng");
+            }
+        }
+
+        void clear()
+        {
+            tb_maNV.Text = "";
+            tb_hoTen.Text = "";
+            tb_Email.Text = "";
+            qTri.Checked = true;
+            Nam.Checked = true;
+            ngay.Value = DateTime.Today;
+            tb_sDth.Text = "";
+            tb_CCCD.Text = "";
+            tb_diaChi.Text = "";
+            pic.Image.Dispose();
+            pic.Image = null;
+            tb_note.Text = "";
+            LoadData();
+        }
+
+        private void btn_clear_Click(object sender, EventArgs e)
+        {
+            clear();
+        }
     }
 }

@@ -36,5 +36,13 @@ namespace DAL
 
             return result > 0;
         }
+
+        public bool deleteData(string ID)
+        {
+            string query = "Delete_NV @ID";
+            int result = DataProvider.Instance.ExecuteNonquery(query, new object[] { ID });
+            return result > 0;
+
+        }
     }
 }

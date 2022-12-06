@@ -38,5 +38,13 @@ namespace BUS
             return DAL_NhanVien.Instance.deleteData(ID);
         }
 
+        public bool addData(string MaNV, string Ten, string Email, string GioiTinh, string SoDienThoai, string CMND, DateTime NgaySinh, string DiaChi,
+           string ChucVu, string Anh, string MatKhau, string GhiChu)
+        {
+
+            return DAL_NhanVien.Instance.addData(MaNV , Ten , Email, GioiTinh, SoDienThoai, CMND , NgaySinh, DiaChi,
+            ChucVu, Anh, MatKhau, GhiChu);
+
+        }
     }
 }

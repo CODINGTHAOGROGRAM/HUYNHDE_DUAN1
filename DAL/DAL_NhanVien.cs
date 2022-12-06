@@ -37,6 +37,17 @@ namespace DAL
             return result > 0;
         }
 
+        public bool addData(string MaNV, string Ten, string Email, string GioiTinh, string SoDienThoai, string CMND, DateTime NgaySinh, string DiaChi,
+            string ChucVu, string Anh, string MatKhau, string GhiChu)
+        {
+            string query = "Add_NV_TK @MaNV , @Ten , @Email , @GioiTinh , @SoDienThoai , @CMND , @NgaySinh , @DiaChi , @ChucVu , @Anh , @MatKhau , @GhiChu";
+
+            int result = DataProvider.Instance.ExecuteNonquery(query, new object[] { MaNV , Ten , Email, GioiTinh, SoDienThoai, CMND , NgaySinh.ToString("MM/dd/yyyy"), DiaChi,
+            ChucVu, Anh, MatKhau, GhiChu});
+
+            return result > 0;
+        }
+
         public bool deleteData(string ID)
         {
             string query = "Delete_NV @ID";

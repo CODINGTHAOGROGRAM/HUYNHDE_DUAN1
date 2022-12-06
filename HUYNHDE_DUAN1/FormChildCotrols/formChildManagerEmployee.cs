@@ -42,13 +42,15 @@ namespace HUYNHDE_DUAN1
             }
         }
         #endregion MouseDown Form
+        private FormManagerEmployee qlnv;
 
-        public formChildManagerEmployee()
+        public formChildManagerEmployee(FormManagerEmployee _qlnv)
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             // CallBack BorderForms
             this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 30, 30));
+            qlnv = _qlnv;
         }
 
         private void btnAdd_Click(object sender, EventArgs e)

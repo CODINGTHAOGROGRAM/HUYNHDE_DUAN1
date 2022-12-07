@@ -63,5 +63,12 @@ namespace DAL
             return result > 0;
 
         }
+
+        public DataTable findData(string stringFind)
+        {
+            DataTable dtb = new DataTable();
+            string query = " Find_NV @StringFind";
+            return dtb = DataProvider.Instance.Executequery(query, new object[] { stringFind });
+        }
     }
 }

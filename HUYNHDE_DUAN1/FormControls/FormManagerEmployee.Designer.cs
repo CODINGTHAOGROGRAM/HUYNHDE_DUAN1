@@ -36,11 +36,12 @@
             this.qTri = new System.Windows.Forms.RadioButton();
             this.tb_Email = new System.Windows.Forms.TextBox();
             this.tb_CCCD = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tb_tim = new System.Windows.Forms.TextBox();
             this.panel10 = new System.Windows.Forms.Panel();
             this.btnAdd = new FontAwesome.Sharp.IconButton();
             this.dataGridNV = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_clear = new FontAwesome.Sharp.IconButton();
             this.btnDelete = new FontAwesome.Sharp.IconButton();
             this.btnSave = new FontAwesome.Sharp.IconButton();
             this.tb_sDth = new System.Windows.Forms.TextBox();
@@ -70,7 +71,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnLoadImg = new FontAwesome.Sharp.IconButton();
             this.pic = new System.Windows.Forms.PictureBox();
-            this.btn_clear = new FontAwesome.Sharp.IconButton();
             this.panel11.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridNV)).BeginInit();
@@ -178,18 +178,18 @@
             this.tb_CCCD.Size = new System.Drawing.Size(380, 19);
             this.tb_CCCD.TabIndex = 59;
             // 
-            // textBox1
+            // tb_tim
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tb_tim.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox1.Location = new System.Drawing.Point(131, 63);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(300, 19);
-            this.textBox1.TabIndex = 37;
+            this.tb_tim.BackColor = System.Drawing.Color.White;
+            this.tb_tim.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_tim.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.tb_tim.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.tb_tim.Location = new System.Drawing.Point(131, 63);
+            this.tb_tim.Name = "tb_tim";
+            this.tb_tim.Size = new System.Drawing.Size(300, 19);
+            this.tb_tim.TabIndex = 37;
             // 
             // panel10
             // 
@@ -251,6 +251,28 @@
             this.panel2.Size = new System.Drawing.Size(154, 858);
             this.panel2.TabIndex = 99;
             this.panel2.Click += new System.EventHandler(this.panel2_Click);
+            // 
+            // btn_clear
+            // 
+            this.btn_clear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_clear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_clear.FlatAppearance.BorderSize = 4;
+            this.btn_clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_clear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.btn_clear.IconChar = FontAwesome.Sharp.IconChar.Rotate;
+            this.btn_clear.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.btn_clear.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_clear.IconSize = 25;
+            this.btn_clear.Location = new System.Drawing.Point(11, 506);
+            this.btn_clear.Name = "btn_clear";
+            this.btn_clear.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btn_clear.Size = new System.Drawing.Size(131, 50);
+            this.btn_clear.TabIndex = 37;
+            this.btn_clear.Text = "Làm mới";
+            this.btn_clear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_clear.UseVisualStyleBackColor = true;
+            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
             // 
             // btnDelete
             // 
@@ -425,7 +447,7 @@
             this.panel3.Controls.Add(this.tb_CCCD);
             this.panel3.Controls.Add(this.tb_sDth);
             this.panel3.Controls.Add(this.tb_hoTen);
-            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.tb_tim);
             this.panel3.Controls.Add(this.panel10);
             this.panel3.Controls.Add(this.panel9);
             this.panel3.Controls.Add(this.panel8);
@@ -523,6 +545,7 @@
             this.btnFind.Text = "Tìm";
             this.btnFind.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnFind.UseVisualStyleBackColor = true;
+            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
             // label9
             // 
@@ -655,28 +678,6 @@
             this.pic.TabIndex = 0;
             this.pic.TabStop = false;
             // 
-            // btn_clear
-            // 
-            this.btn_clear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_clear.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_clear.FlatAppearance.BorderSize = 4;
-            this.btn_clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_clear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.btn_clear.IconChar = FontAwesome.Sharp.IconChar.Rotate;
-            this.btn_clear.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.btn_clear.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_clear.IconSize = 25;
-            this.btn_clear.Location = new System.Drawing.Point(11, 506);
-            this.btn_clear.Name = "btn_clear";
-            this.btn_clear.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btn_clear.Size = new System.Drawing.Size(131, 50);
-            this.btn_clear.TabIndex = 37;
-            this.btn_clear.Text = "Làm mới";
-            this.btn_clear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_clear.UseVisualStyleBackColor = true;
-            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
-            // 
             // FormManagerEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -709,7 +710,7 @@
         private System.Windows.Forms.RadioButton qTri;
         private System.Windows.Forms.TextBox tb_Email;
         private System.Windows.Forms.TextBox tb_CCCD;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tb_tim;
         private System.Windows.Forms.Panel panel10;
         private FontAwesome.Sharp.IconButton btnAdd;
         private System.Windows.Forms.DataGridView dataGridNV;

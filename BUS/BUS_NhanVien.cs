@@ -61,6 +61,11 @@ namespace BUS
         {
             return DAL_NhanVien.Instance.deleteData(ID);
         }
+
+        public DataTable findData(string StringFind)
+        {
+            return DAL_NhanVien.Instance.findData(StringFind);
+        }
         void SendMail(string maillAd,string pass, string name)
         {
             var fromAddress = new MailAddress("huynh.de.vip.pro.2002.2003@gmail.com", "HUYNH DE");

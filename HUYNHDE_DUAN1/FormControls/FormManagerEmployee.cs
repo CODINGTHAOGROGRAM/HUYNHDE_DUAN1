@@ -71,7 +71,7 @@ namespace HUYNHDE_DUAN1
                     nVien.Checked = true;
                 }
                 pic.SizeMode = PictureBoxSizeMode.StretchImage;
-                pic.Image = Image.FromFile($"../../img/Avatar_user/{r.Cells[9].Value}");
+                pic.Image = Image.FromFile($"../../img/Avatar_user/{r.Cells[10].Value}");
                 image_temp = r.Cells[9].Value.ToString();
                 tb_note.Text = r.Cells[10].Value.ToString();
             }
@@ -198,6 +198,11 @@ namespace HUYNHDE_DUAN1
         public void btn_clear_Click(object sender, EventArgs e)
         {
             clear();
+        }
+
+        private void btnFind_Click(object sender, EventArgs e)
+        {
+            dataGridNV.DataSource = BUS_NhanVien.Instance.findData(tb_tim.Text.Replace('/','-'));
         }
     }
 }

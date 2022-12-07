@@ -205,6 +205,12 @@
     <Compile Include="FormExportFile\formExTP.Designer.cs">
       <DependentUpon>formExTP.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormUI\formChangesPass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUI\formChangesPass.Designer.cs">
+      <DependentUpon>formChangesPass.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUI\formMessageLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -323,6 +329,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormExportFile\formExTP.resx">
       <DependentUpon>formExTP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUI\formChangesPass.resx">
+      <DependentUpon>formChangesPass.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUI\formMessageLogin.resx">
       <DependentUpon>formMessageLogin.cs</DependentUpon>

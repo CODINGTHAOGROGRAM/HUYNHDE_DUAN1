@@ -25,6 +25,26 @@ namespace BUS
            return DAL_NhanVien.Instance.loadData();
         }
 
+        public string getIDNV()
+        {
+            DataTable data = new DataTable();
+            data=DAL_NhanVien.Instance.getIDNV();
+            DataRow lastRow = data.Rows[data.Rows.Count - 1];
+            var value = lastRow["ID"] as string;
+            int idNum = Convert.ToInt32(value);
+            idNum++;
+            string id = $"HD{idNum}";
+            if (id.Count() == 3)
+            {
+                id = id.Replace(idNum.ToString(), $"00{idNum}");
+            }
+            else if (id.Count() == 4)
+            {
+                id = id.Replace(idNum.ToString(), $"0{idNum}");
+            }
+            return id;
+        }
+
         public bool editData(string MaNV, string Ten, string Email, string GioiTinh, string SoDienThoai, string CMND, DateTime NgaySinh, string DiaChi,
            string ChucVu, string GhiChu, string Anh)
         {

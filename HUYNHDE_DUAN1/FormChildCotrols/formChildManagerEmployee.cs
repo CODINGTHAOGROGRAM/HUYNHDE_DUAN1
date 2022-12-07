@@ -149,8 +149,8 @@ namespace HUYNHDE_DUAN1
                 {
                     qlnv.LoadData();
                     
-                    f.showMessage("Thông báo", "Mật khẩu đăng nhập sẽ được gửi đến Email của bạn, \n" +
-                        "Dùng Email để đăng nhập ứng dụng.", "icon_success.png", "Đóng");
+                    f.showMessage("Thông báo", "Mật khẩu sẽ được gửi đến email của bạn,\n" +
+                        "dùng email để đăng nhập ứng dụng.", "icon_success.png", "Đóng");
                 }
             }
             catch (IOException)
@@ -185,7 +185,7 @@ namespace HUYNHDE_DUAN1
         private void btnLoadImg_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+            ofd.Filter = "Image Files(*.jpg; *.jpeg; *.bmp; *.png)|*.jpg; *.jpeg; *.bmp; *.png";
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 //pic.Image = new Bitmap(ofd.FileName);

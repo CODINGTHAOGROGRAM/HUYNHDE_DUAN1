@@ -30,6 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnChangPass = new FontAwesome.Sharp.IconButton();
             this.btnThoat = new FontAwesome.Sharp.IconButton();
             this.btnDangXuat = new FontAwesome.Sharp.IconButton();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -77,6 +78,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.btnChangPass);
             this.panel2.Controls.Add(this.btnThoat);
             this.panel2.Controls.Add(this.btnDangXuat);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
@@ -85,6 +87,25 @@
             this.panel2.Size = new System.Drawing.Size(300, 852);
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // btnChangPass
+            // 
+            this.btnChangPass.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnChangPass.FlatAppearance.BorderSize = 4;
+            this.btnChangPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChangPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnChangPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.btnChangPass.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnChangPass.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.btnChangPass.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnChangPass.IconSize = 25;
+            this.btnChangPass.Location = new System.Drawing.Point(32, 619);
+            this.btnChangPass.Name = "btnChangPass";
+            this.btnChangPass.Size = new System.Drawing.Size(120, 50);
+            this.btnChangPass.TabIndex = 36;
+            this.btnChangPass.Text = "Đổi mật khẩu";
+            this.btnChangPass.UseVisualStyleBackColor = true;
+            this.btnChangPass.Click += new System.EventHandler(this.btnChangPass_Click);
             // 
             // btnThoat
             // 
@@ -499,5 +520,6 @@
         private FontAwesome.Sharp.IconButton btnSave;
         private contructions_functions.CircularPictureBox circularPictureBox1;
         private contructions_functions.CircularPictureBox circularPictureBox2;
+        private FontAwesome.Sharp.IconButton btnChangPass;
     }
 }

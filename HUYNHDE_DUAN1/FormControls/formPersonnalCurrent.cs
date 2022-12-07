@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HUYNHDE_DUAN1.FormUI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -41,5 +42,11 @@ namespace HUYNHDE_DUAN1
             this.ActiveControl = null;
         }
         #endregion
+
+        private void btnChangPass_Click(object sender, EventArgs e)
+        {
+              formChangesPass changesPass= new formChangesPass();
+            changesPass.ShowDialog();
+        }
     }
 }

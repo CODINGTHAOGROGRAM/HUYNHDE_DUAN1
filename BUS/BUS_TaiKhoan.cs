@@ -21,6 +21,7 @@ namespace BUS
 
         public bool Login(string username, string password)
         {
+            password = enCodeOneWay(password);
             return DAL_TaiKhoan.Instance.Login(username, password);
         }
         public string enCodeOneWay(string _input)

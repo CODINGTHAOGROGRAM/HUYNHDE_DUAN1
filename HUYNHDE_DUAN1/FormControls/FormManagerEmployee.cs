@@ -82,7 +82,7 @@ namespace HUYNHDE_DUAN1
         private void btnLoadImg_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+            ofd.Filter = "Image Files(*.jpg; *.jpeg; *.bmp; *.png)|*.jpg; *.jpeg; *.bmp; *.png";
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 //pic.Image = new Bitmap(ofd.FileName);

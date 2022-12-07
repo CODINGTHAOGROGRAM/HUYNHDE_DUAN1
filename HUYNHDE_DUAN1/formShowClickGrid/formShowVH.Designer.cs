@@ -42,13 +42,13 @@
             this.label38 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
-            this.title = new System.Windows.Forms.Label();
             this.panel49 = new System.Windows.Forms.Panel();
-            this.panelControlForm = new HUYNHDE_DUAN1.contructions_functions.panelLinearGradient();
             this.btnExports = new FontAwesome.Sharp.IconButton();
             this.btnSave = new FontAwesome.Sharp.IconButton();
             this.btnClose = new FontAwesome.Sharp.IconButton();
             this.btnDelete = new FontAwesome.Sharp.IconButton();
+            this.panelControlForm = new HUYNHDE_DUAN1.contructions_functions.panelLinearGradient();
+            this.title = new System.Windows.Forms.Label();
             this.panelControlForm.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,7 +58,7 @@
             this.txtThiTruong.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.txtThiTruong.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtThiTruong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtThiTruong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.txtThiTruong.ForeColor = System.Drawing.Color.Navy;
             this.txtThiTruong.Location = new System.Drawing.Point(760, 179);
             this.txtThiTruong.Name = "txtThiTruong";
             this.txtThiTruong.Size = new System.Drawing.Size(255, 19);
@@ -71,7 +71,7 @@
             this.txtNgayGiaoDich.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.txtNgayGiaoDich.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNgayGiaoDich.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtNgayGiaoDich.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.txtNgayGiaoDich.ForeColor = System.Drawing.Color.Navy;
             this.txtNgayGiaoDich.Location = new System.Drawing.Point(668, 130);
             this.txtNgayGiaoDich.Name = "txtNgayGiaoDich";
             this.txtNgayGiaoDich.Size = new System.Drawing.Size(347, 19);
@@ -84,7 +84,7 @@
             this.txtVonHoa.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.txtVonHoa.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtVonHoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtVonHoa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.txtVonHoa.ForeColor = System.Drawing.Color.Navy;
             this.txtVonHoa.Location = new System.Drawing.Point(230, 243);
             this.txtVonHoa.Name = "txtVonHoa";
             this.txtVonHoa.Size = new System.Drawing.Size(327, 19);
@@ -97,7 +97,7 @@
             this.txtGiaDong.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.txtGiaDong.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtGiaDong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtGiaDong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.txtGiaDong.ForeColor = System.Drawing.Color.Navy;
             this.txtGiaDong.Location = new System.Drawing.Point(230, 179);
             this.txtGiaDong.Name = "txtGiaDong";
             this.txtGiaDong.Size = new System.Drawing.Size(327, 19);
@@ -110,7 +110,7 @@
             this.txtMaCK.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.txtMaCK.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMaCK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtMaCK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.txtMaCK.ForeColor = System.Drawing.Color.Navy;
             this.txtMaCK.Location = new System.Drawing.Point(230, 131);
             this.txtMaCK.Name = "txtMaCK";
             this.txtMaCK.Size = new System.Drawing.Size(327, 19);
@@ -158,7 +158,7 @@
             this.label36.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label36.AutoSize = true;
             this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.label36.ForeColor = System.Drawing.Color.Navy;
             this.label36.Location = new System.Drawing.Point(69, 136);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(60, 20);
@@ -170,7 +170,7 @@
             this.label37.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label37.AutoSize = true;
             this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.label37.ForeColor = System.Drawing.Color.Navy;
             this.label37.Location = new System.Drawing.Point(69, 251);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(115, 40);
@@ -182,7 +182,7 @@
             this.label38.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label38.AutoSize = true;
             this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.label38.ForeColor = System.Drawing.Color.Navy;
             this.label38.Location = new System.Drawing.Point(576, 136);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(49, 20);
@@ -194,7 +194,7 @@
             this.label39.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label39.AutoSize = true;
             this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.label39.ForeColor = System.Drawing.Color.Navy;
             this.label39.Location = new System.Drawing.Point(576, 187);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(181, 40);
@@ -206,24 +206,12 @@
             this.label42.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label42.AutoSize = true;
             this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.label42.ForeColor = System.Drawing.Color.Navy;
             this.label42.Location = new System.Drawing.Point(69, 187);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(108, 40);
             this.label42.TabIndex = 325;
             this.label42.Text = "Giá đống cửa:\r\n(Nghìn đồng)";
-            // 
-            // title
-            // 
-            this.title.AutoSize = true;
-            this.title.BackColor = System.Drawing.Color.Transparent;
-            this.title.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.title.Location = new System.Drawing.Point(3, 9);
-            this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(51, 25);
-            this.title.TabIndex = 2;
-            this.title.Text = "title";
             // 
             // panel49
             // 
@@ -234,27 +222,15 @@
             this.panel49.Size = new System.Drawing.Size(327, 2);
             this.panel49.TabIndex = 321;
             // 
-            // panelControlForm
-            // 
-            this.panelControlForm.Colorleft = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(254)))), ((int)(((byte)(250)))));
-            this.panelControlForm.ColorRight = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.panelControlForm.Controls.Add(this.title);
-            this.panelControlForm.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControlForm.Location = new System.Drawing.Point(0, 0);
-            this.panelControlForm.Name = "panelControlForm";
-            this.panelControlForm.Size = new System.Drawing.Size(1084, 50);
-            this.panelControlForm.TabIndex = 319;
-            this.panelControlForm.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelControlForm_MouseDown);
-            // 
             // btnExports
             // 
             this.btnExports.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExports.FlatAppearance.BorderSize = 4;
             this.btnExports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExports.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnExports.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.btnExports.ForeColor = System.Drawing.Color.Navy;
             this.btnExports.IconChar = FontAwesome.Sharp.IconChar.Upload;
-            this.btnExports.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.btnExports.IconColor = System.Drawing.Color.Navy;
             this.btnExports.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnExports.IconSize = 20;
             this.btnExports.Location = new System.Drawing.Point(705, 251);
@@ -273,9 +249,9 @@
             this.btnSave.FlatAppearance.BorderSize = 4;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.btnSave.ForeColor = System.Drawing.Color.Navy;
             this.btnSave.IconChar = FontAwesome.Sharp.IconChar.FloppyDisk;
-            this.btnSave.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.btnSave.IconColor = System.Drawing.Color.Navy;
             this.btnSave.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSave.IconSize = 20;
             this.btnSave.Location = new System.Drawing.Point(580, 251);
@@ -295,9 +271,9 @@
             this.btnClose.FlatAppearance.BorderSize = 4;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnClose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.btnClose.ForeColor = System.Drawing.Color.Navy;
             this.btnClose.IconChar = FontAwesome.Sharp.IconChar.XmarkSquare;
-            this.btnClose.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.btnClose.IconColor = System.Drawing.Color.Navy;
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClose.IconSize = 20;
             this.btnClose.Location = new System.Drawing.Point(830, 251);
@@ -317,9 +293,9 @@
             this.btnDelete.FlatAppearance.BorderSize = 4;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.btnDelete.ForeColor = System.Drawing.Color.Navy;
             this.btnDelete.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
-            this.btnDelete.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.btnDelete.IconColor = System.Drawing.Color.Navy;
             this.btnDelete.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDelete.IconSize = 20;
             this.btnDelete.Location = new System.Drawing.Point(955, 251);
@@ -331,6 +307,30 @@
             this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // panelControlForm
+            // 
+            this.panelControlForm.Colorleft = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(254)))), ((int)(((byte)(250)))));
+            this.panelControlForm.ColorRight = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.panelControlForm.Controls.Add(this.title);
+            this.panelControlForm.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelControlForm.Location = new System.Drawing.Point(0, 0);
+            this.panelControlForm.Name = "panelControlForm";
+            this.panelControlForm.Size = new System.Drawing.Size(1084, 50);
+            this.panelControlForm.TabIndex = 319;
+            this.panelControlForm.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelControlForm_MouseDown);
+            // 
+            // title
+            // 
+            this.title.AutoSize = true;
+            this.title.BackColor = System.Drawing.Color.Transparent;
+            this.title.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.title.Location = new System.Drawing.Point(3, 9);
+            this.title.Name = "title";
+            this.title.Size = new System.Drawing.Size(51, 25);
+            this.title.TabIndex = 2;
+            this.title.Text = "title";
             // 
             // formShowVH
             // 

@@ -75,7 +75,7 @@
             this.tongGTGDLL.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.tongGTGDLL.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tongGTGDLL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.tongGTGDLL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.tongGTGDLL.ForeColor = System.Drawing.Color.Navy;
             this.tongGTGDLL.Location = new System.Drawing.Point(819, 434);
             this.tongGTGDLL.Name = "tongGTGDLL";
             this.tongGTGDLL.Size = new System.Drawing.Size(244, 19);
@@ -87,7 +87,7 @@
             this.tongKLGDLL.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.tongKLGDLL.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tongKLGDLL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.tongKLGDLL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.tongKLGDLL.ForeColor = System.Drawing.Color.Navy;
             this.tongKLGDLL.Location = new System.Drawing.Point(819, 370);
             this.tongKLGDLL.Name = "tongKLGDLL";
             this.tongKLGDLL.Size = new System.Drawing.Size(244, 19);
@@ -99,7 +99,7 @@
             this.tongGTGDLC.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.tongGTGDLC.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tongGTGDLC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.tongGTGDLC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.tongGTGDLC.ForeColor = System.Drawing.Color.Navy;
             this.tongGTGDLC.Location = new System.Drawing.Point(820, 306);
             this.tongGTGDLC.Name = "tongGTGDLC";
             this.tongGTGDLC.Size = new System.Drawing.Size(244, 19);
@@ -111,7 +111,7 @@
             this.tongKLGDLC.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.tongKLGDLC.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tongKLGDLC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.tongKLGDLC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.tongKLGDLC.ForeColor = System.Drawing.Color.Navy;
             this.tongKLGDLC.Location = new System.Drawing.Point(819, 242);
             this.tongKLGDLC.Name = "tongKLGDLC";
             this.tongKLGDLC.Size = new System.Drawing.Size(244, 19);
@@ -123,7 +123,7 @@
             this.TKLLL.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.TKLLL.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TKLLL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.TKLLL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.TKLLL.ForeColor = System.Drawing.Color.Navy;
             this.TKLLL.Location = new System.Drawing.Point(737, 117);
             this.TKLLL.Name = "TKLLL";
             this.TKLLL.Size = new System.Drawing.Size(330, 19);
@@ -135,7 +135,7 @@
             this.TGTLC.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.TGTLC.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TGTLC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.TGTLC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.TGTLC.ForeColor = System.Drawing.Color.Navy;
             this.TGTLC.Location = new System.Drawing.Point(201, 370);
             this.TGTLC.Name = "TGTLC";
             this.TGTLC.Size = new System.Drawing.Size(299, 19);
@@ -147,7 +147,7 @@
             this.TKLLC.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.TKLLC.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TKLLC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.TKLLC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.TKLLC.ForeColor = System.Drawing.Color.Navy;
             this.TKLLC.Location = new System.Drawing.Point(201, 306);
             this.TKLLC.Name = "TKLLC";
             this.TKLLC.Size = new System.Drawing.Size(299, 19);
@@ -159,7 +159,7 @@
             this.GiaDC.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.GiaDC.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.GiaDC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.GiaDC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.GiaDC.ForeColor = System.Drawing.Color.Navy;
             this.GiaDC.Location = new System.Drawing.Point(152, 242);
             this.GiaDC.Name = "GiaDC";
             this.GiaDC.Size = new System.Drawing.Size(347, 19);
@@ -171,7 +171,7 @@
             this.maCK.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.maCK.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.maCK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.maCK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.maCK.ForeColor = System.Drawing.Color.Navy;
             this.maCK.Location = new System.Drawing.Point(152, 117);
             this.maCK.Name = "maCK";
             this.maCK.ReadOnly = true;
@@ -263,7 +263,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.label19.ForeColor = System.Drawing.Color.Navy;
             this.label19.Location = new System.Drawing.Point(33, 379);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(147, 20);
@@ -274,7 +274,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.label18.ForeColor = System.Drawing.Color.Navy;
             this.label18.Location = new System.Drawing.Point(33, 123);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(60, 20);
@@ -285,7 +285,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.label14.ForeColor = System.Drawing.Color.Navy;
             this.label14.Location = new System.Drawing.Point(33, 251);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(65, 20);
@@ -296,7 +296,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.label13.ForeColor = System.Drawing.Color.Navy;
             this.label13.Location = new System.Drawing.Point(562, 123);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(121, 20);
@@ -307,7 +307,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.label10.ForeColor = System.Drawing.Color.Navy;
             this.label10.Location = new System.Drawing.Point(562, 187);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(124, 20);
@@ -318,7 +318,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.label9.ForeColor = System.Drawing.Color.Navy;
             this.label9.Location = new System.Drawing.Point(562, 443);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(213, 20);
@@ -329,7 +329,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.label8.ForeColor = System.Drawing.Color.Navy;
             this.label8.Location = new System.Drawing.Point(33, 315);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(144, 20);
@@ -340,7 +340,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.label7.ForeColor = System.Drawing.Color.Navy;
             this.label7.Location = new System.Drawing.Point(562, 251);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(233, 20);
@@ -351,7 +351,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.label6.ForeColor = System.Drawing.Color.Navy;
             this.label6.Location = new System.Drawing.Point(33, 187);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(49, 20);
@@ -362,7 +362,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.label3.ForeColor = System.Drawing.Color.Navy;
             this.label3.Location = new System.Drawing.Point(562, 379);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(210, 20);
@@ -373,7 +373,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.label1.ForeColor = System.Drawing.Color.Navy;
             this.label1.Location = new System.Drawing.Point(562, 315);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(236, 20);
@@ -386,9 +386,9 @@
             this.btnExports.FlatAppearance.BorderSize = 4;
             this.btnExports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExports.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnExports.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.btnExports.ForeColor = System.Drawing.Color.Navy;
             this.btnExports.IconChar = FontAwesome.Sharp.IconChar.Upload;
-            this.btnExports.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.btnExports.IconColor = System.Drawing.Color.Navy;
             this.btnExports.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnExports.IconSize = 20;
             this.btnExports.Location = new System.Drawing.Point(162, 431);
@@ -407,9 +407,9 @@
             this.btnSave.FlatAppearance.BorderSize = 4;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.btnSave.ForeColor = System.Drawing.Color.Navy;
             this.btnSave.IconChar = FontAwesome.Sharp.IconChar.FloppyDisk;
-            this.btnSave.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.btnSave.IconColor = System.Drawing.Color.Navy;
             this.btnSave.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSave.IconSize = 20;
             this.btnSave.Location = new System.Drawing.Point(37, 431);
@@ -429,9 +429,9 @@
             this.btnClose.FlatAppearance.BorderSize = 4;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnClose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.btnClose.ForeColor = System.Drawing.Color.Navy;
             this.btnClose.IconChar = FontAwesome.Sharp.IconChar.XmarkSquare;
-            this.btnClose.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.btnClose.IconColor = System.Drawing.Color.Navy;
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClose.IconSize = 20;
             this.btnClose.Location = new System.Drawing.Point(412, 431);
@@ -449,7 +449,7 @@
             this.TGTLL.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.TGTLL.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TGTLL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.TGTLL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.TGTLL.ForeColor = System.Drawing.Color.Navy;
             this.TGTLL.Location = new System.Drawing.Point(737, 178);
             this.TGTLL.Name = "TGTLL";
             this.TGTLL.Size = new System.Drawing.Size(330, 19);
@@ -463,9 +463,9 @@
             this.btnDelete.FlatAppearance.BorderSize = 4;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.btnDelete.ForeColor = System.Drawing.Color.Navy;
             this.btnDelete.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
-            this.btnDelete.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.btnDelete.IconColor = System.Drawing.Color.Navy;
             this.btnDelete.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDelete.IconSize = 20;
             this.btnDelete.Location = new System.Drawing.Point(287, 431);
@@ -566,6 +566,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panelControlForm);
+            this.ForeColor = System.Drawing.Color.Navy;
             this.Name = "formShowGDTP";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "formShowGDTP";

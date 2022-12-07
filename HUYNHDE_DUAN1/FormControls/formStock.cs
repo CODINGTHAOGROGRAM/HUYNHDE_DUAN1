@@ -49,24 +49,31 @@ namespace HUYNHDE_DUAN1
 
         private void GridViewHoSo_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            formShowStock show = new formShowStock(this);
+
             try
             {
-                if (GridViewHoSo.Rows[e.RowIndex].Cells[9].Selected)
+                if (GridViewHoSo.Rows[e.RowIndex].Cells[9].Selected == true)
                 {
+                    show.Close();
                     System.Diagnostics.Process.Start(GridViewHoSo.Rows[e.RowIndex].Cells[16].Value.ToString());
+                }
+                else
+                {
+                    List<string> binding = new List<string>();
+                    for (int i = 0; i < GridViewHoSo.Columns.Count; i++)
+                    {
+                        binding.Add(GridViewHoSo.CurrentRow.Cells[i].Value.ToString());
+                    }
+
+                    show.bindindDataGrid(binding);
+                    show.ShowDialog();
                 }
             }
             catch { }
 
 
-            List<string> binding = new List<string>();
-            for (int i = 0; i < GridViewHoSo.Columns.Count; i++)
-            {
-                binding.Add(GridViewHoSo.CurrentRow.Cells[i].Value.ToString());
-            }
-            formShowStock show = new formShowStock(this);
-            show.bindindDataGrid(binding);
-            show.ShowDialog();
+           
 
         }
 

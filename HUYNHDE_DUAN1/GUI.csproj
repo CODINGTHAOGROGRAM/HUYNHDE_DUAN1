@@ -66,6 +66,7 @@
     <Compile Include="contructions_functions\panelLinearGradient.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="FormChildCotrols\ExClass.cs" />
     <Compile Include="FormChildCotrols\formChildDataTP.cs">
       <SubType>Form</SubType>
     </Compile>

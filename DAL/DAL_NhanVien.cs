@@ -26,6 +26,14 @@ namespace DAL
             return data = DataProvider.Instance.Executequery(query);
         }
 
+        public DataTable getIDNV()
+        {
+            DataTable data = new DataTable();
+            string query = "get_NV_ID";
+
+            return data = DataProvider.Instance.Executequery(query);
+        }
+
         public bool editData(string MaNV, string Ten, string Email, string GioiTinh, string SoDienThoai, string CMND, DateTime NgaySinh, string DiaChi,
             string ChucVu, string GhiChu, string Anh)
         {

@@ -35,7 +35,7 @@ namespace HUYNHDE_DUAN1
             this.ActiveControl = null;
         }
 
-        private void LoadData()
+        public void LoadData()
         {
             dataGridNV.ForeColor = System.Drawing.Color.Black;
             dataGridNV.DataSource = BUS_NhanVien.Instance.LoadData();
@@ -154,7 +154,6 @@ namespace HUYNHDE_DUAN1
             }
             catch (IOException)
             {
-                throw;
                 formMessage f = new formMessage();
                 f.showMessage("Thông báo", "Có lỗi khi cập nhật dữ liệu, hãy kiểm tra lại!", "icon_error.png", "Đóng");
             }
@@ -180,7 +179,7 @@ namespace HUYNHDE_DUAN1
             }
         }
 
-        private void clear()
+        public void clear()
         {
             tb_maNV.Text = "";
             tb_hoTen.Text = "";
@@ -196,7 +195,7 @@ namespace HUYNHDE_DUAN1
             LoadData();
         }
 
-        private void btn_clear_Click(object sender, EventArgs e)
+        public void btn_clear_Click(object sender, EventArgs e)
         {
             clear();
         }

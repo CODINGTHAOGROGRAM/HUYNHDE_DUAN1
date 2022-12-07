@@ -367,6 +367,7 @@
             this.btnLoadImg.Text = "Ảnh mới";
             this.btnLoadImg.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLoadImg.UseVisualStyleBackColor = true;
+            this.btnLoadImg.Click += new System.EventHandler(this.btnLoadImg_Click);
             // 
             // avatar
             // 
@@ -552,6 +553,7 @@
             this.tb_maNV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
             this.tb_maNV.Location = new System.Drawing.Point(140, 88);
             this.tb_maNV.Name = "tb_maNV";
+            this.tb_maNV.ReadOnly = true;
             this.tb_maNV.Size = new System.Drawing.Size(396, 19);
             this.tb_maNV.TabIndex = 101;
             // 

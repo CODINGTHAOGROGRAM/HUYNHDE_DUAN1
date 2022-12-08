@@ -60,11 +60,6 @@ namespace HUYNHDE_DUAN1.FormUI
         private void formChangesPass_Load(object sender, EventArgs e)
         {
             logoTeams.Image = Image.FromFile("../../img/huynhde_small.png");
-            txtPassOld.Text = formLoginGrogram.Email;
-
-
-
-
         }
 
         #region 1

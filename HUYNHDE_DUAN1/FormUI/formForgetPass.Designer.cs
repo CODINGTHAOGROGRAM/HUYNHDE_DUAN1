@@ -42,6 +42,7 @@
             this.ExitForms = new FontAwesome.Sharp.IconPictureBox();
             this.panelLinearGradient1 = new HUYNHDE_DUAN1.contructions_functions.panelLinearGradient();
             this.ImgForgetLogin = new System.Windows.Forms.PictureBox();
+            this.back = new System.Windows.Forms.Button();
             this.panelLinearGradient2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
@@ -56,6 +57,7 @@
             // 
             this.panelLinearGradient2.Colorleft = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(208)))), ((int)(((byte)(206)))));
             this.panelLinearGradient2.ColorRight = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(208)))), ((int)(((byte)(206)))));
+            this.panelLinearGradient2.Controls.Add(this.back);
             this.panelLinearGradient2.Controls.Add(this.btnConfirm);
             this.panelLinearGradient2.Controls.Add(this.btnSendkey);
             this.panelLinearGradient2.Controls.Add(this.panel3);
@@ -224,6 +226,19 @@
             this.ImgForgetLogin.Click += new System.EventHandler(this.ImgForgetLogin_Click);
             this.ImgForgetLogin.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ImgForgetLogin_MouseDown);
             // 
+            // back
+            // 
+            this.back.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(208)))), ((int)(((byte)(206)))));
+            this.back.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.back.ForeColor = System.Drawing.Color.White;
+            this.back.Location = new System.Drawing.Point(79, 498);
+            this.back.Name = "back";
+            this.back.Size = new System.Drawing.Size(162, 40);
+            this.back.TabIndex = 16;
+            this.back.Text = "Trở về";
+            this.back.UseVisualStyleBackColor = false;
+            this.back.Click += new System.EventHandler(this.back_Click);
+            // 
             // formForgetPass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -264,5 +279,6 @@
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconPictureBox ExitForms;
         private contructions_functions.panelLinearGradient panelLinearGradient1;
+        private System.Windows.Forms.Button back;
     }
 }

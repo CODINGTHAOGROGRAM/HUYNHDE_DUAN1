@@ -25,5 +25,13 @@ namespace DAL
 
             return result.Rows.Count > 0;
         }
+
+        public bool ResetPW (string email, string password)
+        {
+            string query = "Reset_PW @email , @password";
+            DataTable result = DataProvider.Instance.Executequery(query, new object[] { email, password });
+            return result.Rows.Count > 0;
+            
+        }
     }
 }

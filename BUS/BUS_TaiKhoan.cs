@@ -5,11 +5,14 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Web.Security;
+using static BUS.BUS_NhanVien;
 namespace BUS
 {
     public class BUS_TaiKhoan
     {
+
+        BUS_NhanVien nv = new BUS_NhanVien();
         private static BUS_TaiKhoan instance;
 
         public static BUS_TaiKhoan Instance
@@ -60,6 +63,36 @@ namespace BUS
             }
 
             return strBuilder.ToString();
+        }
+
+        public bool resetPW(string email)
+        {
+            string body = "Mật khẩu mới của bạn là:";
+            string MatKhau = Membership.GeneratePassword(12,0);
+            nv.SendMail(email, MatKhau, "con người quên mật khẩu", body);
+            MatKhau = enCodeOneWay(MatKhau);
+
+            return DAL_TaiKhoan.Instance.ResetPW(email, MatKhau);
+        }
+        string key;
+        public void sendkey(string email)
+        {
+            Random rd = new Random();
+            string body = "Mã xác nhận của bạn là:";
+            key = rd.Next(10000000, 99999999).ToString();
+            nv.SendMail(email, key, "con người quên mật khẩu", body);
+        }
+
+        public bool checkKey(string _key)
+        {
+            if (key == _key)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

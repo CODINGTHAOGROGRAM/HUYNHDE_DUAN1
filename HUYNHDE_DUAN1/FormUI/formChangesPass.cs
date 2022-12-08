@@ -61,6 +61,10 @@ namespace HUYNHDE_DUAN1.FormUI
         {
             logoTeams.Image = Image.FromFile("../../img/huynhde_small.png");
             txtPassOld.Text = formLoginGrogram.Email;
+
+
+
+
         }
 
         #region 1

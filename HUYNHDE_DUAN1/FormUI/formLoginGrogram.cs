@@ -21,7 +21,12 @@ namespace HUYNHDE_DUAN1
         );
         #endregion
         
+        FormMain f = new FormMain();
+        formGDBDG bg = new formGDBDG();
+        formDataTP tp = new formDataTP();   
+        formStock st = new formStock();
 
+        public static string Email;
         public formLoginGrogram()
         {
             InitializeComponent();
@@ -87,6 +92,24 @@ namespace HUYNHDE_DUAN1
         {
             var userName = txtUsername.Text;
             var passWord = txtPassword.Text;
+            Email = txtUsername.Text;
+            string Vaitro = BUS_TaiKhoan.Instance.classifyAccount(userName);
+
+            if (Convert.ToBoolean(Vaitro) == false)
+            {
+                f.btnFormManagerEmplyee.Visible = false;
+                bg.btnAddBDG.Enabled = false;
+                bg.btnUpGradeBDG.Enabled = false;
+                bg.btnAddTKCC.Enabled = false;
+                bg.btnUpGradeTKCC.Enabled = false;
+                bg.btnAddVH.Enabled = false;
+                bg.btnUpgradeVH.Enabled = false;
+                st.btnAdd.Enabled = false;
+                st.btnUpGrade.Enabled = false;
+                tp.btnAdd.Enabled = false;
+                tp.btnUpGrade.Enabled = false;
+            }
+
             if (checkReme.Checked == true)
             {
                 Properties.Settings.Default.UserName = txtUsername.Text;

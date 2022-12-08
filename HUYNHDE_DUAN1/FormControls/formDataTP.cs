@@ -85,20 +85,33 @@ namespace HUYNHDE_DUAN1
 
         private void dataGridGDTP_CellClick(object sender, DataGridViewCellEventArgs e) 
         {
-            List<string> binding = new List<string>();
-            for (int i = 0; i < dataGridGDTP.Columns.Count; i++)
+
+            try
             {
-                if (i == 2)
+                string Vaitro = BUS_TaiKhoan.Instance.classifyAccount(formLoginGrogram.Email);
+
+                if (Convert.ToBoolean(Vaitro) == true)
                 {
-                    string[] date = dataGridGDTP.CurrentRow.Cells[i].Value.ToString().Split('-');
-                    string new_format = date[2] + "/" + date[1] + "/" + date[0];
-                    binding.Add(new_format);
-                    continue;
+                    List<string> binding = new List<string>();
+                    for (int i = 0; i < dataGridGDTP.Columns.Count; i++)
+                    {
+                        if (i == 2)
+                        {
+                            string[] date = dataGridGDTP.CurrentRow.Cells[i].Value.ToString().Split('-');
+                            string new_format = date[2] + "/" + date[1] + "/" + date[0];
+                            binding.Add(new_format);
+                            continue;
+                        }
+                        binding.Add(dataGridGDTP.CurrentRow.Cells[i].Value.ToString());
+                    }
+                    formShowGDTP show = new formShowGDTP(this);
+                    show.showData(binding);
                 }
-                binding.Add(dataGridGDTP.CurrentRow.Cells[i].Value.ToString());
             }
-            formShowGDTP show = new formShowGDTP(this);
-            show.showData(binding);
+            catch { }
+
+
+           
         }
 
         private void btnFind_Click(object sender, EventArgs e)

@@ -50,31 +50,36 @@ namespace HUYNHDE_DUAN1
         private void GridViewHoSo_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             formShowStock show = new formShowStock(this);
-
             try
             {
-                if (GridViewHoSo.Rows[e.RowIndex].Cells[9].Selected == true)
-                {
-                    show.Close();
-                    System.Diagnostics.Process.Start(GridViewHoSo.Rows[e.RowIndex].Cells[16].Value.ToString());
-                }
-                else
-                {
-                    List<string> binding = new List<string>();
-                    for (int i = 0; i < GridViewHoSo.Columns.Count; i++)
-                    {
-                        binding.Add(GridViewHoSo.CurrentRow.Cells[i].Value.ToString());
-                    }
+                string Vaitro = BUS_TaiKhoan.Instance.classifyAccount(formLoginGrogram.Email);
 
-                    show.bindindDataGrid(binding);
-                    show.ShowDialog();
+                if (Convert.ToBoolean(Vaitro) == true)
+                {
+                    try
+                    {
+                        if (GridViewHoSo.Rows[e.RowIndex].Cells[9].Selected == true)
+                        {
+                            show.Close();
+                            System.Diagnostics.Process.Start(GridViewHoSo.Rows[e.RowIndex].Cells[16].Value.ToString());
+                        }
+                        else
+                        {
+                            List<string> binding = new List<string>();
+                            for (int i = 0; i < GridViewHoSo.Columns.Count; i++)
+                            {
+                                binding.Add(GridViewHoSo.CurrentRow.Cells[i].Value.ToString());
+                            }
+
+                            show.bindindDataGrid(binding);
+                            show.ShowDialog();
+                        }
+                    }
+                    catch { }
+
                 }
             }
             catch { }
-
-
-           
-
         }
 
         private void btnUpGrade_Click(object sender, EventArgs e)

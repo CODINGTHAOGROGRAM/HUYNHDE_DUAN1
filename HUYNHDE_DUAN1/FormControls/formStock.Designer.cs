@@ -270,7 +270,7 @@
         private System.Windows.Forms.TextBox txtFind;
         private FontAwesome.Sharp.IconButton btnRefesh;
         public System.Windows.Forms.DataGridView GridViewHoSo;
-        public FontAwesome.Sharp.IconButton btnUpGrade;
-        public FontAwesome.Sharp.IconButton btnAdd;
+        private FontAwesome.Sharp.IconButton btnUpGrade;
+        private FontAwesome.Sharp.IconButton btnAdd;
     }
 }

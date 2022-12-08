@@ -42,6 +42,13 @@ namespace HUYNHDE_DUAN1
             LoadGrid();
             // textBox1.DataBindings.Add(new Binding("Text", GridViewHoSo.DataSource, "MaCK"));
             GridViewHoSo.ForeColor = Color.Black;
+            string Vaitro = BUS_TaiKhoan.Instance.classifyAccount(formLoginGrogram.Email);
+
+            if (Convert.ToBoolean(Vaitro) == false)
+            {
+                btnAdd.Visible= false;
+                btnUpGrade.Visible= false;
+            }
 
 
 

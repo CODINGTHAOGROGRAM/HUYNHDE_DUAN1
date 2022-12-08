@@ -20,12 +20,9 @@ namespace HUYNHDE_DUAN1
             int nHeightEllipse
         );
         #endregion
-        
-        FormMain f = new FormMain();
-        formGDBDG bg = new formGDBDG();
-        formDataTP tp = new formDataTP();   
-        formStock st = new formStock();
 
+
+        
         public static string Email;
         public formLoginGrogram()
         {
@@ -90,11 +87,23 @@ namespace HUYNHDE_DUAN1
 
         private void btnSignin_Click(object sender, EventArgs e)
         {
+            FormMain f = new FormMain();
+            formGDBDG bg = new formGDBDG();
+            formDataTP tp = new formDataTP();
+            formStock st = new formStock();
+           
+
             var userName = txtUsername.Text;
             var passWord = txtPassword.Text;
 
             Email = txtUsername.Text;
 
+            string Vaitro = BUS_TaiKhoan.Instance.classifyAccount(userName);
+            if (Convert.ToBoolean(Vaitro) == false)
+            {
+                f.btnFormManagerEmplyee.Visible = false;
+
+            }
 
 
             if (checkReme.Checked == true)
@@ -118,31 +127,14 @@ namespace HUYNHDE_DUAN1
             }
             else if (BUS_TaiKhoan.Instance.Login(userName, passWord))
             {
-                FormMain f = new FormMain();
+                
                 this.Hide();
-                string Vaitro = BUS_TaiKhoan.Instance.classifyAccount(userName);
-                if (Convert.ToBoolean(Vaitro) == false)
-                {
-                    f.btnFormManagerEmplyee.Visible = false;
-                    bg.btnAddBDG.Enabled = false;
-                    bg.btnUpGradeBDG.Enabled = false;
-                    bg.btnAddTKCC.Enabled = false;
-                    bg.btnUpGradeTKCC.Enabled = false;
-                    bg.btnAddVH.Enabled = false;
-                    bg.btnUpgradeVH.Enabled = false;
-                    st.btnAdd.Enabled = false;
-                    st.btnUpGrade.Enabled = false;
-                    tp.btnAdd.Enabled = false;
-                    tp.btnUpGrade.Enabled = false;
-                }
                 f.ShowDialog();
             }
             else
             {
                 msLogin.showMessage("Thông báo", "Sai tài khoản hoặc mật khẩu!", "icon_error_login.png", "Đóng");
             }
-           //string x = BUS_TaiKhoan.Instance.enCodeOneWay(txtPassword.Text);
-           // MessageBox.Show(x);
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

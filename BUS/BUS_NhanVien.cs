@@ -99,5 +99,15 @@ namespace BUS
             return DAL_NhanVien.Instance.addData(MaNV, Ten, Email, GioiTinh, SoDienThoai, CMND, NgaySinh, DiaChi,
             ChucVu, Anh, MatKhau, GhiChu);
         }
+
+        public DataTable getPersonData(string email)
+        {
+            return DAL_NhanVien.Instance.getPersonData(email);
+        }
+
+        public bool edit_infoPerson(string manv, string sdth, string cmnd, string diachi , string img)
+        {
+            return DAL_NhanVien.Instance.edit_dataPersonal(manv,sdth,cmnd,diachi,img);
+        }
     }
 }

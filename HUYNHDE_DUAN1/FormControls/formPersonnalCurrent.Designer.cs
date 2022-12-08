@@ -34,16 +34,13 @@
             this.btnThoat = new FontAwesome.Sharp.IconButton();
             this.btnDangXuat = new FontAwesome.Sharp.IconButton();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.circularPictureBox2 = new HUYNHDE_DUAN1.contructions_functions.CircularPictureBox();
-            this.circularPictureBox1 = new HUYNHDE_DUAN1.contructions_functions.CircularPictureBox();
             this.btnSave = new FontAwesome.Sharp.IconButton();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.diachi = new System.Windows.Forms.TextBox();
+            this.cmnd = new System.Windows.Forms.TextBox();
+            this.sodienthoai = new System.Windows.Forms.TextBox();
+            this.chucvu = new System.Windows.Forms.TextBox();
+            this.gioitinh = new System.Windows.Forms.TextBox();
+            this.hovaten = new System.Windows.Forms.TextBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -58,11 +55,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lb_mail = new System.Windows.Forms.Label();
+            this.ngay = new System.Windows.Forms.DateTimePicker();
+            this.circularPictureBox2 = new HUYNHDE_DUAN1.contructions_functions.CircularPictureBox();
+            this.avatar = new HUYNHDE_DUAN1.contructions_functions.CircularPictureBox();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.avatar)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -148,16 +148,16 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.ngay);
             this.panel3.Controls.Add(this.circularPictureBox2);
-            this.panel3.Controls.Add(this.circularPictureBox1);
+            this.panel3.Controls.Add(this.avatar);
             this.panel3.Controls.Add(this.btnSave);
-            this.panel3.Controls.Add(this.textBox7);
-            this.panel3.Controls.Add(this.textBox6);
-            this.panel3.Controls.Add(this.textBox5);
-            this.panel3.Controls.Add(this.textBox4);
-            this.panel3.Controls.Add(this.textBox3);
-            this.panel3.Controls.Add(this.textBox2);
-            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.diachi);
+            this.panel3.Controls.Add(this.cmnd);
+            this.panel3.Controls.Add(this.sodienthoai);
+            this.panel3.Controls.Add(this.chucvu);
+            this.panel3.Controls.Add(this.gioitinh);
+            this.panel3.Controls.Add(this.hovaten);
             this.panel3.Controls.Add(this.panel8);
             this.panel3.Controls.Add(this.panel7);
             this.panel3.Controls.Add(this.panel6);
@@ -172,37 +172,13 @@
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.panel10);
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.lb_mail);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
             this.panel3.Location = new System.Drawing.Point(300, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(668, 852);
             this.panel3.TabIndex = 2;
-            // 
-            // circularPictureBox2
-            // 
-            this.circularPictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.circularPictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.circularPictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.circularPictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.circularPictureBox2.Location = new System.Drawing.Point(426, 240);
-            this.circularPictureBox2.Name = "circularPictureBox2";
-            this.circularPictureBox2.Size = new System.Drawing.Size(35, 35);
-            this.circularPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.circularPictureBox2.TabIndex = 136;
-            this.circularPictureBox2.TabStop = false;
-            // 
-            // circularPictureBox1
-            // 
-            this.circularPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.circularPictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.circularPictureBox1.Location = new System.Drawing.Point(272, 85);
-            this.circularPictureBox1.Name = "circularPictureBox1";
-            this.circularPictureBox1.Size = new System.Drawing.Size(200, 200);
-            this.circularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.circularPictureBox1.TabIndex = 0;
-            this.circularPictureBox1.TabStop = false;
             // 
             // btnSave
             // 
@@ -224,90 +200,82 @@
             this.btnSave.Text = "Lưu";
             this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // textBox7
+            // diachi
             // 
-            this.textBox7.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox7.BackColor = System.Drawing.Color.White;
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox7.Location = new System.Drawing.Point(216, 708);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(369, 19);
-            this.textBox7.TabIndex = 32;
+            this.diachi.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.diachi.BackColor = System.Drawing.Color.White;
+            this.diachi.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.diachi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.diachi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.diachi.Location = new System.Drawing.Point(216, 708);
+            this.diachi.Name = "diachi";
+            this.diachi.Size = new System.Drawing.Size(369, 19);
+            this.diachi.TabIndex = 32;
             // 
-            // textBox6
+            // cmnd
             // 
-            this.textBox6.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox6.BackColor = System.Drawing.Color.White;
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox6.Location = new System.Drawing.Point(238, 634);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(347, 19);
-            this.textBox6.TabIndex = 31;
+            this.cmnd.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cmnd.BackColor = System.Drawing.Color.White;
+            this.cmnd.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.cmnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.cmnd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.cmnd.Location = new System.Drawing.Point(238, 634);
+            this.cmnd.Name = "cmnd";
+            this.cmnd.Size = new System.Drawing.Size(347, 19);
+            this.cmnd.TabIndex = 31;
             // 
-            // textBox5
+            // sodienthoai
             // 
-            this.textBox5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox5.BackColor = System.Drawing.Color.White;
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox5.Location = new System.Drawing.Point(216, 560);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(369, 19);
-            this.textBox5.TabIndex = 30;
+            this.sodienthoai.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.sodienthoai.BackColor = System.Drawing.Color.White;
+            this.sodienthoai.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.sodienthoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.sodienthoai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.sodienthoai.Location = new System.Drawing.Point(216, 560);
+            this.sodienthoai.Name = "sodienthoai";
+            this.sodienthoai.Size = new System.Drawing.Size(369, 19);
+            this.sodienthoai.TabIndex = 30;
             // 
-            // textBox4
+            // chucvu
             // 
-            this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox4.BackColor = System.Drawing.Color.White;
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox4.Location = new System.Drawing.Point(216, 486);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(366, 19);
-            this.textBox4.TabIndex = 29;
+            this.chucvu.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.chucvu.BackColor = System.Drawing.Color.White;
+            this.chucvu.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.chucvu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.chucvu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.chucvu.Location = new System.Drawing.Point(216, 486);
+            this.chucvu.Name = "chucvu";
+            this.chucvu.ReadOnly = true;
+            this.chucvu.Size = new System.Drawing.Size(366, 19);
+            this.chucvu.TabIndex = 29;
             // 
-            // textBox3
+            // gioitinh
             // 
-            this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox3.BackColor = System.Drawing.Color.White;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox3.Location = new System.Drawing.Point(476, 411);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(108, 19);
-            this.textBox3.TabIndex = 28;
+            this.gioitinh.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.gioitinh.BackColor = System.Drawing.Color.White;
+            this.gioitinh.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gioitinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.gioitinh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.gioitinh.Location = new System.Drawing.Point(476, 411);
+            this.gioitinh.Name = "gioitinh";
+            this.gioitinh.ReadOnly = true;
+            this.gioitinh.Size = new System.Drawing.Size(108, 19);
+            this.gioitinh.TabIndex = 28;
             // 
-            // textBox2
+            // hovaten
             // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox2.Location = new System.Drawing.Point(216, 411);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(133, 19);
-            this.textBox2.TabIndex = 27;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.textBox1.Location = new System.Drawing.Point(216, 338);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(366, 19);
-            this.textBox1.TabIndex = 26;
+            this.hovaten.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.hovaten.BackColor = System.Drawing.Color.White;
+            this.hovaten.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.hovaten.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.hovaten.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.hovaten.Location = new System.Drawing.Point(216, 338);
+            this.hovaten.Name = "hovaten";
+            this.hovaten.ReadOnly = true;
+            this.hovaten.Size = new System.Drawing.Size(366, 19);
+            this.hovaten.TabIndex = 26;
             // 
             // panel8
             // 
@@ -456,17 +424,55 @@
             this.label2.TabIndex = 12;
             this.label2.Text = "Họ và tên: ";
             // 
-            // label1
+            // lb_mail
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.label1.Location = new System.Drawing.Point(309, 301);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 15);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "do272443@gmail.com";
+            this.lb_mail.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lb_mail.AutoSize = true;
+            this.lb_mail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_mail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.lb_mail.Location = new System.Drawing.Point(309, 301);
+            this.lb_mail.Name = "lb_mail";
+            this.lb_mail.Size = new System.Drawing.Size(133, 15);
+            this.lb_mail.TabIndex = 11;
+            this.lb_mail.Text = "do272443@gmail.com";
+            // 
+            // ngay
+            // 
+            this.ngay.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.ngay.CustomFormat = "dd/MM/yyyy";
+            this.ngay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ngay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.ngay.Location = new System.Drawing.Point(216, 415);
+            this.ngay.MaximumSize = new System.Drawing.Size(347, 25);
+            this.ngay.Name = "ngay";
+            this.ngay.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.ngay.Size = new System.Drawing.Size(131, 23);
+            this.ngay.TabIndex = 356;
+            // 
+            // circularPictureBox2
+            // 
+            this.circularPictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.circularPictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.circularPictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.circularPictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.circularPictureBox2.Location = new System.Drawing.Point(426, 240);
+            this.circularPictureBox2.Name = "circularPictureBox2";
+            this.circularPictureBox2.Size = new System.Drawing.Size(35, 35);
+            this.circularPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.circularPictureBox2.TabIndex = 136;
+            this.circularPictureBox2.TabStop = false;
+            this.circularPictureBox2.Click += new System.EventHandler(this.circularPictureBox2_Click);
+            // 
+            // avatar
+            // 
+            this.avatar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.avatar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.avatar.Location = new System.Drawing.Point(272, 85);
+            this.avatar.Name = "avatar";
+            this.avatar.Size = new System.Drawing.Size(200, 200);
+            this.avatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.avatar.TabIndex = 0;
+            this.avatar.TabStop = false;
             // 
             // formPersonnalCurrent
             // 
@@ -483,7 +489,7 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.avatar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -507,19 +513,19 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label lb_mail;
+        private System.Windows.Forms.TextBox hovaten;
+        private System.Windows.Forms.TextBox diachi;
+        private System.Windows.Forms.TextBox cmnd;
+        private System.Windows.Forms.TextBox sodienthoai;
+        private System.Windows.Forms.TextBox chucvu;
+        private System.Windows.Forms.TextBox gioitinh;
         private FontAwesome.Sharp.IconButton btnThoat;
         private FontAwesome.Sharp.IconButton btnDangXuat;
         private FontAwesome.Sharp.IconButton btnSave;
-        private contructions_functions.CircularPictureBox circularPictureBox1;
+        private contructions_functions.CircularPictureBox avatar;
         private contructions_functions.CircularPictureBox circularPictureBox2;
         private FontAwesome.Sharp.IconButton btnChangPass;
+        private System.Windows.Forms.DateTimePicker ngay;
     }
 }

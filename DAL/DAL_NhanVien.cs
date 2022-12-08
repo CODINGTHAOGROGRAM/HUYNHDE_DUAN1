@@ -70,5 +70,19 @@ namespace DAL
             string query = " Find_NV @StringFind";
             return dtb = DataProvider.Instance.Executequery(query, new object[] { stringFind });
         }
+        public DataTable getPersonData(string email)
+        {
+            DataTable dtb = new DataTable();
+            string query = " show_info_personal @email";
+            return dtb = DataProvider.Instance.Executequery(query, new object[] { email });
+        }
+
+       public bool edit_dataPersonal(string maNV, string sdth, string cmnd, string diachi, string img)
+        {
+            string query = "update_info_personal @MaNV , @sodth , @cmnd , @diachi , @anh";
+            int result = DataProvider.Instance.ExecuteNonquery(query, new object[] { maNV, sdth, cmnd, diachi, img });
+
+            return result > 0;
+        }
     }
 }

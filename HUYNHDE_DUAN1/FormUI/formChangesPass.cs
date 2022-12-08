@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BUS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -44,7 +45,9 @@ namespace HUYNHDE_DUAN1.FormUI
         }
 
         #endregion
-
+        private formMessage form = new formMessage();
+        string passOld = formLoginGrogram.passCu;
+        string Manv = formPersonnalCurrent.IdNv;
         public formChangesPass()
         {
             InitializeComponent();
@@ -57,8 +60,24 @@ namespace HUYNHDE_DUAN1.FormUI
         private void formChangesPass_Load(object sender, EventArgs e)
         {
             logoTeams.Image = Image.FromFile("../../img/huynhde_small.png");
+
+            tb_email.Text = Properties.Settings.Default.email;
+            lb_mkc.Visible=false;
+            lb_mkm.Visible = false;
+            lb_nlmk.Visible = false;
+            btnShowPass.Visible = false;
+            btnHidePass.Visible = false;
+            iconPictureBox1.Visible = false;
+            iconPictureBox2.Visible = false;
+            iconPictureBox3.Visible = false;
+            iconPictureBox4.Visible = false;
+            txtPassNew.Visible = false;
+            txtPassOld.Visible = false;
+            txtReversePass.Visible = false;
+
             txtPassOld.Text = formLoginGrogram.Email;
           
+
         }
 
         #region 1
@@ -131,7 +150,7 @@ namespace HUYNHDE_DUAN1.FormUI
         private void btnCancel_Click(object sender, EventArgs e)
         {
             formMessageLogin form = new formMessageLogin();
-            form.showMessage("Thông báo", "Bạn chắc chắn muốn hủy ?", "icon_info_login.png", "Thoát");
+            form.showMessage("Thông báo", "Bạn chắc chắn muốn đóng ?", "icon_info_login.png", "Đóng");
         }
 
         private void ExitForms_Click(object sender, EventArgs e)
@@ -139,6 +158,77 @@ namespace HUYNHDE_DUAN1.FormUI
             this.Close();
         }
 
-       
+        private void btnGetCode_Click(object sender, EventArgs e)
+        {
+            
+            lb_mkc.Visible = false;
+            lb_mkm.Visible = false;
+            lb_nlmk.Visible = false;
+            btnShowPass.Visible = false;
+            btnHidePass.Visible = false;
+            iconPictureBox1.Visible = false;
+            iconPictureBox2.Visible = false;
+            iconPictureBox3.Visible = false;
+            iconPictureBox4.Visible = false;
+            txtPassNew.Visible = false;
+            txtPassOld.Visible = false;
+            txtReversePass.Visible = false;
+            lb_xacnhan.Visible = true;
+            xacnhan.Visible = true;
+            btnConfirm.Text = "Xác nhận";
+            BUS_TaiKhoan.Instance.sendkeyChange(tb_email.Text);
+            form.showMessage("Thông báo", "Mã xác nhận đã được gửi đến email.", "icon_info.png", "Đóng");
+
+        }
+
+        private void btnConfirm_Click(object sender, EventArgs e)
+        {
+            if (btnConfirm.Text =="Xác nhận")
+            {
+                if (BUS_TaiKhoan.Instance.checkKey(xacnhan.Text))
+                {
+                    lb_mkc.Visible = true;
+                    lb_mkm.Visible = true;
+                    lb_nlmk.Visible = true;
+                    btnShowPass.Visible = true;
+                    btnHidePass.Visible = true;
+                    iconPictureBox1.Visible = true;
+                    iconPictureBox2.Visible = true;
+                    iconPictureBox3.Visible = true;
+                    iconPictureBox4.Visible = true;
+                    txtPassNew.Visible = true;
+                    txtPassOld.Visible = true;
+                    txtReversePass.Visible = true;
+                    lb_xacnhan.Visible = false;
+                    xacnhan.Visible = false;
+                    btnConfirm.Text = "Đổi mật khẩu";
+                }
+                else
+                {
+                    form.showMessage("Thông báo", "Mã xác nhận sai!!!", "icon_error.png", "Đóng");
+                }
+            }
+            else
+            {
+                if (txtPassOld.Text != passOld)
+                {
+                    form.showMessage("Thông báo", "Sai mật khẩu cũ!!!", "icon_info.png", "Đóng");
+                }
+                else if (txtReversePass.Text != txtPassNew.Text)
+                {
+                    form.showMessage("Thông báo", "Mật khẩu không trùng!!!", "icon_info.png", "Đóng");
+                }
+                else if (String.IsNullOrEmpty(txtPassOld.Text) || String.IsNullOrEmpty(txtReversePass.Text) || String.IsNullOrEmpty(txtPassNew.Text) )
+                {
+                    form.showMessage("Thông báo", "Không để trống mật khẩu!!!", "icon_info.png", "Đóng");
+                }
+                else
+                {
+                    BUS_TaiKhoan.Instance.ChangePW(Manv, txtPassOld.Text, txtPassNew.Text);
+                    form.showMessage("Thông báo", "Đổi mật khẩu thành công.", "icon_success.png", "Đóng");
+                    this.Hide();
+                }
+            }
+        }
     }
 }

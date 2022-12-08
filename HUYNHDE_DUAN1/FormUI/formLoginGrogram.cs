@@ -24,6 +24,7 @@ namespace HUYNHDE_DUAN1
 
         
         public static string Email;
+        public static string passCu;
         public formLoginGrogram()
         {
             InitializeComponent();
@@ -45,7 +46,7 @@ namespace HUYNHDE_DUAN1
             imgLogin.Image = Image.FromFile("../../img/login_bg.png");
             logoLogin.Image = Image.FromFile("../../img/user_login.png");
             txtPassword.UseSystemPasswordChar = true;
-
+            passCu = txtPassword.Text;
 
             if (Properties.Settings.Default.UserName != string.Empty)
             {
@@ -95,7 +96,7 @@ namespace HUYNHDE_DUAN1
 
             var userName = txtUsername.Text;
             var passWord = txtPassword.Text;
-
+            passCu = txtPassword.Text;
             Email = txtUsername.Text;
 
             string Vaitro = BUS_TaiKhoan.Instance.classifyAccount(userName);

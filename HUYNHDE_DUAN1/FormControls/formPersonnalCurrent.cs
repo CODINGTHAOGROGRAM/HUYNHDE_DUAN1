@@ -12,8 +12,9 @@ using Image = System.Drawing.Image;
 namespace HUYNHDE_DUAN1
 {
     public partial class formPersonnalCurrent : Form
-
     {
+        public static string IdNv;
+
         string email = Properties.Settings.Default.email;
         public formPersonnalCurrent()
         {
@@ -52,6 +53,7 @@ namespace HUYNHDE_DUAN1
 
         private void btnChangPass_Click(object sender, EventArgs e)
         {
+            IdNv = manv;
             formChangesPass changesPass = new formChangesPass();
             changesPass.ShowDialog();
         }

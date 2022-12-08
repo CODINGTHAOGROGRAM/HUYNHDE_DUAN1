@@ -60,6 +60,7 @@ namespace HUYNHDE_DUAN1.FormUI
         private void formChangesPass_Load(object sender, EventArgs e)
         {
             logoTeams.Image = Image.FromFile("../../img/huynhde_small.png");
+
             tb_email.Text = Properties.Settings.Default.email;
             lb_mkc.Visible=false;
             lb_mkm.Visible = false;
@@ -73,6 +74,10 @@ namespace HUYNHDE_DUAN1.FormUI
             txtPassNew.Visible = false;
             txtPassOld.Visible = false;
             txtReversePass.Visible = false;
+
+            txtPassOld.Text = formLoginGrogram.Email;
+          
+
         }
 
         #region 1

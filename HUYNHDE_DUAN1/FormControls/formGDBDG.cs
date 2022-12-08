@@ -246,6 +246,17 @@ namespace HUYNHDE_DUAN1
         public void formGDBDG_Load(object sender, System.EventArgs e)
         {
             Loadd();
+            string Vaitro = BUS_TaiKhoan.Instance.classifyAccount(formLoginGrogram.Email);
+
+            if (Convert.ToBoolean(Vaitro) == false)
+            {
+                btnAddBDG.Visible= false;
+                btnAddTKCC.Visible= false;
+                btnAddVH.Visible = false;
+                btnUpGradeBDG.Visible= false;
+                btnUpGradeTKCC.Visible= false;
+                btnUpgradeVH.Visible= false;
+            }
 
         }
 

@@ -72,8 +72,8 @@ namespace HUYNHDE_DUAN1
                 }
                 pic.SizeMode = PictureBoxSizeMode.StretchImage;
                 pic.Image = Image.FromFile($"../../img/Avatar_user/{r.Cells[10].Value}");
-                image_temp = r.Cells[9].Value.ToString();
-                tb_note.Text = r.Cells[10].Value.ToString();
+                image_temp = r.Cells[10].Value.ToString();
+                tb_note.Text = r.Cells[9].Value.ToString();
             }
         }
 

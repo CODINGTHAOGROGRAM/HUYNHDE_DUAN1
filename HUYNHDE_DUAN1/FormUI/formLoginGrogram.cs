@@ -20,6 +20,7 @@ namespace HUYNHDE_DUAN1
             int nHeightEllipse
         );
         #endregion
+        
 
         public formLoginGrogram()
         {
@@ -28,7 +29,6 @@ namespace HUYNHDE_DUAN1
             // CallBack BorderForms
             this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 30, 30));
             this.ActiveControl = null;
-
         }
 
 
@@ -91,6 +91,7 @@ namespace HUYNHDE_DUAN1
             {
                 Properties.Settings.Default.UserName = txtUsername.Text;
                 Properties.Settings.Default.PassWord = txtPassword.Text;
+                Properties.Settings.Default.email = txtUsername.Text;
                 Properties.Settings.Default.Save();
             }
             else if (checkReme.Checked == false)

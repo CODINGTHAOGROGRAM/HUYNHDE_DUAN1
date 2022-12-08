@@ -74,6 +74,14 @@ namespace HUYNHDE_DUAN1
         private void formDataTP_Load(object sender, EventArgs e)
         {
             dataGridGDTP.DataSource = BUS_GiaoDichTraiPhieu.Instance.loadData();
+            string Vaitro = BUS_TaiKhoan.Instance.classifyAccount(formLoginGrogram.Email);
+
+            if (Convert.ToBoolean(Vaitro) == false)
+            {
+                btnUpGrade.Visible = false;
+                btnAdd.Visible = false;
+            }
+
         }
 
         public void loadform()

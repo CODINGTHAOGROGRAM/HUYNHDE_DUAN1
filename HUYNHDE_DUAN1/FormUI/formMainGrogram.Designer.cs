@@ -474,6 +474,6 @@
         private System.Windows.Forms.Label lbDate;
         private System.Windows.Forms.PictureBox logoDisplay;
         private FontAwesome.Sharp.IconButton btnFormPersonalCurrent;
-        private FontAwesome.Sharp.IconButton btnFormManagerEmplyee;
+        public FontAwesome.Sharp.IconButton btnFormManagerEmplyee;
     }
 }

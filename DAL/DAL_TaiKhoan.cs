@@ -33,5 +33,14 @@ namespace DAL
             return result.Rows.Count > 0;
             
         }
+        public string classifyAccount(string usName)
+        {
+            string query = "get_vaiTro_Account @us";
+            DataTable dt = DataProvider.Instance.Executequery(query, new object[] { usName });
+            string vaitro = dt.Rows[0][0].ToString();
+            return vaitro;
+        }
+
+
     }
 }

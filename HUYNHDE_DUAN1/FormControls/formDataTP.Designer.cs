@@ -361,13 +361,13 @@
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel2;
         private FontAwesome.Sharp.IconButton btnExports;
-        private FontAwesome.Sharp.IconButton btnAdd;
-        private FontAwesome.Sharp.IconButton btnUpGrade;
         private System.Windows.Forms.DataGridView dataGridGDTP;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DateTimePicker fromdate;
         private System.Windows.Forms.DateTimePicker todate;
         private FontAwesome.Sharp.IconButton iconButton1;
         public System.Windows.Forms.TextBox ma_CK;
+        public FontAwesome.Sharp.IconButton btnAdd;
+        public FontAwesome.Sharp.IconButton btnUpGrade;
     }
 }

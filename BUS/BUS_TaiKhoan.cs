@@ -27,6 +27,13 @@ namespace BUS
             password = enCodeOneWay(password);
             return DAL_TaiKhoan.Instance.Login(username, password);
         }
+
+        public string classifyAccount(string usName)
+        {
+            return DAL_TaiKhoan.Instance.classifyAccount(usName);
+        }
+
+
         public string enCodeOneWay(string _input)
         {
             using(MD5 md5Hash = MD5.Create())

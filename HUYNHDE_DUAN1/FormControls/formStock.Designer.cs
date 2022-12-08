@@ -261,8 +261,6 @@
 
         #endregion
         private System.Windows.Forms.Panel cbbListValue;
-        private FontAwesome.Sharp.IconButton btnUpGrade;
-        private FontAwesome.Sharp.IconButton btnAdd;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel5;
         private FontAwesome.Sharp.IconButton btnFind;
@@ -272,5 +270,7 @@
         private System.Windows.Forms.TextBox txtFind;
         private FontAwesome.Sharp.IconButton btnRefesh;
         public System.Windows.Forms.DataGridView GridViewHoSo;
+        public FontAwesome.Sharp.IconButton btnUpGrade;
+        public FontAwesome.Sharp.IconButton btnAdd;
     }
 }

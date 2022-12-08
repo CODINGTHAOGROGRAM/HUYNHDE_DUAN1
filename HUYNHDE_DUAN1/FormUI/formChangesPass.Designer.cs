@@ -29,6 +29,13 @@
         private void InitializeComponent()
         {
             this.panelLinearGradient2 = new HUYNHDE_DUAN1.contructions_functions.panelLinearGradient();
+            this.lb_xacnhan = new System.Windows.Forms.Label();
+            this.xacnhan = new System.Windows.Forms.TextBox();
+            this.btnGetCode = new System.Windows.Forms.Button();
+            this.lb_nlmk = new System.Windows.Forms.Label();
+            this.lb_mkm = new System.Windows.Forms.Label();
+            this.lb_mkc = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
             this.iconPictureBox4 = new FontAwesome.Sharp.IconPictureBox();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
@@ -38,17 +45,12 @@
             this.txtReversePass = new System.Windows.Forms.TextBox();
             this.txtPassNew = new System.Windows.Forms.TextBox();
             this.txtPassOld = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tb_email = new System.Windows.Forms.TextBox();
             this.logoTeams = new System.Windows.Forms.PictureBox();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.ExitForms = new FontAwesome.Sharp.IconPictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.btnGetCode = new System.Windows.Forms.Button();
             this.panelLinearGradient2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).BeginInit();
@@ -65,10 +67,12 @@
             // 
             this.panelLinearGradient2.Colorleft = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(208)))), ((int)(((byte)(206)))));
             this.panelLinearGradient2.ColorRight = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(208)))), ((int)(((byte)(206)))));
+            this.panelLinearGradient2.Controls.Add(this.lb_xacnhan);
+            this.panelLinearGradient2.Controls.Add(this.xacnhan);
             this.panelLinearGradient2.Controls.Add(this.btnGetCode);
-            this.panelLinearGradient2.Controls.Add(this.label4);
-            this.panelLinearGradient2.Controls.Add(this.label3);
-            this.panelLinearGradient2.Controls.Add(this.label2);
+            this.panelLinearGradient2.Controls.Add(this.lb_nlmk);
+            this.panelLinearGradient2.Controls.Add(this.lb_mkm);
+            this.panelLinearGradient2.Controls.Add(this.lb_mkc);
             this.panelLinearGradient2.Controls.Add(this.label1);
             this.panelLinearGradient2.Controls.Add(this.iconPictureBox3);
             this.panelLinearGradient2.Controls.Add(this.iconPictureBox4);
@@ -79,7 +83,7 @@
             this.panelLinearGradient2.Controls.Add(this.txtReversePass);
             this.panelLinearGradient2.Controls.Add(this.txtPassNew);
             this.panelLinearGradient2.Controls.Add(this.txtPassOld);
-            this.panelLinearGradient2.Controls.Add(this.textBox3);
+            this.panelLinearGradient2.Controls.Add(this.tb_email);
             this.panelLinearGradient2.Controls.Add(this.logoTeams);
             this.panelLinearGradient2.Controls.Add(this.btnConfirm);
             this.panelLinearGradient2.Controls.Add(this.btnCancel);
@@ -89,6 +93,90 @@
             this.panelLinearGradient2.Name = "panelLinearGradient2";
             this.panelLinearGradient2.Size = new System.Drawing.Size(575, 561);
             this.panelLinearGradient2.TabIndex = 5;
+            // 
+            // lb_xacnhan
+            // 
+            this.lb_xacnhan.AutoSize = true;
+            this.lb_xacnhan.BackColor = System.Drawing.Color.Transparent;
+            this.lb_xacnhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_xacnhan.ForeColor = System.Drawing.Color.White;
+            this.lb_xacnhan.Location = new System.Drawing.Point(33, 267);
+            this.lb_xacnhan.Name = "lb_xacnhan";
+            this.lb_xacnhan.Size = new System.Drawing.Size(124, 24);
+            this.lb_xacnhan.TabIndex = 35;
+            this.lb_xacnhan.Text = "Mã xác nhận:";
+            // 
+            // xacnhan
+            // 
+            this.xacnhan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(208)))), ((int)(((byte)(206)))));
+            this.xacnhan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.xacnhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xacnhan.ForeColor = System.Drawing.Color.White;
+            this.xacnhan.Location = new System.Drawing.Point(234, 262);
+            this.xacnhan.Name = "xacnhan";
+            this.xacnhan.Size = new System.Drawing.Size(239, 29);
+            this.xacnhan.TabIndex = 34;
+            // 
+            // btnGetCode
+            // 
+            this.btnGetCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(208)))), ((int)(((byte)(206)))));
+            this.btnGetCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGetCode.ForeColor = System.Drawing.Color.White;
+            this.btnGetCode.Location = new System.Drawing.Point(479, 214);
+            this.btnGetCode.Name = "btnGetCode";
+            this.btnGetCode.Size = new System.Drawing.Size(85, 28);
+            this.btnGetCode.TabIndex = 33;
+            this.btnGetCode.Text = "Lấy mã";
+            this.btnGetCode.UseVisualStyleBackColor = false;
+            this.btnGetCode.Click += new System.EventHandler(this.btnGetCode_Click);
+            // 
+            // lb_nlmk
+            // 
+            this.lb_nlmk.AutoSize = true;
+            this.lb_nlmk.BackColor = System.Drawing.Color.Transparent;
+            this.lb_nlmk.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_nlmk.ForeColor = System.Drawing.Color.White;
+            this.lb_nlmk.Location = new System.Drawing.Point(33, 398);
+            this.lb_nlmk.Name = "lb_nlmk";
+            this.lb_nlmk.Size = new System.Drawing.Size(175, 24);
+            this.lb_nlmk.TabIndex = 32;
+            this.lb_nlmk.Text = "Nhập lại mật khẩu : ";
+            // 
+            // lb_mkm
+            // 
+            this.lb_mkm.AutoSize = true;
+            this.lb_mkm.BackColor = System.Drawing.Color.Transparent;
+            this.lb_mkm.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_mkm.ForeColor = System.Drawing.Color.White;
+            this.lb_mkm.Location = new System.Drawing.Point(33, 356);
+            this.lb_mkm.Name = "lb_mkm";
+            this.lb_mkm.Size = new System.Drawing.Size(137, 24);
+            this.lb_mkm.TabIndex = 31;
+            this.lb_mkm.Text = "Mật khẩu mới : ";
+            // 
+            // lb_mkc
+            // 
+            this.lb_mkc.AutoSize = true;
+            this.lb_mkc.BackColor = System.Drawing.Color.Transparent;
+            this.lb_mkc.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_mkc.ForeColor = System.Drawing.Color.White;
+            this.lb_mkc.Location = new System.Drawing.Point(33, 312);
+            this.lb_mkc.Name = "lb_mkc";
+            this.lb_mkc.Size = new System.Drawing.Size(127, 24);
+            this.lb_mkc.TabIndex = 30;
+            this.lb_mkc.Text = "Mật khẩu cũ : ";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(33, 219);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(72, 24);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "Email : ";
             // 
             // iconPictureBox3
             // 
@@ -122,7 +210,7 @@
             this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Eye;
             this.iconPictureBox1.IconColor = System.Drawing.Color.White;
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.Location = new System.Drawing.Point(479, 339);
+            this.iconPictureBox1.Location = new System.Drawing.Point(479, 348);
             this.iconPictureBox1.Name = "iconPictureBox1";
             this.iconPictureBox1.Size = new System.Drawing.Size(32, 32);
             this.iconPictureBox1.TabIndex = 26;
@@ -135,7 +223,7 @@
             this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.EyeSlash;
             this.iconPictureBox2.IconColor = System.Drawing.Color.White;
             this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox2.Location = new System.Drawing.Point(479, 339);
+            this.iconPictureBox2.Location = new System.Drawing.Point(479, 348);
             this.iconPictureBox2.Name = "iconPictureBox2";
             this.iconPictureBox2.Size = new System.Drawing.Size(32, 32);
             this.iconPictureBox2.TabIndex = 25;
@@ -148,7 +236,7 @@
             this.btnShowPass.IconChar = FontAwesome.Sharp.IconChar.Eye;
             this.btnShowPass.IconColor = System.Drawing.Color.White;
             this.btnShowPass.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnShowPass.Location = new System.Drawing.Point(479, 287);
+            this.btnShowPass.Location = new System.Drawing.Point(479, 304);
             this.btnShowPass.Name = "btnShowPass";
             this.btnShowPass.Size = new System.Drawing.Size(32, 32);
             this.btnShowPass.TabIndex = 24;
@@ -161,7 +249,7 @@
             this.btnHidePass.IconChar = FontAwesome.Sharp.IconChar.EyeSlash;
             this.btnHidePass.IconColor = System.Drawing.Color.White;
             this.btnHidePass.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnHidePass.Location = new System.Drawing.Point(479, 287);
+            this.btnHidePass.Location = new System.Drawing.Point(479, 304);
             this.btnHidePass.Name = "btnHidePass";
             this.btnHidePass.Size = new System.Drawing.Size(32, 32);
             this.btnHidePass.TabIndex = 23;
@@ -184,7 +272,7 @@
             this.txtPassNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(208)))), ((int)(((byte)(206)))));
             this.txtPassNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassNew.ForeColor = System.Drawing.Color.White;
-            this.txtPassNew.Location = new System.Drawing.Point(234, 342);
+            this.txtPassNew.Location = new System.Drawing.Point(234, 351);
             this.txtPassNew.Name = "txtPassNew";
             this.txtPassNew.Size = new System.Drawing.Size(239, 29);
             this.txtPassNew.TabIndex = 21;
@@ -196,26 +284,26 @@
             this.txtPassOld.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtPassOld.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassOld.ForeColor = System.Drawing.Color.White;
-            this.txtPassOld.Location = new System.Drawing.Point(234, 290);
+            this.txtPassOld.Location = new System.Drawing.Point(234, 307);
             this.txtPassOld.Name = "txtPassOld";
             this.txtPassOld.Size = new System.Drawing.Size(239, 29);
             this.txtPassOld.TabIndex = 20;
             this.txtPassOld.UseSystemPasswordChar = true;
             // 
-            // textBox3
+            // tb_email
             // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(208)))), ((int)(((byte)(206)))));
-            this.textBox3.Enabled = false;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.White;
-            this.textBox3.Location = new System.Drawing.Point(234, 235);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(239, 29);
-            this.textBox3.TabIndex = 19;
-            this.textBox3.Text = " lấy cái user name ";
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tb_email.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(208)))), ((int)(((byte)(206)))));
+            this.tb_email.Enabled = false;
+            this.tb_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_email.ForeColor = System.Drawing.Color.White;
+            this.tb_email.Location = new System.Drawing.Point(234, 214);
+            this.tb_email.Multiline = true;
+            this.tb_email.Name = "tb_email";
+            this.tb_email.ReadOnly = true;
+            this.tb_email.Size = new System.Drawing.Size(239, 29);
+            this.tb_email.TabIndex = 19;
+            this.tb_email.Text = " lấy cái user name ";
+            this.tb_email.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // logoTeams
             // 
@@ -238,6 +326,7 @@
             this.btnConfirm.TabIndex = 15;
             this.btnConfirm.Text = "Xác nhận";
             this.btnConfirm.UseVisualStyleBackColor = false;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
             // btnCancel
             // 
@@ -280,66 +369,6 @@
             this.ExitForms.TabStop = false;
             this.ExitForms.Click += new System.EventHandler(this.ExitForms_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(33, 240);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 24);
-            this.label1.TabIndex = 29;
-            this.label1.Text = "Email : ";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(33, 295);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(127, 24);
-            this.label2.TabIndex = 30;
-            this.label2.Text = "Mật khẩu cũ : ";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(33, 347);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(137, 24);
-            this.label3.TabIndex = 31;
-            this.label3.Text = "Mật khẩu mới : ";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(33, 398);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(175, 24);
-            this.label4.TabIndex = 32;
-            this.label4.Text = "Nhập lại mật khẩu : ";
-            // 
-            // btnGetCode
-            // 
-            this.btnGetCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(208)))), ((int)(((byte)(206)))));
-            this.btnGetCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGetCode.ForeColor = System.Drawing.Color.White;
-            this.btnGetCode.Location = new System.Drawing.Point(479, 235);
-            this.btnGetCode.Name = "btnGetCode";
-            this.btnGetCode.Size = new System.Drawing.Size(85, 28);
-            this.btnGetCode.TabIndex = 33;
-            this.btnGetCode.Text = "Lấy mã";
-            this.btnGetCode.UseVisualStyleBackColor = false;
-            // 
             // formChangesPass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -375,17 +404,19 @@
         private System.Windows.Forms.TextBox txtReversePass;
         private System.Windows.Forms.TextBox txtPassNew;
         private System.Windows.Forms.TextBox txtPassOld;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tb_email;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox3;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox4;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
         private FontAwesome.Sharp.IconPictureBox btnShowPass;
         private FontAwesome.Sharp.IconPictureBox btnHidePass;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lb_nlmk;
+        private System.Windows.Forms.Label lb_mkm;
+        private System.Windows.Forms.Label lb_mkc;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnGetCode;
+        private System.Windows.Forms.Label lb_xacnhan;
+        private System.Windows.Forms.TextBox xacnhan;
     }
 }

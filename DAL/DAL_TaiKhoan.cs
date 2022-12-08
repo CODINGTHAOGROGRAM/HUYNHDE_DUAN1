@@ -41,6 +41,13 @@ namespace DAL
             return vaitro;
         }
 
+        public bool ChangePW(string manv, string pwo, string pwn)
+        {
+            string query = "Change_PW @manv , @pwo , @pwn";
+            DataTable result = DataProvider.Instance.Executequery(query, new object[] { manv, pwo,pwn });
+            return result.Rows.Count > 0;
+
+        }
 
     }
 }

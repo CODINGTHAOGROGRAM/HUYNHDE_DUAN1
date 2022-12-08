@@ -24,7 +24,7 @@ namespace BUS
 
         public bool Login(string username, string password)
         {
-            password = enCodeOneWay(password);
+            //password = enCodeOneWay(password);
             return DAL_TaiKhoan.Instance.Login(username, password);
         }
 
@@ -90,6 +90,21 @@ namespace BUS
             key = rd.Next(10000000, 99999999).ToString();
             nv.SendMail(email, key, "con người quên mật khẩu", body);
         }
+
+        public void sendkeyChange(string email)
+        {
+            Random rd = new Random();
+            string body = "Mã xác nhận của bạn là:";
+            key = rd.Next(10000000, 99999999).ToString();
+            nv.SendMail(email, key, "có phải bạn muốn đổi mật khẩu", body);
+        }
+        public bool ChangePW(string manv,string pwo, string pwn)
+        {
+            pwo = enCodeOneWay(pwo);
+            pwn = enCodeOneWay(pwn);
+            return DAL_TaiKhoan.Instance.ChangePW(manv, pwo, pwn);
+        }
+
 
         public bool checkKey(string _key)
         {

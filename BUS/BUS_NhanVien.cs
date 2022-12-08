@@ -91,9 +91,10 @@ namespace BUS
            string ChucVu, string Anh, string MatKhau, string GhiChu)
         {
             BUS_TaiKhoan md5 = new BUS_TaiKhoan();
+            Random rd = new Random();
             string body = $"Chào mừng bạn đến với công ty HuynhDe Cào Cào !!!\n" +
                 $"Mật khẩu đăng nhập của bạn là:";
-            MatKhau = Membership.GeneratePassword(12, 0);
+            MatKhau = rd.Next(1000000000, int.MaxValue).ToString();
             SendMail(Email, MatKhau, Ten, body);
             MatKhau = md5.enCodeOneWay(MatKhau);
             return DAL_NhanVien.Instance.addData(MaNV, Ten, Email, GioiTinh, SoDienThoai, CMND, NgaySinh, DiaChi,

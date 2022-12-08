@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BUS;
+using System;
 using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
@@ -22,6 +23,8 @@ namespace HUYNHDE_DUAN1
 
         #endregion Border Forms
 
+        private formMessageLogin form = new formMessageLogin();
+
         public formForgetPass()
         {
             InitializeComponent();
@@ -38,7 +41,6 @@ namespace HUYNHDE_DUAN1
 
         private void ExitForms_Click(object sender, EventArgs e)
         {
-            formMessageLogin form = new formMessageLogin();
             form.showMessage("Thông báo", "Bạn có thực sự muốn thoát chương trình?", "icon_info_login.png", "Thoát");
         }
 
@@ -73,14 +75,51 @@ namespace HUYNHDE_DUAN1
 
         #endregion MouseDown Form
 
+        private bool IsValidEmail(string email)
+        {
+            var trimmedEmail = email.Trim();
+
+            if (trimmedEmail.EndsWith("."))
+            {
+                return false; // suggested by @TK-421
+            }
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(email);
+                return addr.Address == trimmedEmail;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
         private void btnSendkey_Click(object sender, EventArgs e)
         {
-
+            if (IsValidEmail(txtUsername.Text) == false)
+            {
+                form.showMessage("Thông báo", "Bạn hãy điền đúng địa chỉ email!!", "icon_info_login.png", "Đóng");
+            }
+            else
+            {
+                BUS_TaiKhoan.Instance.sendkey(txtUsername.Text);
+                form.showMessage("Thông báo", "Mã xác nhận đã được gửi đến email.", "icon_info_login.png", "Đóng");
+            }
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
+            if (BUS_TaiKhoan.Instance.checkKey(txtPassword.Text))
+            {
+                BUS_TaiKhoan.Instance.resetPW(txtUsername.Text);
 
+                form.showMessage("Thông báo", "Đặt lại mật khẩu thành công,\n" +
+                "Mật khẩu mới đã được gửi đến email.", "icon_success_login.png", "Đóng");
+            }
+            else
+            {
+                form.showMessage("Thông báo", "Sai mã xác nhận !!!", "icon_info_login.png", "Đóng");
+            }
         }
 
         private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
@@ -90,6 +129,7 @@ namespace HUYNHDE_DUAN1
                 btnConfirm_Click(sender, e);
             }
         }
+
         private void txtUsername_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar.Equals(Convert.ToChar(13)))
@@ -106,6 +146,13 @@ namespace HUYNHDE_DUAN1
         private void panelLinearGradient2_Click(object sender, EventArgs e)
         {
             this.ActiveControl = null;
+        }
+
+        private void back_Click(object sender, EventArgs e)
+        {
+            formLoginGrogram fg = new formLoginGrogram();
+            fg.Show();
+            this.Hide();
         }
     }
 }

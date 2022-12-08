@@ -74,8 +74,9 @@ namespace BUS
 
         public bool resetPW(string email)
         {
+            Random rd = new Random();
             string body = "Mật khẩu mới của bạn là:";
-            string MatKhau = Membership.GeneratePassword(12,0);
+            string MatKhau = rd.Next(1000000000, int.MaxValue).ToString();
             nv.SendMail(email, MatKhau, "con người quên mật khẩu", body);
             MatKhau = enCodeOneWay(MatKhau);
 

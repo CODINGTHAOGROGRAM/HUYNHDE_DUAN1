@@ -14,7 +14,7 @@ namespace BUS
 
         BUS_NhanVien nv = new BUS_NhanVien();
         private static BUS_TaiKhoan instance;
-
+         
         public static BUS_TaiKhoan Instance
         {
             get { if (instance == null) instance = new BUS_TaiKhoan(); return BUS_TaiKhoan.instance; }

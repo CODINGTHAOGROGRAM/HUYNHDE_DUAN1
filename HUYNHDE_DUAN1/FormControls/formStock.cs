@@ -3,6 +3,7 @@ using HUYNHDE_DUAN1.formShowClickGrid;
 using HUYNHDE_DUAN1.FormUI;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -21,6 +22,12 @@ namespace HUYNHDE_DUAN1
             GridViewHoSo.DataSource = BUS_HoSoCuPhieu.Instance.LoadGriHoSo();
         }
 
+        public DataTable export()
+        {
+            DataTable _datatable = GridViewHoSo.DataSource as DataTable;
+
+            return _datatable;
+        }
 
 
         private void btnAdd_Click(object sender, EventArgs e)

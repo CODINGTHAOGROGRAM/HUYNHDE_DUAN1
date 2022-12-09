@@ -1,18 +1,11 @@
-﻿using Aspose.Cells;
-using BUS;
+﻿using BUS;
 using HUYNHDE_DUAN1.formShowClickGrid;
+using HUYNHDE_DUAN1.FormUI;
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.IO;
-using System.Text;
 using System.Threading;
 using System.Windows.Forms;
-using System.Windows.Shapes;
-using System.Drawing;
-using System.Xml.Linq;
-using HUYNHDE_DUAN1.FormUI;
-using System.Windows.Controls;
 
 namespace HUYNHDE_DUAN1
 {
@@ -29,7 +22,7 @@ namespace HUYNHDE_DUAN1
             dataGridGDTP.ForeColor = System.Drawing.Color.Black;
         }
 
-       public DataTable export()
+        public DataTable export()
         {
             DataTable _datatable = dataGridGDTP.DataSource as DataTable;
 
@@ -91,7 +84,7 @@ namespace HUYNHDE_DUAN1
             dataGridGDTP.DataSource = BUS_GiaoDichTraiPhieu.Instance.loadData();
         }
 
-        private void dataGridGDTP_CellClick(object sender, DataGridViewCellEventArgs e) 
+        private void dataGridGDTP_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
             try
@@ -119,7 +112,7 @@ namespace HUYNHDE_DUAN1
             catch { }
 
 
-           
+
         }
 
         private void btnFind_Click(object sender, EventArgs e)
@@ -138,7 +131,7 @@ namespace HUYNHDE_DUAN1
         {
             fromdate.Value = DateTime.Today;
             todate.Value = DateTime.Today;
-            loadform(); 
+            loadform();
         }
 
         private void btnExports_Click(object sender, EventArgs e)
@@ -148,5 +141,5 @@ namespace HUYNHDE_DUAN1
         }
 
     }
-    
+
 }

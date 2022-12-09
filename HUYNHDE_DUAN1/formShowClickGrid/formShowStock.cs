@@ -1,7 +1,9 @@
-﻿using BUS;
+﻿using Aspose.Cells.Charts;
+using BUS;
 using HUYNHDE_DUAN1.FormExportFile;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
@@ -92,10 +94,62 @@ namespace HUYNHDE_DUAN1.formShowClickGrid
             txtLink.Text = data[16];
 
         }
+        public DataTable getdata()
+        {
+            DataTable data = new DataTable();
+
+            List<string> text = new List<string>();
+            text.Add(iD.ToString());
+            text.Add(txtMaCK.Text);
+            text.Add(txtTen.Text);
+            text.Add(txtTruSo.Text);
+            text.Add(txtSdt.Text);
+            text.Add(txtGPTL.Text);
+            text.Add(txtNganh.Text);
+            text.Add(txtNguoiDD.Text);
+            text.Add(txtNguoiCB.Text);
+            text.Add(txtBangCao.Text);
+            text.Add(txtKiemSoat.Text);
+            text.Add(txtGiaoDich.Text);
+            text.Add(dateTimePicker.Text);
+            text.Add(txtVon.Text);
+            text.Add(txtKLLH.Text);
+            text.Add(txtKLNY.Text);
+            text.Add(txtLink.Text);
+
+            data.Columns.Add("ID");
+            data.Columns.Add("Mã CK");
+            data.Columns.Add("Tên TCPH");
+            data.Columns.Add("Trụ sở chính");
+            data.Columns.Add("Số điện thoại");
+            data.Columns.Add("GTPL/ĐKKD");
+            data.Columns.Add("Tên ngành");
+            data.Columns.Add("Người đại diện pháp luật");
+            data.Columns.Add("Người công bố thông tin");
+            data.Columns.Add("Bản cáo bạch");
+            data.Columns.Add("Trạng thái kiểm soát");
+            data.Columns.Add("Trạng thái giao dịch");
+            data.Columns.Add("Ngày GD đầu tiên");
+            data.Columns.Add("Vốn điều lệ (Nghìn đồng)");
+            data.Columns.Add("KLLH (Cổ phiếu)");
+            data.Columns.Add("KLNY (Cổ phiếu)");
+            data.Columns.Add("Link_BCB");
+
+            DataRow row = data.NewRow();
+
+            for (int i = 0; i < data.Columns.Count; i++)
+            {
+                row[i] = text[i];
+            }
+            data.Rows.Add(row);
+
+            return data;
+
+        }
 
         private void btnExports_Click(object sender, EventArgs e)
         {
-            formExShowStock show = new formExShowStock();
+            formExShowStock show = new formExShowStock(this);
             show.ShowDialog();
         }
 
@@ -151,6 +205,6 @@ namespace HUYNHDE_DUAN1.formShowClickGrid
             }
         }
 
-      
+   
     }
 }

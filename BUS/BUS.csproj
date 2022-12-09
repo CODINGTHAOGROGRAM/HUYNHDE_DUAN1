@@ -159,6 +159,7 @@
     <Compile Include="BUS_BienDongGia.cs" />
     <Compile Include="BUS_CungCau.cs" />
     <Compile Include="BUS_ExportFile.cs" />
+    <Compile Include="BUS_exStock.cs" />
     <Compile Include="BUS_GiaoDichTraiPhieu.cs" />
     <Compile Include="BUS_HoSoCuPhieu.cs" />
     <Compile Include="BUS_NhanVien.cs" />

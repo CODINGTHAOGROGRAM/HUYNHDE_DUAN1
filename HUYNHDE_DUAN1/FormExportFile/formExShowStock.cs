@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using BUS;
+using HUYNHDE_DUAN1.formShowClickGrid;
+using System;
 using System.Data;
 using System.Drawing;
-using System.Linq;
+using System.IO;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace HUYNHDE_DUAN1.FormExportFile
@@ -46,22 +44,112 @@ namespace HUYNHDE_DUAN1.FormExportFile
             }
         }
         #endregion
-        public formExShowStock()
+        formMessage f = new formMessage();
+        private formShowStock exShowStock;
+        public formExShowStock(formShowStock _exShowStock)
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             // CallBack BorderForms
             this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 50, 50));
+            exShowStock = _exShowStock;
         }
 
-        private void btnEx_Click(object sender, EventArgs e)
+
+        private void excel_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DataTable data = new DataTable();
+            data = exShowStock.getdata();
+            if (data.Rows.Count > 0)
+            {
+                SaveFileDialog sfd = new SaveFileDialog();
+                sfd.Filter = "XLSX (*.xlsx)|*.xlsx";
+                sfd.FileName = "HoSoChungKhoan.xlsx";
+                bool fileError = false;
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    if (File.Exists(sfd.FileName))
+                    {
+                        try
+                        {
+                            File.Delete(sfd.FileName);
+                        }
+                        catch (IOException ex)
+                        {
+                            fileError = true;
+                            f.showMessage("ex.Message", $"Không thể lưu dữ liệu vào ổ đĩa!", "icon_error", "Đóng");
+                        }
+                    }
+                    if (!fileError)
+                    {
+                        try
+                        {
+                            BUS_exStock.Instance.ExportFileExStock(sfd.FileName, data);
+                            f.showMessage("Thông báo", "Xuất dữ liệu thành công!", "icon_success.png", "Đóng");
+                        }
+                        catch (Exception ex)
+                        {
+                            f.showMessage("Thông báo", $"{ex.Message}", "icon_error", "Đóng");
+                        }
+                    }
+                }
+            }
+            else
+            {
+                f.showMessage("Thông báo", "Không có dữ liệu để xuất!", "icon_error.png", "Đóng");
+            }
         }
 
-        private void panelLinearGradient1_Paint(object sender, PaintEventArgs e)
+        private void pdf_Click(object sender, EventArgs e)
+        {
+            DataTable data = new DataTable();
+            data = exShowStock.getdata();
+            string title = "HỒ SƠ CÁC CHỨNG KHOÁN";
+            if (data.Rows.Count > 0)
+            {
+                SaveFileDialog sfd = new SaveFileDialog();
+                sfd.Filter = "PDF (*.pdf)|*.pdf";
+                sfd.FileName = "HoSoChungKhoan.pdf";
+                bool fileError = false;
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    if (File.Exists(sfd.FileName))
+                    {
+                        try
+                        {
+                            File.Delete(sfd.FileName);
+                        }
+                        catch (IOException ex)
+                        {
+                            fileError = true;
+                            f.showMessage($"{ex.Message}", $"Không thể lưu dữ liệu vào ổ đĩa!", "icon_error", "Đóng");
+                        }
+                    }
+                    if (!fileError)
+                    {
+                        try
+                        {
+                            BUS_exStock.Instance.ExportFilePDF(sfd.FileName, data, title);
+                            f.showMessage("Thông báo", "Xuất dữ liệu thành công!", "icon_success.png", "Đóng");
+                        }
+                        catch (IOException ex)
+                        {
+                            throw;
+                            //MessageBox.Show("Error :" + ex.Message);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                f.showMessage("Thông báo", "Không có dữ liệu để xuất!", "icon_error.png", "Đóng");
+            }
+        }
+
+        private void btnClose_Click_1(object sender, EventArgs e)
         {
             this.Close();
         }
     }
 }
+

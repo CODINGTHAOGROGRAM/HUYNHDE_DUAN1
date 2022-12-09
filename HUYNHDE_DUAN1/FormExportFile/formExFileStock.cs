@@ -60,14 +60,12 @@ namespace HUYNHDE_DUAN1.FormUI
             this.FormBorderStyle = FormBorderStyle.None;
             // CallBack BorderForms
             this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 50, 50));
-            st= _st;
+            st = _st;
         }
         private void excel_Click(object sender, EventArgs e)
         {
-            DataGridView data;
-            data = st.GridViewHoSo;
-            string title = "THÔNG TIN HỒ SƠ CÁC CHỨNG KHOÁN";
-            List<char> kytu = new List<char>() { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P' };
+            DataTable data = new DataTable();
+            data = st.export();
             if (data.Rows.Count > 0)
             {
                 SaveFileDialog sfd = new SaveFileDialog();
@@ -92,13 +90,12 @@ namespace HUYNHDE_DUAN1.FormUI
                     {
                         try
                         {
-                            BUS_ExportFile.Instance.ExportFileXLSX_GDTP2(sfd.FileName, data, title, kytu);
+                            BUS_exStock.Instance.ExportFileExStock(sfd.FileName, data);
                             f.showMessage("Thông báo", "Xuất dữ liệu thành công!", "icon_success.png", "Đóng");
                         }
                         catch (Exception ex)
                         {
-                            throw;
-                            //f.showMessage("Thông báo", $"{ex.Message}", "icon_error", "Đóng");
+                            f.showMessage("Thông báo", $"{ex.Message}", "icon_error", "Đóng");
                         }
                     }
                 }
@@ -113,7 +110,7 @@ namespace HUYNHDE_DUAN1.FormUI
         {
             DataGridView data;
             data = st.GridViewHoSo;
-            float[] widths = new float[] { 20f, 50f, 40f, 40f, 50f, 50f, 50f, 50f, 50f, 50f, 50f, 50f , 50f , 50f , 50f , 50f  };
+            float[] widths = new float[] { 20f, 20f, 40f, 40f, 50f, 50f, 50f, 50f, 50f, 50f, 50f, 50f, 50f, 50f, 50f, 80f };
             string title = "THÔNG TIN HỒ SƠ CÁC CHỨNG KHOÁN";
             if (data.Rows.Count > 0)
             {

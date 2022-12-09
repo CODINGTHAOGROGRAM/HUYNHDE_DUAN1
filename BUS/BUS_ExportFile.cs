@@ -499,7 +499,7 @@ namespace BUS
             //add datatable
             PdfPTable table = new PdfPTable(data.Columns.Count);
             table.HorizontalAlignment = Element.ALIGN_CENTER;
-            table.TotalWidth = 570f;
+            table.TotalWidth = 750f;
             table.LockedWidth = true;
             
             table.SetWidths(Wight);

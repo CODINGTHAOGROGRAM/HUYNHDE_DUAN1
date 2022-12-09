@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.panelLinearGradient1 = new HUYNHDE_DUAN1.contructions_functions.panelLinearGradient();
+            this.btnClose = new FontAwesome.Sharp.IconButton();
             this.excel = new FontAwesome.Sharp.IconButton();
             this.pdf = new FontAwesome.Sharp.IconButton();
             this.tt = new System.Windows.Forms.Label();
-            this.btnClose = new FontAwesome.Sharp.IconButton();
             this.panelLinearGradient1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,6 +52,29 @@
             this.panelLinearGradient1.TabIndex = 3;
             this.panelLinearGradient1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelLinearGradient1_MouseDown);
             // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.FlatAppearance.BorderSize = 4;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.IconChar = FontAwesome.Sharp.IconChar.XmarkSquare;
+            this.btnClose.IconColor = System.Drawing.Color.White;
+            this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnClose.IconSize = 20;
+            this.btnClose.Location = new System.Drawing.Point(431, 148);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnClose.Size = new System.Drawing.Size(106, 41);
+            this.btnClose.TabIndex = 352;
+            this.btnClose.Text = "Đóng";
+            this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // excel
             // 
             this.excel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(153)))), ((int)(((byte)(142)))));
@@ -70,6 +93,7 @@
             this.excel.TabIndex = 37;
             this.excel.Text = "Xuất EXCEL";
             this.excel.UseVisualStyleBackColor = false;
+            this.excel.Click += new System.EventHandler(this.excel_Click);
             // 
             // pdf
             // 
@@ -101,29 +125,6 @@
             this.tt.Size = new System.Drawing.Size(433, 29);
             this.tt.TabIndex = 1;
             this.tt.Text = "Bạn muốn xuất theo định dạng nào ?";
-            // 
-            // btnClose
-            // 
-            this.btnClose.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClose.FlatAppearance.BorderSize = 4;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.IconChar = FontAwesome.Sharp.IconChar.XmarkSquare;
-            this.btnClose.IconColor = System.Drawing.Color.White;
-            this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnClose.IconSize = 20;
-            this.btnClose.Location = new System.Drawing.Point(431, 148);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnClose.Size = new System.Drawing.Size(106, 41);
-            this.btnClose.TabIndex = 352;
-            this.btnClose.Text = "Đóng";
-            this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // formExShowBDG
             // 

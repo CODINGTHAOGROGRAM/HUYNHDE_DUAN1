@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.Security;
@@ -38,8 +39,8 @@ namespace BUS
         {
             using(MD5 md5Hash = MD5.Create())
             {
-                string hash = GetmD5Hash(md5Hash, _input);
-                return enCodeTwoWay(hash);
+                string hash;
+                return hash = GetmD5Hash(md5Hash, _input);
             }
         }
         public  string enCodeTwoWay(string _input)

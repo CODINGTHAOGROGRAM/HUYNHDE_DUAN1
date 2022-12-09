@@ -18,6 +18,14 @@ namespace DAL
             private set { DAL_TaiKhoan.instance = value; }
         }
 
+        public DataTable check_email()
+        {
+            DataTable data = new DataTable();
+            string query = "check_email_exist";
+
+            return data = DataProvider.Instance.Executequery(query);
+        }
+
         public bool Login (string userName, string passWord)
         {
             string query = "GetAccountToLogin @usernam , @password";

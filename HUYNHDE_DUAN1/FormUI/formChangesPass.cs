@@ -74,10 +74,7 @@ namespace HUYNHDE_DUAN1.FormUI
             txtPassNew.Visible = false;
             txtPassOld.Visible = false;
             txtReversePass.Visible = false;
-
-            txtPassOld.Text = formLoginGrogram.Email;
-          
-
+         
         }
 
         #region 1
@@ -149,8 +146,12 @@ namespace HUYNHDE_DUAN1.FormUI
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            formMessageLogin form = new formMessageLogin();
-            form.showMessage("Thông báo", "Bạn chắc chắn muốn đóng ?", "icon_info_login.png", "Đóng");
+            formMessage form = new formMessage();
+            form.showMessage("Thông báo", "Bạn chắc chắn muốn đóng ?", "icon_info.png", "Xác nhận");
+            if (form.xacnhan)
+            {
+                this.Close();
+            }
         }
 
         private void ExitForms_Click(object sender, EventArgs e)
@@ -225,10 +226,15 @@ namespace HUYNHDE_DUAN1.FormUI
                 else
                 {
                     BUS_TaiKhoan.Instance.ChangePW(Manv, txtPassOld.Text, txtPassNew.Text);
-                    form.showMessage("Thông báo", "Đổi mật khẩu thành công.", "icon_success.png", "Đóng");
+                    form.showMessage("Thông báo", "Đổi mật khẩu thành công, \n" +
+                        "bạn hãy đăng nhập lại.", "icon_success.png", "Đóng");
+                    Properties.Settings.Default.PassWord = "";
+                    Properties.Settings.Default.Save();
                     this.Hide();
+                    Application.Restart();
                 }
             }
         }
+
     }
 }

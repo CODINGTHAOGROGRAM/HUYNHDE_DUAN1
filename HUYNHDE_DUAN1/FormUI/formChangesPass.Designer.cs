@@ -262,6 +262,7 @@
             this.txtReversePass.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtReversePass.ForeColor = System.Drawing.Color.White;
             this.txtReversePass.Location = new System.Drawing.Point(234, 395);
+            this.txtReversePass.MaxLength = 32;
             this.txtReversePass.Name = "txtReversePass";
             this.txtReversePass.Size = new System.Drawing.Size(239, 29);
             this.txtReversePass.TabIndex = 22;
@@ -273,6 +274,7 @@
             this.txtPassNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassNew.ForeColor = System.Drawing.Color.White;
             this.txtPassNew.Location = new System.Drawing.Point(234, 351);
+            this.txtPassNew.MaxLength = 32;
             this.txtPassNew.Name = "txtPassNew";
             this.txtPassNew.Size = new System.Drawing.Size(239, 29);
             this.txtPassNew.TabIndex = 21;
@@ -285,6 +287,7 @@
             this.txtPassOld.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassOld.ForeColor = System.Drawing.Color.White;
             this.txtPassOld.Location = new System.Drawing.Point(234, 307);
+            this.txtPassOld.MaxLength = 32;
             this.txtPassOld.Name = "txtPassOld";
             this.txtPassOld.Size = new System.Drawing.Size(239, 29);
             this.txtPassOld.TabIndex = 20;

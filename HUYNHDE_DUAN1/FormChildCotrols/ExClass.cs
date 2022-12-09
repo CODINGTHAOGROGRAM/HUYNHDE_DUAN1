@@ -19,4 +19,9 @@ namespace HUYNHDE_DUAN1.FormChildCotrols
     {
         public NULLException() { }
     }
+
+    public class CHECKMAILException : Exception
+    {
+        public CHECKMAILException() { }
+    }
 }

@@ -10,7 +10,6 @@ namespace HUYNHDE_DUAN1
     public partial class FormManagerEmployee : Form
     {
         private formMessage f = new formMessage();
-
         public FormManagerEmployee()
         {
             InitializeComponent();
@@ -166,6 +165,13 @@ namespace HUYNHDE_DUAN1
 
             try
             {
+                if (tb_maNV.Text == "Admin")
+                {
+                    f.showMessage("Thông báo", "Đây là tài khoản Admin không thể xoá.", "icon_info.png", "Đóng");
+                }else if (Properties.Settings.Default.email == tb_Email.Text)
+                {
+                    f.showMessage("Thông báo", "Bạn không thể tự xoá chính mình.", "icon_info.png", "Đóng");
+                }else
                 if (f.xacnhan)
                 {
                     BUS_NhanVien.Instance.deleteData(tb_maNV.Text);
@@ -202,7 +208,12 @@ namespace HUYNHDE_DUAN1
 
         private void btnFind_Click(object sender, EventArgs e)
         {
-            dataGridNV.DataSource = BUS_NhanVien.Instance.findData(tb_tim.Text.Replace('/','-'));
+            
+        }
+
+        private void tb_tim_TextChanged(object sender, EventArgs e)
+        {
+            dataGridNV.DataSource = BUS_NhanVien.Instance.findData(tb_tim.Text.Replace('/', '-'));
         }
     }
 }

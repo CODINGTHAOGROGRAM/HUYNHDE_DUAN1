@@ -135,6 +135,7 @@
             this.btnExit.TabIndex = 15;
             this.btnExit.Text = "Thoát";
             this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnSignin
             // 
@@ -179,6 +180,7 @@
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.ForeColor = System.Drawing.Color.White;
             this.txtPassword.Location = new System.Drawing.Point(85, 314);
+            this.txtPassword.MaxLength = 32;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(187, 19);
             this.txtPassword.TabIndex = 10;

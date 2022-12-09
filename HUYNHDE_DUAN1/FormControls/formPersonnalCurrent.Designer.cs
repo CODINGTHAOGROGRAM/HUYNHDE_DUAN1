@@ -34,6 +34,7 @@
             this.btnThoat = new FontAwesome.Sharp.IconButton();
             this.btnDangXuat = new FontAwesome.Sharp.IconButton();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.ngay = new System.Windows.Forms.DateTimePicker();
             this.btnSave = new FontAwesome.Sharp.IconButton();
             this.diachi = new System.Windows.Forms.TextBox();
             this.cmnd = new System.Windows.Forms.TextBox();
@@ -56,7 +57,6 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.lb_mail = new System.Windows.Forms.Label();
-            this.ngay = new System.Windows.Forms.DateTimePicker();
             this.circularPictureBox2 = new HUYNHDE_DUAN1.contructions_functions.CircularPictureBox();
             this.avatar = new HUYNHDE_DUAN1.contructions_functions.CircularPictureBox();
             this.panel2.SuspendLayout();
@@ -126,6 +126,7 @@
             this.btnThoat.Text = "Thoát";
             this.btnThoat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnDangXuat
             // 
@@ -144,6 +145,7 @@
             this.btnDangXuat.TabIndex = 34;
             this.btnDangXuat.Text = "Đăng xuất";
             this.btnDangXuat.UseVisualStyleBackColor = true;
+            this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
             // 
             // panel3
             // 
@@ -179,6 +181,20 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(668, 852);
             this.panel3.TabIndex = 2;
+            // 
+            // ngay
+            // 
+            this.ngay.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.ngay.CustomFormat = "dd/MM/yyyy";
+            this.ngay.Enabled = false;
+            this.ngay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ngay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.ngay.Location = new System.Drawing.Point(216, 415);
+            this.ngay.MaximumSize = new System.Drawing.Size(347, 25);
+            this.ngay.Name = "ngay";
+            this.ngay.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.ngay.Size = new System.Drawing.Size(131, 23);
+            this.ngay.TabIndex = 356;
             // 
             // btnSave
             // 
@@ -430,24 +446,11 @@
             this.lb_mail.AutoSize = true;
             this.lb_mail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_mail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.lb_mail.Location = new System.Drawing.Point(309, 301);
+            this.lb_mail.Location = new System.Drawing.Point(309, 297);
             this.lb_mail.Name = "lb_mail";
             this.lb_mail.Size = new System.Drawing.Size(133, 15);
             this.lb_mail.TabIndex = 11;
             this.lb_mail.Text = "do272443@gmail.com";
-            // 
-            // ngay
-            // 
-            this.ngay.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.ngay.CustomFormat = "dd/MM/yyyy";
-            this.ngay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ngay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.ngay.Location = new System.Drawing.Point(216, 415);
-            this.ngay.MaximumSize = new System.Drawing.Size(347, 25);
-            this.ngay.Name = "ngay";
-            this.ngay.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.ngay.Size = new System.Drawing.Size(131, 23);
-            this.ngay.TabIndex = 356;
             // 
             // circularPictureBox2
             // 

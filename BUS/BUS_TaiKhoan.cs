@@ -1,6 +1,7 @@
 ﻿using DAL;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Security.Policy;
@@ -23,9 +24,24 @@ namespace BUS
             private set { BUS_TaiKhoan.instance = value; }
         }
 
+        public bool check_emailExist(string email)
+        {
+            DataTable data = new DataTable();
+            data = DAL_TaiKhoan.Instance.check_email();
+            foreach (DataRow item in data.Rows)
+            {
+                string _email = item[data.Columns["Email"]] as string;
+                if (email == _email)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
         public bool Login(string username, string password)
         {
-            //password = enCodeOneWay(password);
+            password = enCodeOneWay(password);
             return DAL_TaiKhoan.Instance.Login(username, password);
         }
 
@@ -43,14 +59,14 @@ namespace BUS
                 return hash = GetmD5Hash(md5Hash, _input);
             }
         }
-        public  string enCodeTwoWay(string _input)
+        /*public  string enCodeTwoWay(string _input)
         {
             char[] inPut_PassEn = _input.ToCharArray();
             var input_WithPass = inPut_PassEn.Select((val, ind) => new {val, ind }).ToArray();
             var char_input_Encode = input_WithPass.Select( c => c.val + c.ind + (input_WithPass.Length > c.ind + 1 ? input_WithPass[c.ind + 1].val % 2 : 0)).Select(c =>(char)c).ToArray(); 
             string res = new string(char_input_Encode);
             return res;
-        }
+        }*/
         // MD5
         public static string GetmD5Hash(MD5 hash ,string text)
         {

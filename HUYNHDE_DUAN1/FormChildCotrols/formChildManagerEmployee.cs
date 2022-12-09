@@ -144,6 +144,11 @@ namespace HUYNHDE_DUAN1
                     Exception mail = new MAILException();
                     throw mail;
                 }
+                if (BUS_TaiKhoan.Instance.check_emailExist(Email))
+                {
+                    CHECKMAILException exist = new CHECKMAILException();
+                    throw exist;
+                }
                 if (BUS_NhanVien.Instance.addData(maNV, hoTen, Email, GioiTinh, SoDienThoai, CMND,
                     ngaySinh, DiaChi, ChucVu, Anh, MatKhau, GhiChu))
                 {
@@ -169,6 +174,10 @@ namespace HUYNHDE_DUAN1
             catch (NULLException mail)
             {
                 f.showMessage("Thông báo", "Không để trống thông tin cá nhân.", "icon_info.png", "Đóng");
+            }
+            catch (CHECKMAILException exist)
+            {
+                f.showMessage("Thông báo", "Email đã tồn tại.", "icon_info.png", "Đóng");
             }
         }
 

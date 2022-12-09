@@ -211,5 +211,11 @@ namespace HUYNHDE_DUAN1
                 txtPassword.UseSystemPasswordChar = true;
             }
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            formMessageLogin msLogin = new formMessageLogin();
+            msLogin.showMessage("Thông báo", "Bạn chắc chắc muốn thoát chứ ??", "icon_info_login.png", "Thoát");
+        }
     }
 }

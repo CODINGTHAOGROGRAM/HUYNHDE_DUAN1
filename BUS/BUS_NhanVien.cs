@@ -31,7 +31,17 @@ namespace BUS
             data = DAL_NhanVien.Instance.getIDNV();
             DataRow lastRow = data.Rows[data.Rows.Count - 1];
             var value = lastRow["ID"] as string;
-            int idNum = Convert.ToInt32(value);
+            int idNum;
+            try
+            {
+                idNum = Convert.ToInt32(value);
+            }
+            catch (Exception)
+            {
+                 lastRow = data.Rows[data.Rows.Count - 2];
+                 value = lastRow["ID"] as string;
+                idNum = Convert.ToInt32(value);
+            }
             idNum++;
             string id = $"HD{idNum}";
             if (id.Count() == 3)

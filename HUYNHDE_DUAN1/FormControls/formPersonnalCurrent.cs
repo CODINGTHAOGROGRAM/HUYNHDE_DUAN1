@@ -69,6 +69,10 @@ namespace HUYNHDE_DUAN1
                 manv = row[0].ToString();
                 hovaten.Text = row[1].ToString();
                 lb_mail.Text = row[2].ToString();
+                if (lb_mail.Text == "Admin")
+                {
+                    lb_mail.Visible = false;
+                }
                 string[] date = row[6].ToString().Split('-');
                 string new_format = date[2] + "/" + date[1] + "/" + date[0];
                 ngay.Text = new_format;
@@ -137,6 +141,18 @@ namespace HUYNHDE_DUAN1
                 formMessage f = new formMessage();
                 f.showMessage("Thông báo", "Có lỗi khi cập nhật dữ liệu, hãy kiểm tra lại!", "icon_error.png", "Đóng");
             }
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            formMessage f = new formMessage();
+            f.showMessage("Thông báo", "Bạn có chắc chắn muốn thoát không ?", "icon_info.png", "Thoát");
+        }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            formMessage f = new formMessage();
+            f.showMessage("Thông báo", "Bạn có chắc chắn muốn đăng xuất chứ?", "icon_info.png", "Đăng xuất");
         }
     }
 }

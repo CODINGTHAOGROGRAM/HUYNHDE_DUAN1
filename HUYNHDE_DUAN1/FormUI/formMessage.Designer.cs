@@ -66,9 +66,9 @@
             this.button.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(254)))), ((int)(((byte)(250)))));
             this.button.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.button.IconSize = 25;
-            this.button.Location = new System.Drawing.Point(442, 200);
+            this.button.Location = new System.Drawing.Point(426, 200);
             this.button.Name = "button";
-            this.button.Size = new System.Drawing.Size(95, 40);
+            this.button.Size = new System.Drawing.Size(111, 40);
             this.button.TabIndex = 36;
             this.button.Text = "Đóng";
             this.button.UseVisualStyleBackColor = true;

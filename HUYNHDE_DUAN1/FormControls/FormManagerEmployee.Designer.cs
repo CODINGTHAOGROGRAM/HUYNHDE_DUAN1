@@ -59,7 +59,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.ngay = new System.Windows.Forms.DateTimePicker();
-            this.btnFind = new FontAwesome.Sharp.IconButton();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -190,6 +189,7 @@
             this.tb_tim.Name = "tb_tim";
             this.tb_tim.Size = new System.Drawing.Size(300, 19);
             this.tb_tim.TabIndex = 37;
+            this.tb_tim.TextChanged += new System.EventHandler(this.tb_tim_TextChanged);
             // 
             // panel10
             // 
@@ -456,7 +456,6 @@
             this.panel3.Controls.Add(this.tb_note);
             this.panel3.Controls.Add(this.tb_diaChi);
             this.panel3.Controls.Add(this.panel4);
-            this.panel3.Controls.Add(this.btnFind);
             this.panel3.Controls.Add(this.label10);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.label8);
@@ -525,27 +524,6 @@
             this.ngay.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.ngay.Size = new System.Drawing.Size(396, 25);
             this.ngay.TabIndex = 356;
-            // 
-            // btnFind
-            // 
-            this.btnFind.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnFind.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFind.FlatAppearance.BorderSize = 4;
-            this.btnFind.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFind.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnFind.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.btnFind.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.btnFind.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.btnFind.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnFind.IconSize = 25;
-            this.btnFind.Location = new System.Drawing.Point(440, 54);
-            this.btnFind.Name = "btnFind";
-            this.btnFind.Size = new System.Drawing.Size(87, 34);
-            this.btnFind.TabIndex = 47;
-            this.btnFind.Text = "Tìm";
-            this.btnFind.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnFind.UseVisualStyleBackColor = true;
-            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
             // label9
             // 
@@ -728,7 +706,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel3;
-        private FontAwesome.Sharp.IconButton btnFind;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;

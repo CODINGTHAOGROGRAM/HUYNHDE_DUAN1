@@ -151,7 +151,7 @@
             this.lbTime.BackColor = System.Drawing.Color.Transparent;
             this.lbTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTime.ForeColor = System.Drawing.Color.Transparent;
-            this.lbTime.Location = new System.Drawing.Point(524, 545);
+            this.lbTime.Location = new System.Drawing.Point(492, 539);
             this.lbTime.Name = "lbTime";
             this.lbTime.Size = new System.Drawing.Size(186, 42);
             this.lbTime.TabIndex = 6;

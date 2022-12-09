@@ -157,14 +157,15 @@ namespace HUYNHDE_DUAN1
         private void TimerLoad_Tick(object sender, EventArgs e)
         {
             lbDate.Text = DateTime.Now.ToString("dd/MM/yyyy");
-            lbTime.Text = DateTime.Now.ToString("hh:mm:ss");
             if (DateTime.Now.Hour >= 0 && DateTime.Now.Hour <= 12)
             {
+                lbTime.Text = DateTime.Now.ToString("hh:mm:ss") + ("_AM");
                 lbCongra.Text = "Mỗi buổi sáng mang lại niềm hi vọng và những giấc mơ mới.\n" +
                                          "Chúc em ngày mới thành công! Chào buổi sáng";
             }
             else if (DateTime.Now.Hour >= 13 && DateTime.Now.Hour <= 18)
             {
+                lbTime.Text = DateTime.Now.ToString("hh:mm:ss") + ("_PM");
                 lbCongra.Text = "Ở đâu đó ngoài kia ước mơ thành hiện thực,\n" +
                                          "Chỉ cần cố gắng hết sức là được.\n" +
                                          "Một ngày làm việc cũng sắp kết thúc.\n" +
@@ -172,6 +173,7 @@ namespace HUYNHDE_DUAN1
             }
             else if (DateTime.Now.Hour >= 19 && DateTime.Now.Hour <= 23)
             {
+                lbTime.Text = DateTime.Now.ToString("hh:mm:ss") + ("_PM");
                 lbCongra.Text = "Nằm xuống giường, nhắm mắt vào, đi ngủ đi \n" +
                                           "Và mơ những giấc mơ ngọt ngào nhất bạn nhé.\n" +
                                           "Have a good night!";

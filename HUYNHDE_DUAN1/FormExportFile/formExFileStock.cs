@@ -108,10 +108,9 @@ namespace HUYNHDE_DUAN1.FormUI
 
         private void pdf_Click(object sender, EventArgs e)
         {
-            DataGridView data;
-            data = st.GridViewHoSo;
-            float[] widths = new float[] { 20f, 20f, 40f, 40f, 50f, 50f, 50f, 50f, 50f, 50f, 50f, 50f, 50f, 50f, 50f, 80f };
-            string title = "THÔNG TIN HỒ SƠ CÁC CHỨNG KHOÁN";
+            DataTable data = new DataTable();
+            data = st.export();
+            string title = "HỒ SƠ CÁC CHỨNG KHOÁN";
             if (data.Rows.Count > 0)
             {
                 SaveFileDialog sfd = new SaveFileDialog();
@@ -136,7 +135,7 @@ namespace HUYNHDE_DUAN1.FormUI
                     {
                         try
                         {
-                            BUS_ExportFile.Instance.ExportFilePDF2(sfd.FileName, data, title, widths);
+                           BUS_exStock.Instance.ExportFilePDF(sfd.FileName, data, title);
                             f.showMessage("Thông báo", "Xuất dữ liệu thành công!", "icon_success.png", "Đóng");
                         }
                         catch (IOException ex)

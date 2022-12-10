@@ -97,7 +97,7 @@ namespace BUS
             editSheet.Pictures.Add(0, 0, ms);
 
            // editSheet.Cells.SetRowHeight(6, 50);
-            for (int i = 2; i <= 16; i++)
+            for (int i = 0; i <= 16; i++)
             {
                 editSheet.AutoFitColumn(i);
             }

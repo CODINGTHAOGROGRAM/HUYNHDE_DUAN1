@@ -134,8 +134,8 @@ namespace HUYNHDE_DUAN1.FormExportFile
                         }
                         catch (IOException ex)
                         {
-                            throw;
-                            //MessageBox.Show("Error :" + ex.Message);
+                          
+                            MessageBox.Show("Error :" + ex.Message);
                         }
                     }
                 }

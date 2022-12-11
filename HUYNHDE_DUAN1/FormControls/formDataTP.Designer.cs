@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -54,7 +55,10 @@
             this.btnFind = new FontAwesome.Sharp.IconButton();
             this.panel5 = new System.Windows.Forms.Panel();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.cb_MACK = new System.Windows.Forms.ComboBox();
+            this.Chart_GDTP = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.label1 = new System.Windows.Forms.Label();
+            this.saveChart = new FontAwesome.Sharp.IconButton();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -62,7 +66,7 @@
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Chart_GDTP)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -73,10 +77,10 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.tabControl1.Location = new System.Drawing.Point(12, 50);
+            this.tabControl1.Location = new System.Drawing.Point(0, 50);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1400, 887);
+            this.tabControl1.Size = new System.Drawing.Size(1424, 887);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -87,7 +91,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1392, 854);
+            this.tabPage1.Size = new System.Drawing.Size(1416, 854);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Thông tin dữ liệu trái phiếu";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -99,7 +103,7 @@
             this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel3.Location = new System.Drawing.Point(3, 135);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1386, 553);
+            this.panel3.Size = new System.Drawing.Size(1410, 553);
             this.panel3.TabIndex = 10;
             // 
             // dataGridGDTP
@@ -111,18 +115,19 @@
             this.dataGridGDTP.Location = new System.Drawing.Point(0, 0);
             this.dataGridGDTP.Name = "dataGridGDTP";
             this.dataGridGDTP.ReadOnly = true;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridGDTP.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridGDTP.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridGDTP.Size = new System.Drawing.Size(1386, 553);
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridGDTP.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridGDTP.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridGDTP.Size = new System.Drawing.Size(1410, 553);
             this.dataGridGDTP.TabIndex = 5;
+            this.dataGridGDTP.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridGDTP_CellClick);
             // 
             // panel2
             // 
@@ -133,7 +138,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(3, 688);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1386, 163);
+            this.panel2.Size = new System.Drawing.Size(1410, 163);
             this.panel2.TabIndex = 9;
             // 
             // btnExports
@@ -148,7 +153,7 @@
             this.btnExports.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
             this.btnExports.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnExports.IconSize = 20;
-            this.btnExports.Location = new System.Drawing.Point(861, 29);
+            this.btnExports.Location = new System.Drawing.Point(873, 29);
             this.btnExports.Name = "btnExports";
             this.btnExports.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnExports.Size = new System.Drawing.Size(119, 45);
@@ -156,6 +161,7 @@
             this.btnExports.Text = "Xuất";
             this.btnExports.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExports.UseVisualStyleBackColor = true;
+            this.btnExports.Click += new System.EventHandler(this.btnExports_Click);
             // 
             // btnAdd
             // 
@@ -169,7 +175,7 @@
             this.btnAdd.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
             this.btnAdd.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAdd.IconSize = 20;
-            this.btnAdd.Location = new System.Drawing.Point(651, 29);
+            this.btnAdd.Location = new System.Drawing.Point(663, 29);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnAdd.Size = new System.Drawing.Size(119, 45);
@@ -177,6 +183,7 @@
             this.btnAdd.Text = "Thêm";
             this.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnUpGrade
             // 
@@ -190,13 +197,14 @@
             this.btnUpGrade.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
             this.btnUpGrade.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnUpGrade.IconSize = 20;
-            this.btnUpGrade.Location = new System.Drawing.Point(440, 29);
+            this.btnUpGrade.Location = new System.Drawing.Point(452, 29);
             this.btnUpGrade.Name = "btnUpGrade";
             this.btnUpGrade.Size = new System.Drawing.Size(119, 45);
             this.btnUpGrade.TabIndex = 167;
             this.btnUpGrade.Text = "Cập nhật";
             this.btnUpGrade.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnUpGrade.UseVisualStyleBackColor = true;
+            this.btnUpGrade.Click += new System.EventHandler(this.btnUpGrade_Click_1);
             // 
             // panel1
             // 
@@ -215,7 +223,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1386, 132);
+            this.panel1.Size = new System.Drawing.Size(1410, 132);
             this.panel1.TabIndex = 8;
             // 
             // ma_CK
@@ -225,10 +233,10 @@
             this.ma_CK.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ma_CK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.ma_CK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.ma_CK.Location = new System.Drawing.Point(285, 84);
+            this.ma_CK.Location = new System.Drawing.Point(297, 84);
             this.ma_CK.MinimumSize = new System.Drawing.Size(150, 25);
             this.ma_CK.Name = "ma_CK";
-            this.ma_CK.Size = new System.Drawing.Size(150, 25);
+            this.ma_CK.Size = new System.Drawing.Size(150, 19);
             this.ma_CK.TabIndex = 358;
             this.ma_CK.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -244,13 +252,14 @@
             this.iconButton1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 25;
-            this.iconButton1.Location = new System.Drawing.Point(1107, 70);
+            this.iconButton1.Location = new System.Drawing.Point(1119, 70);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(113, 45);
             this.iconButton1.TabIndex = 357;
             this.iconButton1.Text = "Làm mới";
             this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton1.UseVisualStyleBackColor = true;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // todate
             // 
@@ -258,7 +267,7 @@
             this.todate.CustomFormat = "dd/MM/yyyy";
             this.todate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.todate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.todate.Location = new System.Drawing.Point(820, 80);
+            this.todate.Location = new System.Drawing.Point(832, 80);
             this.todate.MaximumSize = new System.Drawing.Size(347, 25);
             this.todate.Name = "todate";
             this.todate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -271,7 +280,7 @@
             this.fromdate.CustomFormat = "dd/MM/yyyy";
             this.fromdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fromdate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.fromdate.Location = new System.Drawing.Point(544, 80);
+            this.fromdate.Location = new System.Drawing.Point(556, 80);
             this.fromdate.MaximumSize = new System.Drawing.Size(347, 25);
             this.fromdate.Name = "fromdate";
             this.fromdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -282,7 +291,7 @@
             // 
             this.panel16.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.panel16.Location = new System.Drawing.Point(544, 109);
+            this.panel16.Location = new System.Drawing.Point(556, 109);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(150, 2);
             this.panel16.TabIndex = 97;
@@ -293,7 +302,7 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.label17.Location = new System.Drawing.Point(203, 95);
+            this.label17.Location = new System.Drawing.Point(215, 95);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(60, 20);
             this.label17.TabIndex = 110;
@@ -305,7 +314,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.label16.Location = new System.Drawing.Point(452, 91);
+            this.label16.Location = new System.Drawing.Point(464, 91);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(69, 20);
             this.label16.TabIndex = 109;
@@ -317,7 +326,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.label2.Location = new System.Drawing.Point(710, 90);
+            this.label2.Location = new System.Drawing.Point(722, 90);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 20);
             this.label2.TabIndex = 92;
@@ -327,7 +336,7 @@
             // 
             this.panel11.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.panel11.Location = new System.Drawing.Point(285, 109);
+            this.panel11.Location = new System.Drawing.Point(297, 109);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(150, 2);
             this.panel11.TabIndex = 96;
@@ -344,51 +353,105 @@
             this.btnFind.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
             this.btnFind.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnFind.IconSize = 25;
-            this.btnFind.Location = new System.Drawing.Point(1004, 70);
+            this.btnFind.Location = new System.Drawing.Point(1016, 70);
             this.btnFind.Name = "btnFind";
             this.btnFind.Size = new System.Drawing.Size(87, 45);
             this.btnFind.TabIndex = 93;
             this.btnFind.Text = "Tìm";
             this.btnFind.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnFind.UseVisualStyleBackColor = true;
+            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
             // panel5
             // 
             this.panel5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
-            this.panel5.Location = new System.Drawing.Point(820, 109);
+            this.panel5.Location = new System.Drawing.Point(832, 109);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(150, 2);
             this.panel5.TabIndex = 94;
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.chart1);
+            this.tabPage2.Controls.Add(this.saveChart);
+            this.tabPage2.Controls.Add(this.label1);
+            this.tabPage2.Controls.Add(this.cb_MACK);
+            this.tabPage2.Controls.Add(this.Chart_GDTP);
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1392, 854);
+            this.tabPage2.Size = new System.Drawing.Size(1416, 854);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Biểu đồ trái phiếu";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // chart1
+            // cb_MACK
             // 
-            this.chart1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.cb_MACK.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cb_MACK.FormattingEnabled = true;
+            this.cb_MACK.Location = new System.Drawing.Point(260, 34);
+            this.cb_MACK.Name = "cb_MACK";
+            this.cb_MACK.Size = new System.Drawing.Size(246, 28);
+            this.cb_MACK.TabIndex = 1;
+            this.cb_MACK.SelectionChangeCommitted += new System.EventHandler(this.cb_MACK_SelectionChangeCommitted);
+            // 
+            // Chart_GDTP
+            // 
+            this.Chart_GDTP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(6, 20);
-            this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(1380, 619);
-            this.chart1.TabIndex = 0;
-            this.chart1.Text = "chart1";
+            chartArea2.Name = "ChartArea1";
+            this.Chart_GDTP.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.Chart_GDTP.Legends.Add(legend2);
+            this.Chart_GDTP.Location = new System.Drawing.Point(0, 68);
+            this.Chart_GDTP.Name = "Chart_GDTP";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            series2.XValueMember = "BindingX";
+            series2.YValueMembers = "Binding";
+            this.Chart_GDTP.Series.Add(series2);
+            this.Chart_GDTP.Size = new System.Drawing.Size(1416, 644);
+            this.Chart_GDTP.TabIndex = 0;
+            this.Chart_GDTP.Text = "chart1";
+            title2.Alignment = System.Drawing.ContentAlignment.TopCenter;
+            title2.BorderWidth = 2;
+            title2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            title2.Name = "Title1";
+            this.Chart_GDTP.Titles.Add(title2);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.label1.Location = new System.Drawing.Point(183, 38);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(71, 24);
+            this.label1.TabIndex = 111;
+            this.label1.Text = "Mã CK:";
+            // 
+            // saveChart
+            // 
+            this.saveChart.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.saveChart.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.saveChart.FlatAppearance.BorderSize = 4;
+            this.saveChart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveChart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.saveChart.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.saveChart.IconChar = FontAwesome.Sharp.IconChar.Download;
+            this.saveChart.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(130)))), ((int)(((byte)(251)))));
+            this.saveChart.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.saveChart.IconSize = 20;
+            this.saveChart.Location = new System.Drawing.Point(606, 704);
+            this.saveChart.Name = "saveChart";
+            this.saveChart.Size = new System.Drawing.Size(119, 45);
+            this.saveChart.TabIndex = 168;
+            this.saveChart.Text = "Lưu ảnh";
+            this.saveChart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.saveChart.UseVisualStyleBackColor = true;
+            this.saveChart.Click += new System.EventHandler(this.saveChart_Click);
             // 
             // formDataTP
             // 
@@ -408,7 +471,8 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Chart_GDTP)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -436,6 +500,9 @@
         private System.Windows.Forms.Panel panel11;
         private FontAwesome.Sharp.IconButton btnFind;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart Chart_GDTP;
+        private System.Windows.Forms.ComboBox cb_MACK;
+        private System.Windows.Forms.Label label1;
+        public FontAwesome.Sharp.IconButton saveChart;
     }
 }

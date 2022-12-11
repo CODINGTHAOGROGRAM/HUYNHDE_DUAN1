@@ -67,10 +67,10 @@ namespace BUS
                             try
                             {
                                 driver.FindElement(By.XPath("//*[@id=\"VonHoadivNumberRecordOnPage\"]/option[5]")).Click();
-                                Thread.Sleep(1000);
+                                Thread.Sleep(500);
 
                                 IList<IWebElement> listtr = driver.FindElements(By.XPath("//*[@id=\"VonHoa_tableDatas\"]/tbody/tr"));
-                                Thread.Sleep(1000);
+                                Thread.Sleep(500);
 
                                 for (int j = 1; j <= listtr.Count; j++)
                                 {

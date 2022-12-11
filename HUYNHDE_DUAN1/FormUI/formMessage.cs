@@ -99,7 +99,6 @@ namespace HUYNHDE_DUAN1
             {
                 this.Close();
             }
-
         }
 
         private void formMessage_Load(object sender, EventArgs e)

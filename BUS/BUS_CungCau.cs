@@ -53,7 +53,7 @@ namespace BUS
                 dt.Columns.Add("GiaTriGD");
 
 
-                Thread.Sleep(2000);
+                Thread.Sleep(1000);
 
                 IList<IWebElement> links = driver.FindElements(By.XPath("//*[@id=\"divSearchContentArticle\"]/ul/li[2]/div/div/div[2]/ul/li/label/input"));
                 string query = "exec dbo.CungCauProc_getByMaCk @mack , @ngayGiaoDich";
@@ -64,7 +64,7 @@ namespace BUS
                         string MaCk = links[i].GetAttribute("value");
                         var url = "https://www.hnx.vn/cophieu-etfs/chi-tiet-chung-khoan-ny-" + links[i].GetAttribute("value").ToLower() + ".html?_ces_tab=3";
                         driver.Navigate().GoToUrl(url);
-                        Thread.Sleep(1000);
+                        Thread.Sleep(500);
 
                         Console.WriteLine(MaCk);
                         int x = 2;
@@ -75,10 +75,10 @@ namespace BUS
                             try
                             {
                                 driver.FindElement(By.XPath("//*[@id=\"TK_CungCaudivNumberRecordOnPage\"]/option[5]")).Click();
-                                Thread.Sleep(2000);
+                                Thread.Sleep(500);
 
                                 IList<IWebElement> listtr = driver.FindElements(By.XPath("//*[@id=\"TK_CungCau_tableDatas\"]/tbody/tr"));
-                                Thread.Sleep(2000);
+                                Thread.Sleep(500);
                                 for (int j = 1; j <= listtr.Count; j++)
                                 {
 
@@ -103,7 +103,7 @@ namespace BUS
                                     }
 
                                 }
-                                Thread.Sleep(1000);
+                                Thread.Sleep(500);
 
                                 driver.FindElement(By.XPath($"//*[@id=\"{x}\"]")).Click();
                                 x++;

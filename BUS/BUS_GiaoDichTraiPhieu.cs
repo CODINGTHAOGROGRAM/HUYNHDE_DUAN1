@@ -51,7 +51,58 @@ namespace BUS
 
         public DataTable findData(string MACK, DateTime from, DateTime to)
         {
-            return DAL_GiaoDichTraiPhieu.Instance.findData(MACK,from,to);
+            return DAL_GiaoDichTraiPhieu.Instance.findData(MACK, from, to);
+        }
+
+        public DataTable cb_DATA()
+        {
+            return DAL_GiaoDichTraiPhieu.Instance.Data_CB();
+        }
+
+        public DataTable DataChart(string MaCK)
+        {
+            DataTable date = new DataTable();
+            date = DAL_GiaoDichTraiPhieu.Instance.DataChart_DATE(MaCK);
+            DataTable mack = new DataTable();
+            mack = DAL_GiaoDichTraiPhieu.Instance.DataChart_MACK();
+            DataTable data = new DataTable();
+            data = DAL_GiaoDichTraiPhieu.Instance.DataChart(MaCK);
+            DataTable finish = new DataTable();
+            if (MaCK != "")
+            {
+                finish.Columns.Add("MACK");
+
+                for (int i = 0; i < date.Rows.Count; i++)
+                {
+                    finish.Columns.Add($"{date.Rows[i][0]}");
+                }
+
+                //finish.Rows[i][j] = value;
+
+                for (int i = 0; i < mack.Rows.Count; i++)
+                {
+                    DataRow _mack = finish.NewRow();
+                    _mack["MACK"] = mack.Rows[i][0];
+                    finish.Rows.Add(_mack);
+                }
+                int c = 0;
+                int cMax = data.Columns.Count;
+                int r = 0;
+                int rMax = data.Rows.Count;
+                for (int i = 0; i < finish.Rows.Count; i++)
+                {
+                    for (int j = 1; j < finish.Columns.Count; j++)
+                    {
+                        finish.Rows[i][j] = data.Rows[r][c];
+                        r++;
+                         
+                    }
+                    r = 0;
+                    c++;
+                }
+            }
+
+            return finish;
         }
 
         public void Update(string fromd, string tod)
@@ -113,14 +164,13 @@ namespace BUS
             Thread.Sleep(1000);
             var select = chromeDriver.FindElement(By.XPath("//*[@id=\"divNumberRecordOnPage\"]/option[0]"));
             select.Click();
-            
+
             while (true)
             {
                 try
                 {
-
                     IList<IWebElement> stt = chromeDriver.FindElements(By.XPath("//*[@id=\"_tableDatas\"]/tbody/tr"));
-                    
+
                     for (int i = 1; i <= stt.Count; i++)
                     {
                         bool check_filename = false;
@@ -158,7 +208,7 @@ namespace BUS
                             System.IO.File.Delete($"{downloadDirectory}" + @"\" + $"{file_text}");
                         }
                         var esc = chromeDriver.FindElement(By.XPath("//*[@id=\"divViewDetailArticles\"]/div[5]/input"));
-                        esc.Click(); 
+                        esc.Click();
                     }
 
                     chromeDriver.FindElement(By.XPath($"//*[@id=\"next\"]")).Click();

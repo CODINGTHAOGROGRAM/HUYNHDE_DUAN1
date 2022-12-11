@@ -4,14 +4,15 @@ using HUYNHDE_DUAN1.FormUI;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace HUYNHDE_DUAN1
 {
     public partial class formDataTP : Form
     {
-
         private formMessage f = new formMessage();
 
         public formDataTP()
@@ -19,6 +20,7 @@ namespace HUYNHDE_DUAN1
             InitializeComponent();
             fromdate.Value = DateTime.Today;
             todate.Value = DateTime.Today;
+            getdataCB();
             dataGridGDTP.ForeColor = System.Drawing.Color.Black;
         }
 
@@ -74,7 +76,6 @@ namespace HUYNHDE_DUAN1
                 btnUpGrade.Visible = false;
                 btnAdd.Visible = false;
             }
-
         }
 
         public void loadform()
@@ -86,7 +87,6 @@ namespace HUYNHDE_DUAN1
 
         private void dataGridGDTP_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
             try
             {
                 string Vaitro = BUS_TaiKhoan.Instance.classifyAccount(formLoginGrogram.Email);
@@ -110,9 +110,6 @@ namespace HUYNHDE_DUAN1
                 }
             }
             catch { }
-
-
-
         }
 
         private void btnFind_Click(object sender, EventArgs e)
@@ -140,7 +137,83 @@ namespace HUYNHDE_DUAN1
             showFormMessageEx.ShowDialog();
         }
 
-       
-    }
+        private void getdataCB()
+        {
+            cb_MACK.DataSource = BUS_GiaoDichTraiPhieu.Instance.cb_DATA();
+            cb_MACK.DisplayMember = "Ma_CK";
+            cb_MACK.ValueMember = "Ma_CK";
+        }
 
+        private void loadChart(string MCK)
+        {
+            DataTable dt = new DataTable();
+            dt = BUS_GiaoDichTraiPhieu.Instance.DataChart(MCK);
+            Chart_GDTP.DataSource = dt;
+
+            string datemin = dt.Columns[1].ColumnName.ToString();
+
+            string datemax = dt.Columns[dt.Columns.Count - 1].ColumnName.ToString();
+
+            Chart_GDTP.Titles.Clear();
+            Chart_GDTP.Titles.Add($"Biểu đồ dữ liệu so sánh dữ liệu của {MCK} từ ngày {datemin} đến ngày {datemax}");
+
+            var objChart = Chart_GDTP.ChartAreas[0];
+            objChart.AxisX.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Auto;
+            objChart.AxisX.Minimum = 0;
+            objChart.AxisY.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Auto;
+            //clear
+            Chart_GDTP.Series.Clear();
+            //random color
+            //loop rows to draw multi line chart c#
+            for (int i = 1; i < dt.Rows.Count; i++)
+            {
+                Chart_GDTP.Series.Add(dt.Rows[i][0].ToString());
+                if (i == 1)
+                {
+                    Chart_GDTP.Series[dt.Rows[i][0].ToString()].Color = Color.FromArgb(34, 185, 170);
+                }
+                else
+                {
+                    Chart_GDTP.Series[dt.Rows[i][0].ToString()].Color = Color.FromArgb(112, 59, 151);
+                }
+                Chart_GDTP.Series[dt.Rows[i][0].ToString()].Legend = "Legend1";
+                Chart_GDTP.Series[dt.Rows[i][0].ToString()].ChartArea = "ChartArea1";
+                Chart_GDTP.Series[dt.Rows[i][0].ToString()].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Column;
+                //adding data
+                for (int j = 1; j < dt.Columns.Count; j++)
+                {
+                    Chart_GDTP.Series[dt.Rows[i][0].ToString()].Points.AddXY(j, Convert.ToInt32(dt.Rows[i][j]));
+                }
+            }
+
+            Chart_GDTP.Series.Add(dt.Rows[0][0].ToString());
+            Chart_GDTP.Series[dt.Rows[0][0].ToString()].Color = Color.FromArgb(240, 98, 34);
+            Chart_GDTP.Series[dt.Rows[0][0].ToString()].Legend = "Legend1";
+            Chart_GDTP.Series[dt.Rows[0][0].ToString()].ChartArea = "ChartArea1";
+            Chart_GDTP.Series[dt.Rows[0][0].ToString()].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            Chart_GDTP.Series[dt.Rows[0][0].ToString()].MarkerStyle = MarkerStyle.Circle;
+            //adding data
+            for (int j = 1; j < dt.Columns.Count; j++)
+            {
+                Chart_GDTP.Series[dt.Rows[0][0].ToString()].Points.AddXY(j, Convert.ToInt32(dt.Rows[0][j]));
+            }
+        }
+
+        private void cb_MACK_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            string mack = cb_MACK.GetItemText(cb_MACK.SelectedItem);
+            loadChart(mack);
+        }
+
+        private void saveChart_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "Image Files(*.jpg; *.jpeg; *.bmp; *.png)|*.jpg; *.jpeg; *.bmp; *.png";
+            sfd.FileName = "Chart_GDTP.jpeg";
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                Chart_GDTP.SaveImage(sfd.FileName, ChartImageFormat.Jpeg);
+            }
+        }
+    }
 }

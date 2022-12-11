@@ -61,6 +61,35 @@ namespace DAL
             return dtb = DataProvider.Instance.Executequery(query, new object[] { MACK, from.ToString("MM/dd/yyyy"), to.ToString("MM/dd/yyyy") });  
         }
 
+        public DataTable DataChart( string MACK)
+        {
+            DataTable dtb = new DataTable();
+            string query = "linechart_data @MaCK ";
+            return dtb = DataProvider.Instance.Executequery(query , new object[] { MACK }); 
+        }
+        public DataTable DataChart_MACK()
+        {
+            /*DataTable dtb = new DataTable();
+            string query = "linechart_mack @MaCK ";
+            return dtb = DataProvider.Instance.Executequery(query, new object[] { MACK });*/
+
+            DataTable dtb = new DataTable();
+            string query = "linechart_mack ";
+            return dtb = DataProvider.Instance.Executequery(query);
+        }
+        public DataTable DataChart_DATE(string MACK)
+        {
+            DataTable dtb = new DataTable();
+            string query = "linechart_date @MaCK ";
+            return dtb = DataProvider.Instance.Executequery(query, new object[] { MACK });
+        }
+
+        public DataTable Data_CB()
+        {
+            DataTable dtb = new DataTable();
+            string query = "cb_GDTP";
+            return dtb = DataProvider.Instance.Executequery(query);
+        }
         public void ImportExcelInDB(string filename)
         {
             var CurrentDirectory = Directory.GetCurrentDirectory();

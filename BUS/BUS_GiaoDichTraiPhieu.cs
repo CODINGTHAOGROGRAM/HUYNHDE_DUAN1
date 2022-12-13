@@ -130,8 +130,11 @@ namespace BUS
             chromeOptions.AddUserProfilePreference("download.default_directory", downloadDirectory);
             chromeOptions.AddUserProfilePreference("download.prompt_for_download", false);
             chromeOptions.AddUserProfilePreference("disable-popup-blocking", "true");
+            chromeOptions.AddArgument("window-position=-32000,-32000");
+            ChromeDriverService service = ChromeDriverService.CreateDefaultService();
+            service.HideCommandPromptWindow = true;
 
-            IWebDriver chromeDriver = new ChromeDriver(chromeOptions);
+            IWebDriver chromeDriver = new ChromeDriver(service,chromeOptions);
             chromeDriver.Url = "https://www.hnx.vn/vi-vn/thong-tin-cong-bo-ny-hnx.html";
             chromeDriver.Navigate();
             chromeDriver.Manage().Window.Maximize();

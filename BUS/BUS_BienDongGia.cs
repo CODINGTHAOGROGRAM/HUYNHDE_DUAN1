@@ -35,7 +35,7 @@ namespace BUS
                 var options = new ChromeOptions();
                 options.AddArgument("window-position=-32000,-32000");
 
-                IWebDriver driver = new ChromeDriver(service, options);
+                IWebDriver driver = new ChromeDriver();
                 driver.Navigate().GoToUrl("https://www.hnx.vn/cophieu-etfs/chi-tiet-chung-khoan-ny-AAV.html?_des_tab=2");
 
                 DataTable dt = new DataTable("BienDongGia");
@@ -52,7 +52,7 @@ namespace BUS
                 dt.Columns.Add("Diem");
                 dt.Columns.Add("PhanTram");
 
-                Thread.Sleep(2000);
+                Thread.Sleep(1000);
 
                 IList<IWebElement> links = driver.FindElements(By.XPath("//*[@id=\"divSearchContentArticle\"]/ul/li[2]/div/div/div[2]/ul/li/label/input"));
                 string query = "exec dbo.BDGiaProc_getByMaCk @mack , @ngayGiaoDich";
@@ -63,17 +63,17 @@ namespace BUS
                         string MaCk = links[i].GetAttribute("value");
                         var url = "https://www.hnx.vn/cophieu-etfs/chi-tiet-chung-khoan-ny-" + links[i].GetAttribute("value").ToLower() + ".html?_ces_tab=2";
                         driver.Navigate().GoToUrl(url);
-                        Thread.Sleep(2000);
+                        Thread.Sleep(1000);
                         int x = 2;
                         while (true)
                         {
                             try
                             {
                                 driver.FindElement(By.XPath("//*[@id=\"BienDongGiadivNumberRecordOnPage\"]/option[5]")).Click();
-                                Thread.Sleep(1000);
+                                Thread.Sleep(500);
 
                                 IList<IWebElement> listtr = driver.FindElements(By.XPath("//*[@id=\"BienDongGia_tableDatas\"]/tbody/tr"));
-                                Thread.Sleep(1000);
+                                Thread.Sleep(500);
                                 for (int j = 1; j <= listtr.Count; j++)
                                 {
                                     IList<IWebElement> listCol = driver.FindElements(By.XPath($"//*[@id=\"BienDongGia_tableDatas\"]/tbody/tr[{j}]/td"));
@@ -96,7 +96,7 @@ namespace BUS
                                     }
 
                                 }
-                                Thread.Sleep(2000);
+                                Thread.Sleep(500);
 
                                 var netpage = driver.FindElement(By.XPath($"//*[@id=\"{x}\"]"));
                                 netpage.Click();

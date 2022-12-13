@@ -48,7 +48,13 @@ namespace BUS
         }
         public void upGradeHoSo()
         {
-            ChromeDriver chromeDriver = new ChromeDriver();
+            ChromeDriverService service = ChromeDriverService.CreateDefaultService();
+            service.HideCommandPromptWindow = true;
+
+            var options = new ChromeOptions();
+            options.AddArgument("window-position=-32000,-32000");
+
+            ChromeDriver chromeDriver = new ChromeDriver(service,options);
             chromeDriver.Manage().Window.Maximize();
             chromeDriver.Navigate().GoToUrl("https://hnx.vn/vi-vn/");
             string queryProc = "HoSoProc_getHoSoByMaCk @MaCk";

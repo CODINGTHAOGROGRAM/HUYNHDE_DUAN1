@@ -130,7 +130,8 @@ namespace BUS
             chromeOptions.AddUserProfilePreference("download.default_directory", downloadDirectory);
             chromeOptions.AddUserProfilePreference("download.prompt_for_download", false);
             chromeOptions.AddUserProfilePreference("disable-popup-blocking", "true");
-
+            llfdlf
+                fldlfdlf
             IWebDriver chromeDriver = new ChromeDriver(chromeOptions);
             chromeDriver.Url = "https://www.hnx.vn/vi-vn/thong-tin-cong-bo-ny-hnx.html";
             chromeDriver.Navigate();

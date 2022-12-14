@@ -59,11 +59,18 @@ namespace HUYNHDE_DUAN1
         }
         public void showMessage(string title, string text, string icon, string textbutton)
         {
-            tt.Text = title;
-            info.Text = text;
-            pic.Image = Image.FromFile($"../../img/icon_info/{icon}");
-            button.Text = textbutton.Trim();
-            this.ShowDialog();
+            try
+            {
+                tt.Text = title;
+                info.Text = text;
+                pic.Image = Image.FromFile($"../../img/icon_info/{icon}");
+                button.Text = textbutton.Trim();
+                this.ShowDialog();
+            }
+            catch (Exception e)
+            {
+               
+            }
 
             //using static HUYNHDE_DUAN1.formMessage;
             /*formMessage form = new formMessage();

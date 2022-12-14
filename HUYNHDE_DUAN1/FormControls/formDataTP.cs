@@ -51,11 +51,18 @@ namespace HUYNHDE_DUAN1
             try
             {
                 mess.Start();
-                BUS_GiaoDichTraiPhieu.Instance.Update(fromdate.Text, todate.Text);
-                mess.Abort();
-                f.showMessage("Thông báo", "Cập nhật dữ liệu thành công.", "icon_success.png", "Đóng");
+                if (BUS_GiaoDichTraiPhieu.Instance.Update(fromdate.Text, todate.Text))
+                {
+                    mess.Abort();
+                    f.showMessage("Thông báo", "Cập nhật dữ liệu thành công.", "icon_success.png", "Đóng");
+                }
+                else
+                {
+                    mess.Abort();
+                    f.showMessage("Thông báo", "Đã lỗi trong quá trình cập nhật,\nvui lòng kiểm tra và thử lại!", "icon_error.png", "Đóng");
+                }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 mess.Abort();
                 f.showMessage("Thông báo", "Đã lỗi trong quá trình cập nhật,\nvui lòng kiểm tra và thử lại!", "icon_error.png", "Đóng");

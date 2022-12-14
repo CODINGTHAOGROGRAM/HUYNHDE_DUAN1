@@ -105,7 +105,7 @@ namespace BUS
             return finish;
         }
 
-        public void Update(string fromd, string tod)
+        public bool Update(string fromd, string tod)
         {
             DTO_GiaoDichTraiPhieu GDTP = new DTO_GiaoDichTraiPhieu();
             char[] charsToTrim = { '1', '.', ' ' };
@@ -126,7 +126,6 @@ namespace BUS
             {
                 System.IO.File.Create(pathfile).Close();
             }
-
             chromeOptions.AddUserProfilePreference("download.default_directory", downloadDirectory);
             chromeOptions.AddUserProfilePreference("download.prompt_for_download", false);
             chromeOptions.AddUserProfilePreference("disable-popup-blocking", "true");
@@ -134,44 +133,54 @@ namespace BUS
             ChromeDriverService service = ChromeDriverService.CreateDefaultService();
             service.HideCommandPromptWindow = true;
 
-            IWebDriver chromeDriver = new ChromeDriver(service,chromeOptions);
-            chromeDriver.Url = "https://www.hnx.vn/vi-vn/thong-tin-cong-bo-ny-hnx.html";
-            chromeDriver.Navigate();
-            chromeDriver.Manage().Window.Maximize();
-            WebClient download = new WebClient();
-
-            Thread.Sleep(2000);
             //read file .txt
             var logFile = System.IO.File.ReadAllLines(pathfile);
             var xlsFileExist = new List<string>(logFile);
 
-            var from = chromeDriver.FindElement(By.XPath("//*[@id=\"txtTuNgay\"]"));
-            //from.SendKeys(Convert.ToDateTime(fromd).ToString("dd/MM/yyyy"));
-            from.SendKeys(fromd.ToString());
+            IWebDriver chromeDriver = new ChromeDriver(service, chromeOptions);
+            try
+            {
+                
+                chromeDriver.Url = "https://www.hnx.vn/vi-vn/thong-tin-cong-bo-ny-hnx.html";
+                chromeDriver.Navigate();
+                chromeDriver.Manage().Window.Maximize();
+                
 
-            var to = chromeDriver.FindElement(By.XPath("//*[@id=\"txtDenNgay\"]"));
-            //to.SendKeys(Convert.ToDateTime(tod).ToString("dd/MM/yyyy"));
-            to.SendKeys(tod.ToString());
+                Thread.Sleep(2000);
+                
+                var from = chromeDriver.FindElement(By.XPath("//*[@id=\"txtTuNgay\"]"));
+                //from.SendKeys(Convert.ToDateTime(fromd).ToString("dd/MM/yyyy"));
+                from.SendKeys(fromd.ToString());
 
-            var title = chromeDriver.FindElement(By.XPath("//*[@id=\"txtTieuDeTin\"]"));
-            title.SendKeys("Kết quả giao dịch Trái phiếu doanh nghiệp ngày");
+                var to = chromeDriver.FindElement(By.XPath("//*[@id=\"txtDenNgay\"]"));
+                //to.SendKeys(Convert.ToDateTime(tod).ToString("dd/MM/yyyy"));
+                to.SendKeys(tod.ToString());
 
-            Thread.Sleep(1000);
-            var button_find = chromeDriver.FindElement(By.XPath("//*[@id=\"btn_searchL\"]"));
-            button_find.Click();
+                var title = chromeDriver.FindElement(By.XPath("//*[@id=\"txtTieuDeTin\"]"));
+                title.SendKeys("Kết quả giao dịch Trái phiếu doanh nghiệp ngày");
 
-            Thread.Sleep(1000);
-            var select_show_more = chromeDriver.FindElement(By.XPath("//*[@id=\"divNumberRecordOnPage\"]"));
-            select_show_more.Click();
+                Thread.Sleep(1000);
+                var button_find = chromeDriver.FindElement(By.XPath("//*[@id=\"btn_searchL\"]"));
+                button_find.Click();
 
-            Thread.Sleep(1000);
-            var select = chromeDriver.FindElement(By.XPath("//*[@id=\"divNumberRecordOnPage\"]/option[0]"));
-            select.Click();
+                Thread.Sleep(1000);
+                var select_show_more = chromeDriver.FindElement(By.XPath("//*[@id=\"divNumberRecordOnPage\"]"));
+                select_show_more.Click();
+
+                Thread.Sleep(1000);
+                var select = chromeDriver.FindElement(By.XPath("//*[@id=\"divNumberRecordOnPage\"]/option[5]"));
+                select.Click();
+            }
+            catch (Exception)
+            {
+                return false;
+            }
 
             while (true)
             {
                 try
                 {
+                    WebClient download = new WebClient();
                     IList<IWebElement> stt = chromeDriver.FindElements(By.XPath("//*[@id=\"_tableDatas\"]/tbody/tr"));
 
                     for (int i = 1; i <= stt.Count; i++)
@@ -179,46 +188,57 @@ namespace BUS
                         bool check_filename = false;
 
                         Thread.Sleep(1000);
-                        chromeDriver.ExecuteJavaScript($"var content////////////////////''/ = document.querySelector(\"#_tableDatas > tbody > tr:nth-child({i}) > td.tdLeftAlign > a\").click()");
-
-                        Thread.Sleep(3000);
-                        var file_text = chromeDriver.FindElement(By.XPath("//*[@id=\"divViewDetailArticles\"]/div[2]/div[3]/p/a")).Text.ToUpper().Trim(charsToTrim);
-                        var file_link = chromeDriver.FindElement(By.XPath("//*[@id=\"divViewDetailArticles\"]/div[2]/div[3]/p/a")).GetAttribute("href");
-
-                        //check filename
-                        for (int j = 0; j < xlsFileExist.Count; j++)
+                        var link_text = chromeDriver.FindElement(By.CssSelector($"#_tableDatas > tbody > tr:nth-child({i}) > td.tdLeftAlign > a")).Text.Trim();
+                        if (link_text.Contains("Kết quả giao dịch Trái phiếu doanh nghiệp ngày"))
                         {
-                            if (xlsFileExist[j].CompareTo(file_text) == 0)
+                            chromeDriver.ExecuteJavaScript($"var content = document.querySelector(\"#_tableDatas > tbody > tr:nth-child({i}) > td.tdLeftAlign > a\").click()");
+                        }
+                        else
+                        {
+                            break;
+                        }
+
+
+                            Thread.Sleep(3000);
+                            var file_text = chromeDriver.FindElement(By.XPath("//*[@id=\"divViewDetailArticles\"]/div[2]/div[3]/p/a")).Text.ToUpper().Trim(charsToTrim);
+                            var file_link = chromeDriver.FindElement(By.XPath("//*[@id=\"divViewDetailArticles\"]/div[2]/div[3]/p/a")).GetAttribute("href");
+
+                            //check filename
+                            for (int j = 0; j < xlsFileExist.Count; j++)
                             {
-                                check_filename = true;
-                                break;
+                                if (xlsFileExist[j].CompareTo(file_text) == 0)
+                                {
+                                    check_filename = true;
+                                    break;
+                                }
                             }
+
+                            if (check_filename == false)
+                            {
+                                //save filename
+                                System.IO.File.AppendAllText(pathfile, file_text + Environment.NewLine);
+                                chromeDriver.ExecuteJavaScript("var content = document.querySelector(\"#divViewDetailArticles > div.divContentArticlesDetail > div.divLstFileAttach > p > a\").click()");
+                                download.Headers.Add("user-agent", "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.2; .NET CLR 1.0.3705;)");
+                                download.DownloadFile(file_link, file_text);
+                                Thread.Sleep(1000);
+
+                                FileInfo newestFile = GetNewestFile(new DirectoryInfo(downloadDirectory));
+                                DeleteRows(newestFile.ToString().Trim(), 6);
+                                EditCells(newestFile.ToString().Trim());
+                                DAL_GiaoDichTraiPhieu.Instance.ImportExcelInDB(newestFile.ToString().Trim());
+                                System.IO.File.Delete($"{downloadDirectory}" + @"\" + $"{file_text}");
+                            }
+                            var esc = chromeDriver.FindElement(By.XPath("//*[@id=\"divViewDetailArticles\"]/div[5]/input"));
+                            esc.Click();
                         }
 
-                        if (check_filename == false)
-                        {
-                            //save filename
-                            System.IO.File.AppendAllText(pathfile, file_text + Environment.NewLine);
-                            chromeDriver.ExecuteJavaScript("var content = document.querySelector(\"#divViewDetailArticles > div.divContentArticlesDetail > div.divLstFileAttach > p > a\").click()");
-                            download.Headers.Add("user-agent", "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.2; .NET CLR 1.0.3705;)");
-                            download.DownloadFile(file_link, file_text);
-                            Thread.Sleep(1000);
-
-                            FileInfo newestFile = GetNewestFile(new DirectoryInfo(downloadDirectory));
-                            DeleteRows(newestFile.ToString().Trim(), 6);
-                            EditCells(newestFile.ToString().Trim());
-                            DAL_GiaoDichTraiPhieu.Instance.ImportExcelInDB(newestFile.ToString().Trim());
-                            System.IO.File.Delete($"{downloadDirectory}" + @"\" + $"{file_text}");
-                        }
-                        var esc = chromeDriver.FindElement(By.XPath("//*[@id=\"divViewDetailArticles\"]/div[5]/input"));
-                        esc.Click();
-                    }
-
-                    chromeDriver.FindElement(By.XPath($"//*[@id=\"next\"]")).Click();
+                        chromeDriver.FindElement(By.XPath($"//*[@id=\"next\"]")).Click();
+                     
                 }
                 catch (Exception)
                 {
-                    throw;
+                    chromeDriver.Quit();
+                    return true;
                 }
             }
         }

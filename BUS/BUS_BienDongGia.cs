@@ -37,7 +37,7 @@ namespace BUS
                 var options = new ChromeOptions();
                 options.AddArgument("window-position=-32000,-32000");
 
-                IWebDriver driver = new ChromeDriver();
+                IWebDriver driver = new ChromeDriver(service,options);
                 driver.Navigate().GoToUrl("https://www.hnx.vn/cophieu-etfs/chi-tiet-chung-khoan-ny-AAV.html?_des_tab=2");
 
                 DataTable dt = new DataTable("BienDongGia");

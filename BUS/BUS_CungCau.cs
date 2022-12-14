@@ -64,11 +64,8 @@ namespace BUS
                         string MaCk = links[i].GetAttribute("value");
                         var url = "https://www.hnx.vn/cophieu-etfs/chi-tiet-chung-khoan-ny-" + links[i].GetAttribute("value").ToLower() + ".html?_ces_tab=3";
                         driver.Navigate().GoToUrl(url);
-                        Thread.Sleep(500);
-
-                        Console.WriteLine(MaCk);
+                        Thread.Sleep(1000);
                         int x = 2;
-
 
                         while (true)
                         {

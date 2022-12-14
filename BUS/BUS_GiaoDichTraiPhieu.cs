@@ -163,13 +163,12 @@ namespace BUS
                 var button_find = chromeDriver.FindElement(By.XPath("//*[@id=\"btn_searchL\"]"));
                 button_find.Click();
 
-                Thread.Sleep(1000);
-                var select_show_more = chromeDriver.FindElement(By.XPath("//*[@id=\"divNumberRecordOnPage\"]"));
-                select_show_more.Click();
+                //Thread.Sleep(1000);
+                //var select_show_more = chromeDriver.FindElement(By.XPath("//*[@id=\"divNumberRecordOnPage\"]"));
+                //select_show_more.Click();
 
                 Thread.Sleep(1000);
-                var select = chromeDriver.FindElement(By.XPath("//*[@id=\"divNumberRecordOnPage\"]/option[5]"));
-                select.Click();
+                
             }
             catch (Exception)
             {
@@ -180,15 +179,19 @@ namespace BUS
             {
                 try
                 {
+                    var select = chromeDriver.FindElement(By.XPath("//*[@id=\"divNumberRecordOnPage\"]/option[5]"));
+                    select.Click();
+                    Thread.Sleep(500);
                     WebClient download = new WebClient();
                     IList<IWebElement> stt = chromeDriver.FindElements(By.XPath("//*[@id=\"_tableDatas\"]/tbody/tr"));
-
+                    Thread.Sleep(500);
                     for (int i = 1; i <= stt.Count; i++)
                     {
                         bool check_filename = false;
 
-                        Thread.Sleep(1000);
+                        Thread.Sleep(500);
                         var link_text = chromeDriver.FindElement(By.CssSelector($"#_tableDatas > tbody > tr:nth-child({i}) > td.tdLeftAlign > a")).Text.Trim();
+                        Thread.Sleep(100);
                         if (link_text.Contains("Kết quả giao dịch Trái phiếu doanh nghiệp ngày"))
                         {
                             chromeDriver.ExecuteJavaScript($"var content = document.querySelector(\"#_tableDatas > tbody > tr:nth-child({i}) > td.tdLeftAlign > a\").click()");

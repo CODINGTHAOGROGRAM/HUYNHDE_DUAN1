@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WebDriverManager.DriverConfigs.Impl;
 
 namespace BUS
 {
@@ -29,6 +30,7 @@ namespace BUS
         {
             try
             {
+                //new WebDriverManager.DriverManager().SetUpDriver(new ChromeConfig());
                 ChromeDriverService service = ChromeDriverService.CreateDefaultService();
                 service.HideCommandPromptWindow = true;
 
